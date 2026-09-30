@@ -57,7 +57,7 @@
           "EVENT.TABLET_OF_TRUTH",
           "EVENT.BYRDONIS_NEST"
         ],
-        "events_visited": 2,
+        "events_visited": 5,
         "normal_encounter_ids": [
           "ENCOUNTER.SHRINKER_BEETLE_WEAK",
           "ENCOUNTER.NIBBITS_WEAK",
@@ -1177,7 +1177,8 @@
   "ascension": 0,
   "current_act_index": 0,
   "events_seen": [
-    "EVENT.SAPPHIRE_SEED"
+    "EVENT.SAPPHIRE_SEED",
+    "EVENT.ROOM_FULL_OF_CHEESE"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1562,23 +1563,66 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 19,
+            "current_hp": 61,
+            "damage_taken": 14,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.CHOSEN_CHEESE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.ROOM_FULL_OF_CHEESE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 7,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 75,
+      "current_hp": 61,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1821,6 +1865,10 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.NEOWS_TALISMAN"
+        },
+        {
+          "floor_added_to_deck": 6,
+          "id": "RELIC.CHOSEN_CHEESE"
         }
       ],
       "rng": {
@@ -1936,11 +1984,11 @@
         "s3": 8040753942483988653
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 7326091812736486637,
-        "s1": 18349284159736800914,
-        "s2": 13681125196759216115,
-        "s3": 13940379916263564778
+        "counter": 2,
+        "s0": 6519079920490975125,
+        "s1": 2797685244598453644,
+        "s2": 6414358359890256670,
+        "s3": 2913556256363035174
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2008,8 +2056,8 @@
     },
     "seed": "P26XDGQ6YMXA"
   },
-  "run_time": 82,
-  "save_time": 1790807482,
+  "run_time": 151,
+  "save_time": 1790810765,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2169,6 +2217,10 @@
     {
       "col": 3,
       "row": 5
+    },
+    {
+      "col": 3,
+      "row": 6
     }
   ],
   "win_time": 0
