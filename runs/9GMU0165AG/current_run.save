@@ -54,7 +54,7 @@
           "EVENT.RELIC_TRADER",
           "EVENT.SPIRALING_WHIRLPOOL"
         ],
-        "events_visited": 0,
+        "events_visited": 1,
         "normal_encounter_ids": [
           "ENCOUNTER.CORPSE_SLUGS_WEAK",
           "ENCOUNTER.SEAPUNK_WEAK",
@@ -171,6 +171,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -216,6 +217,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -423,6 +425,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -436,6 +439,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -513,6 +517,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 2,
@@ -590,6 +595,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -801,6 +807,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -900,6 +907,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 6,
@@ -1025,6 +1033,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -1230,9 +1239,81 @@
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNgYGAAABzfRCEEAAAA",
+  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_point_history": [
+    [
+      {
+        "map_point_type": "ancient",
+        "player_stats": [
+          {
+            "ancient_choice": [
+              {
+                "TextKey": "FISHING_ROD",
+                "title": {
+                  "key": "FISHING_ROD.title",
+                  "table": "relics"
+                },
+                "was_chosen": true
+              },
+              {
+                "TextKey": "PRECISE_SCISSORS",
+                "title": {
+                  "key": "PRECISE_SCISSORS.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              },
+              {
+                "TextKey": "LEAFY_POULTICE",
+                "title": {
+                  "key": "LEAFY_POULTICE.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              }
+            ],
+            "current_gold": 99,
+            "current_hp": 52,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "FISHING_ROD.title",
+                  "table": "relics"
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 52,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.FISHING_ROD",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.NEOW",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      }
+    ]
+  ],
   "modifiers": [],
-  "num_reloads": 0,
+  "num_reloads": 1,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1244,51 +1325,84 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 66,
+      "current_hp": 52,
       "deck": [
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_NECROBINDER"
+          "id": "CARD.STRIKE_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_NECROBINDER"
+          "id": "CARD.STRIKE_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_NECROBINDER"
+          "id": "CARD.STRIKE_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_NECROBINDER"
+          "id": "CARD.STRIKE_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.DEFEND_NECROBINDER"
+          "id": "CARD.DEFEND_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.DEFEND_NECROBINDER"
+          "id": "CARD.DEFEND_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.DEFEND_NECROBINDER"
+          "id": "CARD.DEFEND_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.DEFEND_NECROBINDER"
+          "id": "CARD.DEFEND_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.BODYGUARD"
+          "id": "CARD.BODYGUARD",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.UNLEASH"
+          "id": "CARD.UNLEASH",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.ASCENDERS_BANE"
+          "id": "CARD.ASCENDERS_BANE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {},
@@ -1439,13 +1553,43 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.BOUND_PHYLACTERY"
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "RELIC.FISHING_ROD",
+          "props": {
+            "ints": [
+              {
+                "name": "CombatsSeen",
+                "value": 0
+              }
+            ]
+          }
         }
       ],
       "rng": {
-        "counters": {
-          "rewards": 0,
-          "shops": 0,
-          "transformations": 0
+        "rngs": {
+          "rewards": {
+            "counter": 0,
+            "s0": 11848167161083905661,
+            "s1": 17326075744088714853,
+            "s2": 11551326654140912858,
+            "s3": 10310745961369106474
+          },
+          "shops": {
+            "counter": 0,
+            "s0": 2354966117202365778,
+            "s1": 804459717241937249,
+            "s2": 13285989500233400129,
+            "s3": 13432511414676438075
+          },
+          "transformations": {
+            "counter": 0,
+            "s0": 11440112902647465213,
+            "s1": 6864395554823141911,
+            "s2": 7736034413385916016,
+            "s3": 11425862924349044755
+          }
         },
         "seed": 3478726394
       },
@@ -1493,7 +1637,7 @@
           "ENCOUNTER.KNOWLEDGE_DEMON_BOSS",
           "ENCOUNTER.DEVOTED_SCULPTOR_WEAK",
           "ENCOUNTER.FROG_KNIGHT_NORMAL",
-          "ENCOUNTER.BATTLEWORN_DUMMY_EVENT_ENCOUNTER",
+          "ENCOUNTER.DEPRECATED_ENCOUNTER",
           "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
           "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
           "ENCOUNTER.TEST_SUBJECT_BOSS",
@@ -1603,25 +1747,97 @@
   ],
   "pre_finished_room": null,
   "rng": {
-    "counters": {
-      "up_front": 408,
-      "shuffle": 0,
-      "unknown_map_point": 0,
-      "combat_card_generation": 0,
-      "combat_potion_generation": 0,
-      "combat_card_selection": 0,
-      "combat_energy_costs": 0,
-      "combat_targets": 0,
-      "monster_ai": 0,
-      "niche": 0,
-      "combat_orbs": 0,
-      "treasure_room_relics": 0
+    "rngs": {
+      "up_front": {
+        "counter": 0,
+        "s0": 12536467582090538123,
+        "s1": 15867675597871908855,
+        "s2": 18142166287502071481,
+        "s3": 70425821479608134
+      },
+      "shuffle": {
+        "counter": 0,
+        "s0": 15431898871223652222,
+        "s1": 16024376723533627164,
+        "s2": 3988600019611343300,
+        "s3": 3219044808134627311
+      },
+      "unknown_map_point": {
+        "counter": 0,
+        "s0": 18286710797942032181,
+        "s1": 8650090460004965093,
+        "s2": 8946026755723672409,
+        "s3": 16337184867945539614
+      },
+      "combat_card_generation": {
+        "counter": 0,
+        "s0": 17106794925415586312,
+        "s1": 12958298051521993787,
+        "s2": 4674937488932845640,
+        "s3": 4170514089051432522
+      },
+      "combat_potion_generation": {
+        "counter": 0,
+        "s0": 5472461514267111436,
+        "s1": 7662509314502675401,
+        "s2": 12956619814263924604,
+        "s3": 18428222635582324653
+      },
+      "combat_card_selection": {
+        "counter": 0,
+        "s0": 1834881851933428926,
+        "s1": 9719825220656382365,
+        "s2": 13533381654935515545,
+        "s3": 13750041283055992273
+      },
+      "combat_energy_costs": {
+        "counter": 0,
+        "s0": 591973678322028933,
+        "s1": 665716333090261101,
+        "s2": 6894214890924741842,
+        "s3": 3452510974502003656
+      },
+      "combat_targets": {
+        "counter": 0,
+        "s0": 7119912454317192071,
+        "s1": 3407134974908193192,
+        "s2": 6907442348254771159,
+        "s3": 679907559095744840
+      },
+      "monster_ai": {
+        "counter": 0,
+        "s0": 13512765968392239754,
+        "s1": 3723838437858063641,
+        "s2": 14840465814118289796,
+        "s3": 9610880014437680607
+      },
+      "niche": {
+        "counter": 0,
+        "s0": 16422617562344515540,
+        "s1": 18168796625731696595,
+        "s2": 10725622346091832679,
+        "s3": 15499712038505695503
+      },
+      "combat_orbs": {
+        "counter": 0,
+        "s0": 12204898250723848479,
+        "s1": 13074170531327473645,
+        "s2": 2562949193876366198,
+        "s3": 14191101461061636788
+      },
+      "treasure_room_relics": {
+        "counter": 0,
+        "s0": 14343310429039003621,
+        "s1": 15100845049658491939,
+        "s2": 6352563349680657524,
+        "s3": 12931395991206518621
+      }
     },
-    "seed": "9GMU0165AG"
+    "seed": "old9GMU0165AG"
   },
-  "run_time": 2,
-  "save_time": 1782975603,
-  "schema_version": 16,
+  "run_time": 8,
+  "save_time": 1790734699,
+  "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
@@ -1761,6 +1977,10 @@
     {
       "col": 3,
       "row": 0
+    },
+    {
+      "col": 1,
+      "row": 1
     }
   ],
   "win_time": 0
