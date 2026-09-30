@@ -1384,11 +1384,139 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.SOLAR_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CRUSH_UNDER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DECISIONS_DECISIONS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.REFLECT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PANIC_BUTTON",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.GOLD_AXE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.ORBIT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "cards_removed": [
+              {
+                "floor_added_to_deck": 1,
+                "id": "CARD.STRIKE_REGENT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 19,
+            "current_hp": 73,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 113,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SWIFT_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.CLARITY",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.STRENGTH_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.VAMBRACE",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.FENCING_MANUAL",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.VITRUVIAN_MINION",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1402,13 +1530,6 @@
       "character_id": "CHARACTER.REGENT",
       "current_hp": 73,
       "deck": [
-        {
-          "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_REGENT",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
         {
           "floor_added_to_deck": 1,
           "id": "CARD.STRIKE_REGENT",
@@ -1487,13 +1608,21 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.ORBIT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
+        "card_shop_removals_used": 1,
         "damage_dealt": 83,
         "debuffs_applied": 4
       },
-      "gold": 132,
+      "gold": 19,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 3,
@@ -1535,7 +1664,6 @@
             "RELIC.RIPPLE_BASIN",
             "RELIC.TUNING_FORK",
             "RELIC.TINY_MAILBOX",
-            "RELIC.VAMBRACE",
             "RELIC.BOWLER_HAT"
           ],
           "common": [
@@ -1563,8 +1691,7 @@
             "RELIC.CENTENNIAL_PUZZLE",
             "RELIC.REGAL_PILLOW",
             "RELIC.VENERABLE_TEA_SET",
-            "RELIC.RED_MASK",
-            "RELIC.FENCING_MANUAL"
+            "RELIC.RED_MASK"
           ],
           "rare": [
             "RELIC.THE_COURIER",
@@ -1631,8 +1758,7 @@
             "RELIC.TOOLBOX",
             "RELIC.KIFUDA",
             "RELIC.RINGING_TRIANGLE",
-            "RELIC.WING_CHARM",
-            "RELIC.VITRUVIAN_MINION"
+            "RELIC.WING_CHARM"
           ]
         }
       },
@@ -1649,18 +1775,18 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 22,
-            "s0": 9966517303456860075,
-            "s1": 4312660864273469002,
-            "s2": 6806165594459094078,
-            "s3": 3314058573215193015
+            "counter": 36,
+            "s0": 5159201667060805304,
+            "s1": 11876390813482123928,
+            "s2": 1509931131038845498,
+            "s3": 8231443851647294639
           },
           "shops": {
-            "counter": 0,
-            "s0": 5167715328890903911,
-            "s1": 8560206730035783635,
-            "s2": 12263126395188980177,
-            "s3": 9366272530702873510
+            "counter": 28,
+            "s0": 14859657612885462225,
+            "s1": 8950220905354420269,
+            "s2": 11210779935037476454,
+            "s3": 1420533816869153095
           },
           "transformations": {
             "counter": 0,
@@ -1831,8 +1957,8 @@
     },
     "seed": "P26XDGQ6YMXA"
   },
-  "run_time": 60,
-  "save_time": 1790802424,
+  "run_time": 73,
+  "save_time": 1790802487,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1862,7 +1988,6 @@
         "RELIC.BOWLER_HAT",
         "RELIC.PARRYING_SHIELD",
         "RELIC.AKABEKO",
-        "RELIC.VAMBRACE",
         "RELIC.GREMLIN_HORN",
         "RELIC.TINY_MAILBOX",
         "RELIC.ORNAMENTAL_FAN",
@@ -1985,6 +2110,10 @@
     {
       "col": 4,
       "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
     }
   ],
   "win_time": 0
