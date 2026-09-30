@@ -57,7 +57,7 @@
           "EVENT.TABLET_OF_TRUTH",
           "EVENT.BYRDONIS_NEST"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.SHRINKER_BEETLE_WEAK",
           "ENCOUNTER.NIBBITS_WEAK",
@@ -1176,6 +1176,9 @@
   ],
   "ascension": 0,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.SAPPHIRE_SEED"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
@@ -1512,23 +1515,70 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 19,
+            "current_hp": 75,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SAPPHIRE_SEED.pages.INITIAL.options.EAT.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Enchantment": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Sown"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 2,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.BULWARK"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.SAPPHIRE_SEED",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 4,
+  "num_reloads": 5,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
     "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 73,
+      "current_hp": 75,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1603,6 +1653,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 3,
           "id": "CARD.BULWARK",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1885,11 +1936,11 @@
         "s3": 8040753942483988653
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 634715872293308252,
-        "s1": 12280177680710158689,
-        "s2": 6629512549448607919,
-        "s3": 14343546452125336272
+        "counter": 1,
+        "s0": 7326091812736486637,
+        "s1": 18349284159736800914,
+        "s2": 13681125196759216115,
+        "s3": 13940379916263564778
       },
       "combat_card_generation": {
         "counter": 0,
@@ -1957,8 +2008,8 @@
     },
     "seed": "P26XDGQ6YMXA"
   },
-  "run_time": 73,
-  "save_time": 1790802487,
+  "run_time": 82,
+  "save_time": 1790807482,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2114,6 +2165,10 @@
     {
       "col": 4,
       "row": 4
+    },
+    {
+      "col": 3,
+      "row": 5
     }
   ],
   "win_time": 0
