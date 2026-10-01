@@ -3857,16 +3857,49 @@
             "turns_taken": 11
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 240,
+            "current_hp": 50,
+            "damage_taken": 0,
+            "gold_gained": 33,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.VAMBRACE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 37,
+  "num_reloads": 38,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.02
   },
   "platform_type": "steam",
   "players": [
@@ -4106,7 +4139,7 @@
         "damage_dealt": 2435,
         "debuffs_applied": 31
       },
-      "gold": 207,
+      "gold": 240,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
@@ -4147,7 +4180,6 @@
             "RELIC.PARRYING_SHIELD",
             "RELIC.ETERNAL_FEATHER",
             "RELIC.AKABEKO",
-            "RELIC.VAMBRACE",
             "RELIC.GREMLIN_HORN",
             "RELIC.PETRIFIED_TOAD",
             "RELIC.LETTER_OPENER",
@@ -4320,16 +4352,20 @@
         {
           "floor_added_to_deck": 34,
           "id": "RELIC.JEWELED_MASK"
+        },
+        {
+          "floor_added_to_deck": 39,
+          "id": "RELIC.VAMBRACE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 269,
-            "s0": 13802333092386353361,
-            "s1": 999891042755813934,
-            "s2": 4231376204026414512,
-            "s3": 11616710597080864093
+            "counter": 270,
+            "s0": 1395332996625975202,
+            "s1": 9859278400219879247,
+            "s2": 2451438074293106017,
+            "s3": 7993455696427666561
           },
           "shops": {
             "counter": 56,
@@ -4436,11 +4472,11 @@
         "s3": 7474033974572779990
       },
       "unknown_map_point": {
-        "counter": 9,
-        "s0": 3280893746704239885,
-        "s1": 5118433033755041388,
-        "s2": 8712593907007159850,
-        "s3": 8697965460688832000
+        "counter": 10,
+        "s0": 1311991441340945761,
+        "s1": 1326619311580097867,
+        "s2": 17443063361245262631,
+        "s3": 3678745968347914732
       },
       "combat_card_generation": {
         "counter": 686,
@@ -4499,22 +4535,21 @@
         "s3": 15602353924628334763
       },
       "treasure_room_relics": {
-        "counter": 2,
-        "s0": 768352643515965190,
-        "s1": 18029188472458685402,
-        "s2": 5608675903777244080,
-        "s3": 11241147499594406772
+        "counter": 3,
+        "s0": 7826591891376287656,
+        "s1": 13640051733858645868,
+        "s2": 5888046684396313782,
+        "s3": 18308765013133649037
       }
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 2563,
-  "save_time": 1790827661,
+  "run_time": 2568,
+  "save_time": 1790827671,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
-        "RELIC.VAMBRACE",
         "RELIC.TINY_MAILBOX",
         "RELIC.NUNCHAKU",
         "RELIC.ORNAMENTAL_FAN",
@@ -4655,6 +4690,10 @@
     {
       "col": 5,
       "row": 5
+    },
+    {
+      "col": 5,
+      "row": 6
     }
   ],
   "win_time": 0
