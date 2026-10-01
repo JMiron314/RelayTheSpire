@@ -23,7 +23,7 @@
           "ENCOUNTER.BYRDONIS_ELITE",
           "ENCOUNTER.BYGONE_EFFIGY_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.BYRDONIS_NEST",
           "EVENT.SAPPHIRE_SEED",
@@ -1746,11 +1746,84 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.FETCH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SEVERANCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BURY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 250,
+            "current_hp": 20,
+            "damage_taken": 3,
+            "gold_gained": 33,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.FIRE_POTION",
+                "was_picked": true
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.RIPPLE_BASIN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHROG_PARASITE_ELITE",
+            "monster_ids": [
+              "MONSTER.PHROG_PARASITE",
+              "MONSTER.WRIGGLER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1762,7 +1835,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 23,
+      "current_hp": 20,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1875,28 +1948,31 @@
         }
       ],
       "extra_fields": {
-        "damage_dealt": 59,
-        "debuffs_applied": 17
+        "damage_dealt": 100,
+        "debuffs_applied": 32
       },
-      "gold": 217,
+      "gold": 250,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 4,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
           "id": "POTION.LUCKY_TONIC",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.FIRE_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.RIPPLE_BASIN",
             "RELIC.KUSARIGAMA",
             "RELIC.AKABEKO",
             "RELIC.LUCKY_FYSH",
@@ -2038,16 +2114,20 @@
         {
           "floor_added_to_deck": 7,
           "id": "RELIC.POTION_BELT"
+        },
+        {
+          "floor_added_to_deck": 9,
+          "id": "RELIC.RIPPLE_BASIN"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 47,
-            "s0": 10727424000112812774,
-            "s1": 11678686467393624312,
-            "s2": 14388122205870470950,
-            "s3": 17564141083164710330
+            "counter": 61,
+            "s0": 12414274546825721014,
+            "s1": 13222783670265771837,
+            "s2": 9293452349892274602,
+            "s3": 15039311484319173828
           },
           "shops": {
             "counter": 0,
@@ -2142,11 +2222,11 @@
         "s3": 8949686389267949214
       },
       "shuffle": {
-        "counter": 82,
-        "s0": 3911993666227747532,
-        "s1": 14814110726577232353,
-        "s2": 10329905097368536089,
-        "s3": 12154022956930933232
+        "counter": 110,
+        "s0": 79115654401064584,
+        "s1": 13824530689142544708,
+        "s2": 1994064672960689003,
+        "s3": 2625341640768291583
       },
       "unknown_map_point": {
         "counter": 0,
@@ -2198,11 +2278,11 @@
         "s3": 15592837996807283167
       },
       "niche": {
-        "counter": 6,
-        "s0": 238275976121953167,
-        "s1": 14711089763605347509,
-        "s2": 10359231045245353663,
-        "s3": 9910201596589556961
+        "counter": 11,
+        "s0": 14596446581288451372,
+        "s1": 13675642810096490252,
+        "s2": 17452607442468470683,
+        "s3": 8994200354911617752
       },
       "combat_orbs": {
         "counter": 0,
@@ -2221,8 +2301,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 314,
-  "save_time": 1790824026,
+  "run_time": 411,
+  "save_time": 1790824234,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2237,7 +2317,6 @@
         "RELIC.STONE_CRACKER",
         "RELIC.TINY_MAILBOX",
         "RELIC.PARRYING_SHIELD",
-        "RELIC.RIPPLE_BASIN",
         "RELIC.ORICHALCUM",
         "RELIC.PEAR",
         "RELIC.MERCURY_HOURGLASS",
@@ -2394,6 +2473,10 @@
     {
       "col": 5,
       "row": 8
+    },
+    {
+      "col": 4,
+      "row": 9
     }
   ],
   "win_time": 0
