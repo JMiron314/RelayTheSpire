@@ -57,7 +57,7 @@
           "EVENT.SLIPPERY_BRIDGE",
           "EVENT.TEA_MASTER"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.NIBBITS_WEAK",
           "ENCOUNTER.SLIMES_WEAK",
@@ -1238,6 +1238,9 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.SAPPHIRE_SEED"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
@@ -1381,11 +1384,71 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_enchanted": [
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.SOWN"
+                  },
+                  "floor_added_to_deck": 2,
+                  "id": "CARD.DEATHBRINGER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "enchantment": "ENCHANTMENT.SOWN"
+              }
+            ],
+            "current_gold": 108,
+            "current_hp": 45,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SAPPHIRE_SEED.pages.INITIAL.options.PLANT.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Enchantment": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Sown"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.SAPPHIRE_SEED",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 3,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1477,6 +1540,10 @@
           }
         },
         {
+          "enchantment": {
+            "amount": 1,
+            "id": "ENCHANTMENT.SOWN"
+          },
           "floor_added_to_deck": 2,
           "id": "CARD.DEATHBRINGER",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1821,8 +1888,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 101,
-  "save_time": 1790823642,
+  "run_time": 125,
+  "save_time": 1790823738,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1971,6 +2038,10 @@
     {
       "col": 4,
       "row": 2
+    },
+    {
+      "col": 4,
+      "row": 3
     }
   ],
   "win_time": 0
