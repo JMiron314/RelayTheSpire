@@ -75,7 +75,7 @@
           "ENCOUNTER.VINE_SHAMBLER_NORMAL",
           "ENCOUNTER.FLYCONID_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 2,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1495,11 +1495,82 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 5,
+                  "id": "CARD.HIGH_FIVE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.SOW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.REAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.HIGH_FIVE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 172,
+            "current_hp": 45,
+            "damage_taken": 0,
+            "gold_gained": 9,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SLIMES_WEAK",
+            "monster_ids": [
+              "MONSTER.TWIG_SLIME_S",
+              "MONSTER.LEAF_SLIME_M",
+              "MONSTER.LEAF_SLIME_S"
+            ],
+            "room_type": "monster",
+            "turns_taken": 2
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 4,
+  "num_reloads": 5,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1600,19 +1671,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "CARD.HIGH_FIVE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 19
+        "damage_dealt": 31,
+        "debuffs_applied": 6
       },
-      "gold": 163,
+      "gold": 172,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.035000004,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.020000007,
+        "potion_reward_odds_value": 0.6
       },
       "relic_grab_bag": {
         "relic_id_lists": {
@@ -1761,11 +1840,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 11,
-            "s0": 3490026266376600511,
-            "s1": 9530709087482007635,
-            "s2": 9585808816540278538,
-            "s3": 17256967672974323938
+            "counter": 22,
+            "s0": 3808081376894790545,
+            "s1": 12431191854651776860,
+            "s2": 7668142246126121258,
+            "s3": 2117760359730031129
           },
           "shops": {
             "counter": 0,
@@ -1860,11 +1939,11 @@
         "s3": 8949686389267949214
       },
       "shuffle": {
-        "counter": 27,
-        "s0": 8000176625451971821,
-        "s1": 14033657995736416274,
-        "s2": 5106582120471929960,
-        "s3": 12332696077142603870
+        "counter": 38,
+        "s0": 2393221668213354723,
+        "s1": 9182714552691473992,
+        "s2": 15253205666799561711,
+        "s3": 15963087560381873434
       },
       "unknown_map_point": {
         "counter": 0,
@@ -1909,18 +1988,18 @@
         "s3": 15032823842007388642
       },
       "monster_ai": {
-        "counter": 0,
-        "s0": 6391707730805650989,
-        "s1": 17225692109975710518,
-        "s2": 12542679512525598972,
-        "s3": 17533794273280337937
+        "counter": 1,
+        "s0": 4965947677259281674,
+        "s1": 1850583022713728487,
+        "s2": 1281791357820438225,
+        "s3": 15592837996807283167
       },
       "niche": {
-        "counter": 1,
-        "s0": 17340917685434596541,
-        "s1": 12574396180056229105,
-        "s2": 4646886584261103928,
-        "s3": 3413374654193917583
+        "counter": 4,
+        "s0": 14151562848443572280,
+        "s1": 15830123026750282618,
+        "s2": 717968451888118088,
+        "s3": 13999115090087435405
       },
       "combat_orbs": {
         "counter": 0,
@@ -1939,8 +2018,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 145,
-  "save_time": 1790823775,
+  "run_time": 185,
+  "save_time": 1790823836,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2097,6 +2176,10 @@
     {
       "col": 4,
       "row": 4
+    },
+    {
+      "col": 5,
+      "row": 5
     }
   ],
   "win_time": 0
