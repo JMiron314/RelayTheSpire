@@ -54,7 +54,7 @@
           "EVENT.TEA_MASTER",
           "EVENT.DROWNING_BEACON"
         ],
-        "events_visited": 4,
+        "events_visited": 6,
         "normal_encounter_ids": [
           "ENCOUNTER.TOADPOLES_WEAK",
           "ENCOUNTER.CORPSE_SLUGS_WEAK",
@@ -1063,7 +1063,8 @@
   "current_act_index": 0,
   "events_seen": [
     "EVENT.DOORS_OF_LIGHT_AND_DARK",
-    "EVENT.TRASH_HEAP"
+    "EVENT.TRASH_HEAP",
+    "EVENT.ENDLESS_CONVEYOR"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1891,23 +1892,139 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 13,
+            "current_hp": 59,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "ENDLESS_CONVEYOR.pages.ALL.options.SUSPICIOUS_CONDIMENT.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "CurrentDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Caviar"
+                  },
+                  "LastDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Clam Roll"
+                  }
+                }
+              },
+              {
+                "title": {
+                  "key": "ENDLESS_CONVEYOR.pages.ALL.options.CAVIAR.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "CurrentDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Caviar"
+                  },
+                  "LastDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Clam Roll"
+                  }
+                }
+              },
+              {
+                "title": {
+                  "key": "ENDLESS_CONVEYOR.pages.ALL.options.CLAM_ROLL.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "CurrentDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Caviar"
+                  },
+                  "LastDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Clam Roll"
+                  }
+                }
+              },
+              {
+                "title": {
+                  "key": "ENDLESS_CONVEYOR.pages.GRAB_SOMETHING_OFF_THE_BELT.options.LEAVE.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "CurrentDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Caviar"
+                  },
+                  "LastDishTitle": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Clam Roll"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 120,
+            "gold_stolen": 0,
+            "hp_healed": 14,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 4,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.STABLE_SERUM",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.ENDLESS_CONVEYOR",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 11,
+  "num_reloads": 12,
   "odds": {
-    "unknown_map_point_elite_odds_value": -3,
-    "unknown_map_point_monster_odds_value": 0.3,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.06
+    "unknown_map_point_elite_odds_value": -4,
+    "unknown_map_point_monster_odds_value": 0.4,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.08
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 45,
+      "current_hp": 59,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -2050,9 +2167,9 @@
         "damage_dealt": 312,
         "debuffs_applied": 3
       },
-      "gold": 133,
+      "gold": 13,
       "max_energy": 3,
-      "max_hp": 75,
+      "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
@@ -2063,6 +2180,10 @@
         {
           "id": "POTION.VULNERABLE_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.STABLE_SERUM",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -2222,11 +2343,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 92,
-            "s0": 15182940895391142056,
-            "s1": 7983640262162116458,
-            "s2": 11482925246082008528,
-            "s3": 716217690576750945
+            "counter": 93,
+            "s0": 13082876619600311971,
+            "s1": 2532352737559116306,
+            "s2": 6982495574675887480,
+            "s3": 919135540003381888
           },
           "shops": {
             "counter": 28,
@@ -2333,11 +2454,11 @@
         "s3": 9656463321659214821
       },
       "unknown_map_point": {
-        "counter": 2,
-        "s0": 15798889511324190,
-        "s1": 5523116633219166130,
-        "s2": 3173767526253541374,
-        "s3": 11727058867792727874
+        "counter": 3,
+        "s0": 17158940776745282286,
+        "s1": 6959557786048680530,
+        "s2": 3932273142060039648,
+        "s3": 11825922395373772126
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2405,8 +2526,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 575,
-  "save_time": 1790824387,
+  "run_time": 590,
+  "save_time": 1790824451,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2589,6 +2710,10 @@
     {
       "col": 1,
       "row": 12
+    },
+    {
+      "col": 0,
+      "row": 13
     }
   ],
   "win_time": 0
