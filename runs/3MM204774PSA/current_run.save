@@ -4220,11 +4220,133 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "bought_relics": [
+              "RELIC.SPARKLING_ROUGE"
+            ],
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.REFRACT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FOCUSED_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.GLASSWORK",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCAVENGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SALVO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCRAWL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.CAPACITOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 20,
+            "current_hp": 85,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 305,
+            "gold_stolen": 0,
+            "hp_healed": 15,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLOCK_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.SKILL_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.ENERGY_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.SPARKLING_ROUGE",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.CHANDELIER",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.ROYAL_STAMP",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 44,
+  "num_reloads": 45,
   "odds": {
     "unknown_map_point_elite_odds_value": -4,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -4236,7 +4358,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 70,
+      "current_hp": 85,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -4470,6 +4592,13 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 46,
+          "id": "CARD.CAPACITOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
@@ -4477,7 +4606,7 @@
         "damage_dealt": 3257,
         "debuffs_applied": 42
       },
-      "gold": 325,
+      "gold": 20,
       "max_energy": 3,
       "max_hp": 86,
       "max_potion_slot_count": 2,
@@ -4520,8 +4649,7 @@
             "RELIC.LETTER_OPENER",
             "RELIC.ORNAMENTAL_FAN",
             "RELIC.MINIATURE_CANNON",
-            "RELIC.PEAR",
-            "RELIC.SPARKLING_ROUGE"
+            "RELIC.PEAR"
           ],
           "common": [
             "RELIC.BLOOD_VIAL",
@@ -4567,8 +4695,7 @@
             "RELIC.LIZARD_TAIL",
             "RELIC.MANGO",
             "RELIC.MUMMIFIED_HAND",
-            "RELIC.STONE_CALENDAR",
-            "RELIC.CHANDELIER"
+            "RELIC.STONE_CALENDAR"
           ],
           "shop": [
             "RELIC.RUNIC_CAPACITOR",
@@ -4592,8 +4719,7 @@
             "RELIC.KIFUDA",
             "RELIC.BREAD",
             "RELIC.CHEMICAL_X",
-            "RELIC.THE_ABACUS",
-            "RELIC.ROYAL_STAMP"
+            "RELIC.THE_ABACUS"
           ]
         }
       },
@@ -4685,23 +4811,27 @@
         {
           "floor_added_to_deck": 45,
           "id": "RELIC.KUSARIGAMA"
+        },
+        {
+          "floor_added_to_deck": 46,
+          "id": "RELIC.SPARKLING_ROUGE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 316,
-            "s0": 4705107344521516488,
-            "s1": 11725461039256855415,
-            "s2": 1593577296643007939,
-            "s3": 5272227915814471992
+            "counter": 330,
+            "s0": 16017392770181295807,
+            "s1": 4906285929488502750,
+            "s2": 15210416085272691075,
+            "s3": 17282661569322778266
           },
           "shops": {
-            "counter": 56,
-            "s0": 9357521278381152712,
-            "s1": 13350069479851767717,
-            "s2": 4178481180305834852,
-            "s3": 2445547220882706256
+            "counter": 84,
+            "s0": 10572593374754359269,
+            "s1": 2750398533369508265,
+            "s2": 4029658420123138811,
+            "s3": 11697206646554180813
           },
           "transformations": {
             "counter": 0,
@@ -4873,8 +5003,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 3010,
-  "save_time": 1790828145,
+  "run_time": 3089,
+  "save_time": 1790828228,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -4898,7 +5028,6 @@
         "RELIC.CANDELABRA",
         "RELIC.ETERNAL_FEATHER",
         "RELIC.MERCURY_HOURGLASS",
-        "RELIC.SPARKLING_ROUGE",
         "RELIC.PETRIFIED_TOAD"
       ],
       "common": [
@@ -4923,7 +5052,6 @@
         "RELIC.BEATING_REMNANT",
         "RELIC.KUNAI",
         "RELIC.ART_OF_WAR",
-        "RELIC.CHANDELIER",
         "RELIC.RAZOR_TOOTH",
         "RELIC.MEAT_ON_THE_BONE",
         "RELIC.ICE_CREAM",
@@ -4948,7 +5076,6 @@
         "RELIC.CHEMICAL_X",
         "RELIC.MYSTIC_LIGHTER",
         "RELIC.KIFUDA",
-        "RELIC.ROYAL_STAMP",
         "RELIC.ORRERY",
         "RELIC.BREAD",
         "RELIC.CAULDRON",
@@ -5030,6 +5157,10 @@
     {
       "col": 3,
       "row": 12
+    },
+    {
+      "col": 2,
+      "row": 13
     }
   ],
   "win_time": 0
