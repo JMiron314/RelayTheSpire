@@ -147,7 +147,7 @@
           "ENCOUNTER.THE_OBSCURA_NORMAL",
           "ENCOUNTER.LOUSE_PROGENITOR_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 2,
         "second_boss_id": null
       },
       "saved_map": {
@@ -3055,11 +3055,109 @@
             "turns_taken": 7
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "floor_added_to_deck": 30,
+                  "id": "CARD.COOLHEADED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.DARKNESS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CHARGE_BATTERY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.COOLHEADED",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "floor_added_to_deck": 2,
+                "id": "CARD.ROCKET_PUNCH",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "cards_removed": [
+              {
+                "current_upgrade_level": 1,
+                "floor_added_to_deck": 2,
+                "id": "CARD.ROCKET_PUNCH",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 68,
+            "current_hp": 62,
+            "damage_taken": 0,
+            "gold_gained": 7,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.OROBIC_ACID",
+                "was_picked": true
+              }
+            ],
+            "potion_discarded": [
+              "POTION.COLORLESS_POTION"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.THIEVING_HOPPER_WEAK",
+            "monster_ids": [
+              "MONSTER.THIEVING_HOPPER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 28,
+  "num_reloads": 29,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -3127,14 +3225,6 @@
         {
           "floor_added_to_deck": 1,
           "id": "CARD.GUNK_UP",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
-        {
-          "current_upgrade_level": 1,
-          "floor_added_to_deck": 2,
-          "id": "CARD.ROCKET_PUNCH",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
@@ -3256,21 +3346,37 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 30,
+          "id": "CARD.COOLHEADED",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 30,
+          "id": "CARD.ROCKET_PUNCH",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 1283,
-        "debuffs_applied": 12
+        "damage_dealt": 1367,
+        "debuffs_applied": 14
       },
-      "gold": 61,
+      "gold": 68,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.3
       },
       "potions": [
         {
@@ -3278,7 +3384,7 @@
           "slot_index": 0
         },
         {
-          "id": "POTION.COLORLESS_POTION",
+          "id": "POTION.OROBIC_ACID",
           "slot_index": 1
         }
       ],
@@ -3434,7 +3540,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 1
+                "value": 0
               }
             ]
           }
@@ -3458,7 +3564,7 @@
             "ints": [
               {
                 "name": "AttacksPlayed",
-                "value": 9
+                "value": 6
               }
             ]
           }
@@ -3475,11 +3581,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 196,
-            "s0": 598224569682613699,
-            "s1": 17470808160658218291,
-            "s2": 13650354353779292435,
-            "s3": 11156861322871144787
+            "counter": 209,
+            "s0": 8490478390318803013,
+            "s1": 5628931519282341716,
+            "s2": 12012922199381654386,
+            "s3": 17233900868952388451
           },
           "shops": {
             "counter": 56,
@@ -3579,11 +3685,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 336,
-        "s0": 13842146070721919521,
-        "s1": 14466927536788271659,
-        "s2": 16920257243410523384,
-        "s3": 14897176843804290230
+        "counter": 380,
+        "s0": 15893219459666220695,
+        "s1": 14404406053427320722,
+        "s2": 15882034449556146320,
+        "s3": 9412405166611388383
       },
       "unknown_map_point": {
         "counter": 8,
@@ -3593,11 +3699,11 @@
         "s3": 15468445710276568557
       },
       "combat_card_generation": {
-        "counter": 85,
-        "s0": 123967336945143592,
-        "s1": 16201297087211795614,
-        "s2": 17312095101361545148,
-        "s3": 4971804353977891013
+        "counter": 189,
+        "s0": 14371376618462923906,
+        "s1": 16252221181605972139,
+        "s2": 1205759515426664238,
+        "s3": 10658171946832856220
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -3621,11 +3727,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 58,
-        "s0": 11824039589578166596,
-        "s1": 16979323592202507051,
-        "s2": 8121708175980007971,
-        "s3": 1045363021131869462
+        "counter": 62,
+        "s0": 10554787276103366820,
+        "s1": 6390040088315072881,
+        "s2": 4444127067781646080,
+        "s3": 4805595548717828370
       },
       "monster_ai": {
         "counter": 4,
@@ -3635,11 +3741,11 @@
         "s3": 5653756567085345448
       },
       "niche": {
-        "counter": 22,
-        "s0": 14767455872302046139,
-        "s1": 12485147967027015832,
-        "s2": 5546549353989105812,
-        "s3": 16269766997143256044
+        "counter": 23,
+        "s0": 9258696943177879759,
+        "s1": 3264512087354065847,
+        "s2": 14975394773745054511,
+        "s3": 11632386146606115257
       },
       "combat_orbs": {
         "counter": 0,
@@ -3658,8 +3764,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1566,
-  "save_time": 1790826386,
+  "run_time": 1671,
+  "save_time": 1790826560,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3834,6 +3940,10 @@
     {
       "col": 1,
       "row": 12
+    },
+    {
+      "col": 0,
+      "row": 13
     }
   ],
   "win_time": 0
