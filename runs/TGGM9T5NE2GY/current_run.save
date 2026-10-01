@@ -23,7 +23,7 @@
           "ENCOUNTER.BYRDONIS_ELITE",
           "ENCOUNTER.BYGONE_EFFIGY_ELITE"
         ],
-        "elite_encounters_visited": 2,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.BYRDONIS_NEST",
           "EVENT.SAPPHIRE_SEED",
@@ -1246,7 +1246,7 @@
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgYWBgYGG4YHtyNUa7RXt+QnTv2Uu3rSPs/QR9vnnfrrFnTyvpLWz9kOT+u6lx/JfzTl89uZRXsvBrWZu3u9FXPTvNumMfM2b2ph8cI/uRpTdq9tNtpuG/DM7J/n3Wl2O29vUa+M/qySzzzvTe62yftzS412FPqxmZ/1lGEI4fOadMrTM8hSw1PzuMrLJx0qk2P6VSaenihSZDrJHrA8t6LjGz2eWfCflHoub/l4mXJ8TMaTLulumULxieJ+4kIHPR2vbf95/E3bzxO3V8i53z62OCW6XCTncF9J7+WJa1mtZpmaH9/Y9syD2WFTrYWXmaD7yW8PJW6aychKVz9OMs41yYnpbeBddHGdrfGyre5ua48d1bjaJTFdij85UDvxTeanbkvekovLpurc2uLqOjtsbsVlBaHCKAklP2O7I5nO7Ra6twSW35S8ZCLmLMmg19t6celOg10mosemtR06cclDInQWu7JXd4JM5q9uGd7qwkVr9bS2HHRtDNs243yH2OOZJ5SssyNc0pm6n/jEG865ql21ueJo7rZ1FWdPiC6X3J5ksjmsJ+1y10WdKEEAcQSvHKQBAAA=",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZWBgYGG4YHtyNUa7RXt+QnTv2Uu3rSPs/QR9vnnfrrFnTyvpLWz9kOT+u6lx/JfzTl89uZRXsvBrWZu3u9FXPTvNumMfM2b2ph8cI/uRpTdq9tNtpuG/DM7J/n3Wl2O29vUa+M/qySzzzvTe62yftzS412FPqxmZ/1lGEI4fOadMrTM8hSw1PzuMrLJx0qk2P6VSaenihSZDrJPs+t6PhGj2cW/CelnstbPl6mHB+T8aRLulumUHyiuJ+40EFPx2vbfx5/0/bzxO0Vcu63jy1OiS4XyTncV9J7eeJaVqtZpubHN7Y982B22FRr4WUm6H7y20OJm2YystLVj5OMc01yYnobeBddXGdrvGyru9vaY0c1rnZJTJfiTw7UTnyT+anbkrfk4rKpOre2uLrODptbcVlBqDBKQsnP2O5IpnO7BWC6twSW35S8ZCLmLMmg19t6celOg10mosemtR06cclDInQWu7JXd4JM5q9uGd7qwkVr9bS2HHRtDNs243yH2OOZJ5SssyNc0pm6n/jEG865ql21ueJo7rZ1FWdPiC6X3J5ksjmsJ+1y10WdqItcDf7MCV8ymXrs1tZfXH5W/9eWV67zv23nuFIi1j5r76LAz6E2WQu6PM4GCa701VLa6um6JG1lxxUD0Ym3likFfQ6xyZrX5XY2eOKKSi2mrb5H521bWXHZTDT51rJFntqhKplru5R9wyYuOam1yiTy6My2VS8uy4hOlpqTFHI6aE5WUFfoW8+Lq1I140xtXNduW3niaoXo7lubksJXh33JutoV7xstCABtogIcQgIAAA==",
   "map_point_history": [
     [
       {
@@ -1923,11 +1923,126 @@
             "turns_taken": 3
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 298,
+            "current_hp": 36,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 19,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 13,
+                  "id": "CARD.PULL_AGGRO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.SEVERANCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.GRAVEBLAST",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.PULL_AGGRO",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 330,
+            "current_hp": 27,
+            "damage_taken": 9,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.CLARITY",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.LUCKY_TONIC",
+              "POTION.FIRE_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.LANTERN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+            "monster_ids": [
+              "MONSTER.BYGONE_EFFIGY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 11,
+  "num_reloads": 12,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1939,7 +2054,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 17,
+      "current_hp": 27,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2056,29 +2171,32 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "CARD.PULL_AGGRO",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 118,
-        "debuffs_applied": 36
+        "damage_dealt": 176,
+        "debuffs_applied": 47
       },
-      "gold": 298,
+      "gold": 330,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 4,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
-          "id": "POTION.LUCKY_TONIC",
+          "id": "POTION.CLARITY",
           "slot_index": 0
-        },
-        {
-          "id": "POTION.FIRE_POTION",
-          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -2117,7 +2235,6 @@
             "RELIC.PEN_NIB"
           ],
           "common": [
-            "RELIC.LANTERN",
             "RELIC.JUZU_BRACELET",
             "RELIC.BLOOD_VIAL",
             "RELIC.PENDULUM",
@@ -2232,16 +2349,20 @@
         {
           "floor_added_to_deck": 10,
           "id": "RELIC.GORGET"
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "RELIC.LANTERN"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 73,
-            "s0": 7873831868393999388,
-            "s1": 5148176542877055374,
-            "s2": 496002784039039534,
-            "s3": 1680263824317045943
+            "counter": 87,
+            "s0": 7212093121058728026,
+            "s1": 3401510559784440826,
+            "s2": 4010246360988915725,
+            "s3": 5750501128922922828
           },
           "shops": {
             "counter": 0,
@@ -2336,11 +2457,11 @@
         "s3": 8949686389267949214
       },
       "shuffle": {
-        "counter": 124,
-        "s0": 3092572493815841513,
-        "s1": 4358757146333421894,
-        "s2": 1174511072859820463,
-        "s3": 6426525558595560614
+        "counter": 163,
+        "s0": 15634891559158885708,
+        "s1": 4810086812487304282,
+        "s2": 1906654315570385775,
+        "s3": 7272015461500845356
       },
       "unknown_map_point": {
         "counter": 0,
@@ -2392,11 +2513,11 @@
         "s3": 11977549301871327667
       },
       "niche": {
-        "counter": 14,
-        "s0": 12231149690404896837,
-        "s1": 4737793495839156867,
-        "s2": 10080317720857711991,
-        "s3": 4607108460843938049
+        "counter": 15,
+        "s0": 15533618245974891463,
+        "s1": 7176970122167074737,
+        "s2": 3347295013279896882,
+        "s3": 6012393214216318493
       },
       "combat_orbs": {
         "counter": 0,
@@ -2415,8 +2536,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 483,
-  "save_time": 1790824429,
+  "run_time": 702,
+  "save_time": 1790824654,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2467,7 +2588,6 @@
         "RELIC.BLOOD_VIAL",
         "RELIC.JUZU_BRACELET",
         "RELIC.VAJRA",
-        "RELIC.LANTERN",
         "RELIC.PENDULUM",
         "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.FESTIVE_POPPER",
@@ -2598,6 +2718,14 @@
     {
       "col": 3,
       "row": 11
+    },
+    {
+      "col": 3,
+      "row": 12
+    },
+    {
+      "col": 3,
+      "row": 13
     }
   ],
   "win_time": 0
