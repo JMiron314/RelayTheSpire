@@ -54,7 +54,7 @@
           "EVENT.RELIC_TRADER",
           "EVENT.TRASH_HEAP"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.CORPSE_SLUGS_WEAK",
           "ENCOUNTER.SEAPUNK_WEAK",
@@ -1229,11 +1229,14 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.BRAIN_LEECH"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZmBgaGCgaFWTaqLouX12R8msLbOzdo4cRgqS1ZpxrcfHaej9N8L6mhant4yZT03inveCZMmns0cNVmA68SNdfMc20aJ2fyplpoL3yTxjXl1plaodmp/lHGz09mpdlEnu1Q3yj5QcUie25I+sTJv9bkXlr40advS9PJWWG6lleiVOfeWrIkbPbkmGznSdW6zkIbATvp7mf23OP8Nqmbt1iUy2eHPylc3FmSJzLxyls5od0TnYvM0098/Ma18x6P4vNoiSd1ixtVCv738577WXhorV3UjlPHedR/nHh4S85R5triDu0qnUKTfjW+ZxPZHJqii3wKfPu48k5O3P/SYtd2YffP2x5a3DOQOTq79XF5c8GZvP+953R3B+5YaXbLbNexK2yXT9zcJ6kZrZKcYp00JYejZ8bZisAtW3W3mbW73kpbM+O2mmj57HmP8qqD7+TmdmkxzImJXDzZObukKLU36NzqiacCTZMsZ7vplZ+3eBYief2O8OM5zvFbivu7S/QyP5411Fm2M/eoYfjqG0+lRLfGzEqaNjloT5FzVxif+8ZTBzWYAO2K2lWbAQAA",
   "map_point_history": [
     [
       {
@@ -1574,23 +1577,98 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 5,
+                  "id": "CARD.FASTEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.CATASTROPHE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.RESTLESSNESS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.FASTEN",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 29,
+            "current_hp": 23,
+            "damage_taken": 5,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "BRAIN_LEECH.pages.INITIAL.options.RIP.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.BRAIN_LEECH",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
     "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 28,
+      "current_hp": 23,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1679,6 +1757,13 @@
         {
           "floor_added_to_deck": 4,
           "id": "CARD.GATHER_LIGHT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "CARD.FASTEN",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
@@ -1841,11 +1926,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 36,
-            "s0": 8161347684101379862,
-            "s1": 17259283873781588845,
-            "s2": 16605058772708892284,
-            "s3": 7916060273434914186
+            "counter": 42,
+            "s0": 3248948403988099360,
+            "s1": 16101781321032908092,
+            "s2": 2747472871592022948,
+            "s3": 8423841048543056734
           },
           "shops": {
             "counter": 28,
@@ -1952,11 +2037,11 @@
         "s3": 272217220342046024
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 8465635652259051612,
-        "s1": 8645043683042665354,
-        "s2": 14484134161643494481,
-        "s3": 1399240183282870999
+        "counter": 1,
+        "s0": 1290771814908260609,
+        "s1": 14664666994933630855,
+        "s2": 477460167026287629,
+        "s3": 2390193771533612143
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2024,8 +2109,8 @@
     },
     "seed": "63A7P3BDFHCY"
   },
-  "run_time": 205,
-  "save_time": 1790825249,
+  "run_time": 241,
+  "save_time": 1790825293,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2179,6 +2264,10 @@
     {
       "col": 4,
       "row": 4
+    },
+    {
+      "col": 3,
+      "row": 5
     }
   ],
   "win_time": 0
