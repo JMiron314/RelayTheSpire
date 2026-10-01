@@ -54,7 +54,7 @@
           "EVENT.TEA_MASTER",
           "EVENT.DROWNING_BEACON"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.TOADPOLES_WEAK",
           "ENCOUNTER.CORPSE_SLUGS_WEAK",
@@ -1061,11 +1061,14 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.DOORS_OF_LIGHT_AND_DARK"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZmBgYGOwY9iXkPWS8b70moaBPuuTihca8Ul0Gh8++tRTv2KfAfnc6U9H2Vy504ts67r7UNaw+qvdL/58J8bFHGwR0ivjMWJPE4h+5JPNdlfSZuY/tOHaaNe1wVru05cRiwKIncG0rJPLfTchJle7XXrCpsnWi6zmCbm9izaydYHHoYzboMD7oZhd2oOCYnfV8ia7GscN6f5Bu97T77Lk6UtIjaxHc8IO3xjFNTZBIlpz/WbS5mSevsO37m8sVZvNZtm/Pcy9LeS5znkvsoeTzZ4XdlSkZ5v3jvt8AlZ+03mYiemBXGdvNykOL0Wb5LQrJ7l2QJTQpd67lp1VpPr612nsufaZy8YqM6OWrlk8DqqVMYN1xKUwmf1avi3T3RJ9N6kvpbz6AlZz2TTCJPtonpS16oUnt988kS6+j5LummUx7o9BvNfhgUZ1zilWMWuPNsm9b+mzGqVs1rS9IvTv3ks3fSvLvht4z/e1WbJWSeF9BhBAAwLx7ZbAEAAA==",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgYWBgYGOwY9iXkPWS8b70moaBPuuTihca8Ul0Gh8++tRTv2KfAfnc6U9H2Vy504ts67r7UNaw+qvdL/58J8bFHGwR0ivjMWJPE4h+5JPNdlfSZuY/tOHaaNe1wVru05cThKIveGUjLP7bScRNle7TWrClsnmq4z2OYm9uzaCRaHHkazLsODbkZhNyqOyUnfl8haLCuc9yf5Rm+7z76LEyUtojbxHQ9Iezzj1BSZRMnpj3Wbi1nSOvuOn7l8cRavddvmPPeytPcS57nkPkoeT3b4XZmSUd4v3vstcMlZ+00moidmARbGdvNykOL0Wb5LQrJ7l2QJTQpd67lp1VpPr612nsufaZy8YqM6OWrlk8DqqVMYN1xKUwmf1avi3T3RJ9N6kvpbz6AlZz2TTCJPtonpS16oUnt988kS6+j5LummUx7o9BvNfhgUZ1zilWMWuPNsm9b+mzGqVs1rS9IvTv3ks3fSvLvht4z/e1WbJWSeF9DpZCjYrOOet+3pibObZHbenJpsPrtIJN2l76XOsY1zOy2ObeZwr152f8X5c9J/Z5YkO9zOlclY2Mu2dp3gQl1TpS3TjrVsu9Bx4Zokd5TBY3vllCvpwT1fcloL58oaNG3+5JrxbTfHGRXxVMmbSVrOUSKpFt1z36QaTl6rE7Vpiqt32SYOAKka+A7pAQAA",
   "map_point_history": [
     [
       {
@@ -1371,16 +1374,57 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 33,
+            "current_hp": 50,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.DEFEND_DEFECT",
+              "CARD.STRIKE_DEFECT"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.DOORS_OF_LIGHT_AND_DARK",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
     "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
@@ -1390,6 +1434,7 @@
       "current_hp": 50,
       "deck": [
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 1,
           "id": "CARD.STRIKE_DEFECT",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1418,6 +1463,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 1,
           "id": "CARD.DEFEND_DEFECT",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1765,11 +1811,11 @@
         "s3": 5542452675060694474
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 1199842998148673419,
-        "s1": 7717925542432632923,
-        "s2": 3671474159918450588,
-        "s3": 8414923891054886969
+        "counter": 1,
+        "s0": 1115474388712300521,
+        "s1": 5282323179829680204,
+        "s2": 761794065693222935,
+        "s3": 5047484029983149499
       },
       "combat_card_generation": {
         "counter": 0,
@@ -1837,8 +1883,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 139,
-  "save_time": 1790823747,
+  "run_time": 177,
+  "save_time": 1790823790,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1988,6 +2034,10 @@
     {
       "col": 1,
       "row": 3
+    },
+    {
+      "col": 2,
+      "row": 4
     }
   ],
   "win_time": 0
