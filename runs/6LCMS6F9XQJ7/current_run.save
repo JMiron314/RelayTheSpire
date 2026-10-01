@@ -57,7 +57,7 @@
           "EVENT.SELF_HELP_BOOK",
           "EVENT.DENSE_VEGETATION"
         ],
-        "events_visited": 1,
+        "events_visited": 3,
         "normal_encounter_ids": [
           "ENCOUNTER.SLIMES_WEAK",
           "ENCOUNTER.SHRINKER_BEETLE_WEAK",
@@ -1240,6 +1240,9 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.BRAIN_LEECH"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
@@ -1600,23 +1603,98 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 5,
+                  "id": "CARD.ULTIMATE_DEFEND",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.THE_BOMB",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.VOLLEY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.ULTIMATE_DEFEND",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 23,
+            "current_hp": 39,
+            "damage_taken": 5,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "BRAIN_LEECH.pages.INITIAL.options.RIP.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.BRAIN_LEECH",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 4,
+  "num_reloads": 5,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
     "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 44,
+      "current_hp": 39,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1733,6 +1811,13 @@
         {
           "floor_added_to_deck": 4,
           "id": "CARD.PRODUCTION",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "CARD.ULTIMATE_DEFEND",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
@@ -1913,11 +1998,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 40,
-            "s0": 3411733836388010064,
-            "s1": 13466009432152322067,
-            "s2": 1976913889536967897,
-            "s3": 8928186168327648173
+            "counter": 46,
+            "s0": 9951386733748434116,
+            "s1": 5487957701667401005,
+            "s2": 13278476986672577217,
+            "s3": 15557011667818010979
           },
           "shops": {
             "counter": 28,
@@ -2030,11 +2115,11 @@
         "s3": 5931270172398167437
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 8473349151337839874,
-        "s1": 2727935113691649509,
-        "s2": 4588490729291711255,
-        "s3": 12938855988522898182
+        "counter": 1,
+        "s0": 16419275793712643041,
+        "s1": 8061839850617547760,
+        "s2": 8010287345511726613,
+        "s3": 62050704433345990
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2102,8 +2187,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 142,
-  "save_time": 1790825885,
+  "run_time": 190,
+  "save_time": 1790826056,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2257,6 +2342,10 @@
     {
       "col": 0,
       "row": 4
+    },
+    {
+      "col": 0,
+      "row": 5
     }
   ],
   "win_time": 0
