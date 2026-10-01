@@ -75,7 +75,7 @@
           "ENCOUNTER.FLYCONID_NORMAL",
           "ENCOUNTER.SLIMES_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 2,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1399,11 +1399,86 @@
             "turns_taken": 7
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 3,
+                  "id": "CARD.SNAKEBITE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.DODGE_AND_ROLL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SUCKER_PUNCH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SNAKEBITE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 454,
+            "current_hp": 44,
+            "damage_taken": 1,
+            "gold_gained": 8,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.ENERGY_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+            "monster_ids": [
+              "MONSTER.SHRINKER_BEETLE"
+            ],
+            "room_type": "monster",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 3,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1415,7 +1490,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 45,
+      "current_hp": 44,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1521,25 +1596,36 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 3,
+          "id": "CARD.SNAKEBITE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 55,
-        "debuffs_applied": 3
+        "damage_dealt": 91,
+        "debuffs_applied": 7
       },
-      "gold": 446,
+      "gold": 454,
       "max_energy": 3,
       "max_hp": 70,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.035000004,
-        "potion_reward_odds_value": 0.3
+        "card_rarity_odds_value": -0.020000007,
+        "potion_reward_odds_value": 0.20000002
       },
       "potions": [
         {
           "id": "POTION.SKILL_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.ENERGY_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -1689,11 +1775,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 13,
-            "s0": 5525923140621492387,
-            "s1": 7254364170637986471,
-            "s2": 15947410115009261029,
-            "s3": 1412648078624233265
+            "counter": 26,
+            "s0": 2954903402741465064,
+            "s1": 9924190850610506421,
+            "s2": 13599641083367719657,
+            "s3": 6793319890058456372
           },
           "shops": {
             "counter": 0,
@@ -1799,11 +1885,11 @@
         "s3": 6724589788759297695
       },
       "shuffle": {
-        "counter": 35,
-        "s0": 14870378268663731166,
-        "s1": 13730492886551879770,
-        "s2": 5222248718903817497,
-        "s3": 8912750186485360772
+        "counter": 58,
+        "s0": 6482371276429328147,
+        "s1": 15483033547518349686,
+        "s2": 13531350671876844795,
+        "s3": 5931270172398167437
       },
       "unknown_map_point": {
         "counter": 0,
@@ -1855,11 +1941,11 @@
         "s3": 17489560876097053177
       },
       "niche": {
-        "counter": 3,
-        "s0": 5505778261078004223,
-        "s1": 2909674360501156080,
-        "s2": 15616135491938967598,
-        "s3": 9826427222382675309
+        "counter": 4,
+        "s0": 17030135755571063906,
+        "s1": 13600555587606710561,
+        "s2": 17152952189612405201,
+        "s3": 6319592648193779100
       },
       "combat_orbs": {
         "counter": 0,
@@ -1878,8 +1964,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 82,
-  "save_time": 1790825777,
+  "run_time": 115,
+  "save_time": 1790825827,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2028,6 +2114,10 @@
     {
       "col": 0,
       "row": 2
+    },
+    {
+      "col": 0,
+      "row": 3
     }
   ],
   "win_time": 0
