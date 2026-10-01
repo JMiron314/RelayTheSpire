@@ -1819,11 +1819,44 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 287,
+            "current_hp": 20,
+            "damage_taken": 0,
+            "gold_gained": 37,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.GORGET",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 9,
+  "num_reloads": 10,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1951,7 +1984,7 @@
         "damage_dealt": 100,
         "debuffs_applied": 32
       },
-      "gold": 250,
+      "gold": 287,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 4,
@@ -2025,7 +2058,6 @@
             "RELIC.WAR_PAINT",
             "RELIC.ODDLY_SMOOTH_STONE",
             "RELIC.REGAL_PILLOW",
-            "RELIC.GORGET",
             "RELIC.BONE_FLUTE",
             "RELIC.WHETSTONE",
             "RELIC.FESTIVE_POPPER",
@@ -2118,16 +2150,20 @@
         {
           "floor_added_to_deck": 9,
           "id": "RELIC.RIPPLE_BASIN"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.GORGET"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 61,
-            "s0": 12414274546825721014,
-            "s1": 13222783670265771837,
-            "s2": 9293452349892274602,
-            "s3": 15039311484319173828
+            "counter": 62,
+            "s0": 14663369921194528591,
+            "s1": 11182551062314199585,
+            "s2": 12380700269759651100,
+            "s3": 6881268125551409961
           },
           "shops": {
             "counter": 0,
@@ -2292,17 +2328,17 @@
         "s3": 6125220852891568525
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 17135249062699737260,
-        "s1": 11597306235795353718,
-        "s2": 15654956506566994291,
-        "s3": 15145996883074562977
+        "counter": 1,
+        "s0": 11460580527690754939,
+        "s1": 10699665753219316137,
+        "s2": 16549076897244482015,
+        "s3": 9330031640068428570
       }
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 411,
-  "save_time": 1790824234,
+  "run_time": 417,
+  "save_time": 1790824246,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2341,7 +2377,6 @@
         "RELIC.CENTENNIAL_PUZZLE",
         "RELIC.BAG_OF_MARBLES",
         "RELIC.WHETSTONE",
-        "RELIC.GORGET",
         "RELIC.WAR_PAINT",
         "RELIC.STRIKE_DUMMY",
         "RELIC.REGAL_PILLOW",
@@ -2477,6 +2512,10 @@
     {
       "col": 4,
       "row": 9
+    },
+    {
+      "col": 4,
+      "row": 10
     }
   ],
   "win_time": 0
