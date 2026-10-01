@@ -57,7 +57,7 @@
           "EVENT.SELF_HELP_BOOK",
           "EVENT.DENSE_VEGETATION"
         ],
-        "events_visited": 3,
+        "events_visited": 9,
         "normal_encounter_ids": [
           "ENCOUNTER.SLIMES_WEAK",
           "ENCOUNTER.SHRINKER_BEETLE_WEAK",
@@ -1241,7 +1241,8 @@
   "ascension": 10,
   "current_act_index": 0,
   "events_seen": [
-    "EVENT.BRAIN_LEECH"
+    "EVENT.BRAIN_LEECH",
+    "EVENT.THE_LEGENDS_WERE_TRUE"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1749,23 +1750,66 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 33,
+            "current_hp": 24,
+            "damage_taken": 8,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SNECKO_OIL",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.THE_LEGENDS_WERE_TRUE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 6,
+  "num_reloads": 7,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 32,
+      "current_hp": 24,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1915,6 +1959,10 @@
         "potion_reward_odds_value": 0.3
       },
       "potions": [
+        {
+          "id": "POTION.SNECKO_OIL",
+          "slot_index": 0
+        },
         {
           "id": "POTION.ENERGY_POTION",
           "slot_index": 1
@@ -2072,11 +2120,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 57,
-            "s0": 11519358753269277412,
-            "s1": 10606400113963918286,
-            "s2": 11558095501791003398,
-            "s3": 3884440281039587862
+            "counter": 58,
+            "s0": 4108750359152347964,
+            "s1": 12433279597780828716,
+            "s2": 4526299770225025506,
+            "s3": 14211975980895827869
           },
           "shops": {
             "counter": 28,
@@ -2189,11 +2237,11 @@
         "s3": 4535602095097178300
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 16419275793712643041,
-        "s1": 8061839850617547760,
-        "s2": 8010287345511726613,
-        "s3": 62050704433345990
+        "counter": 2,
+        "s0": 10151648195047007703,
+        "s1": 16363782038308040196,
+        "s2": 6752116276593755636,
+        "s3": 5460277992994177277
       },
       "combat_card_generation": {
         "counter": 38,
@@ -2261,8 +2309,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 265,
-  "save_time": 1790826154,
+  "run_time": 288,
+  "save_time": 1790826191,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2424,6 +2472,10 @@
     {
       "col": 0,
       "row": 6
+    },
+    {
+      "col": 1,
+      "row": 7
     }
   ],
   "win_time": 0
