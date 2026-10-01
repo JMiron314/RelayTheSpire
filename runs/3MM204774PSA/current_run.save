@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.SKULKING_COLONY_ELITE"
         ],
-        "elite_encounters_visited": 2,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.WATERLOGGED_SCRIPTORIUM",
           "EVENT.DOORS_OF_LIGHT_AND_DARK",
@@ -2008,11 +2008,89 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 14,
+                  "id": "CARD.FIGHT_THROUGH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.SCAVENGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CHAOS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.FIGHT_THROUGH",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 45,
+            "current_hp": 49,
+            "damage_taken": 10,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.HAPPY_FLOWER",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
+            "monster_ids": [
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 12,
+  "num_reloads": 13,
   "odds": {
     "unknown_map_point_elite_odds_value": -4,
     "unknown_map_point_monster_odds_value": 0.4,
@@ -2024,7 +2102,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 59,
+      "current_hp": 49,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -2161,20 +2239,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 14,
+          "id": "CARD.FIGHT_THROUGH",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 312,
-        "debuffs_applied": 3
+        "damage_dealt": 430,
+        "debuffs_applied": 4
       },
-      "gold": 13,
+      "gold": 45,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.039999988,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.054999985,
+        "potion_reward_odds_value": 0.70000005
       },
       "potions": [
         {
@@ -2222,7 +2307,6 @@
             "RELIC.LUCKY_FYSH"
           ],
           "common": [
-            "RELIC.HAPPY_FLOWER",
             "RELIC.ODDLY_SMOOTH_STONE",
             "RELIC.WHETSTONE",
             "RELIC.BOOK_OF_FIVE_RINGS",
@@ -2338,16 +2422,28 @@
         {
           "floor_added_to_deck": 11,
           "id": "RELIC.MEAL_TICKET"
+        },
+        {
+          "floor_added_to_deck": 14,
+          "id": "RELIC.HAPPY_FLOWER",
+          "props": {
+            "ints": [
+              {
+                "name": "TurnsSeen",
+                "value": 0
+              }
+            ]
+          }
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 93,
-            "s0": 13082876619600311971,
-            "s1": 2532352737559116306,
-            "s2": 6982495574675887480,
-            "s3": 919135540003381888
+            "counter": 105,
+            "s0": 14213852708220269221,
+            "s1": 10341453847056053504,
+            "s2": 14427292967808638468,
+            "s3": 16131587581906635405
           },
           "shops": {
             "counter": 28,
@@ -2447,11 +2543,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 96,
-        "s0": 14414197129884170396,
-        "s1": 70914982861438090,
-        "s2": 3494584365035519872,
-        "s3": 9656463321659214821
+        "counter": 126,
+        "s0": 2196443134085115754,
+        "s1": 10860683147090400714,
+        "s2": 7999243257363083382,
+        "s3": 3423903627781707040
       },
       "unknown_map_point": {
         "counter": 3,
@@ -2489,11 +2585,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 24,
-        "s0": 5497975514656612256,
-        "s1": 5700383292033046007,
-        "s2": 4531260086637477050,
-        "s3": 18132320391768425950
+        "counter": 26,
+        "s0": 1100429507059638239,
+        "s1": 2243813705154615934,
+        "s2": 8610262556164287635,
+        "s3": 10523468627507433715
       },
       "monster_ai": {
         "counter": 0,
@@ -2503,11 +2599,11 @@
         "s3": 6088552758004036187
       },
       "niche": {
-        "counter": 6,
-        "s0": 18253432158222348744,
-        "s1": 408582212902680652,
-        "s2": 3869751252673534308,
-        "s3": 5953043532441347852
+        "counter": 10,
+        "s0": 13662460206887575483,
+        "s1": 14924577220662335942,
+        "s2": 1902709796339199886,
+        "s3": 9373997590470161312
       },
       "combat_orbs": {
         "counter": 0,
@@ -2526,8 +2622,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 590,
-  "save_time": 1790824451,
+  "run_time": 674,
+  "save_time": 1790824745,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2564,7 +2660,6 @@
       ],
       "common": [
         "RELIC.BOOK_OF_FIVE_RINGS",
-        "RELIC.HAPPY_FLOWER",
         "RELIC.STRAWBERRY",
         "RELIC.ODDLY_SMOOTH_STONE",
         "RELIC.STRIKE_DUMMY",
@@ -2714,6 +2809,10 @@
     {
       "col": 0,
       "row": 13
+    },
+    {
+      "col": 0,
+      "row": 14
     }
   ],
   "win_time": 0
