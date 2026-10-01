@@ -1474,11 +1474,137 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "bought_colorless": [
+              "CARD.PRODUCTION"
+            ],
+            "bought_relics": [
+              "RELIC.LANTERN",
+              "RELIC.GHOST_SEED"
+            ],
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.LEADING_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.POUNCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SNAKEBITE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BLADE_DANCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ACCURACY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.HAND_OF_GREED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.PRODUCTION",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 23,
+            "current_hp": 44,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 431,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.OROBIC_ACID",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.EXPLOSIVE_AMPOULE",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.ATTACK_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.LANTERN",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.GHOST_SEED",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.PARRYING_SHIELD",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1603,13 +1729,20 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.PRODUCTION",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "damage_dealt": 91,
         "debuffs_applied": 7
       },
-      "gold": 454,
+      "gold": 23,
       "max_energy": 3,
       "max_hp": 70,
       "max_potion_slot_count": 2,
@@ -1661,8 +1794,7 @@
             "RELIC.TINGSHA",
             "RELIC.CANDELABRA",
             "RELIC.GREMLIN_HORN",
-            "RELIC.LETTER_OPENER",
-            "RELIC.PARRYING_SHIELD"
+            "RELIC.LETTER_OPENER"
           ],
           "common": [
             "RELIC.SNECKO_SKULL",
@@ -1689,8 +1821,7 @@
             "RELIC.REGAL_PILLOW",
             "RELIC.BRONZE_SCALES",
             "RELIC.BAG_OF_MARBLES",
-            "RELIC.VENERABLE_TEA_SET",
-            "RELIC.LANTERN"
+            "RELIC.VENERABLE_TEA_SET"
           ],
           "rare": [
             "RELIC.SHOVEL",
@@ -1757,8 +1888,7 @@
             "RELIC.SLING_OF_COURAGE",
             "RELIC.MINIATURE_TENT",
             "RELIC.DRAGON_FRUIT",
-            "RELIC.DINGY_RUG",
-            "RELIC.GHOST_SEED"
+            "RELIC.DINGY_RUG"
           ]
         }
       },
@@ -1770,23 +1900,31 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.CURSED_PEARL"
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "RELIC.LANTERN"
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "RELIC.GHOST_SEED"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 26,
-            "s0": 2954903402741465064,
-            "s1": 9924190850610506421,
-            "s2": 13599641083367719657,
-            "s3": 6793319890058456372
+            "counter": 40,
+            "s0": 3411733836388010064,
+            "s1": 13466009432152322067,
+            "s2": 1976913889536967897,
+            "s3": 8928186168327648173
           },
           "shops": {
-            "counter": 0,
-            "s0": 5871507106368454583,
-            "s1": 1871811211383348736,
-            "s2": 15778301847484113047,
-            "s3": 14901981747714109816
+            "counter": 28,
+            "s0": 5648544475327344098,
+            "s1": 13230029475498586237,
+            "s2": 7842328434573651925,
+            "s3": 5337153216223984937
           },
           "transformations": {
             "counter": 0,
@@ -1964,8 +2102,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 115,
-  "save_time": 1790825827,
+  "run_time": 142,
+  "save_time": 1790825885,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1986,7 +2124,6 @@
         "RELIC.HORN_CLEAT",
         "RELIC.PEN_NIB",
         "RELIC.MINIATURE_CANNON",
-        "RELIC.PARRYING_SHIELD",
         "RELIC.KUSARIGAMA",
         "RELIC.LUCKY_FYSH",
         "RELIC.JOSS_PAPER",
@@ -2023,7 +2160,6 @@
         "RELIC.BRONZE_SCALES",
         "RELIC.JUZU_BRACELET",
         "RELIC.WAR_PAINT",
-        "RELIC.LANTERN",
         "RELIC.HAPPY_FLOWER",
         "RELIC.BLOOD_VIAL",
         "RELIC.FESTIVE_POPPER"
@@ -2081,7 +2217,6 @@
         "RELIC.MINIATURE_TENT",
         "RELIC.LEES_WAFFLE",
         "RELIC.KIFUDA",
-        "RELIC.GHOST_SEED",
         "RELIC.RINGING_TRIANGLE",
         "RELIC.DINGY_RUG",
         "RELIC.ORRERY",
@@ -2118,6 +2253,10 @@
     {
       "col": 0,
       "row": 3
+    },
+    {
+      "col": 0,
+      "row": 4
     }
   ],
   "win_time": 0
