@@ -130,7 +130,7 @@
           "EVENT.WAR_HISTORIAN_REPY",
           "EVENT.FAKE_MERCHANT"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.TUNNELER_WEAK",
           "ENCOUNTER.THIEVING_HOPPER_WEAK",
@@ -930,7 +930,8 @@
   "events_seen": [
     "EVENT.DOORS_OF_LIGHT_AND_DARK",
     "EVENT.TRASH_HEAP",
-    "EVENT.ENDLESS_CONVEYOR"
+    "EVENT.ENDLESS_CONVEYOR",
+    "EVENT.INFESTED_AUTOMATON"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -2310,16 +2311,60 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_gained": [
+              {
+                "id": "CARD.HOTFIX",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 137,
+            "current_hp": 70,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE.title",
+                  "table": "events"
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.INFESTED_AUTOMATON",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 18,
+  "num_reloads": 19,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
@@ -2461,6 +2506,13 @@
         {
           "floor_added_to_deck": 19,
           "id": "CARD.HOLOGRAM",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 20,
+          "id": "CARD.HOTFIX",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
@@ -2661,11 +2713,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 142,
-            "s0": 460574344720664348,
-            "s1": 1772541011773679223,
-            "s2": 11483942160031832474,
-            "s3": 16423202910903236597
+            "counter": 144,
+            "s0": 7963920955767269548,
+            "s1": 5539393235477704937,
+            "s2": 12028926535718193176,
+            "s3": 17277587671330645645
           },
           "shops": {
             "counter": 28,
@@ -2772,11 +2824,11 @@
         "s3": 5033046310305398704
       },
       "unknown_map_point": {
-        "counter": 4,
-        "s0": 3074692546798380514,
-        "s1": 13269751578273662300,
-        "s2": 8750298738237773582,
-        "s3": 7629546994052479061
+        "counter": 5,
+        "s0": 18117340031231105259,
+        "s1": 16997550376967026608,
+        "s2": 1317021000977314540,
+        "s3": 9196695929599168033
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2844,8 +2896,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1011,
-  "save_time": 1790825184,
+  "run_time": 1033,
+  "save_time": 1790825278,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2987,6 +3039,10 @@
     {
       "col": 5,
       "row": 2
+    },
+    {
+      "col": 5,
+      "row": 3
     }
   ],
   "win_time": 0
