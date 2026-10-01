@@ -3923,11 +3923,44 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 276,
+            "current_hp": 57,
+            "damage_taken": 0,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 7,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 7,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.STRAWBERRY",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 39,
+  "num_reloads": 40,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -3939,7 +3972,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 50,
+      "current_hp": 57,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -4173,9 +4206,9 @@
         "damage_dealt": 2435,
         "debuffs_applied": 31
       },
-      "gold": 240,
+      "gold": 276,
       "max_energy": 3,
-      "max_hp": 79,
+      "max_hp": 86,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
@@ -4229,7 +4262,6 @@
             "RELIC.GORGET",
             "RELIC.CENTENNIAL_PUZZLE",
             "RELIC.VENERABLE_TEA_SET",
-            "RELIC.STRAWBERRY",
             "RELIC.DATA_DISK",
             "RELIC.VAJRA",
             "RELIC.BAG_OF_PREPARATION",
@@ -4390,16 +4422,20 @@
         {
           "floor_added_to_deck": 39,
           "id": "RELIC.VAMBRACE"
+        },
+        {
+          "floor_added_to_deck": 41,
+          "id": "RELIC.STRAWBERRY"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 270,
-            "s0": 1395332996625975202,
-            "s1": 9859278400219879247,
-            "s2": 2451438074293106017,
-            "s3": 7993455696427666561
+            "counter": 271,
+            "s0": 17681258694792748140,
+            "s1": 13369858468942964108,
+            "s2": 6032487674906964675,
+            "s3": 12356149802753173109
           },
           "shops": {
             "counter": 56,
@@ -4569,17 +4605,17 @@
         "s3": 15602353924628334763
       },
       "treasure_room_relics": {
-        "counter": 3,
-        "s0": 7826591891376287656,
-        "s1": 13640051733858645868,
-        "s2": 5888046684396313782,
-        "s3": 18308765013133649037
+        "counter": 4,
+        "s0": 3441697711900441673,
+        "s1": 9250422567157367922,
+        "s2": 6393560782150071070,
+        "s3": 14014120584250770734
       }
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 2605,
-  "save_time": 1790827714,
+  "run_time": 2611,
+  "save_time": 1790827725,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -4598,26 +4634,19 @@
         "RELIC.TUNING_FORK",
         "RELIC.AKABEKO",
         "RELIC.PARRYING_SHIELD",
-        "RELIC.LASTING_CANDY",
         "RELIC.PERMAFROST",
         "RELIC.HORN_CLEAT",
         "RELIC.KUSARIGAMA",
         "RELIC.CANDELABRA",
-        "RELIC.BOWLER_HAT",
         "RELIC.ETERNAL_FEATHER",
         "RELIC.MERCURY_HOURGLASS",
         "RELIC.SPARKLING_ROUGE",
-        "RELIC.PETRIFIED_TOAD",
-        "RELIC.LUCKY_FYSH"
+        "RELIC.PETRIFIED_TOAD"
       ],
       "common": [
-        "RELIC.BOOK_OF_FIVE_RINGS",
-        "RELIC.STRAWBERRY",
         "RELIC.STRIKE_DUMMY",
-        "RELIC.AMETHYST_AUBERGINE",
         "RELIC.ANCHOR",
         "RELIC.VENERABLE_TEA_SET",
-        "RELIC.JUZU_BRACELET",
         "RELIC.VAJRA",
         "RELIC.PENDULUM",
         "RELIC.CENTENNIAL_PUZZLE",
@@ -4633,30 +4662,22 @@
         "RELIC.UNSETTLING_LAMP",
         "RELIC.STURDY_CLAMP",
         "RELIC.LIZARD_TAIL",
-        "RELIC.GIRYA",
         "RELIC.BEATING_REMNANT",
         "RELIC.KUNAI",
-        "RELIC.WHITE_STAR",
         "RELIC.ART_OF_WAR",
-        "RELIC.FROZEN_EGG",
-        "RELIC.MOLTEN_EGG",
         "RELIC.CHANDELIER",
         "RELIC.RAZOR_TOOTH",
         "RELIC.MEAT_ON_THE_BONE",
-        "RELIC.WHITE_BEAST_STATUE",
         "RELIC.ICE_CREAM",
         "RELIC.GAMBLING_CHIP",
         "RELIC.RAINBOW_RING",
         "RELIC.MUMMIFIED_HAND",
         "RELIC.BELLOWS",
-        "RELIC.SHOVEL",
         "RELIC.PRAYER_WHEEL",
         "RELIC.CAPTAINS_WHEEL",
         "RELIC.INTIMIDATING_HELMET",
         "RELIC.SHURIKEN",
         "RELIC.VEXING_PUZZLEBOX",
-        "RELIC.TOXIC_EGG",
-        "RELIC.OLD_COIN",
         "RELIC.TUNGSTEN_ROD",
         "RELIC.MANGO",
         "RELIC.THE_COURIER",
@@ -4686,7 +4707,6 @@
         "RELIC.SCREAMING_FLAGON",
         "RELIC.SLING_OF_COURAGE",
         "RELIC.BELT_BUCKLE",
-        "RELIC.DRAGON_FRUIT",
         "RELIC.LEES_WAFFLE",
         "RELIC.THE_ABACUS"
       ],
@@ -4732,6 +4752,10 @@
     {
       "col": 4,
       "row": 7
+    },
+    {
+      "col": 3,
+      "row": 8
     }
   ],
   "win_time": 0
