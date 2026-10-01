@@ -23,7 +23,7 @@
           "ENCOUNTER.PHROG_PARASITE_ELITE",
           "ENCOUNTER.BYRDONIS_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.WOOD_CARVINGS",
           "EVENT.POTION_COURIER",
@@ -1822,11 +1822,86 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.FLECHETTES",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.KNIFE_TRAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ANTICIPATE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 65,
+            "current_hp": 27,
+            "damage_taken": 28,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 10,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 10,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SKILL_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.SNECKO_OIL"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.PEAR",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+            "monster_ids": [
+              "MONSTER.BYGONE_EFFIGY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 11
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1838,7 +1913,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 45,
+      "current_hp": 27,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1975,21 +2050,21 @@
         }
       ],
       "extra_fields": {
-        "damage_dealt": 132,
-        "debuffs_applied": 10
+        "damage_dealt": 184,
+        "debuffs_applied": 22
       },
-      "gold": 33,
+      "gold": 65,
       "max_energy": 3,
-      "max_hp": 70,
+      "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.3
+        "card_rarity_odds_value": -0.045,
+        "potion_reward_odds_value": 0.20000002
       },
       "potions": [
         {
-          "id": "POTION.SNECKO_OIL",
+          "id": "POTION.SKILL_POTION",
           "slot_index": 0
         },
         {
@@ -2000,7 +2075,6 @@
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.PEAR",
             "RELIC.REPTILE_TRINKET",
             "RELIC.PERMAFROST",
             "RELIC.HORN_CLEAT",
@@ -2144,16 +2218,20 @@
         {
           "floor_added_to_deck": 4,
           "id": "RELIC.GHOST_SEED"
+        },
+        {
+          "floor_added_to_deck": 9,
+          "id": "RELIC.PEAR"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 58,
-            "s0": 4108750359152347964,
-            "s1": 12433279597780828716,
-            "s2": 4526299770225025506,
-            "s3": 14211975980895827869
+            "counter": 72,
+            "s0": 5935862972378683818,
+            "s1": 14464667057791962221,
+            "s2": 8296174764104218101,
+            "s3": 3596814929913821853
           },
           "shops": {
             "counter": 28,
@@ -2259,11 +2337,11 @@
         "s3": 6724589788759297695
       },
       "shuffle": {
-        "counter": 84,
-        "s0": 237250456512133866,
-        "s1": 17865600437736277853,
-        "s2": 11287282086535578140,
-        "s3": 4535602095097178300
+        "counter": 139,
+        "s0": 14397389576749998801,
+        "s1": 16594769118537851117,
+        "s2": 11528015048965652601,
+        "s3": 17288478477549510951
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2294,18 +2372,18 @@
         "s3": 11217701547225945590
       },
       "combat_energy_costs": {
-        "counter": 0,
-        "s0": 3069119172138334083,
-        "s1": 13523805863542229508,
-        "s2": 2851930551680225518,
-        "s3": 2823958731708923581
+        "counter": 9,
+        "s0": 13617693316248479252,
+        "s1": 16385689893242412007,
+        "s2": 1702800797019853502,
+        "s3": 4589164782951363626
       },
       "combat_targets": {
-        "counter": 0,
-        "s0": 8895351899193185355,
-        "s1": 12873693063320883261,
-        "s2": 15400959642869163235,
-        "s3": 16438812500382001075
+        "counter": 1,
+        "s0": 3312481163098088389,
+        "s1": 2044946477573251221,
+        "s2": 13370577146828583080,
+        "s3": 9147315318739152772
       },
       "monster_ai": {
         "counter": 9,
@@ -2315,11 +2393,11 @@
         "s3": 17489560876097053177
       },
       "niche": {
-        "counter": 5,
-        "s0": 529849177627148511,
-        "s1": 13754648709015426194,
-        "s2": 13845107173709110707,
-        "s3": 5014684937272888688
+        "counter": 6,
+        "s0": 18171899446814480701,
+        "s1": 8762739042807532030,
+        "s2": 8014607260359531884,
+        "s3": 3115469971458109872
       },
       "combat_orbs": {
         "counter": 0,
@@ -2338,8 +2416,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 307,
-  "save_time": 1790826233,
+  "run_time": 490,
+  "save_time": 1790826448,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2350,7 +2428,6 @@
         "RELIC.LASTING_CANDY",
         "RELIC.SPARKLING_ROUGE",
         "RELIC.PLANISPHERE",
-        "RELIC.PEAR",
         "RELIC.ORNAMENTAL_FAN",
         "RELIC.MERCURY_HOURGLASS",
         "RELIC.TUNING_FORK",
@@ -2509,6 +2586,10 @@
     {
       "col": 2,
       "row": 8
+    },
+    {
+      "col": 3,
+      "row": 9
     }
   ],
   "win_time": 0
