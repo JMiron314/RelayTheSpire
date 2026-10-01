@@ -99,7 +99,7 @@
           "ENCOUNTER.DECIMILLIPEDE_ELITE",
           "ENCOUNTER.INFESTED_PRISMS_ELITE"
         ],
-        "elite_encounters_visited": 2,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.RANWID_THE_ELDER",
           "EVENT.INFESTED_AUTOMATON",
@@ -3153,11 +3153,77 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.GO_FOR_THE_EYES",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.COOLHEADED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.GLASSWORK",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 99,
+            "current_hp": 48,
+            "damage_taken": 14,
+            "gold_gained": 31,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.PANTOGRAPH",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.ENTOMANCER_ELITE",
+            "monster_ids": [
+              "MONSTER.ENTOMANCER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 7
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 29,
+  "num_reloads": 30,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -3169,7 +3235,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 62,
+      "current_hp": 48,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -3366,17 +3432,17 @@
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 1367,
-        "debuffs_applied": 14
+        "damage_dealt": 1532,
+        "debuffs_applied": 15
       },
-      "gold": 68,
+      "gold": 99,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
-        "potion_reward_odds_value": 0.3
+        "card_rarity_odds_value": 0.039999988,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
@@ -3391,7 +3457,6 @@
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.PANTOGRAPH",
             "RELIC.KUSARIGAMA",
             "RELIC.NUNCHAKU",
             "RELIC.RIPPLE_BASIN",
@@ -3540,7 +3605,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 0
+                "value": 1
               }
             ]
           }
@@ -3564,7 +3629,7 @@
             "ints": [
               {
                 "name": "AttacksPlayed",
-                "value": 6
+                "value": 1
               }
             ]
           }
@@ -3576,16 +3641,20 @@
         {
           "floor_added_to_deck": 29,
           "id": "RELIC.WHETSTONE"
+        },
+        {
+          "floor_added_to_deck": 31,
+          "id": "RELIC.PANTOGRAPH"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 209,
-            "s0": 8490478390318803013,
-            "s1": 5628931519282341716,
-            "s2": 12012922199381654386,
-            "s3": 17233900868952388451
+            "counter": 221,
+            "s0": 13779378963729403032,
+            "s1": 18322310707029712137,
+            "s2": 17082045356247826054,
+            "s3": 3368031256411571239
           },
           "shops": {
             "counter": 56,
@@ -3685,11 +3754,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 380,
-        "s0": 15893219459666220695,
-        "s1": 14404406053427320722,
-        "s2": 15882034449556146320,
-        "s3": 9412405166611388383
+        "counter": 461,
+        "s0": 14459592353563722070,
+        "s1": 6963350453134983403,
+        "s2": 7788227832334308534,
+        "s3": 10054875030292959873
       },
       "unknown_map_point": {
         "counter": 8,
@@ -3699,11 +3768,11 @@
         "s3": 15468445710276568557
       },
       "combat_card_generation": {
-        "counter": 189,
-        "s0": 14371376618462923906,
-        "s1": 16252221181605972139,
-        "s2": 1205759515426664238,
-        "s3": 10658171946832856220
+        "counter": 328,
+        "s0": 3725215020030066872,
+        "s1": 14283309128999101226,
+        "s2": 11240539503245422734,
+        "s3": 9315948166135249426
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -3727,11 +3796,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 62,
-        "s0": 10554787276103366820,
-        "s1": 6390040088315072881,
-        "s2": 4444127067781646080,
-        "s3": 4805595548717828370
+        "counter": 75,
+        "s0": 312323456624021659,
+        "s1": 15714449729760275268,
+        "s2": 9234766461342466975,
+        "s3": 16239078857022898582
       },
       "monster_ai": {
         "counter": 4,
@@ -3741,11 +3810,11 @@
         "s3": 5653756567085345448
       },
       "niche": {
-        "counter": 23,
-        "s0": 9258696943177879759,
-        "s1": 3264512087354065847,
-        "s2": 14975394773745054511,
-        "s3": 11632386146606115257
+        "counter": 24,
+        "s0": 891174186981554881,
+        "s1": 7125773875836166231,
+        "s2": 10325402156380873696,
+        "s3": 10755107751836018594
       },
       "combat_orbs": {
         "counter": 0,
@@ -3764,8 +3833,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1671,
-  "save_time": 1790826560,
+  "run_time": 1824,
+  "save_time": 1790826726,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3795,8 +3864,7 @@
         "RELIC.MERCURY_HOURGLASS",
         "RELIC.SPARKLING_ROUGE",
         "RELIC.PETRIFIED_TOAD",
-        "RELIC.LUCKY_FYSH",
-        "RELIC.PANTOGRAPH"
+        "RELIC.LUCKY_FYSH"
       ],
       "common": [
         "RELIC.BOOK_OF_FIVE_RINGS",
@@ -3944,6 +4012,10 @@
     {
       "col": 0,
       "row": 13
+    },
+    {
+      "col": 1,
+      "row": 14
     }
   ],
   "win_time": 0
