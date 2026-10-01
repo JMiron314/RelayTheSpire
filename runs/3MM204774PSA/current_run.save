@@ -130,7 +130,7 @@
           "EVENT.WAR_HISTORIAN_REPY",
           "EVENT.FAKE_MERCHANT"
         ],
-        "events_visited": 2,
+        "events_visited": 3,
         "normal_encounter_ids": [
           "ENCOUNTER.TUNNELER_WEAK",
           "ENCOUNTER.THIEVING_HOPPER_WEAK",
@@ -931,13 +931,14 @@
     "EVENT.DOORS_OF_LIGHT_AND_DARK",
     "EVENT.TRASH_HEAP",
     "EVENT.ENDLESS_CONVEYOR",
-    "EVENT.INFESTED_AUTOMATON"
+    "EVENT.INFESTED_AUTOMATON",
+    "EVENT.SPIRIT_GRAFTER"
   ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoHcCQFR2Zmuu8ektu6tTNvGuMtmWGHjJbeepaWMjMWwla3tIuSzOSl3/JOTJlru/kSZvXBhaZiZ06W2a78uYrNePbJ1TSuKfvyVk2aVqu76VNDz2izFg8T0+TzbyZpqwdnayS6t09JcdmYu9ahU0bHJ0/mQZ77GDj0Ly2RmH5LQ6VgN91KZnz+iV7X19coGlzaXOce2nb84hzfTKMAJRtMvKkAAAA",
   "map_point_history": [
     [
       {
@@ -2355,23 +2356,63 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 137,
+            "current_hp": 60,
+            "damage_taken": 10,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SPIRIT_GRAFTER.pages.INITIAL.options.REJECTION.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.ROCKET_PUNCH"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.SPIRIT_GRAFTER",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 19,
+  "num_reloads": 20,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 70,
+      "current_hp": 60,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -2432,6 +2473,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 2,
           "id": "CARD.ROCKET_PUNCH",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2824,11 +2866,11 @@
         "s3": 5033046310305398704
       },
       "unknown_map_point": {
-        "counter": 5,
-        "s0": 18117340031231105259,
-        "s1": 16997550376967026608,
-        "s2": 1317021000977314540,
-        "s3": 9196695929599168033
+        "counter": 6,
+        "s0": 8011882841230647674,
+        "s1": 200455647096528311,
+        "s2": 3832240584683547143,
+        "s3": 16659433532544205116
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2896,8 +2938,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1033,
-  "save_time": 1790825278,
+  "run_time": 1066,
+  "save_time": 1790825677,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3043,6 +3085,10 @@
     {
       "col": 5,
       "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
     }
   ],
   "win_time": 0
