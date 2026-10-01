@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.SKULKING_COLONY_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.WATERLOGGED_SCRIPTORIUM",
           "EVENT.DOORS_OF_LIGHT_AND_DARK",
@@ -1598,11 +1598,86 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 8,
+                  "id": "CARD.SHADOW_SHIELD",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.LEAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ROCKET_PUNCH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SHADOW_SHIELD",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 71,
+            "current_hp": 36,
+            "damage_taken": 28,
+            "gold_gained": 28,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.FESTIVE_POPPER",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TERROR_EEL_ELITE",
+            "monster_ids": [
+              "MONSTER.TERROR_EEL"
+            ],
+            "room_type": "elite",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 7,
+  "num_reloads": 8,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1614,7 +1689,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 64,
+      "current_hp": 36,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -1729,19 +1804,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "CARD.SHADOW_SHIELD",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 106
+        "damage_dealt": 256,
+        "debuffs_applied": 1
       },
-      "gold": 43,
+      "gold": 71,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.70000005
       },
       "potions": [
         {
@@ -1785,7 +1868,6 @@
             "RELIC.LUCKY_FYSH"
           ],
           "common": [
-            "RELIC.FESTIVE_POPPER",
             "RELIC.MEAL_TICKET",
             "RELIC.HAPPY_FLOWER",
             "RELIC.ODDLY_SMOOTH_STONE",
@@ -1892,16 +1974,20 @@
         {
           "floor_added_to_deck": 5,
           "id": "RELIC.DREAM_CATCHER"
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "RELIC.FESTIVE_POPPER"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 56,
-            "s0": 9121218343157237963,
-            "s1": 9088810313727466382,
-            "s2": 9077362578766606275,
-            "s3": 17801333454471230142
+            "counter": 68,
+            "s0": 2276122131276659870,
+            "s1": 11005580776779670606,
+            "s2": 2321918290990723917,
+            "s3": 2860198147109952142
           },
           "shops": {
             "counter": 28,
@@ -2001,11 +2087,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 40,
-        "s0": 13023500971944659777,
-        "s1": 4577513677051757815,
-        "s2": 6240178929916549515,
-        "s3": 12130844345599768987
+        "counter": 79,
+        "s0": 9426438658484101190,
+        "s1": 16840346999491907077,
+        "s2": 5013464755925037376,
+        "s3": 9749246237174711798
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2043,11 +2129,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 10,
-        "s0": 7182912469796340518,
-        "s1": 1949150045453531708,
-        "s2": 6447497871304220955,
-        "s3": 12571673623883662949
+        "counter": 21,
+        "s0": 1167271178251171736,
+        "s1": 1195914659283914468,
+        "s2": 17783724472719240764,
+        "s3": 9374512590760795861
       },
       "monster_ai": {
         "counter": 0,
@@ -2057,11 +2143,11 @@
         "s3": 6088552758004036187
       },
       "niche": {
-        "counter": 4,
-        "s0": 2915891225522583843,
-        "s1": 17478983629340089711,
-        "s2": 5551904132390798692,
-        "s3": 10078329856664715631
+        "counter": 5,
+        "s0": 5853530549333419299,
+        "s1": 10946794917916172584,
+        "s2": 14085759506491440199,
+        "s3": 4287443516559422915
       },
       "combat_orbs": {
         "counter": 0,
@@ -2080,8 +2166,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 312,
-  "save_time": 1790823966,
+  "run_time": 421,
+  "save_time": 1790824130,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2128,7 +2214,6 @@
         "RELIC.ANCHOR",
         "RELIC.VENERABLE_TEA_SET",
         "RELIC.BRONZE_SCALES",
-        "RELIC.FESTIVE_POPPER",
         "RELIC.JUZU_BRACELET",
         "RELIC.VAJRA",
         "RELIC.PENDULUM",
@@ -2247,6 +2332,10 @@
     {
       "col": 3,
       "row": 7
+    },
+    {
+      "col": 3,
+      "row": 8
     }
   ],
   "win_time": 0
