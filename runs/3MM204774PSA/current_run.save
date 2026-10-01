@@ -2727,11 +2727,44 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 196,
+            "current_hp": 37,
+            "damage_taken": 0,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.PEN_NIB",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 24,
+  "num_reloads": 25,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -2924,7 +2957,7 @@
         "damage_dealt": 1112,
         "debuffs_applied": 9
       },
-      "gold": 160,
+      "gold": 196,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
@@ -2963,7 +2996,6 @@
             "RELIC.JOSS_PAPER",
             "RELIC.BOWLER_HAT",
             "RELIC.TINY_MAILBOX",
-            "RELIC.PEN_NIB",
             "RELIC.PARRYING_SHIELD",
             "RELIC.ETERNAL_FEATHER",
             "RELIC.AKABEKO",
@@ -3116,16 +3148,28 @@
         {
           "floor_added_to_deck": 24,
           "id": "RELIC.ORICHALCUM"
+        },
+        {
+          "floor_added_to_deck": 26,
+          "id": "RELIC.PEN_NIB",
+          "props": {
+            "ints": [
+              {
+                "name": "AttacksPlayed",
+                "value": 0
+              }
+            ]
+          }
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 158,
-            "s0": 7646303366988800162,
-            "s1": 16008277592706140374,
-            "s2": 15831607264331401556,
-            "s3": 412281529636778890
+            "counter": 159,
+            "s0": 12793957007108447230,
+            "s1": 8034660519788044576,
+            "s2": 1650407340989884918,
+            "s3": 9758063931767606093
           },
           "shops": {
             "counter": 28,
@@ -3295,22 +3339,21 @@
         "s3": 15602353924628334763
       },
       "treasure_room_relics": {
-        "counter": 1,
-        "s0": 12255513301578202882,
-        "s1": 7931521708061370474,
-        "s2": 4481842451427835058,
-        "s3": 14893267880247871598
+        "counter": 2,
+        "s0": 768352643515965190,
+        "s1": 18029188472458685402,
+        "s2": 5608675903777244080,
+        "s3": 11241147499594406772
       }
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1347,
-  "save_time": 1790826073,
+  "run_time": 1358,
+  "save_time": 1790826089,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
-        "RELIC.PEN_NIB",
         "RELIC.VAMBRACE",
         "RELIC.TINY_MAILBOX",
         "RELIC.NUNCHAKU",
@@ -3469,6 +3512,10 @@
     {
       "col": 3,
       "row": 8
+    },
+    {
+      "col": 2,
+      "row": 9
     }
   ],
   "win_time": 0
