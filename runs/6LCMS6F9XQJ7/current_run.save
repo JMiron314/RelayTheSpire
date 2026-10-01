@@ -1897,11 +1897,44 @@
             "turns_taken": 11
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 101,
+            "current_hp": 27,
+            "damage_taken": 0,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.ETERNAL_FEATHER",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 9,
+  "num_reloads": 10,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -2053,7 +2086,7 @@
         "damage_dealt": 184,
         "debuffs_applied": 22
       },
-      "gold": 65,
+      "gold": 101,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
@@ -2096,7 +2129,6 @@
             "RELIC.JOSS_PAPER",
             "RELIC.TINY_MAILBOX",
             "RELIC.AKABEKO",
-            "RELIC.ETERNAL_FEATHER",
             "RELIC.STONE_CRACKER",
             "RELIC.LUCKY_FYSH",
             "RELIC.ORNAMENTAL_FAN",
@@ -2222,16 +2254,20 @@
         {
           "floor_added_to_deck": 9,
           "id": "RELIC.PEAR"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.ETERNAL_FEATHER"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 72,
-            "s0": 5935862972378683818,
-            "s1": 14464667057791962221,
-            "s2": 8296174764104218101,
-            "s3": 3596814929913821853
+            "counter": 73,
+            "s0": 12337274724088229722,
+            "s1": 16860728374845726770,
+            "s2": 9609308223117028447,
+            "s3": 3953631791696465461
           },
           "shops": {
             "counter": 28,
@@ -2407,22 +2443,21 @@
         "s3": 1189242145855748168
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 16143453373521349773,
-        "s1": 14394217618138016729,
-        "s2": 15371061023866915339,
-        "s3": 11627905114238865533
+        "counter": 1,
+        "s0": 9697666165286680361,
+        "s1": 17481675681064283487,
+        "s2": 2596380514072970886,
+        "s3": 16101649407817424541
       }
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 490,
-  "save_time": 1790826448,
+  "run_time": 497,
+  "save_time": 1790826460,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
-        "RELIC.ETERNAL_FEATHER",
         "RELIC.LETTER_OPENER",
         "RELIC.GREMLIN_HORN",
         "RELIC.LASTING_CANDY",
@@ -2590,6 +2625,10 @@
     {
       "col": 3,
       "row": 9
+    },
+    {
+      "col": 4,
+      "row": 10
     }
   ],
   "win_time": 0
