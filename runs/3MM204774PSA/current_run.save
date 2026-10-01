@@ -1673,11 +1673,79 @@
             "turns_taken": 6
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 9,
+                  "id": "CARD.COLD_SNAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.STORM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.LEAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.COLD_SNAP",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 71,
+            "current_hp": 58,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 22,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1689,7 +1757,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 36,
+      "current_hp": 58,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -1811,6 +1879,13 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 9,
+          "id": "CARD.COLD_SNAP",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
@@ -1823,7 +1898,7 @@
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
+        "card_rarity_odds_value": 0.024999991,
         "potion_reward_odds_value": 0.70000005
       },
       "potions": [
@@ -1983,11 +2058,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 68,
-            "s0": 2276122131276659870,
-            "s1": 11005580776779670606,
-            "s2": 2321918290990723917,
-            "s3": 2860198147109952142
+            "counter": 77,
+            "s0": 15320891020569542573,
+            "s1": 3076137658121718661,
+            "s2": 6784815827288570277,
+            "s3": 15001809839948335464
           },
           "shops": {
             "counter": 28,
@@ -2166,8 +2241,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 421,
-  "save_time": 1790824130,
+  "run_time": 437,
+  "save_time": 1790824177,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2336,6 +2411,10 @@
     {
       "col": 3,
       "row": 8
+    },
+    {
+      "col": 2,
+      "row": 9
     }
   ],
   "win_time": 0
