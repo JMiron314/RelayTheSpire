@@ -1458,6 +1458,122 @@
             "turns_taken": 6
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.WROUGHT_IN_WAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CRUSH_UNDER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.HIDDEN_CACHE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.JACK_OF_ALL_TRADES",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.MASTER_OF_STRATEGY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SPECTRUM_SHIFT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "id": "CARD.GATHER_LIGHT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 29,
+            "current_hp": 28,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 99,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SPEED_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.COLORLESS_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.STAR_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.PANTOGRAPH",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.TUNING_FORK",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.GNARLED_HAMMER",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
@@ -1552,13 +1668,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.SPECTRUM_SHIFT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.GATHER_LIGHT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "damage_dealt": 103,
         "debuffs_applied": 10
       },
-      "gold": 128,
+      "gold": 29,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
@@ -1599,9 +1729,7 @@
             "RELIC.PEN_NIB",
             "RELIC.NUNCHAKU",
             "RELIC.PARRYING_SHIELD",
-            "RELIC.TUNING_FORK",
-            "RELIC.LUCKY_FYSH",
-            "RELIC.PANTOGRAPH"
+            "RELIC.LUCKY_FYSH"
           ],
           "common": [
             "RELIC.CENTENNIAL_PUZZLE",
@@ -1696,8 +1824,7 @@
             "RELIC.WING_CHARM",
             "RELIC.BREAD",
             "RELIC.MINIATURE_TENT",
-            "RELIC.LEES_WAFFLE",
-            "RELIC.GNARLED_HAMMER"
+            "RELIC.LEES_WAFFLE"
           ]
         }
       },
@@ -1714,18 +1841,18 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 22,
-            "s0": 8205666442150670422,
-            "s1": 4399070620195093248,
-            "s2": 2894268099846862676,
-            "s3": 9076989706329110597
+            "counter": 36,
+            "s0": 8161347684101379862,
+            "s1": 17259283873781588845,
+            "s2": 16605058772708892284,
+            "s3": 7916060273434914186
           },
           "shops": {
-            "counter": 0,
-            "s0": 17387539150239363527,
-            "s1": 8885798005726309183,
-            "s2": 5503291172047334129,
-            "s3": 11070674999318284694
+            "counter": 28,
+            "s0": 11335754886047947953,
+            "s1": 7563809782472620127,
+            "s2": 1334988815247416164,
+            "s3": 10029564329553660035
           },
           "transformations": {
             "counter": 0,
@@ -1897,14 +2024,13 @@
     },
     "seed": "63A7P3BDFHCY"
   },
-  "run_time": 140,
-  "save_time": 1790825184,
+  "run_time": 205,
+  "save_time": 1790825249,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
         "RELIC.LETTER_OPENER",
-        "RELIC.TUNING_FORK",
         "RELIC.HORN_CLEAT",
         "RELIC.REPTILE_TRINKET",
         "RELIC.PARRYING_SHIELD",
@@ -1923,7 +2049,6 @@
         "RELIC.LASTING_CANDY",
         "RELIC.LUCKY_FYSH",
         "RELIC.PERMAFROST",
-        "RELIC.PANTOGRAPH",
         "RELIC.JOSS_PAPER",
         "RELIC.MERCURY_HOURGLASS",
         "RELIC.PETRIFIED_TOAD",
@@ -2009,7 +2134,6 @@
         "RELIC.THE_ABACUS",
         "RELIC.KIFUDA",
         "RELIC.ROYAL_STAMP",
-        "RELIC.GNARLED_HAMMER",
         "RELIC.CHEMICAL_X",
         "RELIC.DRAGON_FRUIT",
         "RELIC.LAVA_LAMP",
@@ -2051,6 +2175,10 @@
     {
       "col": 5,
       "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
     }
   ],
   "win_time": 0
