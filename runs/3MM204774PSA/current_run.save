@@ -4093,11 +4093,70 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.SCRAPE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CLAW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FOCUSED_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 299,
+            "current_hp": 76,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 25,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 42,
+  "num_reloads": 43,
   "odds": {
     "unknown_map_point_elite_odds_value": -4,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -4109,7 +4168,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 51,
+      "current_hp": 76,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -4356,7 +4415,7 @@
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
+        "card_rarity_odds_value": 0.039999988,
         "potion_reward_odds_value": 0.4
       },
       "potions": [
@@ -4575,11 +4634,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 295,
-            "s0": 4020431824284653180,
-            "s1": 1861050063079030745,
-            "s2": 12640254269015803669,
-            "s3": 10668732307154967251
+            "counter": 304,
+            "s0": 18444477785099768490,
+            "s1": 17138622649824866276,
+            "s2": 11408034792282157855,
+            "s3": 2528231224601750310
           },
           "shops": {
             "counter": 56,
@@ -4758,8 +4817,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 2851,
-  "save_time": 1790827976,
+  "run_time": 2894,
+  "save_time": 1790828025,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -4908,6 +4967,10 @@
     {
       "col": 2,
       "row": 10
+    },
+    {
+      "col": 3,
+      "row": 11
     }
   ],
   "win_time": 0
