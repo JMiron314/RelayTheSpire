@@ -23,7 +23,7 @@
           "ENCOUNTER.PHROG_PARASITE_ELITE",
           "ENCOUNTER.BYRDONIS_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.WOOD_CARVINGS",
           "EVENT.POTION_COURIER",
@@ -2096,11 +2096,87 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 14,
+                  "id": "CARD.PREPARED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.BACKSTAB",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.MURDER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.PREPARED",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 146,
+            "current_hp": 9,
+            "damage_taken": 19,
+            "gold_gained": 29,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.SNECKO_SKULL",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHROG_PARASITE_ELITE",
+            "monster_ids": [
+              "MONSTER.PHROG_PARASITE",
+              "MONSTER.WRIGGLER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 10
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 13,
+  "num_reloads": 14,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -2112,7 +2188,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 28,
+      "current_hp": 9,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2254,20 +2330,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 14,
+          "id": "CARD.PREPARED",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 289,
-        "debuffs_applied": 37
+        "damage_dealt": 355,
+        "debuffs_applied": 58
       },
-      "gold": 117,
+      "gold": 146,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.015000007,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": -0.05,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
@@ -2309,7 +2392,6 @@
             "RELIC.LETTER_OPENER"
           ],
           "common": [
-            "RELIC.SNECKO_SKULL",
             "RELIC.BLOOD_VIAL",
             "RELIC.PENDULUM",
             "RELIC.JUZU_BRACELET",
@@ -2428,16 +2510,20 @@
         {
           "floor_added_to_deck": 10,
           "id": "RELIC.ETERNAL_FEATHER"
+        },
+        {
+          "floor_added_to_deck": 14,
+          "id": "RELIC.SNECKO_SKULL"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 95,
-            "s0": 6711503410641323045,
-            "s1": 11569470406977714647,
-            "s2": 3766503377137120584,
-            "s3": 13893529672198668024
+            "counter": 107,
+            "s0": 12535668441372029703,
+            "s1": 9436558934588301107,
+            "s2": 4808408338682731678,
+            "s3": 13661321069643744319
           },
           "shops": {
             "counter": 28,
@@ -2543,11 +2629,11 @@
         "s3": 6724589788759297695
       },
       "shuffle": {
-        "counter": 205,
-        "s0": 11588362294787029860,
-        "s1": 12668045900720513426,
-        "s2": 10637585019030238915,
-        "s3": 6068396473311771840
+        "counter": 254,
+        "s0": 8083984401827538048,
+        "s1": 10083856378591344752,
+        "s2": 17282658939167907241,
+        "s3": 6827970219117870927
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2599,11 +2685,11 @@
         "s3": 17489560876097053177
       },
       "niche": {
-        "counter": 9,
-        "s0": 17306899668382826203,
-        "s1": 3013397694322263785,
-        "s2": 6490822554209480292,
-        "s3": 12012124282349684492
+        "counter": 14,
+        "s0": 18354874872962519223,
+        "s1": 7450531477060546764,
+        "s2": 8876418209950536298,
+        "s3": 7048624511369918724
       },
       "combat_orbs": {
         "counter": 0,
@@ -2622,8 +2708,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 705,
-  "save_time": 1790826855,
+  "run_time": 826,
+  "save_time": 1790827131,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2811,6 +2897,10 @@
     {
       "col": 4,
       "row": 13
+    },
+    {
+      "col": 4,
+      "row": 14
     }
   ],
   "win_time": 0
