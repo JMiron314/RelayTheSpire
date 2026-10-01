@@ -99,7 +99,7 @@
           "ENCOUNTER.DECIMILLIPEDE_ELITE",
           "ENCOUNTER.INFESTED_PRISMS_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.RANWID_THE_ELDER",
           "EVENT.INFESTED_AUTOMATON",
@@ -2967,11 +2967,99 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "floor_added_to_deck": 29,
+                  "id": "CARD.CHILL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.UPROAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.NULL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.CHILL",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 61,
+            "current_hp": 62,
+            "damage_taken": 13,
+            "gold_gained": 31,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.COLORLESS_POTION",
+                "was_picked": true
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.WHETSTONE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.COLD_SNAP",
+              "CARD.COLD_SNAP"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.INFESTED_PRISMS_ELITE",
+            "monster_ids": [
+              "MONSTER.INFESTED_PRISM"
+            ],
+            "room_type": "elite",
+            "turns_taken": 7
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 27,
+  "num_reloads": 28,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -2983,7 +3071,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 75,
+      "current_hp": 62,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -3082,6 +3170,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 9,
           "id": "CARD.COLD_SNAP",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -3153,8 +3242,17 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 28,
           "id": "CARD.COLD_SNAP",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 29,
+          "id": "CARD.CHILL",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
@@ -3162,22 +3260,26 @@
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 1112,
-        "debuffs_applied": 9
+        "damage_dealt": 1283,
+        "debuffs_applied": 12
       },
-      "gold": 30,
+      "gold": 61,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
           "id": "POTION.FOCUS_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.COLORLESS_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -3214,7 +3316,6 @@
             "RELIC.LUCKY_FYSH"
           ],
           "common": [
-            "RELIC.WHETSTONE",
             "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.BLOOD_VIAL",
             "RELIC.GORGET",
@@ -3357,7 +3458,7 @@
             "ints": [
               {
                 "name": "AttacksPlayed",
-                "value": 0
+                "value": 9
               }
             ]
           }
@@ -3365,16 +3466,20 @@
         {
           "floor_added_to_deck": 27,
           "id": "RELIC.TOOLBOX"
+        },
+        {
+          "floor_added_to_deck": 29,
+          "id": "RELIC.WHETSTONE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 182,
-            "s0": 4532581721565839588,
-            "s1": 2409695126749745546,
-            "s2": 8864939593302784145,
-            "s3": 167619101043130546
+            "counter": 196,
+            "s0": 598224569682613699,
+            "s1": 17470808160658218291,
+            "s2": 13650354353779292435,
+            "s3": 11156861322871144787
           },
           "shops": {
             "counter": 56,
@@ -3474,11 +3579,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 288,
-        "s0": 1265970267019168816,
-        "s1": 16658468853221542920,
-        "s2": 5123157599774196830,
-        "s3": 10326104504709940130
+        "counter": 336,
+        "s0": 13842146070721919521,
+        "s1": 14466927536788271659,
+        "s2": 16920257243410523384,
+        "s3": 14897176843804290230
       },
       "unknown_map_point": {
         "counter": 8,
@@ -3488,11 +3593,11 @@
         "s3": 15468445710276568557
       },
       "combat_card_generation": {
-        "counter": 0,
-        "s0": 18285940600332873421,
-        "s1": 14388697788976902495,
-        "s2": 1878502729435610834,
-        "s3": 1764571438922719683
+        "counter": 85,
+        "s0": 123967336945143592,
+        "s1": 16201297087211795614,
+        "s2": 17312095101361545148,
+        "s3": 4971804353977891013
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -3516,11 +3621,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 54,
-        "s0": 13631884649594718449,
-        "s1": 17350814823807086049,
-        "s2": 4829215441183201075,
-        "s3": 11388991036301147793
+        "counter": 58,
+        "s0": 11824039589578166596,
+        "s1": 16979323592202507051,
+        "s2": 8121708175980007971,
+        "s3": 1045363021131869462
       },
       "monster_ai": {
         "counter": 4,
@@ -3530,11 +3635,11 @@
         "s3": 5653756567085345448
       },
       "niche": {
-        "counter": 16,
-        "s0": 15079473357711440943,
-        "s1": 15590594590487963080,
-        "s2": 4251215991071627805,
-        "s3": 8872947057411638572
+        "counter": 22,
+        "s0": 14767455872302046139,
+        "s1": 12485147967027015832,
+        "s2": 5546549353989105812,
+        "s3": 16269766997143256044
       },
       "combat_orbs": {
         "counter": 0,
@@ -3553,8 +3658,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1444,
-  "save_time": 1790826257,
+  "run_time": 1566,
+  "save_time": 1790826386,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3591,7 +3696,6 @@
         "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.STRAWBERRY",
         "RELIC.STRIKE_DUMMY",
-        "RELIC.WHETSTONE",
         "RELIC.AMETHYST_AUBERGINE",
         "RELIC.ANCHOR",
         "RELIC.VENERABLE_TEA_SET",
@@ -3726,6 +3830,10 @@
     {
       "col": 2,
       "row": 11
+    },
+    {
+      "col": 1,
+      "row": 12
     }
   ],
   "win_time": 0
