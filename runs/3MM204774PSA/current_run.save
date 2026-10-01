@@ -218,7 +218,7 @@
           "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
           "ENCOUNTER.AXEBOTS_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": "ENCOUNTER.AEONGLASS_BOSS"
       },
       "saved_map": {
@@ -3580,11 +3580,82 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 35,
+                  "id": "CARD.SCRAPE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.BARRAGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.REFRACT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SCRAPE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 187,
+            "current_hp": 69,
+            "damage_taken": 0,
+            "gold_gained": 13,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TURRET_OPERATOR_WEAK",
+            "monster_ids": [
+              "MONSTER.LIVING_SHIELD",
+              "MONSTER.TURRET_OPERATOR"
+            ],
+            "room_type": "monster",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 33,
+  "num_reloads": 34,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -3797,21 +3868,28 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 35,
+          "id": "CARD.SCRAPE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 1873,
-        "debuffs_applied": 18
+        "damage_dealt": 1989,
+        "debuffs_applied": 20
       },
-      "gold": 174,
+      "gold": 187,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.3
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
@@ -3974,7 +4052,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 2
+                "value": 0
               }
             ]
           }
@@ -3998,7 +4076,7 @@
             "ints": [
               {
                 "name": "AttacksPlayed",
-                "value": 5
+                "value": 2
               }
             ]
           }
@@ -4023,11 +4101,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 234,
-            "s0": 16909645209520058404,
-            "s1": 13104291420822659892,
-            "s2": 5682777212144903357,
-            "s3": 5771945977688838465
+            "counter": 245,
+            "s0": 453203707628637241,
+            "s1": 5348279929784536754,
+            "s2": 17140527285979238061,
+            "s3": 1744203392114245442
           },
           "shops": {
             "counter": 56,
@@ -4127,11 +4205,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 551,
-        "s0": 10308982176161628564,
-        "s1": 10097137030367707667,
-        "s2": 5589677362398764821,
-        "s3": 9962489367941520934
+        "counter": 577,
+        "s0": 15325097925260455759,
+        "s1": 2198616983924534536,
+        "s2": 17310008318525645817,
+        "s3": 915482504955271891
       },
       "unknown_map_point": {
         "counter": 8,
@@ -4141,11 +4219,11 @@
         "s3": 15468445710276568557
       },
       "combat_card_generation": {
-        "counter": 485,
-        "s0": 14868857353330993639,
-        "s1": 5830756041425138191,
-        "s2": 2914565217601561317,
-        "s3": 3694052417748763928
+        "counter": 588,
+        "s0": 6867611295110921033,
+        "s1": 11292114474885429782,
+        "s2": 7693336313952979536,
+        "s3": 5663368054350049235
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -4155,11 +4233,11 @@
         "s3": 7719716315142391400
       },
       "combat_card_selection": {
-        "counter": 0,
-        "s0": 14879774938606419587,
-        "s1": 12873561666811227955,
-        "s2": 290808039809015511,
-        "s3": 16164163632346154347
+        "counter": 1,
+        "s0": 11278462038147110107,
+        "s1": 8709583475111333735,
+        "s2": 16299860328112971860,
+        "s3": 3840174511846716579
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -4169,11 +4247,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 87,
-        "s0": 7075644265534913053,
-        "s1": 1571239883008425966,
-        "s2": 14876977767862596178,
-        "s3": 2505921262425728253
+        "counter": 89,
+        "s0": 563249605608091876,
+        "s1": 1460848178161721056,
+        "s2": 14440446835872246081,
+        "s3": 12843503475799536392
       },
       "monster_ai": {
         "counter": 4,
@@ -4183,11 +4261,11 @@
         "s3": 5653756567085345448
       },
       "niche": {
-        "counter": 25,
-        "s0": 18157407734751640884,
-        "s1": 16282466672287365494,
-        "s2": 2898402054295001377,
-        "s3": 12177380398719978744
+        "counter": 27,
+        "s0": 12571313039640211283,
+        "s1": 12778266250017206732,
+        "s2": 2877004125185207471,
+        "s3": 4394707913896924812
       },
       "combat_orbs": {
         "counter": 0,
@@ -4206,8 +4284,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 2074,
-  "save_time": 1790827033,
+  "run_time": 2201,
+  "save_time": 1790827264,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -4337,6 +4415,10 @@
     {
       "col": 3,
       "row": 1
+    },
+    {
+      "col": 3,
+      "row": 2
     }
   ],
   "win_time": 0
