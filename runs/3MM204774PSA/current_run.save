@@ -2694,11 +2694,44 @@
             "turns_taken": 7
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 160,
+            "current_hp": 37,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.CREATIVE_AI"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 23,
+  "num_reloads": 24,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -2865,6 +2898,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 22,
           "id": "CARD.CREATIVE_AI",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -3270,8 +3304,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1321,
-  "save_time": 1790826000,
+  "run_time": 1347,
+  "save_time": 1790826073,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3431,6 +3465,10 @@
     {
       "col": 4,
       "row": 7
+    },
+    {
+      "col": 3,
+      "row": 8
     }
   ],
   "win_time": 0
