@@ -147,7 +147,7 @@
           "ENCOUNTER.THE_OBSCURA_NORMAL",
           "ENCOUNTER.LOUSE_PROGENITOR_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": null
       },
       "saved_map": {
@@ -2235,11 +2235,86 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 19,
+                  "id": "CARD.HOLOGRAM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.GUNK_UP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.COLD_SNAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.HOLOGRAM",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 137,
+            "current_hp": 70,
+            "damage_taken": 0,
+            "gold_gained": 8,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLESSING_OF_THE_FORGE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TUNNELER_WEAK",
+            "monster_ids": [
+              "MONSTER.TUNNELER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 17,
+  "num_reloads": 18,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -2382,25 +2457,36 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 19,
+          "id": "CARD.HOLOGRAM",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 772,
+        "damage_dealt": 864,
         "debuffs_applied": 6
       },
-      "gold": 129,
+      "gold": 137,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.70000005
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.6
       },
       "potions": [
         {
           "id": "POTION.VULNERABLE_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.BLESSING_OF_THE_FORGE",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -2562,7 +2648,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 2
+                "value": 0
               }
             ]
           }
@@ -2575,11 +2661,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 129,
-            "s0": 4698641132508489861,
-            "s1": 17761969639107959097,
-            "s2": 17685911539390289567,
-            "s3": 5574380556055258690
+            "counter": 142,
+            "s0": 460574344720664348,
+            "s1": 1772541011773679223,
+            "s2": 11483942160031832474,
+            "s3": 16423202910903236597
           },
           "shops": {
             "counter": 28,
@@ -2679,11 +2765,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 213,
-        "s0": 16297568389861386599,
-        "s1": 8724992772574152949,
-        "s2": 12281081380806340905,
-        "s3": 4927377001199943822
+        "counter": 246,
+        "s0": 17501500114073731687,
+        "s1": 14634564804438535498,
+        "s2": 10327488952997208429,
+        "s3": 5033046310305398704
       },
       "unknown_map_point": {
         "counter": 4,
@@ -2721,11 +2807,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 37,
-        "s0": 4958209249575667962,
-        "s1": 9367941478460835647,
-        "s2": 13477625883641817498,
-        "s3": 17209282319228064946
+        "counter": 44,
+        "s0": 6442859498168951610,
+        "s1": 16870734319594580002,
+        "s2": 11639475566725794305,
+        "s3": 4703380373933841392
       },
       "monster_ai": {
         "counter": 0,
@@ -2735,11 +2821,11 @@
         "s3": 6088552758004036187
       },
       "niche": {
-        "counter": 12,
-        "s0": 10753506290848947850,
-        "s1": 4637853164520533019,
-        "s2": 6470774079597987304,
-        "s3": 7307913611490565749
+        "counter": 13,
+        "s0": 12685015809281699044,
+        "s1": 10136503952488691577,
+        "s2": 2391975550516370274,
+        "s3": 4489460624078312241
       },
       "combat_orbs": {
         "counter": 0,
@@ -2758,8 +2844,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 956,
-  "save_time": 1790825097,
+  "run_time": 1011,
+  "save_time": 1790825184,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2897,6 +2983,10 @@
     {
       "col": 4,
       "row": 1
+    },
+    {
+      "col": 5,
+      "row": 2
     }
   ],
   "win_time": 0
