@@ -99,7 +99,7 @@
           "ENCOUNTER.DECIMILLIPEDE_ELITE",
           "ENCOUNTER.INFESTED_PRISMS_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.RANWID_THE_ELDER",
           "EVENT.INFESTED_AUTOMATON",
@@ -2611,11 +2611,94 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 24,
+                  "id": "CARD.GLACIER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.BOOST_AWAY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.HOTFIX",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GLACIER",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 160,
+            "current_hp": 37,
+            "damage_taken": 23,
+            "gold_gained": 33,
+            "gold_lost": 20,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLESSING_OF_THE_FORGE",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.ORICHALCUM",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.DECIMILLIPEDE_ELITE",
+            "monster_ids": [
+              "MONSTER.DECIMILLIPEDE_SEGMENT_FRONT",
+              "MONSTER.DECIMILLIPEDE_SEGMENT_MIDDLE",
+              "MONSTER.DECIMILLIPEDE_SEGMENT_BACK"
+            ],
+            "room_type": "elite",
+            "turns_taken": 7
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 22,
+  "num_reloads": 23,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -2627,7 +2710,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 60,
+      "current_hp": 37,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -2794,20 +2877,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 24,
+          "id": "CARD.GLACIER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 864,
-        "debuffs_applied": 6
+        "damage_dealt": 1112,
+        "debuffs_applied": 9
       },
-      "gold": 147,
+      "gold": 160,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.035000004,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": -0.020000007,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
@@ -2822,7 +2912,6 @@
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.ORICHALCUM",
             "RELIC.PANTOGRAPH",
             "RELIC.KUSARIGAMA",
             "RELIC.NUNCHAKU",
@@ -2977,7 +3066,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 0
+                "value": 1
               }
             ]
           }
@@ -2989,16 +3078,20 @@
         {
           "floor_added_to_deck": 22,
           "id": "RELIC.ODDLY_SMOOTH_STONE"
+        },
+        {
+          "floor_added_to_deck": 24,
+          "id": "RELIC.ORICHALCUM"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 144,
-            "s0": 7963920955767269548,
-            "s1": 5539393235477704937,
-            "s2": 12028926535718193176,
-            "s3": 17277587671330645645
+            "counter": 158,
+            "s0": 7646303366988800162,
+            "s1": 16008277592706140374,
+            "s2": 15831607264331401556,
+            "s3": 412281529636778890
           },
           "shops": {
             "counter": 28,
@@ -3098,11 +3191,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 246,
-        "s0": 17501500114073731687,
-        "s1": 14634564804438535498,
-        "s2": 10327488952997208429,
-        "s3": 5033046310305398704
+        "counter": 288,
+        "s0": 1265970267019168816,
+        "s1": 16658468853221542920,
+        "s2": 5123157599774196830,
+        "s3": 10326104504709940130
       },
       "unknown_map_point": {
         "counter": 8,
@@ -3140,25 +3233,25 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 44,
-        "s0": 6442859498168951610,
-        "s1": 16870734319594580002,
-        "s2": 11639475566725794305,
-        "s3": 4703380373933841392
+        "counter": 54,
+        "s0": 13631884649594718449,
+        "s1": 17350814823807086049,
+        "s2": 4829215441183201075,
+        "s3": 11388991036301147793
       },
       "monster_ai": {
-        "counter": 0,
-        "s0": 10631033467536753234,
-        "s1": 13219321019992716578,
-        "s2": 15800070866332588797,
-        "s3": 6088552758004036187
+        "counter": 4,
+        "s0": 7290087117669048237,
+        "s1": 17076942222728600597,
+        "s2": 11207430035758469903,
+        "s3": 5653756567085345448
       },
       "niche": {
-        "counter": 13,
-        "s0": 12685015809281699044,
-        "s1": 10136503952488691577,
-        "s2": 2391975550516370274,
-        "s3": 4489460624078312241
+        "counter": 16,
+        "s0": 15079473357711440943,
+        "s1": 15590594590487963080,
+        "s2": 4251215991071627805,
+        "s3": 8872947057411638572
       },
       "combat_orbs": {
         "counter": 0,
@@ -3177,8 +3270,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1155,
-  "save_time": 1790825809,
+  "run_time": 1321,
+  "save_time": 1790826000,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3210,8 +3303,7 @@
         "RELIC.SPARKLING_ROUGE",
         "RELIC.PETRIFIED_TOAD",
         "RELIC.LUCKY_FYSH",
-        "RELIC.PANTOGRAPH",
-        "RELIC.ORICHALCUM"
+        "RELIC.PANTOGRAPH"
       ],
       "common": [
         "RELIC.BOOK_OF_FIVE_RINGS",
@@ -3335,6 +3427,10 @@
     {
       "col": 4,
       "row": 6
+    },
+    {
+      "col": 4,
+      "row": 7
     }
   ],
   "win_time": 0
