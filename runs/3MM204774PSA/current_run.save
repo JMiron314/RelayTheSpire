@@ -2760,11 +2760,150 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "bought_potions": [
+              "POTION.FOCUS_POTION"
+            ],
+            "bought_relics": [
+              "RELIC.TOOLBOX"
+            ],
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.GUNK_UP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BEAM_CELL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.COOLHEADED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCAVENGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SUBROUTINE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.THINKING_AHEAD",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BOLAS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_removed": [
+              {
+                "floor_added_to_deck": 22,
+                "id": "CARD.DEBT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 30,
+            "current_hp": 52,
+            "damage_taken": 0,
+            "gold_gained": 200,
+            "gold_lost": 0,
+            "gold_spent": 366,
+            "gold_stolen": 0,
+            "hp_healed": 15,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 79,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.FOCUS_POTION",
+                "was_picked": true
+              },
+              {
+                "choice": "POTION.COLORLESS_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.LIQUID_MEMORIES",
+                "was_picked": false
+              }
+            ],
+            "potion_used": [
+              "POTION.FOUL_POTION",
+              "POTION.FOUL_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.TOOLBOX",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.BRONZE_SCALES",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.CLOAK_CLASP",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 25,
+  "num_reloads": 26,
   "odds": {
     "unknown_map_point_elite_odds_value": -5,
     "unknown_map_point_monster_odds_value": 0.5,
@@ -2776,7 +2915,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 37,
+      "current_hp": 52,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -2924,13 +3063,6 @@
           }
         },
         {
-          "floor_added_to_deck": 22,
-          "id": "CARD.DEBT",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
-        {
           "current_upgrade_level": 1,
           "floor_added_to_deck": 22,
           "id": "CARD.CREATIVE_AI",
@@ -2954,10 +3086,11 @@
         }
       ],
       "extra_fields": {
+        "card_shop_removals_used": 1,
         "damage_dealt": 1112,
         "debuffs_applied": 9
       },
-      "gold": 196,
+      "gold": 30,
       "max_energy": 3,
       "max_hp": 79,
       "max_potion_slot_count": 2,
@@ -2968,12 +3101,8 @@
       },
       "potions": [
         {
-          "id": "POTION.FOUL_POTION",
+          "id": "POTION.FOCUS_POTION",
           "slot_index": 0
-        },
-        {
-          "id": "POTION.FOUL_POTION",
-          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -3028,8 +3157,7 @@
             "RELIC.POTION_BELT",
             "RELIC.BAG_OF_MARBLES",
             "RELIC.AMETHYST_AUBERGINE",
-            "RELIC.ANCHOR",
-            "RELIC.BRONZE_SCALES"
+            "RELIC.ANCHOR"
           ],
           "rare": [
             "RELIC.METRONOME",
@@ -3068,8 +3196,7 @@
             "RELIC.GIRYA",
             "RELIC.TOXIC_EGG",
             "RELIC.STONE_CALENDAR",
-            "RELIC.CHANDELIER",
-            "RELIC.CLOAK_CLASP"
+            "RELIC.CHANDELIER"
           ],
           "shop": [
             "RELIC.DRAGON_FRUIT",
@@ -3095,8 +3222,7 @@
             "RELIC.BREAD",
             "RELIC.CHEMICAL_X",
             "RELIC.THE_ABACUS",
-            "RELIC.ROYAL_STAMP",
-            "RELIC.TOOLBOX"
+            "RELIC.ROYAL_STAMP"
           ]
         }
       },
@@ -3160,23 +3286,27 @@
               }
             ]
           }
+        },
+        {
+          "floor_added_to_deck": 27,
+          "id": "RELIC.TOOLBOX"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 159,
-            "s0": 12793957007108447230,
-            "s1": 8034660519788044576,
-            "s2": 1650407340989884918,
-            "s3": 9758063931767606093
+            "counter": 173,
+            "s0": 5662202738253311194,
+            "s1": 13111104213408644491,
+            "s2": 4251719230796616452,
+            "s3": 17906882742794958112
           },
           "shops": {
-            "counter": 28,
-            "s0": 11588628889144796804,
-            "s1": 12487309452765183452,
-            "s2": 4445341028652523897,
-            "s3": 5525042958837511122
+            "counter": 56,
+            "s0": 9357521278381152712,
+            "s1": 13350069479851767717,
+            "s2": 4178481180305834852,
+            "s3": 2445547220882706256
           },
           "transformations": {
             "counter": 0,
@@ -3348,8 +3478,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 1358,
-  "save_time": 1790826089,
+  "run_time": 1403,
+  "save_time": 1790826207,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3390,7 +3520,6 @@
         "RELIC.AMETHYST_AUBERGINE",
         "RELIC.ANCHOR",
         "RELIC.VENERABLE_TEA_SET",
-        "RELIC.BRONZE_SCALES",
         "RELIC.JUZU_BRACELET",
         "RELIC.VAJRA",
         "RELIC.PENDULUM",
@@ -3420,7 +3549,6 @@
         "RELIC.WHITE_BEAST_STATUE",
         "RELIC.ICE_CREAM",
         "RELIC.GAMBLING_CHIP",
-        "RELIC.CLOAK_CLASP",
         "RELIC.RAINBOW_RING",
         "RELIC.MUMMIFIED_HAND",
         "RELIC.BELLOWS",
@@ -3458,7 +3586,6 @@
         "RELIC.LAVA_LAMP",
         "RELIC.PUNCH_DAGGER",
         "RELIC.MINIATURE_TENT",
-        "RELIC.TOOLBOX",
         "RELIC.SCREAMING_FLAGON",
         "RELIC.SLING_OF_COURAGE",
         "RELIC.BELT_BUCKLE",
@@ -3516,6 +3643,10 @@
     {
       "col": 2,
       "row": 9
+    },
+    {
+      "col": 2,
+      "row": 10
     }
   ],
   "win_time": 0
