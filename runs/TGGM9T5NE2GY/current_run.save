@@ -23,7 +23,7 @@
           "ENCOUNTER.BYRDONIS_ELITE",
           "ENCOUNTER.BYGONE_EFFIGY_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.BYRDONIS_NEST",
           "EVENT.SAPPHIRE_SEED",
@@ -1635,11 +1635,92 @@
             "turns_taken": 3
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 7,
+                  "id": "CARD.DEBILITATE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.RIGHT_HAND_HAND",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.COUNTDOWN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.DEBILITATE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 217,
+            "current_hp": 4,
+            "damage_taken": 39,
+            "gold_gained": 30,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.LUCKY_TONIC",
+                "was_picked": true
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.POTION_BELT",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYRDONIS_ELITE",
+            "monster_ids": [
+              "MONSTER.BYRDONIS"
+            ],
+            "room_type": "elite",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 6,
+  "num_reloads": 7,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1651,7 +1732,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 43,
+      "current_hp": 4,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1754,21 +1835,34 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 7,
+          "id": "CARD.DEBILITATE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 41,
-        "debuffs_applied": 10
+        "damage_dealt": 59,
+        "debuffs_applied": 17
       },
-      "gold": 187,
+      "gold": 217,
       "max_energy": 3,
       "max_hp": 66,
-      "max_potion_slot_count": 2,
+      "max_potion_slot_count": 4,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.70000005
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.6
       },
+      "potions": [
+        {
+          "id": "POTION.LUCKY_TONIC",
+          "slot_index": 0
+        }
+      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -1806,7 +1900,6 @@
             "RELIC.PEN_NIB"
           ],
           "common": [
-            "RELIC.POTION_BELT",
             "RELIC.LANTERN",
             "RELIC.JUZU_BRACELET",
             "RELIC.BLOOD_VIAL",
@@ -1911,16 +2004,20 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.BOOMING_CONCH"
+        },
+        {
+          "floor_added_to_deck": 7,
+          "id": "RELIC.POTION_BELT"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 33,
-            "s0": 7504274089024989341,
-            "s1": 8911250569284223148,
-            "s2": 9976872401947126274,
-            "s3": 10757693297238160945
+            "counter": 47,
+            "s0": 10727424000112812774,
+            "s1": 11678686467393624312,
+            "s2": 14388122205870470950,
+            "s3": 17564141083164710330
           },
           "shops": {
             "counter": 0,
@@ -2015,11 +2112,11 @@
         "s3": 8949686389267949214
       },
       "shuffle": {
-        "counter": 58,
-        "s0": 4483323497957811907,
-        "s1": 14231330247866144593,
-        "s2": 6034982573623955835,
-        "s3": 2879761123568188601
+        "counter": 82,
+        "s0": 3911993666227747532,
+        "s1": 14814110726577232353,
+        "s2": 10329905097368536089,
+        "s3": 12154022956930933232
       },
       "unknown_map_point": {
         "counter": 0,
@@ -2071,11 +2168,11 @@
         "s3": 15592837996807283167
       },
       "niche": {
-        "counter": 5,
-        "s0": 15964503574076876751,
-        "s1": 1602484231228670474,
-        "s2": 547239801751230832,
-        "s3": 14483263303465340490
+        "counter": 6,
+        "s0": 238275976121953167,
+        "s1": 14711089763605347509,
+        "s2": 10359231045245353663,
+        "s3": 9910201596589556961
       },
       "combat_orbs": {
         "counter": 0,
@@ -2094,8 +2191,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 223,
-  "save_time": 1790823880,
+  "run_time": 307,
+  "save_time": 1790824010,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2150,7 +2247,6 @@
         "RELIC.VAJRA",
         "RELIC.LANTERN",
         "RELIC.PENDULUM",
-        "RELIC.POTION_BELT",
         "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.FESTIVE_POPPER",
         "RELIC.AMETHYST_AUBERGINE",
@@ -2260,6 +2356,10 @@
     {
       "col": 5,
       "row": 6
+    },
+    {
+      "col": 5,
+      "row": 7
     }
   ],
   "win_time": 0
