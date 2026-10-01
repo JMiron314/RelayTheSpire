@@ -75,7 +75,7 @@
           "ENCOUNTER.FLYCONID_NORMAL",
           "ENCOUNTER.SLIMES_NORMAL"
         ],
-        "normal_encounters_visited": 2,
+        "normal_encounters_visited": 3,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1654,8 +1654,7 @@
                 "title": {
                   "key": "BRAIN_LEECH.pages.INITIAL.options.RIP.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 0,
@@ -1678,11 +1677,83 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 6,
+                  "id": "CARD.HAND_TRICK",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.CLOAK_AND_DAGGER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DAGGER_SPRAY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.HAND_TRICK",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 33,
+            "current_hp": 32,
+            "damage_taken": 7,
+            "gold_gained": 10,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.SKILL_POTION"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+            "monster_ids": [
+              "MONSTER.FUZZY_WURM_CRAWLER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 6,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1694,7 +1765,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 39,
+      "current_hp": 32,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1821,26 +1892,29 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 6,
+          "id": "CARD.HAND_TRICK",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 91,
-        "debuffs_applied": 7
+        "damage_dealt": 132,
+        "debuffs_applied": 10
       },
-      "gold": 23,
+      "gold": 33,
       "max_energy": 3,
       "max_hp": 70,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.020000007,
-        "potion_reward_odds_value": 0.20000002
+        "card_rarity_odds_value": -0.0050000073,
+        "potion_reward_odds_value": 0.3
       },
       "potions": [
-        {
-          "id": "POTION.SKILL_POTION",
-          "slot_index": 0
-        },
         {
           "id": "POTION.ENERGY_POTION",
           "slot_index": 1
@@ -1998,11 +2072,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 46,
-            "s0": 9951386733748434116,
-            "s1": 5487957701667401005,
-            "s2": 13278476986672577217,
-            "s3": 15557011667818010979
+            "counter": 57,
+            "s0": 11519358753269277412,
+            "s1": 10606400113963918286,
+            "s2": 11558095501791003398,
+            "s3": 3884440281039587862
           },
           "shops": {
             "counter": 28,
@@ -2108,11 +2182,11 @@
         "s3": 6724589788759297695
       },
       "shuffle": {
-        "counter": 58,
-        "s0": 6482371276429328147,
-        "s1": 15483033547518349686,
-        "s2": 13531350671876844795,
-        "s3": 5931270172398167437
+        "counter": 84,
+        "s0": 237250456512133866,
+        "s1": 17865600437736277853,
+        "s2": 11287282086535578140,
+        "s3": 4535602095097178300
       },
       "unknown_map_point": {
         "counter": 1,
@@ -2122,11 +2196,11 @@
         "s3": 62050704433345990
       },
       "combat_card_generation": {
-        "counter": 0,
-        "s0": 18102923129107350318,
-        "s1": 4278691400640726630,
-        "s2": 3189273376289492321,
-        "s3": 15251605986078663152
+        "counter": 38,
+        "s0": 821424836464811299,
+        "s1": 9487414414596634137,
+        "s2": 4642206178647852255,
+        "s3": 10828857166654664211
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2164,11 +2238,11 @@
         "s3": 17489560876097053177
       },
       "niche": {
-        "counter": 4,
-        "s0": 17030135755571063906,
-        "s1": 13600555587606710561,
-        "s2": 17152952189612405201,
-        "s3": 6319592648193779100
+        "counter": 5,
+        "s0": 529849177627148511,
+        "s1": 13754648709015426194,
+        "s2": 13845107173709110707,
+        "s3": 5014684937272888688
       },
       "combat_orbs": {
         "counter": 0,
@@ -2187,8 +2261,8 @@
     },
     "seed": "6LCMS6F9XQJ7"
   },
-  "run_time": 190,
-  "save_time": 1790826056,
+  "run_time": 265,
+  "save_time": 1790826154,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2346,6 +2420,10 @@
     {
       "col": 0,
       "row": 5
+    },
+    {
+      "col": 0,
+      "row": 6
     }
   ],
   "win_time": 0
