@@ -155,7 +155,7 @@
       "id": "ACT.GLORY",
       "rooms": {
         "ancient_id": "EVENT.VAKUU",
-        "boss_encounters_visited": 0,
+        "boss_encounters_visited": 1,
         "boss_id": "ENCOUNTER.QUEEN_BOSS",
         "elite_encounter_ids": [
           "ENCOUNTER.KNIGHTS_ELITE",
@@ -4375,11 +4375,46 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "boss",
+        "player_stats": [
+          {
+            "current_gold": 20,
+            "current_hp": 6,
+            "damage_taken": 80,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 1,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.OROBIC_ACID"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.QUEEN_BOSS",
+            "monster_ids": [
+              "MONSTER.TORCH_HEAD_AMALGAM",
+              "MONSTER.QUEEN"
+            ],
+            "room_type": "boss",
+            "turns_taken": 11
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 46,
+  "num_reloads": 47,
   "odds": {
     "unknown_map_point_elite_odds_value": -4,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -4391,7 +4426,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 85,
+      "current_hp": 6,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -4637,8 +4672,8 @@
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 3257,
-        "debuffs_applied": 42
+        "damage_dealt": 3887,
+        "debuffs_applied": 51
       },
       "gold": 20,
       "max_energy": 3,
@@ -4653,10 +4688,6 @@
         {
           "id": "POTION.FOCUS_POTION",
           "slot_index": 0
-        },
-        {
-          "id": "POTION.OROBIC_ACID",
-          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -4789,7 +4820,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 2
+                "value": 1
               }
             ]
           }
@@ -4813,7 +4844,7 @@
             "ints": [
               {
                 "name": "AttacksPlayed",
-                "value": 8
+                "value": 1
               }
             ]
           }
@@ -4958,11 +4989,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 865,
-        "s0": 16788310029437073833,
-        "s1": 9830113029469592829,
-        "s2": 8565928971694058550,
-        "s3": 4675233314646930169
+        "counter": 950,
+        "s0": 1116326515828266612,
+        "s1": 1519531023987208369,
+        "s2": 2808921697877384299,
+        "s3": 16859488314237245406
       },
       "unknown_map_point": {
         "counter": 11,
@@ -4972,11 +5003,11 @@
         "s3": 1266888275308147348
       },
       "combat_card_generation": {
-        "counter": 1013,
-        "s0": 8542490069384000119,
-        "s1": 12842410333126453307,
-        "s2": 4262700920301692819,
-        "s3": 4393993579226148104
+        "counter": 1319,
+        "s0": 4177231883592284485,
+        "s1": 17721836314742400412,
+        "s2": 13195428783195091816,
+        "s3": 10892907542978102580
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -4986,11 +5017,11 @@
         "s3": 7719716315142391400
       },
       "combat_card_selection": {
-        "counter": 6,
-        "s0": 16604117628211319820,
-        "s1": 6963245310246382090,
-        "s2": 13660910436014870283,
-        "s3": 10278852532161897455
+        "counter": 7,
+        "s0": 606321693779549673,
+        "s1": 4276882651562012941,
+        "s2": 10274930581554174727,
+        "s3": 3547919242943501024
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -5000,11 +5031,11 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 113,
-        "s0": 5741753618690310845,
-        "s1": 5525078646679335027,
-        "s2": 6587450935171681473,
-        "s3": 2677379799322884878
+        "counter": 133,
+        "s0": 13407289790074713371,
+        "s1": 17609715947767557509,
+        "s2": 14924655755270330323,
+        "s3": 73747992292210265
       },
       "monster_ai": {
         "counter": 8,
@@ -5014,11 +5045,11 @@
         "s3": 6917338887879727317
       },
       "niche": {
-        "counter": 36,
-        "s0": 15495131846187320490,
-        "s1": 8042368952272651519,
-        "s2": 3453301144755989386,
-        "s3": 2695651821625579307
+        "counter": 38,
+        "s0": 16789137155969392639,
+        "s1": 9621506238869672833,
+        "s2": 14090273432412780638,
+        "s3": 17370435029581990399
       },
       "combat_orbs": {
         "counter": 0,
@@ -5037,8 +5068,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 3106,
-  "save_time": 1790828252,
+  "run_time": 3422,
+  "save_time": 1790828572,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -5199,6 +5230,10 @@
     {
       "col": 3,
       "row": 14
+    },
+    {
+      "col": 3,
+      "row": 15
     }
   ],
   "win_time": 0
