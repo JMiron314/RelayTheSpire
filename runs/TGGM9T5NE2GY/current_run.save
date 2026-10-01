@@ -75,7 +75,7 @@
           "ENCOUNTER.VINE_SHAMBLER_NORMAL",
           "ENCOUNTER.FLYCONID_NORMAL"
         ],
-        "normal_encounters_visited": 3,
+        "normal_encounters_visited": 4,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1246,7 +1246,7 @@
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZmBgYGG4YHtyNUa7RXt+QnTv2Uu3rSPs/QR9vnnfrrFnTyvpLWz9kOT+u6lx/JfzTl89uZRXsvBrUBZu7u9VbMTfNum8bM27yphcUL/+RqTNm9ttlou23AM7N/nnen2e28vUW9MvqzSj7zvDe52ybvzy012lHox2Z+1lOGIYTPa9IpT88gSw1PzeMqL590qEyO6VeZeHqiSJHpJPs8t6LjGz2eWfCflHoub/l4mXJ8TMaTLulumULxieJ+4kIHPR2vbf95/E3bzxO3V8i53z62OCW6XCTncF9J7+WJa1mtZpmaH9/Y9syD2WFTrYWXmaD7yW8PJW6aychKVz9OMs41yYnpbeBddHGdrfGyre5ua48d1bjaJTFdij85UDvxTeanbkvekovLpurc2uLqOjtsbsVlBaHCKAklP2O7I5nO7Ra6twSW35S8ZCLmDACGSW4mRwEAAA==",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgYWBgYGG4YHtyNUa7RXt+QnTv2Uu3rSPs/QR9vnnfrrFnTyvpLWz9kOT+u6lx/JfzTl89uZRXsvBrWZu3u9FXPTvNumMfM2b2ph8cI/uRpTdq9tNtpuG/DM7J/n3Wl2O29vUa+M/qySzzzvTe62yftzS412FPqxmZ/1lGEI4fOadMrTM8hSw1PzuMrLJx0qk2P6VSaenihSZDrJHrA8t6LjGz2eWfCflHoub/l4mXJ8TMaTLulumULxieJ+4kIHPR2vbf95/E3bzxO3V8i53z62OCW6XCTncF9J7+WJa1mtZpmaH9/Y9syD2WFTrYWXmaD7yW8PJW6aychKVz9OMs41yYnpbeBddHGdrfGyre5ua48d1bjaJTFdij85UDvxTeanbkvekovLpurc2uLqOjtsbsVlBaHCKAklP2O7I5nO7Ra6twSW35S8ZCLmLMmg19t6celOg10mosemtR06cclDInQWu7JXd4JM5q9uGd7qwkVr9bS2HHRtDNs243yH2OOZJ5SssyNc0pm6n/jEG865ql21ueJo7rZ1FWdPiC6X3J5ksjmsJ+1y10WdKEEAcQSvHKQBAAA=",
   "map_point_history": [
     [
       {
@@ -1852,11 +1852,82 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 11,
+                  "id": "CARD.BANSHEES_CRY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.REAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.WISP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.BANSHEES_CRY",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 298,
+            "current_hp": 17,
+            "damage_taken": 3,
+            "gold_gained": 11,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.INKLETS_NORMAL",
+            "monster_ids": [
+              "MONSTER.INKLET",
+              "MONSTER.INKLET",
+              "MONSTER.INKLET"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 10,
+  "num_reloads": 11,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1868,7 +1939,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 20,
+      "current_hp": 17,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1978,20 +2049,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 11,
+          "id": "CARD.BANSHEES_CRY",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 100,
-        "debuffs_applied": 32
+        "damage_dealt": 118,
+        "debuffs_applied": 36
       },
-      "gold": 287,
+      "gold": 298,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 4,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.05,
+        "potion_reward_odds_value": 0.6
       },
       "potions": [
         {
@@ -2159,11 +2237,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 62,
-            "s0": 14663369921194528591,
-            "s1": 11182551062314199585,
-            "s2": 12380700269759651100,
-            "s3": 6881268125551409961
+            "counter": 73,
+            "s0": 7873831868393999388,
+            "s1": 5148176542877055374,
+            "s2": 496002784039039534,
+            "s3": 1680263824317045943
           },
           "shops": {
             "counter": 0,
@@ -2258,11 +2336,11 @@
         "s3": 8949686389267949214
       },
       "shuffle": {
-        "counter": 110,
-        "s0": 79115654401064584,
-        "s1": 13824530689142544708,
-        "s2": 1994064672960689003,
-        "s3": 2625341640768291583
+        "counter": 124,
+        "s0": 3092572493815841513,
+        "s1": 4358757146333421894,
+        "s2": 1174511072859820463,
+        "s3": 6426525558595560614
       },
       "unknown_map_point": {
         "counter": 0,
@@ -2307,18 +2385,18 @@
         "s3": 15032823842007388642
       },
       "monster_ai": {
-        "counter": 1,
-        "s0": 4965947677259281674,
-        "s1": 1850583022713728487,
-        "s2": 1281791357820438225,
-        "s3": 15592837996807283167
+        "counter": 3,
+        "s0": 16729234071673833716,
+        "s1": 12855196253370209493,
+        "s2": 5967837922763377385,
+        "s3": 11977549301871327667
       },
       "niche": {
-        "counter": 11,
-        "s0": 14596446581288451372,
-        "s1": 13675642810096490252,
-        "s2": 17452607442468470683,
-        "s3": 8994200354911617752
+        "counter": 14,
+        "s0": 12231149690404896837,
+        "s1": 4737793495839156867,
+        "s2": 10080317720857711991,
+        "s3": 4607108460843938049
       },
       "combat_orbs": {
         "counter": 0,
@@ -2337,8 +2415,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 417,
-  "save_time": 1790824246,
+  "run_time": 483,
+  "save_time": 1790824429,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2516,6 +2594,10 @@
     {
       "col": 4,
       "row": 10
+    },
+    {
+      "col": 3,
+      "row": 11
     }
   ],
   "win_time": 0
