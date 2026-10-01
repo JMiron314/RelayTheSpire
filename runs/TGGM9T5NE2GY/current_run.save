@@ -57,7 +57,7 @@
           "EVENT.SLIPPERY_BRIDGE",
           "EVENT.TEA_MASTER"
         ],
-        "events_visited": 2,
+        "events_visited": 7,
         "normal_encounter_ids": [
           "ENCOUNTER.NIBBITS_WEAK",
           "ENCOUNTER.SLIMES_WEAK",
@@ -1239,7 +1239,8 @@
   "ascension": 10,
   "current_act_index": 0,
   "events_seen": [
-    "EVENT.SAPPHIRE_SEED"
+    "EVENT.SAPPHIRE_SEED",
+    "EVENT.JUNGLE_MAZE_ADVENTURE"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1444,11 +1445,61 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 163,
+            "current_hp": 45,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "SoloGold": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 150.6369542,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "JoinForcesGold": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 55.438336,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 55,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.JUNGLE_MAZE_ADVENTURE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1554,7 +1605,7 @@
       "extra_fields": {
         "damage_dealt": 19
       },
-      "gold": 108,
+      "gold": 163,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
@@ -1888,8 +1939,8 @@
     },
     "seed": "TGGM9T5NE2GY"
   },
-  "run_time": 125,
-  "save_time": 1790823738,
+  "run_time": 145,
+  "save_time": 1790823775,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2042,6 +2093,10 @@
     {
       "col": 4,
       "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
     }
   ],
   "win_time": 0
