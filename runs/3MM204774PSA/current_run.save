@@ -174,7 +174,7 @@
           "ENCOUNTER.SOUL_NEXUS_ELITE",
           "ENCOUNTER.MECHA_KNIGHT_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.FAKE_MERCHANT",
           "EVENT.SYMBIOTE",
@@ -4152,11 +4152,79 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.THUNDER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CLAW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.TESLA_COIL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 325,
+            "current_hp": 70,
+            "damage_taken": 6,
+            "gold_gained": 26,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.KUSARIGAMA",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.KNIGHTS_ELITE",
+            "monster_ids": [
+              "MONSTER.FLAIL_KNIGHT",
+              "MONSTER.SPECTRAL_KNIGHT",
+              "MONSTER.MAGI_KNIGHT"
+            ],
+            "room_type": "elite",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 43,
+  "num_reloads": 44,
   "odds": {
     "unknown_map_point_elite_odds_value": -4,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -4168,7 +4236,7 @@
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 76,
+      "current_hp": 70,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -4406,17 +4474,17 @@
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 2963,
-        "debuffs_applied": 39
+        "damage_dealt": 3257,
+        "debuffs_applied": 42
       },
-      "gold": 299,
+      "gold": 325,
       "max_energy": 3,
       "max_hp": 86,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.039999988,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": 0.054999985,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
@@ -4431,7 +4499,6 @@
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.KUSARIGAMA",
             "RELIC.NUNCHAKU",
             "RELIC.RIPPLE_BASIN",
             "RELIC.GOLD_PLATED_CABLES",
@@ -4443,9 +4510,7 @@
             "RELIC.TUNING_FORK",
             "RELIC.REPTILE_TRINKET",
             "RELIC.CANDELABRA",
-            "RELIC.LASTING_CANDY",
             "RELIC.JOSS_PAPER",
-            "RELIC.BOWLER_HAT",
             "RELIC.TINY_MAILBOX",
             "RELIC.PARRYING_SHIELD",
             "RELIC.ETERNAL_FEATHER",
@@ -4456,11 +4521,9 @@
             "RELIC.ORNAMENTAL_FAN",
             "RELIC.MINIATURE_CANNON",
             "RELIC.PEAR",
-            "RELIC.SPARKLING_ROUGE",
-            "RELIC.LUCKY_FYSH"
+            "RELIC.SPARKLING_ROUGE"
           ],
           "common": [
-            "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.BLOOD_VIAL",
             "RELIC.GORGET",
             "RELIC.CENTENNIAL_PUZZLE",
@@ -4469,20 +4532,16 @@
             "RELIC.VAJRA",
             "RELIC.BAG_OF_PREPARATION",
             "RELIC.WAR_PAINT",
-            "RELIC.JUZU_BRACELET",
             "RELIC.PENDULUM",
             "RELIC.STRIKE_DUMMY",
             "RELIC.REGAL_PILLOW",
             "RELIC.POTION_BELT",
             "RELIC.BAG_OF_MARBLES",
-            "RELIC.AMETHYST_AUBERGINE",
             "RELIC.ANCHOR"
           ],
           "rare": [
             "RELIC.METRONOME",
             "RELIC.ART_OF_WAR",
-            "RELIC.OLD_COIN",
-            "RELIC.WHITE_BEAST_STATUE",
             "RELIC.GAMBLING_CHIP",
             "RELIC.POCKETWATCH",
             "RELIC.BELLOWS",
@@ -4491,17 +4550,13 @@
             "RELIC.SHURIKEN",
             "RELIC.INTIMIDATING_HELMET",
             "RELIC.RAZOR_TOOTH",
-            "RELIC.WHITE_STAR",
-            "RELIC.FROZEN_EGG",
             "RELIC.THE_COURIER",
             "RELIC.ICE_CREAM",
             "RELIC.POWER_CELL",
             "RELIC.GAME_PIECE",
-            "RELIC.MOLTEN_EGG",
             "RELIC.TUNGSTEN_ROD",
             "RELIC.VEXING_PUZZLEBOX",
             "RELIC.BEATING_REMNANT",
-            "RELIC.SHOVEL",
             "RELIC.CAPTAINS_WHEEL",
             "RELIC.PRAYER_WHEEL",
             "RELIC.STURDY_CLAMP",
@@ -4512,13 +4567,10 @@
             "RELIC.LIZARD_TAIL",
             "RELIC.MANGO",
             "RELIC.MUMMIFIED_HAND",
-            "RELIC.GIRYA",
-            "RELIC.TOXIC_EGG",
             "RELIC.STONE_CALENDAR",
             "RELIC.CHANDELIER"
           ],
           "shop": [
-            "RELIC.DRAGON_FRUIT",
             "RELIC.RUNIC_CAPACITOR",
             "RELIC.PUNCH_DAGGER",
             "RELIC.SCREAMING_FLAGON",
@@ -4577,7 +4629,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 0
+                "value": 2
               }
             ]
           }
@@ -4601,7 +4653,7 @@
             "ints": [
               {
                 "name": "AttacksPlayed",
-                "value": 3
+                "value": 8
               }
             ]
           }
@@ -4629,16 +4681,20 @@
         {
           "floor_added_to_deck": 41,
           "id": "RELIC.STRAWBERRY"
+        },
+        {
+          "floor_added_to_deck": 45,
+          "id": "RELIC.KUSARIGAMA"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 304,
-            "s0": 18444477785099768490,
-            "s1": 17138622649824866276,
-            "s2": 11408034792282157855,
-            "s3": 2528231224601750310
+            "counter": 316,
+            "s0": 4705107344521516488,
+            "s1": 11725461039256855415,
+            "s2": 1593577296643007939,
+            "s3": 5272227915814471992
           },
           "shops": {
             "counter": 56,
@@ -4738,11 +4794,11 @@
         "s3": 14542416598490284144
       },
       "shuffle": {
-        "counter": 821,
-        "s0": 15388682309212625536,
-        "s1": 8245424179333655559,
-        "s2": 3131280975214139339,
-        "s3": 3003957587737422396
+        "counter": 865,
+        "s0": 16788310029437073833,
+        "s1": 9830113029469592829,
+        "s2": 8565928971694058550,
+        "s3": 4675233314646930169
       },
       "unknown_map_point": {
         "counter": 11,
@@ -4752,11 +4808,11 @@
         "s3": 1266888275308147348
       },
       "combat_card_generation": {
-        "counter": 964,
-        "s0": 9459357652139420925,
-        "s1": 438310308407287699,
-        "s2": 3017483785439934920,
-        "s3": 13076636704044887568
+        "counter": 1013,
+        "s0": 8542490069384000119,
+        "s1": 12842410333126453307,
+        "s2": 4262700920301692819,
+        "s3": 4393993579226148104
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -4766,11 +4822,11 @@
         "s3": 7719716315142391400
       },
       "combat_card_selection": {
-        "counter": 5,
-        "s0": 7580996410060448034,
-        "s1": 7193338712644003073,
-        "s2": 7657431995714104873,
-        "s3": 17044838579270471727
+        "counter": 6,
+        "s0": 16604117628211319820,
+        "s1": 6963245310246382090,
+        "s2": 13660910436014870283,
+        "s3": 10278852532161897455
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -4780,25 +4836,25 @@
         "s3": 5702049431455906913
       },
       "combat_targets": {
-        "counter": 107,
-        "s0": 18432492386356131222,
-        "s1": 3360929963602048807,
-        "s2": 2605829790800680297,
-        "s3": 5612357528196449604
+        "counter": 113,
+        "s0": 5741753618690310845,
+        "s1": 5525078646679335027,
+        "s2": 6587450935171681473,
+        "s3": 2677379799322884878
       },
       "monster_ai": {
-        "counter": 4,
-        "s0": 7290087117669048237,
-        "s1": 17076942222728600597,
-        "s2": 11207430035758469903,
-        "s3": 5653756567085345448
+        "counter": 8,
+        "s0": 13636151834895150444,
+        "s1": 17010053890060216211,
+        "s2": 6661886851313153924,
+        "s3": 6917338887879727317
       },
       "niche": {
-        "counter": 33,
-        "s0": 12275400996298442144,
-        "s1": 17139053024914799890,
-        "s2": 14685191228929414048,
-        "s3": 3339677216272329429
+        "counter": 36,
+        "s0": 15495131846187320490,
+        "s1": 8042368952272651519,
+        "s2": 3453301144755989386,
+        "s3": 2695651821625579307
       },
       "combat_orbs": {
         "counter": 0,
@@ -4817,8 +4873,8 @@
     },
     "seed": "3MM204774PSA"
   },
-  "run_time": 2894,
-  "save_time": 1790828025,
+  "run_time": 3010,
+  "save_time": 1790828145,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -4839,7 +4895,6 @@
         "RELIC.PARRYING_SHIELD",
         "RELIC.PERMAFROST",
         "RELIC.HORN_CLEAT",
-        "RELIC.KUSARIGAMA",
         "RELIC.CANDELABRA",
         "RELIC.ETERNAL_FEATHER",
         "RELIC.MERCURY_HOURGLASS",
@@ -4971,6 +5026,10 @@
     {
       "col": 3,
       "row": 11
+    },
+    {
+      "col": 3,
+      "row": 12
     }
   ],
   "win_time": 0
