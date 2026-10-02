@@ -54,7 +54,7 @@
           "EVENT.WATERLOGGED_SCRIPTORIUM",
           "EVENT.SPIRALING_WHIRLPOOL"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.SEAPUNK_WEAK",
           "ENCOUNTER.TOADPOLES_WEAK",
@@ -1169,11 +1169,14 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.SUNKEN_STATUE"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYobcEw6YZ5qhD3cpek+1PcdGYHddgGP9sQfUrimefNQ0qa4RHKT7mil4Qktk3R6OkrajENrNogfIqvzfHkQREN8xv/lrA5z9+SsHWyCE9BUVOkr5fBzJMcYQaSB1epKt9Yl8KyempPwqpJgjyhQgCtSfAveAAAAA==",
   "map_point_history": [
     [
       {
@@ -1320,23 +1323,73 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 213,
+            "current_hp": 52,
+            "damage_taken": 7,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Relic": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Sword of Stone"
+                  },
+                  "HpLoss": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 7,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 107,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.SUNKEN_STATUE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 59,
+      "current_hp": 52,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1434,7 +1487,7 @@
         "damage_dealt": 47,
         "debuffs_applied": 2
       },
-      "gold": 106,
+      "gold": 213,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
@@ -1716,11 +1769,11 @@
         "s3": 6471504502721371802
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 17986623701404287851,
-        "s1": 9885932406794115311,
-        "s2": 15303842967477584087,
-        "s3": 11568011489884177523
+        "counter": 1,
+        "s0": 14998505150719483895,
+        "s1": 11875602752232217427,
+        "s2": 16984681772112511932,
+        "s3": 7751685855017808650
       },
       "combat_card_generation": {
         "counter": 0,
@@ -1788,8 +1841,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 43,
-  "save_time": 1790871822,
+  "run_time": 68,
+  "save_time": 1790910785,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1938,6 +1991,10 @@
     {
       "col": 2,
       "row": 2
+    },
+    {
+      "col": 2,
+      "row": 3
     }
   ],
   "win_time": 0
