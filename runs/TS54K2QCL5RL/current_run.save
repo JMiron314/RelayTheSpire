@@ -72,7 +72,7 @@
           "ENCOUNTER.CORPSE_SLUGS_NORMAL",
           "ENCOUNTER.LIVING_FOG_NORMAL"
         ],
-        "normal_encounters_visited": 3,
+        "normal_encounters_visited": 4,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1925,11 +1925,71 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.REAVE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DRAIN_POWER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BURY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 287,
+            "current_hp": 22,
+            "damage_taken": 9,
+            "gold_gained": 8,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.HAUNTED_SHIP_NORMAL",
+            "monster_ids": [
+              "MONSTER.HAUNTED_SHIP"
+            ],
+            "room_type": "monster",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 10,
+  "num_reloads": 11,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1941,7 +2001,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 31,
+      "current_hp": 22,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2061,17 +2121,17 @@
         }
       ],
       "extra_fields": {
-        "damage_dealt": 82,
-        "debuffs_applied": 22
+        "damage_dealt": 109,
+        "debuffs_applied": 24
       },
-      "gold": 279,
+      "gold": 287,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.039999988,
+        "potion_reward_odds_value": 0.6
       },
       "potions": [
         {
@@ -2235,11 +2295,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 62,
-            "s0": 12342958007316919801,
-            "s1": 10558659628429310725,
-            "s2": 13121679556209171866,
-            "s3": 10159091680444388420
+            "counter": 73,
+            "s0": 1464164679581610175,
+            "s1": 5704186082446195577,
+            "s2": 999062633627593599,
+            "s3": 467743102843744714
           },
           "shops": {
             "counter": 0,
@@ -2362,11 +2422,11 @@
         "s3": 6452379823959318706
       },
       "shuffle": {
-        "counter": 158,
-        "s0": 4030148693446416998,
-        "s1": 11303545132541593604,
-        "s2": 13571522853954757885,
-        "s3": 17497760431837801212
+        "counter": 188,
+        "s0": 7892946358104189464,
+        "s1": 6120991495531147328,
+        "s2": 7288558931003131749,
+        "s3": 13164249817219751768
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2390,11 +2450,11 @@
         "s3": 6733609270230078837
       },
       "combat_card_selection": {
-        "counter": 1,
-        "s0": 3734425531272752852,
-        "s1": 17688408587008524126,
-        "s2": 10781624470347539411,
-        "s3": 3229643413872281011
+        "counter": 2,
+        "s0": 16896237284548695097,
+        "s1": 5983744096882963033,
+        "s2": 1565655425434258695,
+        "s3": 12060001213556378290
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -2418,11 +2478,11 @@
         "s3": 9177098398331446830
       },
       "niche": {
-        "counter": 11,
-        "s0": 10442312232623100986,
-        "s1": 2067300143844763084,
-        "s2": 15274857365398290896,
-        "s3": 1926704653259620241
+        "counter": 12,
+        "s0": 10873671429412212327,
+        "s1": 6890855946568822822,
+        "s2": 5629360480553031146,
+        "s3": 6002067682145694251
       },
       "combat_orbs": {
         "counter": 0,
@@ -2441,8 +2501,8 @@
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 655,
-  "save_time": 1790917711,
+  "run_time": 714,
+  "save_time": 1790917801,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2629,6 +2689,10 @@
     {
       "col": 4,
       "row": 12
+    },
+    {
+      "col": 5,
+      "row": 13
     }
   ],
   "win_time": 0
