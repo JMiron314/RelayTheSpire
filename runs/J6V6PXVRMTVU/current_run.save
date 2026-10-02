@@ -72,7 +72,7 @@
           "ENCOUNTER.GREMLIN_MERC_NORMAL",
           "ENCOUNTER.LIVING_FOG_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 2,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1373,11 +1373,81 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 4,
+                  "id": "CARD.ASHEN_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.EXPECT_A_FIGHT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.EVIL_EYE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.ASHEN_STRIKE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 227,
+            "current_hp": 47,
+            "damage_taken": 11,
+            "gold_gained": 14,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TOADPOLES_WEAK",
+            "monster_ids": [
+              "MONSTER.TOADPOLE",
+              "MONSTER.TOADPOLE"
+            ],
+            "room_type": "monster",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 3,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1389,7 +1459,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 52,
+      "current_hp": 47,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1481,20 +1551,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.ASHEN_STRIKE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 47,
-        "debuffs_applied": 2
+        "damage_dealt": 97,
+        "debuffs_applied": 4
       },
-      "gold": 213,
+      "gold": 227,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.035000004,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.020000007,
+        "potion_reward_odds_value": 0.6
       },
       "relic_grab_bag": {
         "relic_id_lists": {
@@ -1643,11 +1720,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 12,
-            "s0": 7691220085368678267,
-            "s1": 2506650185897131483,
-            "s2": 9412551008892717935,
-            "s3": 15820518651371075333
+            "counter": 23,
+            "s0": 606223614658098944,
+            "s1": 16298208797220129595,
+            "s2": 4749991531866441483,
+            "s3": 7376484266546604519
           },
           "shops": {
             "counter": 0,
@@ -1762,11 +1839,11 @@
         "s3": 7174073025756116651
       },
       "shuffle": {
-        "counter": 28,
-        "s0": 15770192868684960785,
-        "s1": 8990312602147546553,
-        "s2": 10518655588587901235,
-        "s3": 6471504502721371802
+        "counter": 57,
+        "s0": 8551944147742645811,
+        "s1": 16314135353456937304,
+        "s2": 1487971287148331432,
+        "s3": 4105068286310513715
       },
       "unknown_map_point": {
         "counter": 1,
@@ -1818,11 +1895,11 @@
         "s3": 6187674524516816234
       },
       "niche": {
-        "counter": 1,
-        "s0": 8649930581926219696,
-        "s1": 3226823059997366983,
-        "s2": 12170547666631136509,
-        "s3": 12793530192314763851
+        "counter": 3,
+        "s0": 14662687782478608182,
+        "s1": 4428460894898750971,
+        "s2": 12719982899154027633,
+        "s3": 14772164975185671443
       },
       "combat_orbs": {
         "counter": 0,
@@ -1841,8 +1918,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 68,
-  "save_time": 1790910785,
+  "run_time": 115,
+  "save_time": 1790915123,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1995,6 +2072,10 @@
     {
       "col": 2,
       "row": 3
+    },
+    {
+      "col": 2,
+      "row": 4
     }
   ],
   "win_time": 0
