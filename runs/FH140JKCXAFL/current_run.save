@@ -75,7 +75,7 @@
           "ENCOUNTER.OVERGROWTH_CRAWLERS",
           "ENCOUNTER.FLYCONID_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1168,11 +1168,90 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 2,
+                  "id": "CARD.CAPTURE_SPIRIT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.DEFILE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SOW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.CAPTURE_SPIRIT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 114,
+            "current_hp": 52,
+            "damage_taken": 0,
+            "gold_gained": 15,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.POTION_SHAPED_ROCK",
+                "was_picked": true
+              },
+              {
+                "choice": "POTION.FLEX_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+            "monster_ids": [
+              "MONSTER.FUZZY_WURM_CRAWLER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1276,18 +1355,37 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 2,
+          "id": "CARD.CAPTURE_SPIRIT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
-      "extra_fields": {},
-      "gold": 99,
+      "extra_fields": {
+        "damage_dealt": 35
+      },
+      "gold": 114,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.3
       },
+      "potions": [
+        {
+          "id": "POTION.POTION_SHAPED_ROCK",
+          "slot_index": 0
+        },
+        {
+          "id": "POTION.FLEX_POTION",
+          "slot_index": 1
+        }
+      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -1441,11 +1539,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 2,
-            "s0": 7597265938452122236,
-            "s1": 6515056070309834165,
-            "s2": 13469187738802903603,
-            "s3": 5164876628679048468
+            "counter": 15,
+            "s0": 15558692277764183665,
+            "s1": 7492648304666326885,
+            "s2": 11129859352134135332,
+            "s3": 16112636009192926365
           },
           "shops": {
             "counter": 0,
@@ -1562,11 +1660,11 @@
         "s3": 5905923188299481089
       },
       "shuffle": {
-        "counter": 0,
-        "s0": 13642173720431442640,
-        "s1": 6344393417518337194,
-        "s2": 10995881402232317490,
-        "s3": 17673109091148509328
+        "counter": 29,
+        "s0": 15190494419795857172,
+        "s1": 11271287717176324179,
+        "s2": 8761155695377655555,
+        "s3": 9499584740991060639
       },
       "unknown_map_point": {
         "counter": 0,
@@ -1618,11 +1716,11 @@
         "s3": 9596474466283382847
       },
       "niche": {
-        "counter": 0,
-        "s0": 3491342335345240316,
-        "s1": 12550213256539759819,
-        "s2": 1132991237032482832,
-        "s3": 6596079830301088563
+        "counter": 1,
+        "s0": 14254199059845568260,
+        "s1": 10511925633801114663,
+        "s2": 11468286962514571500,
+        "s3": 10376045826362040072
       },
       "combat_orbs": {
         "counter": 0,
@@ -1641,8 +1739,8 @@
     },
     "seed": "FH140JKCXAFL"
   },
-  "run_time": 18,
-  "save_time": 1790915282,
+  "run_time": 79,
+  "save_time": 1790915960,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1785,6 +1883,10 @@
     {
       "col": 6,
       "row": 1
+    },
+    {
+      "col": 6,
+      "row": 2
     }
   ],
   "win_time": 0
