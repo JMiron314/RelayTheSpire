@@ -1775,11 +1775,44 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 250,
+            "current_hp": 12,
+            "damage_taken": 0,
+            "gold_gained": 33,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.BRONZE_SCALES",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 7,
+  "num_reloads": 8,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1907,7 +1940,7 @@
         "damage_dealt": 34,
         "debuffs_applied": 15
       },
-      "gold": 217,
+      "gold": 250,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
@@ -1979,7 +2012,6 @@
             "RELIC.ODDLY_SMOOTH_STONE",
             "RELIC.BONE_FLUTE",
             "RELIC.BLOOD_VIAL",
-            "RELIC.BRONZE_SCALES",
             "RELIC.REGAL_PILLOW",
             "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.CENTENNIAL_PUZZLE",
@@ -2067,16 +2099,20 @@
         {
           "floor_added_to_deck": 8,
           "id": "RELIC.BOOKMARK"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.BRONZE_SCALES"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 47,
-            "s0": 3004297782357830021,
-            "s1": 6960157142867508806,
-            "s2": 14316115479188524763,
-            "s3": 11692844398883944053
+            "counter": 48,
+            "s0": 16961487373169451446,
+            "s1": 10343384936210077976,
+            "s2": 795840535978993502,
+            "s3": 16791240589793394972
           },
           "shops": {
             "counter": 0,
@@ -2269,17 +2305,17 @@
         "s3": 5414030742847790816
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 8769240137942372406,
-        "s1": 6757830386568164974,
-        "s2": 13954432786661808076,
-        "s3": 9105963239752279117
+        "counter": 1,
+        "s0": 6495557136656384533,
+        "s1": 16560335273000563092,
+        "s2": 18286783440440363002,
+        "s3": 16880727747443791121
       }
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 539,
-  "save_time": 1790917466,
+  "run_time": 545,
+  "save_time": 1790917501,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2316,7 +2352,6 @@
         "RELIC.LETTER_OPENER"
       ],
       "common": [
-        "RELIC.BRONZE_SCALES",
         "RELIC.ODDLY_SMOOTH_STONE",
         "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.BAG_OF_MARBLES",
@@ -2456,6 +2491,10 @@
     {
       "col": 4,
       "row": 9
+    },
+    {
+      "col": 4,
+      "row": 10
     }
   ],
   "win_time": 0
