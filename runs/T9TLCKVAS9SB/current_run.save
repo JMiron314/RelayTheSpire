@@ -23,7 +23,7 @@
           "ENCOUNTER.BYGONE_EFFIGY_ELITE",
           "ENCOUNTER.BYRDONIS_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.THIS_OR_THAT",
           "EVENT.SYMBIOTE",
@@ -1825,11 +1825,95 @@
             "turns_taken": 3
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 7,
+                  "id": "CARD.BATTLE_TRANCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.BODY_SLAM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.WHIRLWIND",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.BATTLE_TRANCE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 64,
+            "current_hp": 58,
+            "damage_taken": 22,
+            "gold_gained": 31,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.EXPLOSIVE_AMPOULE",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.FIRE_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.HORN_CLEAT",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+            "monster_ids": [
+              "MONSTER.BYGONE_EFFIGY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 6,
+  "num_reloads": 7,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1841,7 +1925,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 74,
+      "current_hp": 58,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1951,32 +2035,38 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 7,
+          "id": "CARD.BATTLE_TRANCE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 141,
-        "debuffs_applied": 1
+        "damage_dealt": 273,
+        "debuffs_applied": 2
       },
-      "gold": 33,
+      "gold": 64,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
-          "id": "POTION.FIRE_POTION",
+          "id": "POTION.EXPLOSIVE_AMPOULE",
           "slot_index": 0
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.HORN_CLEAT",
             "RELIC.ORICHALCUM",
             "RELIC.ORNAMENTAL_FAN",
             "RELIC.LUCKY_FYSH",
@@ -2112,16 +2202,20 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.KALEIDOSCOPE"
+        },
+        {
+          "floor_added_to_deck": 7,
+          "id": "RELIC.HORN_CLEAT"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 67,
-            "s0": 17767194033510168376,
-            "s1": 3596975685816361027,
-            "s2": 17448743379435449115,
-            "s3": 388059732988242431
+            "counter": 81,
+            "s0": 473664826728207735,
+            "s1": 1386268849692530592,
+            "s2": 6756846352758486572,
+            "s3": 17885734945890123469
           },
           "shops": {
             "counter": 28,
@@ -2305,11 +2399,11 @@
         "s3": 2068616982961574991
       },
       "shuffle": {
-        "counter": 79,
-        "s0": 5044239429058064136,
-        "s1": 7410423272036665756,
-        "s2": 11467415724777853476,
-        "s3": 14909549146829239953
+        "counter": 103,
+        "s0": 10538083695722428291,
+        "s1": 11636646312920514236,
+        "s2": 6995916135331082014,
+        "s3": 11128238144390703196
       },
       "unknown_map_point": {
         "counter": 1,
@@ -2361,11 +2455,11 @@
         "s3": 2786572160756754016
       },
       "niche": {
-        "counter": 11,
-        "s0": 2300078402115933269,
-        "s1": 13294147916299697554,
-        "s2": 9099588668764580936,
-        "s3": 3902312929281218193
+        "counter": 12,
+        "s0": 10498459084139364182,
+        "s1": 15698971780116907407,
+        "s2": 18128083225345456157,
+        "s3": 5575581456186402774
       },
       "combat_orbs": {
         "counter": 0,
@@ -2384,8 +2478,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 287,
-  "save_time": 1790917526,
+  "run_time": 401,
+  "save_time": 1790917833,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2394,7 +2488,6 @@
         "RELIC.TUNING_FORK",
         "RELIC.PEN_NIB",
         "RELIC.PARRYING_SHIELD",
-        "RELIC.HORN_CLEAT",
         "RELIC.PETRIFIED_TOAD",
         "RELIC.PANTOGRAPH",
         "RELIC.JOSS_PAPER",
@@ -2547,6 +2640,10 @@
     {
       "col": 5,
       "row": 6
+    },
+    {
+      "col": 5,
+      "row": 7
     }
   ],
   "win_time": 0
