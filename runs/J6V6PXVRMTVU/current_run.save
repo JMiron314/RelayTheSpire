@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.TERROR_EEL_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.WELCOME_TO_WONGOS",
           "EVENT.SUNKEN_STATUE",
@@ -1744,11 +1744,95 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 9,
+                  "id": "CARD.DRUM_OF_BATTLE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.BLOOD_WALL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DISMANTLE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.DRUM_OF_BATTLE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 88,
+            "current_hp": 12,
+            "damage_taken": 50,
+            "gold_gained": 30,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.FIRE_POTION",
+                "was_picked": true
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.LANTERN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
+            "monster_ids": [
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 9
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 7,
+  "num_reloads": 8,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1760,7 +1844,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 56,
+      "current_hp": 12,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1873,21 +1957,34 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 9,
+          "id": "CARD.DRUM_OF_BATTLE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 209,
-        "debuffs_applied": 10
+        "damage_dealt": 327,
+        "debuffs_applied": 14
       },
-      "gold": 58,
+      "gold": 88,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.5
       },
+      "potions": [
+        {
+          "id": "POTION.FIRE_POTION",
+          "slot_index": 0
+        }
+      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -1924,7 +2021,6 @@
             "RELIC.CANDELABRA"
           ],
           "common": [
-            "RELIC.LANTERN",
             "RELIC.VENERABLE_TEA_SET",
             "RELIC.POTION_BELT",
             "RELIC.FESTIVE_POPPER",
@@ -2031,16 +2127,20 @@
         {
           "floor_added_to_deck": 6,
           "id": "RELIC.STRIKE_DUMMY"
+        },
+        {
+          "floor_added_to_deck": 9,
+          "id": "RELIC.LANTERN"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 61,
-            "s0": 11512211565384185343,
-            "s1": 12965992448961182325,
-            "s2": 6669533996943210281,
-            "s3": 5915594780920029785
+            "counter": 75,
+            "s0": 7908835178504441746,
+            "s1": 207690737426639756,
+            "s2": 3858049238418252112,
+            "s3": 6647422031354048802
           },
           "shops": {
             "counter": 28,
@@ -2155,11 +2255,11 @@
         "s3": 7174073025756116651
       },
       "shuffle": {
-        "counter": 102,
-        "s0": 7772260820973927780,
-        "s1": 5218505875642742882,
-        "s2": 4135439635108304390,
-        "s3": 2807570400762094945
+        "counter": 150,
+        "s0": 34759821011064860,
+        "s1": 15172429281981370598,
+        "s2": 1029969547529422690,
+        "s3": 9233384346420397254
       },
       "unknown_map_point": {
         "counter": 1,
@@ -2211,11 +2311,11 @@
         "s3": 14177968557848677602
       },
       "niche": {
-        "counter": 6,
-        "s0": 5128634086800473995,
-        "s1": 13099681501507861687,
-        "s2": 12854949775630270098,
-        "s3": 5670064464564085241
+        "counter": 10,
+        "s0": 16541229755360767274,
+        "s1": 8472248644531686176,
+        "s2": 5984456763140294172,
+        "s3": 16649560013122393685
       },
       "combat_orbs": {
         "counter": 0,
@@ -2234,8 +2334,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 323,
-  "save_time": 1790915656,
+  "run_time": 434,
+  "save_time": 1790915843,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2272,7 +2372,6 @@
       ],
       "common": [
         "RELIC.JUZU_BRACELET",
-        "RELIC.LANTERN",
         "RELIC.RED_MASK",
         "RELIC.BAG_OF_PREPARATION",
         "RELIC.FESTIVE_POPPER",
@@ -2405,6 +2504,10 @@
     {
       "col": 0,
       "row": 8
+    },
+    {
+      "col": 1,
+      "row": 9
     }
   ],
   "win_time": 0
