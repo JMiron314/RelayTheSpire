@@ -75,7 +75,7 @@
           "ENCOUNTER.SLIMES_NORMAL",
           "ENCOUNTER.VINE_SHAMBLER_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1406,11 +1406,88 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 2,
+                  "id": "CARD.SETUP_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.CRUELTY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.IRON_WAVE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SETUP_STRIKE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 113,
+            "current_hp": 67,
+            "damage_taken": 3,
+            "gold_gained": 14,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.FIRE_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SLIMES_WEAK",
+            "monster_ids": [
+              "MONSTER.TWIG_SLIME_S",
+              "MONSTER.LEAF_SLIME_M",
+              "MONSTER.LEAF_SLIME_S"
+            ],
+            "room_type": "monster",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1422,7 +1499,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 64,
+      "current_hp": 67,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1514,18 +1591,33 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 2,
+          "id": "CARD.SETUP_STRIKE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
-      "extra_fields": {},
-      "gold": 99,
+      "extra_fields": {
+        "damage_dealt": 56
+      },
+      "gold": 113,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.3
       },
+      "potions": [
+        {
+          "id": "POTION.FIRE_POTION",
+          "slot_index": 0
+        }
+      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -1673,11 +1765,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 18,
-            "s0": 6631755242632674537,
-            "s1": 7244531949743958986,
-            "s2": 104683776723436764,
-            "s3": 11157387195527174548
+            "counter": 31,
+            "s0": 7026712646401125865,
+            "s1": 17057011825085315576,
+            "s2": 17632348377777412474,
+            "s3": 16221598182364349421
           },
           "shops": {
             "counter": 0,
@@ -1861,11 +1953,11 @@
         "s3": 2068616982961574991
       },
       "shuffle": {
-        "counter": 0,
-        "s0": 8252312582607825878,
-        "s1": 3564878930757398039,
-        "s2": 4326941241539731065,
-        "s3": 12964618986153705335
+        "counter": 37,
+        "s0": 7231435539506813134,
+        "s1": 16080753590733725981,
+        "s2": 13207983740168652409,
+        "s3": 14826960764141444912
       },
       "unknown_map_point": {
         "counter": 0,
@@ -1910,18 +2002,18 @@
         "s3": 14518070350007793984
       },
       "monster_ai": {
-        "counter": 0,
-        "s0": 7911511245480385685,
-        "s1": 3240327244626351558,
-        "s2": 8248981049537645494,
-        "s3": 4675052919531138019
+        "counter": 3,
+        "s0": 17415914405864201900,
+        "s1": 3239367772669847830,
+        "s2": 8246146226662547040,
+        "s3": 2786572160756754016
       },
       "niche": {
-        "counter": 6,
-        "s0": 8585947578039758025,
-        "s1": 6296781147499571868,
-        "s2": 14551131975451206206,
-        "s3": 4620691123421340292
+        "counter": 9,
+        "s0": 12606444449581899671,
+        "s1": 13402920809758611705,
+        "s2": 16488997723551520436,
+        "s3": 7809435010166874629
       },
       "combat_orbs": {
         "counter": 0,
@@ -1940,8 +2032,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 55,
-  "save_time": 1790916249,
+  "run_time": 123,
+  "save_time": 1790916324,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2086,6 +2178,10 @@
     {
       "col": 4,
       "row": 1
+    },
+    {
+      "col": 4,
+      "row": 2
     }
   ],
   "win_time": 0
