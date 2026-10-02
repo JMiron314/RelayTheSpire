@@ -57,7 +57,7 @@
           "EVENT.THE_LEGENDS_WERE_TRUE",
           "EVENT.THIS_OR_THAT"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
           "ENCOUNTER.SLIMES_WEAK",
@@ -1072,11 +1072,14 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.BYRDONIS_NEST"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYobcfwSionNXby2jXZG6YW8m4LWpMapma62WvKtwDJC3qa+2eyqhrunlOSqjJ5gU9U0eRar6xN9id9xNRnnrylYhw5O0Ute/KZlNxJM3l8iyZLepZtYvMMvCbdeeqGUvJM1yd6zW0yaTMnnNDh2zQz1NFts8qJzDYWTgBwafZBgwAAAA==",
   "map_point_history": [
     [
       {
@@ -1247,16 +1250,68 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_gained": [
+              {
+                "id": "CARD.BYRDONIS_EGG",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 114,
+            "current_hp": 52,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "BYRDONIS_NEST.pages.INITIAL.options.TAKE.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Card": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Byrdonis Egg"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.BYRDONIS_NEST",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 3,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
@@ -1359,6 +1414,13 @@
         {
           "floor_added_to_deck": 2,
           "id": "CARD.CAPTURE_SPIRIT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 3,
+          "id": "CARD.BYRDONIS_EGG",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
@@ -1667,11 +1729,11 @@
         "s3": 9499584740991060639
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 9108199729473244487,
-        "s1": 16496350382896708951,
-        "s2": 560844508619903184,
-        "s3": 12582419389519605821
+        "counter": 1,
+        "s0": 3753090467331145773,
+        "s1": 11331225145221357760,
+        "s2": 16655854730981236119,
+        "s3": 5308980136950896436
       },
       "combat_card_generation": {
         "counter": 0,
@@ -1739,8 +1801,8 @@
     },
     "seed": "FH140JKCXAFL"
   },
-  "run_time": 79,
-  "save_time": 1790915960,
+  "run_time": 117,
+  "save_time": 1790917163,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -1887,6 +1949,10 @@
     {
       "col": 6,
       "row": 2
+    },
+    {
+      "col": 5,
+      "row": 3
     }
   ],
   "win_time": 0
