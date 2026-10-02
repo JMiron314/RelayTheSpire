@@ -1714,11 +1714,41 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 58,
+            "current_hp": 56,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 24,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 6,
+  "num_reloads": 7,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1730,7 +1760,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 32,
+      "current_hp": 56,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2204,8 +2234,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 269,
-  "save_time": 1790915590,
+  "run_time": 323,
+  "save_time": 1790915656,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2371,6 +2401,10 @@
     {
       "col": 0,
       "row": 7
+    },
+    {
+      "col": 0,
+      "row": 8
     }
   ],
   "win_time": 0
