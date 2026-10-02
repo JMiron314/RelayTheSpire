@@ -23,7 +23,7 @@
           "ENCOUNTER.SKULKING_COLONY_ELITE",
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.POTION_COURIER",
           "EVENT.RELIC_TRADER",
@@ -1732,11 +1732,86 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.GUIDING_STAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ALIGNMENT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.WROUGHT_IN_WAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 70,
+            "current_hp": 16,
+            "damage_taken": 21,
+            "gold_gained": 33,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.DEXTERITY_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.DEXTERITY_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.AMETHYST_AUBERGINE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TERROR_EEL_ELITE",
+            "monster_ids": [
+              "MONSTER.TERROR_EEL"
+            ],
+            "room_type": "elite",
+            "turns_taken": 9
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1748,7 +1823,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 37,
+      "current_hp": 16,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1866,17 +1941,17 @@
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 138,
-        "debuffs_applied": 10
+        "damage_dealt": 288,
+        "debuffs_applied": 16
       },
-      "gold": 37,
+      "gold": 70,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
@@ -1923,7 +1998,6 @@
             "RELIC.BOWLER_HAT"
           ],
           "common": [
-            "RELIC.AMETHYST_AUBERGINE",
             "RELIC.VAJRA",
             "RELIC.STRAWBERRY",
             "RELIC.BLOOD_VIAL",
@@ -2027,16 +2101,20 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.SCROLL_BOXES"
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "RELIC.AMETHYST_AUBERGINE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 56,
-            "s0": 10030701345790026970,
-            "s1": 10828936789131496278,
-            "s2": 9684838113384351190,
-            "s3": 10246247627784613306
+            "counter": 70,
+            "s0": 15877548792431657872,
+            "s1": 8089092178429100535,
+            "s2": 14303867893174301276,
+            "s3": 2180688324622671744
           },
           "shops": {
             "counter": 28,
@@ -2150,11 +2228,11 @@
         "s3": 8892940911525340523
       },
       "shuffle": {
-        "counter": 51,
-        "s0": 15535574831669792882,
-        "s1": 1288113611842936822,
-        "s2": 4785158458575349236,
-        "s3": 14299732959375640905
+        "counter": 95,
+        "s0": 16984809093510148329,
+        "s1": 16612108313522015446,
+        "s2": 15271515221830603773,
+        "s3": 16597446211384226121
       },
       "unknown_map_point": {
         "counter": 1,
@@ -2206,11 +2284,11 @@
         "s3": 1552494851308201949
       },
       "niche": {
-        "counter": 4,
-        "s0": 3889660950722887245,
-        "s1": 16892327232855941760,
-        "s2": 1248256335098666036,
-        "s3": 8123635611081855310
+        "counter": 5,
+        "s0": 12622379831351168387,
+        "s1": 14899581699467591929,
+        "s2": 1194729959518921337,
+        "s3": 14878155228253932134
       },
       "combat_orbs": {
         "counter": 0,
@@ -2229,8 +2307,8 @@
     },
     "seed": "C3FC5HP6GATC"
   },
-  "run_time": 329,
-  "save_time": 1790915892,
+  "run_time": 498,
+  "save_time": 1790916153,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2275,7 +2353,6 @@
         "RELIC.BAG_OF_PREPARATION",
         "RELIC.MEAL_TICKET",
         "RELIC.REGAL_PILLOW",
-        "RELIC.AMETHYST_AUBERGINE",
         "RELIC.RED_MASK",
         "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.LANTERN",
@@ -2396,6 +2473,10 @@
     {
       "col": 3,
       "row": 7
+    },
+    {
+      "col": 2,
+      "row": 8
     }
   ],
   "win_time": 0
