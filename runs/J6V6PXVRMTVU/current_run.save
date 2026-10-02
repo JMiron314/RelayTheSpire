@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.TERROR_EEL_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.WELCOME_TO_WONGOS",
           "EVENT.SUNKEN_STATUE",
@@ -2009,11 +2009,86 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.BLUDGEON",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SETUP_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ASHEN_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 164,
+            "current_hp": 16,
+            "damage_taken": 32,
+            "gold_gained": 31,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLOOD_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.FIRE_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.TUNING_FORK",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TERROR_EEL_ELITE",
+            "monster_ids": [
+              "MONSTER.TERROR_EEL"
+            ],
+            "room_type": "elite",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 13,
+  "num_reloads": 14,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -2025,7 +2100,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 42,
+      "current_hp": 16,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2148,28 +2223,27 @@
         }
       ],
       "extra_fields": {
-        "damage_dealt": 416,
-        "debuffs_applied": 17
+        "damage_dealt": 566,
+        "debuffs_applied": 20
       },
-      "gold": 133,
+      "gold": 164,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.054999985,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.069999985,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
-          "id": "POTION.FIRE_POTION",
+          "id": "POTION.BLOOD_POTION",
           "slot_index": 0
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.TUNING_FORK",
             "RELIC.PETRIFIED_TOAD",
             "RELIC.LETTER_OPENER",
             "RELIC.PAPER_PHROG",
@@ -2315,16 +2389,28 @@
         {
           "floor_added_to_deck": 10,
           "id": "RELIC.PRAYER_WHEEL"
+        },
+        {
+          "floor_added_to_deck": 14,
+          "id": "RELIC.TUNING_FORK",
+          "props": {
+            "ints": [
+              {
+                "name": "SkillsPlayed",
+                "value": 0
+              }
+            ]
+          }
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 96,
-            "s0": 2061687119360425039,
-            "s1": 9891546124734453421,
-            "s2": 13622558444431154673,
-            "s3": 7791061809581086392
+            "counter": 110,
+            "s0": 14555698541236935987,
+            "s1": 300095409711017654,
+            "s2": 11573931492343270033,
+            "s3": 12906744482836659279
           },
           "shops": {
             "counter": 28,
@@ -2439,11 +2525,11 @@
         "s3": 7174073025756116651
       },
       "shuffle": {
-        "counter": 181,
-        "s0": 1179140207218834186,
-        "s1": 14243647492734540775,
-        "s2": 1886666538744927280,
-        "s3": 7290651337206423951
+        "counter": 219,
+        "s0": 5123825458215041540,
+        "s1": 15973891421978823567,
+        "s2": 787166155093846269,
+        "s3": 8215790307268120921
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2495,11 +2581,11 @@
         "s3": 14177968557848677602
       },
       "niche": {
-        "counter": 12,
-        "s0": 1129457333511388700,
-        "s1": 17294784082266504063,
-        "s2": 6864833804115680105,
-        "s3": 9928307526612224197
+        "counter": 13,
+        "s0": 8531970673751084454,
+        "s1": 11595362702731271690,
+        "s2": 9516985255629776245,
+        "s3": 9689300231164611907
       },
       "combat_orbs": {
         "counter": 0,
@@ -2518,8 +2604,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 590,
-  "save_time": 1790916570,
+  "run_time": 750,
+  "save_time": 1790916757,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2541,7 +2627,6 @@
         "RELIC.AKABEKO",
         "RELIC.MERCURY_HOURGLASS",
         "RELIC.PANTOGRAPH",
-        "RELIC.TUNING_FORK",
         "RELIC.RIPPLE_BASIN",
         "RELIC.NUNCHAKU",
         "RELIC.PERMAFROST",
@@ -2707,6 +2792,10 @@
     {
       "col": 2,
       "row": 13
+    },
+    {
+      "col": 1,
+      "row": 14
     }
   ],
   "win_time": 0
