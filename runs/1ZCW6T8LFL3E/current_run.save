@@ -75,7 +75,7 @@
           "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
           "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL"
         ],
-        "normal_encounters_visited": 3,
+        "normal_encounters_visited": 4,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1628,11 +1628,88 @@
             "turns_taken": 3
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 6,
+                  "id": "CARD.DODGE_AND_ROLL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.DEADLY_POISON",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DAGGER_THROW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 66,
+            "current_hp": 40,
+            "damage_taken": 8,
+            "gold_gained": 13,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.VULNERABLE_POTION",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+            "monster_ids": [
+              "MONSTER.CROSSBOW_RUBY_RAIDER",
+              "MONSTER.BRUTE_RUBY_RAIDER",
+              "MONSTER.ASSASSIN_RUBY_RAIDER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 5
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1644,7 +1721,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 48,
+      "current_hp": 40,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1768,20 +1845,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 6,
+          "id": "CARD.DODGE_AND_ROLL",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 217,
-        "debuffs_applied": 7
+        "damage_dealt": 291,
+        "debuffs_applied": 9
       },
-      "gold": 53,
+      "gold": 66,
       "max_energy": 3,
       "max_hp": 70,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.20000002
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.10000002
       },
       "potions": [
         {
@@ -1948,11 +2032,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 50,
-            "s0": 1962960548710280551,
-            "s1": 17156488260411118842,
-            "s2": 8357012801984548775,
-            "s3": 2006693934609555422
+            "counter": 63,
+            "s0": 2073971603574121017,
+            "s1": 1585949590988464951,
+            "s2": 8634703908069860124,
+            "s3": 287253126042823723
           },
           "shops": {
             "counter": 0,
@@ -2066,11 +2150,11 @@
         "s3": 4898999508017571369
       },
       "shuffle": {
-        "counter": 122,
-        "s0": 12094110759897050353,
-        "s1": 1810472997663961504,
-        "s2": 6215841603456903278,
-        "s3": 10919382200376026492
+        "counter": 151,
+        "s0": 11256199010300222467,
+        "s1": 5807428547928471799,
+        "s2": 12559447060892279946,
+        "s3": 3404121158526359825
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2122,11 +2206,11 @@
         "s3": 13516402212766735305
       },
       "niche": {
-        "counter": 9,
-        "s0": 1952792172849613125,
-        "s1": 6854938148400131785,
-        "s2": 16514472824051070918,
-        "s3": 13441889271395024277
+        "counter": 12,
+        "s0": 6580594833267178587,
+        "s1": 13859058533332233464,
+        "s2": 2511326300792166440,
+        "s3": 7502204040982398710
       },
       "combat_orbs": {
         "counter": 0,
@@ -2145,8 +2229,8 @@
     },
     "seed": "1ZCW6T8LFL3E"
   },
-  "run_time": 207,
-  "save_time": 1790915030,
+  "run_time": 367,
+  "save_time": 1790915299,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2307,6 +2391,10 @@
     {
       "col": 3,
       "row": 5
+    },
+    {
+      "col": 4,
+      "row": 6
     }
   ],
   "win_time": 0
