@@ -2013,11 +2013,44 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 106,
+            "current_hp": 64,
+            "damage_taken": 0,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.GAME_PIECE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 9,
+  "num_reloads": 10,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -2161,7 +2194,7 @@
         "damage_dealt": 345,
         "debuffs_applied": 2
       },
-      "gold": 74,
+      "gold": 106,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
@@ -2264,7 +2297,6 @@
             "RELIC.FROZEN_EGG",
             "RELIC.POCKETWATCH",
             "RELIC.SHOVEL",
-            "RELIC.GAME_PIECE",
             "RELIC.UNCEASING_TOP",
             "RELIC.OLD_COIN",
             "RELIC.RAZOR_TOOTH",
@@ -2318,16 +2350,20 @@
         {
           "floor_added_to_deck": 7,
           "id": "RELIC.HORN_CLEAT"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.GAME_PIECE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 92,
-            "s0": 3935677572468519494,
-            "s1": 4989958026325707384,
-            "s2": 8782911879612744061,
-            "s3": 14636534380805444772
+            "counter": 93,
+            "s0": 13312319431524134042,
+            "s1": 739322989171292483,
+            "s2": 9780508554076451643,
+            "s3": 8348426605558986174
           },
           "shops": {
             "counter": 28,
@@ -2581,17 +2617,17 @@
         "s3": 18268006650839290840
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 8146333483957837433,
-        "s1": 15032729273541906585,
-        "s2": 5627470439895140760,
-        "s3": 9991823520549887884
+        "counter": 1,
+        "s0": 3114654797718704492,
+        "s1": 17261072552110819192,
+        "s2": 14435190749448984545,
+        "s3": 135859258555475546
       }
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 509,
-  "save_time": 1790918025,
+  "run_time": 516,
+  "save_time": 1790918039,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2652,7 +2688,6 @@
         "RELIC.VAJRA"
       ],
       "rare": [
-        "RELIC.GAME_PIECE",
         "RELIC.GAMBLING_CHIP",
         "RELIC.SHURIKEN",
         "RELIC.VEXING_PUZZLEBOX",
@@ -2764,6 +2799,10 @@
     {
       "col": 5,
       "row": 9
+    },
+    {
+      "col": 4,
+      "row": 10
     }
   ],
   "win_time": 0
