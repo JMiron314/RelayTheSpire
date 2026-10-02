@@ -1558,11 +1558,140 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.WHIRLWIND",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.UPPERCUT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.TREMBLE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BLOOD_WALL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.RUPTURE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FASTEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.NOSTALGIA",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_removed": [
+              {
+                "floor_added_to_deck": 1,
+                "id": "CARD.STRIKE_IRONCLAD",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 13,
+            "current_hp": 67,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 100,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SHACKLING_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.TOUCH_OF_INSANITY",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.SPEED_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.BAG_OF_PREPARATION",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.REGAL_PILLOW",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.MYSTIC_LIGHTER",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1576,13 +1705,6 @@
       "character_id": "CHARACTER.IRONCLAD",
       "current_hp": 67,
       "deck": [
-        {
-          "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_IRONCLAD",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
         {
           "floor_added_to_deck": 1,
           "id": "CARD.STRIKE_IRONCLAD",
@@ -1680,9 +1802,10 @@
         }
       ],
       "extra_fields": {
+        "card_shop_removals_used": 1,
         "damage_dealt": 56
       },
-      "gold": 113,
+      "gold": 13,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
@@ -1757,9 +1880,7 @@
             "RELIC.RED_MASK",
             "RELIC.STRAWBERRY",
             "RELIC.VENERABLE_TEA_SET",
-            "RELIC.CENTENNIAL_PUZZLE",
-            "RELIC.REGAL_PILLOW",
-            "RELIC.BAG_OF_PREPARATION"
+            "RELIC.CENTENNIAL_PUZZLE"
           ],
           "rare": [
             "RELIC.MANGO",
@@ -1826,8 +1947,7 @@
             "RELIC.KIFUDA",
             "RELIC.ROYAL_STAMP",
             "RELIC.PUNCH_DAGGER",
-            "RELIC.RINGING_TRIANGLE",
-            "RELIC.MYSTIC_LIGHTER"
+            "RELIC.RINGING_TRIANGLE"
           ]
         }
       },
@@ -1844,18 +1964,18 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 31,
-            "s0": 7026712646401125865,
-            "s1": 17057011825085315576,
-            "s2": 17632348377777412474,
-            "s3": 16221598182364349421
+            "counter": 45,
+            "s0": 3376802872101276083,
+            "s1": 15602290608348560438,
+            "s2": 7340803161694836411,
+            "s3": 9573558443514503273
           },
           "shops": {
-            "counter": 0,
-            "s0": 2817433778025509375,
-            "s1": 16440298907057094454,
-            "s2": 7356941988351766421,
-            "s3": 1951138886579551697
+            "counter": 28,
+            "s0": 1614493290809848739,
+            "s1": 17371537150386604293,
+            "s2": 14715759805935484856,
+            "s3": 3888676001241108798
           },
           "transformations": {
             "counter": 0,
@@ -2111,8 +2231,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 151,
-  "save_time": 1790917108,
+  "run_time": 184,
+  "save_time": 1790917194,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2153,11 +2273,9 @@
         "RELIC.WAR_PAINT",
         "RELIC.HAPPY_FLOWER",
         "RELIC.VENERABLE_TEA_SET",
-        "RELIC.BAG_OF_PREPARATION",
         "RELIC.AMETHYST_AUBERGINE",
         "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.JUZU_BRACELET",
-        "RELIC.REGAL_PILLOW",
         "RELIC.CENTENNIAL_PUZZLE",
         "RELIC.PENDULUM",
         "RELIC.BRONZE_SCALES",
@@ -2226,7 +2344,6 @@
         "RELIC.DOLLYS_MIRROR",
         "RELIC.RINGING_TRIANGLE",
         "RELIC.TOOLBOX",
-        "RELIC.MYSTIC_LIGHTER",
         "RELIC.GHOST_SEED",
         "RELIC.DRAGON_FRUIT",
         "RELIC.CHEMICAL_X",
@@ -2265,6 +2382,10 @@
     {
       "col": 4,
       "row": 3
+    },
+    {
+      "col": 5,
+      "row": 4
     }
   ],
   "win_time": 0
