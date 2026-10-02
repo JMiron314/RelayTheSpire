@@ -54,7 +54,7 @@
           "EVENT.BRAIN_LEECH",
           "EVENT.TRASH_HEAP"
         ],
-        "events_visited": 2,
+        "events_visited": 5,
         "normal_encounter_ids": [
           "ENCOUNTER.SLUDGE_SPINNER_WEAK",
           "ENCOUNTER.CORPSE_SLUGS_WEAK",
@@ -1234,7 +1234,8 @@
   "ascension": 10,
   "current_act_index": 0,
   "events_seen": [
-    "EVENT.DOORS_OF_LIGHT_AND_DARK"
+    "EVENT.DOORS_OF_LIGHT_AND_DARK",
+    "EVENT.SUNKEN_TREASURY"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1410,8 +1411,7 @@
                 "title": {
                   "key": "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 0,
@@ -1438,16 +1438,66 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 163,
+            "current_hp": 47,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SUNKEN_TREASURY.pages.INITIAL.options.FIRST_CHEST.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "SmallChestGold": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 55,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "LargeChestGold": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 321,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 55,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.SUNKEN_TREASURY",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
@@ -1546,7 +1596,7 @@
       "extra_fields": {
         "damage_dealt": 11
       },
-      "gold": 108,
+      "gold": 163,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
@@ -1836,11 +1886,11 @@
         "s3": 3530643119220182668
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 16599768706258964021,
-        "s1": 3028580281026292616,
-        "s2": 2998325464536455010,
-        "s3": 2811032853952552953
+        "counter": 2,
+        "s0": 16959253777467996740,
+        "s1": 16556821125864174303,
+        "s2": 10714740855619590487,
+        "s3": 1048812737202262259
       },
       "combat_card_generation": {
         "counter": 0,
@@ -1908,8 +1958,8 @@
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 106,
-  "save_time": 1790916514,
+  "run_time": 123,
+  "save_time": 1790916588,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2062,6 +2112,10 @@
     {
       "col": 3,
       "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
     }
   ],
   "win_time": 0
