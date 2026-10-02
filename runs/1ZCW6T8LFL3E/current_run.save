@@ -75,7 +75,7 @@
           "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
           "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 2,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1427,15 +1427,13 @@
                 "title": {
                   "key": "DENSE_VEGETATION.pages.INITIAL.options.REST.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               },
               {
                 "title": {
                   "key": "DENSE_VEGETATION.pages.REST.options.FIGHT.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 15,
@@ -1475,11 +1473,86 @@
             "turns_taken": 6
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 4,
+                  "id": "CARD.BLADE_DANCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.UNTOUCHABLE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PINPOINT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.BLADE_DANCE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 40,
+            "current_hp": 50,
+            "damage_taken": 4,
+            "gold_gained": 15,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.ATTACK_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.NIBBITS_WEAK",
+            "monster_ids": [
+              "MONSTER.NIBBIT"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1491,7 +1564,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 54,
+      "current_hp": 50,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1601,25 +1674,36 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.BLADE_DANCE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 118,
-        "debuffs_applied": 5
+        "damage_dealt": 165,
+        "debuffs_applied": 6
       },
-      "gold": 25,
+      "gold": 40,
       "max_energy": 3,
       "max_hp": 70,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.020000007,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": -0.0050000073,
+        "potion_reward_odds_value": 0.3
       },
       "potions": [
         {
           "id": "POTION.EXPLOSIVE_AMPOULE",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.ATTACK_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -1777,11 +1861,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 24,
-            "s0": 7157392454793930001,
-            "s1": 7533375264183074233,
-            "s2": 12775848583383556286,
-            "s3": 7497503566020154773
+            "counter": 37,
+            "s0": 13881217762742539964,
+            "s1": 1675096621565467062,
+            "s2": 6504911153027189215,
+            "s3": 17858548591451989845
           },
           "shops": {
             "counter": 0,
@@ -1895,11 +1979,11 @@
         "s3": 4898999508017571369
       },
       "shuffle": {
-        "counter": 72,
-        "s0": 11108169169279561809,
-        "s1": 7960466714491537733,
-        "s2": 516137613790505343,
-        "s3": 2896984238023325274
+        "counter": 95,
+        "s0": 5301715732662142269,
+        "s1": 12474534018479215769,
+        "s2": 17307835129351411175,
+        "s3": 5555739445113137264
       },
       "unknown_map_point": {
         "counter": 1,
@@ -1951,11 +2035,11 @@
         "s3": 8178920474206089930
       },
       "niche": {
-        "counter": 5,
-        "s0": 12727816251535483452,
-        "s1": 905467541279094143,
-        "s2": 7351317000994184158,
-        "s3": 12080029022000124393
+        "counter": 6,
+        "s0": 1987907096713840298,
+        "s1": 15724189736839744669,
+        "s2": 7889098747693840866,
+        "s3": 9552932395950366629
       },
       "combat_orbs": {
         "counter": 0,
@@ -1974,8 +2058,8 @@
     },
     "seed": "1ZCW6T8LFL3E"
   },
-  "run_time": 118,
-  "save_time": 1790871214,
+  "run_time": 162,
+  "save_time": 1790910751,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2128,6 +2212,10 @@
     {
       "col": 3,
       "row": 3
+    },
+    {
+      "col": 3,
+      "row": 4
     }
   ],
   "win_time": 0
