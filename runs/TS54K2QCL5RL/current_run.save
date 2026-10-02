@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.SKULKING_COLONY_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.RELIC_TRADER",
           "EVENT.DOORS_OF_LIGHT_AND_DARK",
@@ -1241,7 +1241,7 @@
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYGBgYmBgYGN4awaI7HWcqJMbmKPavXthRu3WiwyUzO7SbbsYzbDJKF0prKeavTluTy9a7vXV24daLZLLOvxy6yPX5x84OM4ezNj5MXV7Hk/OwvfCv4ac1b57KtR06sNFOaeUVLtX7W7iW+k2e2ZGZO1uIt3rTE1b/JhN2rt8wl8uIjDdVZiktdvJdMyeieYsGw5frURd8uBZ2JC++6ne0TWPNWc9V6f9cfT1dn7N8i+jV8T9L/oAieBMtu5jO5Gxsy9cQM7hxlmrbH4sAR8e/hrMp/uJJZ4lf2XHo9R7Cy1IRLf4Xb/a3XT+y2kC4Xz3n87lLundhDvXtW7xAEAM2QObn5AAAA",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZmBgYGN4awaI7HWcqJMbmKPavXthRu3WiwyUzO7SbbsYzbDJKF0prKeavTluTy9a7vXV24daLZLLOvxy6yPX5x84OM4ezNj5MXV7Hk/OwvfCv4ac1b5zLAth45sdJMaeYVLdX6WbuX+E6e2ZKZOVmLt3jTElf/JhN2r94yl8iLjzRUZykudfFeMiWje4oFw5brUxd9uxR0Ji6863a2T2DNW81V6/1dfzxdnbF/i+jX8D1J/4MieBIsu5nP5G5syNQTM7hzlGnaHosDR8S/h7Mq/+FKZolf2XPp9RzBylITLv0Vbve3Xj+x20K6XDzn8btLuXdiD/XuWb0jkJ0ha3OaS+7NnpW8cyZumWnUZKbvdkHsQMStD2LR0nuU8rpDfPK8u+7mOhvue6sutOPDEY70OR0PPYRNZWIftT72bCn43sHGJyJ4QFfx3/a/zkzi1SsePOOTnnPuYfNr85iCnW2sfecLDshKclnIOQMAWEE5D2QBAAA=",
   "map_point_history": [
     [
       {
@@ -1838,11 +1838,98 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 12,
+                  "id": "CARD.DEATHS_DOOR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.REAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.GRAVEBLAST",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.DEATHS_DOOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 279,
+            "current_hp": 31,
+            "damage_taken": 0,
+            "gold_gained": 29,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SKILL_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.SKILL_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.HORN_CLEAT",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
+            "monster_ids": [
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 9,
+  "num_reloads": 10,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1964,20 +2051,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 12,
+          "id": "CARD.DEATHS_DOOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 34,
-        "debuffs_applied": 15
+        "damage_dealt": 82,
+        "debuffs_applied": 22
       },
-      "gold": 250,
+      "gold": 279,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
@@ -1988,7 +2082,6 @@
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.HORN_CLEAT",
             "RELIC.FUNERARY_MASK",
             "RELIC.ORNAMENTAL_FAN",
             "RELIC.PERMAFROST",
@@ -2133,16 +2226,20 @@
         {
           "floor_added_to_deck": 10,
           "id": "RELIC.BRONZE_SCALES"
+        },
+        {
+          "floor_added_to_deck": 12,
+          "id": "RELIC.HORN_CLEAT"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 48,
-            "s0": 16961487373169451446,
-            "s1": 10343384936210077976,
-            "s2": 795840535978993502,
-            "s3": 16791240589793394972
+            "counter": 62,
+            "s0": 12342958007316919801,
+            "s1": 10558659628429310725,
+            "s2": 13121679556209171866,
+            "s3": 10159091680444388420
           },
           "shops": {
             "counter": 0,
@@ -2265,11 +2362,11 @@
         "s3": 6452379823959318706
       },
       "shuffle": {
-        "counter": 133,
-        "s0": 2820096554963150782,
-        "s1": 12524292327107390900,
-        "s2": 8238021707497285450,
-        "s3": 4185491902181419375
+        "counter": 158,
+        "s0": 4030148693446416998,
+        "s1": 11303545132541593604,
+        "s2": 13571522853954757885,
+        "s3": 17497760431837801212
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2279,11 +2376,11 @@
         "s3": 1048812737202262259
       },
       "combat_card_generation": {
-        "counter": 0,
-        "s0": 13105251649387154388,
-        "s1": 12589429630194059352,
-        "s2": 13988228159961960599,
-        "s3": 6559808621044512529
+        "counter": 28,
+        "s0": 16759773279130656866,
+        "s1": 7103471010603864236,
+        "s2": 8742513305028255683,
+        "s3": 9447356157630914734
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2293,11 +2390,11 @@
         "s3": 6733609270230078837
       },
       "combat_card_selection": {
-        "counter": 0,
-        "s0": 14935555327354996827,
-        "s1": 7153266305703861389,
-        "s2": 6447351856482184072,
-        "s3": 11516576718297414146
+        "counter": 1,
+        "s0": 3734425531272752852,
+        "s1": 17688408587008524126,
+        "s2": 10781624470347539411,
+        "s3": 3229643413872281011
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -2321,11 +2418,11 @@
         "s3": 9177098398331446830
       },
       "niche": {
-        "counter": 7,
-        "s0": 16221461872948020561,
-        "s1": 14111377200129805254,
-        "s2": 14360096276477255123,
-        "s3": 1442009414053175631
+        "counter": 11,
+        "s0": 10442312232623100986,
+        "s1": 2067300143844763084,
+        "s2": 15274857365398290896,
+        "s3": 1926704653259620241
       },
       "combat_orbs": {
         "counter": 0,
@@ -2344,8 +2441,8 @@
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 554,
-  "save_time": 1790917543,
+  "run_time": 655,
+  "save_time": 1790917711,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2363,7 +2460,6 @@
         "RELIC.JOSS_PAPER",
         "RELIC.REPTILE_TRINKET",
         "RELIC.LUCKY_FYSH",
-        "RELIC.HORN_CLEAT",
         "RELIC.PANTOGRAPH",
         "RELIC.PEAR",
         "RELIC.ETERNAL_FEATHER",
@@ -2529,6 +2625,10 @@
     {
       "col": 4,
       "row": 11
+    },
+    {
+      "col": 4,
+      "row": 12
     }
   ],
   "win_time": 0
