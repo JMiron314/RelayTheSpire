@@ -72,7 +72,7 @@
           "ENCOUNTER.CORPSE_SLUGS_NORMAL",
           "ENCOUNTER.LIVING_FOG_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 2,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1488,11 +1488,81 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 5,
+                  "id": "CARD.NEGATIVE_PULSE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.AFTERLIFE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FLATTEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.NEGATIVE_PULSE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 173,
+            "current_hp": 44,
+            "damage_taken": 3,
+            "gold_gained": 10,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.CORPSE_SLUGS_WEAK",
+            "monster_ids": [
+              "MONSTER.CORPSE_SLUG",
+              "MONSTER.CORPSE_SLUG"
+            ],
+            "room_type": "monster",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 3,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1504,7 +1574,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 47,
+      "current_hp": 44,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1591,19 +1661,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "CARD.NEGATIVE_PULSE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 11
+        "damage_dealt": 16,
+        "debuffs_applied": 2
       },
-      "gold": 163,
+      "gold": 173,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.035000004,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.020000007,
+        "potion_reward_odds_value": 0.6
       },
       "relic_grab_bag": {
         "relic_id_lists": {
@@ -1752,11 +1830,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 11,
-            "s0": 5591733841686125815,
-            "s1": 13197465759029345794,
-            "s2": 7422116995102853412,
-            "s3": 1690087431215947690
+            "counter": 22,
+            "s0": 4208506337818435263,
+            "s1": 14289267625121328233,
+            "s2": 14708657524322566591,
+            "s3": 4161254007459542521
           },
           "shops": {
             "counter": 0,
@@ -1879,11 +1957,11 @@
         "s3": 6452379823959318706
       },
       "shuffle": {
-        "counter": 26,
-        "s0": 10784146221521719699,
-        "s1": 3732798503588843222,
-        "s2": 12538303877064712123,
-        "s3": 3530643119220182668
+        "counter": 54,
+        "s0": 2151164981848155718,
+        "s1": 11159252548534348521,
+        "s2": 3717037259668889653,
+        "s3": 4538925572085723774
       },
       "unknown_map_point": {
         "counter": 2,
@@ -1935,11 +2013,11 @@
         "s3": 9177098398331446830
       },
       "niche": {
-        "counter": 2,
-        "s0": 14251146065944659241,
-        "s1": 5490369875493842167,
-        "s2": 7379014068235185956,
-        "s3": 3223667346052834411
+        "counter": 4,
+        "s0": 8919606101427890293,
+        "s1": 9645299906997985602,
+        "s2": 8152159750017984440,
+        "s3": 8986963638467477088
       },
       "combat_orbs": {
         "counter": 0,
@@ -1958,8 +2036,8 @@
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 123,
-  "save_time": 1790916588,
+  "run_time": 209,
+  "save_time": 1790916753,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2116,6 +2194,10 @@
     {
       "col": 4,
       "row": 4
+    },
+    {
+      "col": 4,
+      "row": 5
     }
   ],
   "win_time": 0
