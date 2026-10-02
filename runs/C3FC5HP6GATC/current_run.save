@@ -1224,7 +1224,7 @@
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZmBgYGLQaDWcEqbs1dRzICJoqe1Sha9NXFbctMj/Y0oZkXtJRYo+xU7C+3LUnfNuHtGaGguaJOizbbeRS3sWeee6NweqZMimVxs0p61oTHb3iK5sx1DGJsyArvCdDtFlyVa+hmanhsRdoxjatnJJZKSSaHnE7qyXIBrCfwbavhqkIDr60cx1ayHfC4+kR8ddTvpNDJ8Vuy/nSH+zYLrhY0TDI1dVuz7ETHVTfJjbN0lcNepx7JOtoT0TtTcHWucZJpjdvqaxcyrmpIrZ3lmhx6OGNNllRvaO/ijasmmoRtnXJsVdjliKsTpFbeCnscYpw9JyurN9h37UTOBv5m/y+JnzrteOwuth9U/2bw9Yis2ryKw6uEUyUKlbi7fXUS53TKvDG42PRS1WvDdhf2sGkrDuwQ4pUIXcQQ7fUk3rbzx2m1iXU7VY6tn+Ly7evEjn0qQifDHRb9KHJnib/ecS9bbGI1p1LRerUjb5827dhrJbB9OvOib1oOV+K+tt96/TugmlM+a/1157dbqzgA+JoX2oUBAAA=",
   "map_point_history": [
     [
       {
@@ -1699,11 +1699,44 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 37,
+            "current_hp": 37,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.GLITTERSTREAM"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 7,
+  "num_reloads": 8,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1823,6 +1856,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 5,
           "id": "CARD.GLITTERSTREAM",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2195,8 +2229,8 @@
     },
     "seed": "C3FC5HP6GATC"
   },
-  "run_time": 288,
-  "save_time": 1790915817,
+  "run_time": 329,
+  "save_time": 1790915892,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2358,6 +2392,10 @@
     {
       "col": 4,
       "row": 6
+    },
+    {
+      "col": 3,
+      "row": 7
     }
   ],
   "win_time": 0
