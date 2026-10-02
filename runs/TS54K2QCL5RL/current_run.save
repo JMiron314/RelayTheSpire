@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.SKULKING_COLONY_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.RELIC_TRADER",
           "EVENT.DOORS_OF_LIGHT_AND_DARK",
@@ -1661,11 +1661,92 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 8,
+                  "id": "CARD.GRAVE_WARDEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.CAPTURE_SPIRIT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DELAY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GRAVE_WARDEN",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 217,
+            "current_hp": 12,
+            "damage_taken": 32,
+            "gold_gained": 31,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SKILL_POTION",
+                "was_picked": true
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.BOOKMARK",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TERROR_EEL_ELITE",
+            "monster_ids": [
+              "MONSTER.TERROR_EEL"
+            ],
+            "room_type": "elite",
+            "turns_taken": 10
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 6,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1677,7 +1758,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 44,
+      "current_hp": 12,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1779,21 +1860,34 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "CARD.GRAVE_WARDEN",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 16,
-        "debuffs_applied": 6
+        "damage_dealt": 34,
+        "debuffs_applied": 15
       },
-      "gold": 186,
+      "gold": 217,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.70000005
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.6
       },
+      "potions": [
+        {
+          "id": "POTION.SKILL_POTION",
+          "slot_index": 0
+        }
+      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -1859,7 +1953,6 @@
             "RELIC.HAPPY_FLOWER"
           ],
           "rare": [
-            "RELIC.BOOKMARK",
             "RELIC.IVORY_TILE",
             "RELIC.INTIMIDATING_HELMET",
             "RELIC.BELLOWS",
@@ -1936,16 +2029,20 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.NEW_LEAF"
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "RELIC.BOOKMARK"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 33,
-            "s0": 14645513227411177078,
-            "s1": 2652500255418417499,
-            "s2": 5479819358496517770,
-            "s3": 10892426185959620409
+            "counter": 47,
+            "s0": 3004297782357830021,
+            "s1": 6960157142867508806,
+            "s2": 14316115479188524763,
+            "s3": 11692844398883944053
           },
           "shops": {
             "counter": 0,
@@ -2068,11 +2165,11 @@
         "s3": 6452379823959318706
       },
       "shuffle": {
-        "counter": 83,
-        "s0": 11694373686067343383,
-        "s1": 7040860420291730437,
-        "s2": 4773634544263581095,
-        "s3": 12056154220333734930
+        "counter": 133,
+        "s0": 2820096554963150782,
+        "s1": 12524292327107390900,
+        "s2": 8238021707497285450,
+        "s3": 4185491902181419375
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2124,11 +2221,11 @@
         "s3": 9177098398331446830
       },
       "niche": {
-        "counter": 6,
-        "s0": 13726425094889448777,
-        "s1": 18240700952882746901,
-        "s2": 9261754846377719962,
-        "s3": 11692408524050806285
+        "counter": 7,
+        "s0": 16221461872948020561,
+        "s1": 14111377200129805254,
+        "s2": 14360096276477255123,
+        "s3": 1442009414053175631
       },
       "combat_orbs": {
         "counter": 0,
@@ -2147,8 +2244,8 @@
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 318,
-  "save_time": 1790917154,
+  "run_time": 525,
+  "save_time": 1790917408,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2317,6 +2414,10 @@
     {
       "col": 4,
       "row": 7
+    },
+    {
+      "col": 4,
+      "row": 8
     }
   ],
   "win_time": 0
