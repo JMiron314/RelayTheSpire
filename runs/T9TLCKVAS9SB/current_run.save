@@ -1909,11 +1909,44 @@
             "turns_taken": 5
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 64,
+            "current_hp": 58,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.BATTLE_TRANCE"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 7,
+  "num_reloads": 8,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -2037,6 +2070,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 7,
           "id": "CARD.BATTLE_TRANCE",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2478,8 +2512,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 401,
-  "save_time": 1790917833,
+  "run_time": 434,
+  "save_time": 1790917887,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2644,6 +2678,10 @@
     {
       "col": 5,
       "row": 7
+    },
+    {
+      "col": 6,
+      "row": 8
     }
   ],
   "win_time": 0
