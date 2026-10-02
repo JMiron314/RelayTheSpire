@@ -23,7 +23,7 @@
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
           "ENCOUNTER.SKULKING_COLONY_ELITE"
         ],
-        "elite_encounters_visited": 2,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.RELIC_TRADER",
           "EVENT.DOORS_OF_LIGHT_AND_DARK",
@@ -2061,11 +2061,86 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.PULL_AGGRO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.REAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DRAIN_POWER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 326,
+            "current_hp": 22,
+            "damage_taken": 0,
+            "gold_gained": 27,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.COLORLESS_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.SKILL_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.IVORY_TILE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SKULKING_COLONY_ELITE",
+            "monster_ids": [
+              "MONSTER.SKULKING_COLONY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 3
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 12,
+  "num_reloads": 13,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -2204,21 +2279,21 @@
         }
       ],
       "extra_fields": {
-        "damage_dealt": 130,
-        "debuffs_applied": 28
+        "damage_dealt": 181,
+        "debuffs_applied": 33
       },
-      "gold": 299,
+      "gold": 326,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.054999985,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.069999985,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
-          "id": "POTION.SKILL_POTION",
+          "id": "POTION.COLORLESS_POTION",
           "slot_index": 0
         },
         {
@@ -2289,7 +2364,6 @@
             "RELIC.HAPPY_FLOWER"
           ],
           "rare": [
-            "RELIC.IVORY_TILE",
             "RELIC.INTIMIDATING_HELMET",
             "RELIC.BELLOWS",
             "RELIC.FROZEN_EGG",
@@ -2377,16 +2451,20 @@
         {
           "floor_added_to_deck": 12,
           "id": "RELIC.HORN_CLEAT"
+        },
+        {
+          "floor_added_to_deck": 15,
+          "id": "RELIC.IVORY_TILE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 86,
-            "s0": 5682047897267540968,
-            "s1": 10056108615413109073,
-            "s2": 7712702743439748423,
-            "s3": 8707183093721865270
+            "counter": 100,
+            "s0": 3770661517594681139,
+            "s1": 14393260494068342427,
+            "s2": 15021293710449473896,
+            "s3": 7643292281193432923
           },
           "shops": {
             "counter": 0,
@@ -2509,11 +2587,11 @@
         "s3": 6452379823959318706
       },
       "shuffle": {
-        "counter": 212,
-        "s0": 8575232116542314331,
-        "s1": 4624953860768613471,
-        "s2": 6910430837775037302,
-        "s3": 8963956946256750919
+        "counter": 229,
+        "s0": 5815591659093320276,
+        "s1": 16294779326751576713,
+        "s2": 5632104109118108727,
+        "s3": 7431694002333335997
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2523,11 +2601,11 @@
         "s3": 1048812737202262259
       },
       "combat_card_generation": {
-        "counter": 28,
-        "s0": 16759773279130656866,
-        "s1": 7103471010603864236,
-        "s2": 8742513305028255683,
-        "s3": 9447356157630914734
+        "counter": 56,
+        "s0": 249888297289574550,
+        "s1": 13978248728546626962,
+        "s2": 18253819715574885824,
+        "s3": 11458798796589575483
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2565,11 +2643,11 @@
         "s3": 9177098398331446830
       },
       "niche": {
-        "counter": 14,
-        "s0": 6707408871958133366,
-        "s1": 13573305510849199180,
-        "s2": 6124506900980324327,
-        "s3": 4522626551582046705
+        "counter": 15,
+        "s0": 16107134261136900043,
+        "s1": 13093388214692401629,
+        "s2": 3102463708901305745,
+        "s3": 1204625298846528281
       },
       "combat_orbs": {
         "counter": 0,
@@ -2588,8 +2666,8 @@
     },
     "seed": "TS54K2QCL5RL"
   },
-  "run_time": 808,
-  "save_time": 1790917938,
+  "run_time": 865,
+  "save_time": 1790918000,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2784,6 +2862,10 @@
     {
       "col": 5,
       "row": 14
+    },
+    {
+      "col": 5,
+      "row": 15
     }
   ],
   "win_time": 0
