@@ -1837,11 +1837,44 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 108,
+            "current_hp": 38,
+            "damage_taken": 0,
+            "gold_gained": 38,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.LUCKY_FYSH",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 10,
+  "num_reloads": 11,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1974,7 +2007,7 @@
         "damage_dealt": 288,
         "debuffs_applied": 16
       },
-      "gold": 70,
+      "gold": 108,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
@@ -2011,7 +2044,6 @@
             "RELIC.PERMAFROST",
             "RELIC.PANTOGRAPH",
             "RELIC.LETTER_OPENER",
-            "RELIC.LUCKY_FYSH",
             "RELIC.RIPPLE_BASIN",
             "RELIC.CANDELABRA",
             "RELIC.AKABEKO",
@@ -2135,16 +2167,20 @@
         {
           "floor_added_to_deck": 8,
           "id": "RELIC.AMETHYST_AUBERGINE"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.LUCKY_FYSH"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 70,
-            "s0": 15877548792431657872,
-            "s1": 8089092178429100535,
-            "s2": 14303867893174301276,
-            "s3": 2180688324622671744
+            "counter": 71,
+            "s0": 12851307962643504615,
+            "s1": 7681967694265905211,
+            "s2": 7939032230410105292,
+            "s3": 3733182550777006090
           },
           "shops": {
             "counter": 28,
@@ -2328,22 +2364,21 @@
         "s3": 12675258915510074241
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 206222722640258372,
-        "s1": 2554280026230930121,
-        "s2": 9964326288090801411,
-        "s3": 2215522339708304407
+        "counter": 1,
+        "s0": 4544443786189202330,
+        "s1": 12386697400758418062,
+        "s2": 14472857483715608647,
+        "s3": 17932145941771345603
       }
     },
     "seed": "C3FC5HP6GATC"
   },
-  "run_time": 512,
-  "save_time": 1790916180,
+  "run_time": 526,
+  "save_time": 1790916561,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
-        "RELIC.LUCKY_FYSH",
         "RELIC.NUNCHAKU",
         "RELIC.ORNAMENTAL_FAN",
         "RELIC.JOSS_PAPER",
@@ -2511,6 +2546,10 @@
     {
       "col": 3,
       "row": 9
+    },
+    {
+      "col": 3,
+      "row": 10
     }
   ],
   "win_time": 0
