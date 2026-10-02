@@ -54,7 +54,7 @@
           "EVENT.THIS_OR_THAT",
           "EVENT.THE_FUTURE_OF_POTIONS"
         ],
-        "events_visited": 1,
+        "events_visited": 5,
         "normal_encounter_ids": [
           "ENCOUNTER.SLUDGE_SPINNER_WEAK",
           "ENCOUNTER.TOADPOLES_WEAK",
@@ -1217,6 +1217,9 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.THE_LEGENDS_WERE_TRUE"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
@@ -1456,23 +1459,66 @@
             "turns_taken": 3
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 125,
+            "current_hp": 37,
+            "damage_taken": 8,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.DEXTERITY_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.THE_LEGENDS_WERE_TRUE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 4,
+  "num_reloads": 5,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 45,
+      "current_hp": 37,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1604,6 +1650,10 @@
         {
           "id": "POTION.POWER_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.DEXTERITY_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -1753,11 +1803,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 30,
-            "s0": 1289314082541558593,
-            "s1": 2553209162196737637,
-            "s2": 14101392966316083282,
-            "s3": 642449283513995152
+            "counter": 31,
+            "s0": 4206417435999357620,
+            "s1": 17381770682751798646,
+            "s2": 8520698790576919315,
+            "s3": 9385120576428938625
           },
           "shops": {
             "counter": 0,
@@ -1878,11 +1928,11 @@
         "s3": 13110682946017761222
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 786629549056774013,
-        "s1": 1782749753057817099,
-        "s2": 6036717343804344751,
-        "s3": 10173028239153910791
+        "counter": 1,
+        "s0": 11491753948725815665,
+        "s1": 4724707485650400473,
+        "s2": 7765584282833716946,
+        "s3": 10142549129155810772
       },
       "combat_card_generation": {
         "counter": 0,
@@ -1950,8 +2000,8 @@
     },
     "seed": "C3FC5HP6GATC"
   },
-  "run_time": 106,
-  "save_time": 1790915238,
+  "run_time": 139,
+  "save_time": 1790915577,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2104,6 +2154,10 @@
     {
       "col": 4,
       "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
     }
   ],
   "win_time": 0
