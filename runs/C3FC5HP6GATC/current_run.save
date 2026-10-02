@@ -72,7 +72,7 @@
           "ENCOUNTER.TWO_TAILED_RATS_NORMAL",
           "ENCOUNTER.SEWER_CLAM_NORMAL"
         ],
-        "normal_encounters_visited": 2,
+        "normal_encounters_visited": 3,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1472,8 +1472,7 @@
                 "title": {
                   "key": "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 0,
@@ -1502,11 +1501,80 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 5,
+                  "id": "CARD.GLITTERSTREAM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.PILLAR_OF_CREATION",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PHOTON_CUT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GLITTERSTREAM",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 137,
+            "current_hp": 37,
+            "damage_taken": 0,
+            "gold_gained": 12,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SEAPUNK_WEAK",
+            "monster_ids": [
+              "MONSTER.SEAPUNK"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 6,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1631,20 +1699,27 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "CARD.GLITTERSTREAM",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 91,
-        "debuffs_applied": 6
+        "damage_dealt": 138,
+        "debuffs_applied": 10
       },
-      "gold": 125,
+      "gold": 137,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.020000007,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": -0.0050000073,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
@@ -1803,11 +1878,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 31,
-            "s0": 4206417435999357620,
-            "s1": 17381770682751798646,
-            "s2": 8520698790576919315,
-            "s3": 9385120576428938625
+            "counter": 42,
+            "s0": 14523714029697370481,
+            "s1": 15594983453552034733,
+            "s2": 4681501309911949620,
+            "s3": 7564341693406157446
           },
           "shops": {
             "counter": 0,
@@ -1921,11 +1996,11 @@
         "s3": 8892940911525340523
       },
       "shuffle": {
-        "counter": 36,
-        "s0": 15857428160929818159,
-        "s1": 1619573265171676123,
-        "s2": 5626643500697791100,
-        "s3": 13110682946017761222
+        "counter": 51,
+        "s0": 15535574831669792882,
+        "s1": 1288113611842936822,
+        "s2": 4785158458575349236,
+        "s3": 14299732959375640905
       },
       "unknown_map_point": {
         "counter": 1,
@@ -1977,11 +2052,11 @@
         "s3": 1552494851308201949
       },
       "niche": {
-        "counter": 3,
-        "s0": 12221577502156929962,
-        "s1": 6283601228506005172,
-        "s2": 1496760661756077982,
-        "s3": 14651001223142800211
+        "counter": 4,
+        "s0": 3889660950722887245,
+        "s1": 16892327232855941760,
+        "s2": 1248256335098666036,
+        "s3": 8123635611081855310
       },
       "combat_orbs": {
         "counter": 0,
@@ -2000,8 +2075,8 @@
     },
     "seed": "C3FC5HP6GATC"
   },
-  "run_time": 139,
-  "save_time": 1790915577,
+  "run_time": 223,
+  "save_time": 1790915685,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2158,6 +2233,10 @@
     {
       "col": 4,
       "row": 4
+    },
+    {
+      "col": 4,
+      "row": 5
     }
   ],
   "win_time": 0
