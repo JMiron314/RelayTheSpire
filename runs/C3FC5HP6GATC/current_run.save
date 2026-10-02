@@ -23,7 +23,7 @@
           "ENCOUNTER.SKULKING_COLONY_ELITE",
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.POTION_COURIER",
           "EVENT.RELIC_TRADER",
@@ -1870,11 +1870,90 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 11,
+                  "id": "CARD.GLOW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.REFINE_BLADE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PROPHESIZE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GLOW",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 164,
+            "current_hp": 13,
+            "damage_taken": 25,
+            "gold_gained": 56,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.DEXTERITY_POTION",
+              "POTION.POWER_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.VAJRA",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SKULKING_COLONY_ELITE",
+            "monster_ids": [
+              "MONSTER.SKULKING_COLONY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 11,
+  "num_reloads": 12,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1886,7 +1965,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 38,
+      "current_hp": 13,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2000,32 +2079,29 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 11,
+          "id": "CARD.GLOW",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 288,
-        "debuffs_applied": 16
+        "damage_dealt": 368,
+        "debuffs_applied": 22
       },
-      "gold": 108,
+      "gold": 164,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.5
       },
-      "potions": [
-        {
-          "id": "POTION.POWER_POTION",
-          "slot_index": 0
-        },
-        {
-          "id": "POTION.DEXTERITY_POTION",
-          "slot_index": 1
-        }
-      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -2060,7 +2136,6 @@
             "RELIC.BOWLER_HAT"
           ],
           "common": [
-            "RELIC.VAJRA",
             "RELIC.STRAWBERRY",
             "RELIC.BLOOD_VIAL",
             "RELIC.BAG_OF_PREPARATION",
@@ -2171,16 +2246,20 @@
         {
           "floor_added_to_deck": 10,
           "id": "RELIC.LUCKY_FYSH"
+        },
+        {
+          "floor_added_to_deck": 11,
+          "id": "RELIC.VAJRA"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 71,
-            "s0": 12851307962643504615,
-            "s1": 7681967694265905211,
-            "s2": 7939032230410105292,
-            "s3": 3733182550777006090
+            "counter": 83,
+            "s0": 15175363934194212525,
+            "s1": 17351138669374420977,
+            "s2": 2595491942407772229,
+            "s3": 10333138751245793819
           },
           "shops": {
             "counter": 28,
@@ -2294,11 +2373,11 @@
         "s3": 8892940911525340523
       },
       "shuffle": {
-        "counter": 95,
-        "s0": 16984809093510148329,
-        "s1": 16612108313522015446,
-        "s2": 15271515221830603773,
-        "s3": 16597446211384226121
+        "counter": 132,
+        "s0": 5767392765263189461,
+        "s1": 7528703352171906313,
+        "s2": 16713605204611434911,
+        "s3": 10455148559352743065
       },
       "unknown_map_point": {
         "counter": 1,
@@ -2308,11 +2387,11 @@
         "s3": 10142549129155810772
       },
       "combat_card_generation": {
-        "counter": 0,
-        "s0": 8505972756138025740,
-        "s1": 5546690629204680242,
-        "s2": 8224472233534045377,
-        "s3": 14272174467844508850
+        "counter": 15,
+        "s0": 3984823497849140611,
+        "s1": 6263639995100275226,
+        "s2": 11320638136767792639,
+        "s3": 17106690137201430016
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2350,11 +2429,11 @@
         "s3": 1552494851308201949
       },
       "niche": {
-        "counter": 5,
-        "s0": 12622379831351168387,
-        "s1": 14899581699467591929,
-        "s2": 1194729959518921337,
-        "s3": 14878155228253932134
+        "counter": 6,
+        "s0": 12652742567530776348,
+        "s1": 8177069730913644291,
+        "s2": 6522828952257146874,
+        "s3": 16236567473207963123
       },
       "combat_orbs": {
         "counter": 0,
@@ -2373,8 +2452,8 @@
     },
     "seed": "C3FC5HP6GATC"
   },
-  "run_time": 526,
-  "save_time": 1790916561,
+  "run_time": 609,
+  "save_time": 1790916660,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2430,8 +2509,7 @@
         "RELIC.FESTIVE_POPPER",
         "RELIC.WHETSTONE",
         "RELIC.STRAWBERRY",
-        "RELIC.BLOOD_VIAL",
-        "RELIC.VAJRA"
+        "RELIC.BLOOD_VIAL"
       ],
       "rare": [
         "RELIC.UNSETTLING_LAMP",
@@ -2550,6 +2628,10 @@
     {
       "col": 3,
       "row": 10
+    },
+    {
+      "col": 2,
+      "row": 11
     }
   ],
   "win_time": 0
