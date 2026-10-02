@@ -57,7 +57,7 @@
           "EVENT.AROMA_OF_CHAOS",
           "EVENT.THE_FUTURE_OF_POTIONS"
         ],
-        "events_visited": 1,
+        "events_visited": 7,
         "normal_encounter_ids": [
           "ENCOUNTER.SLIMES_WEAK",
           "ENCOUNTER.NIBBITS_WEAK",
@@ -1260,11 +1260,14 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.SELF_HELP_BOOK"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZmBgYGJ4aa6OqF+dX6LHnPWzevPXhhC6dk3jZ751PHcixu+vGpAzb74cPUyfZXcuI6Zq8VL9ycqJJmtsHlZNnMjhtNwp9vVSpFeweIZKt0hfu6T1xpq8m01cx15rMVHpdiRI1nbVZyaQ4vyZDrFnibNXFRrF7alidH+6btk7jEIOEexbSYk2FZ2MUTVwykpke5KId2Z6pkx/VW8G66uFHWvMvs/7Eb2x7tuL1ApjV6TnJRccmUvI19d3NvXdyz03rV9gb372kfM+5nyH2PvrSYl4FN/O+JB8vkhe98Vm6TrncpZJxgsY5l0wlFRyNLIw+N6+yST7UUF8vopEyxbispejjBk08h6EShyyuLeR5S7GI/H8koh8YUpnR+7ucptJgk884/6LCmd5xF90lOdTPOhyrqknN+qAAAK44uazUBAAA=",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZWBgYGJ4aa6OqF+dX6LHnPWzevPXhhC6dk3jZ751PHcixu+vGpz374MHWy/ZWcuI7Za8ULNyeqpJltcDlZNrPjRpPw51uVStHeASLZKl3hvu4TV9pqMm01c535bIXHpRhR41mblVyaw0sy5LoF3mZNXBSrl7blydG+afskLjFIuEcxLeZkWBZ28cQVA6npUS7Kod2ZKtlxvRW8my5ulDXvMvt/7Ma2RztuL5BpjZ6TXFRcMiVvY9/d3FsX9+y0XrW9wf172seM+xly36MvLeZlYBP/e+LBMnnhO5+V26TrXQoZJ1isY9l0QtHRyNLIQ+M6u+RTLcXFMjopU6zbSooeTvDkUwg6UejyymKehxS72M9HMsqhMYUpnZ/7eQotJsm88w86rOkdZ9F9klPdjPOhirrknB9LxBuWfdt584qL+dyoF2lBj++YZE2Z7fo2H7DPKwxztUwbfZelrX555ZfJ4lmTn4UYX5yTJTwrWNepeJVgRtjWHz7rts2ZeY3N+Pcs97SUz0dZcotmrHrLFrxNM+HRtq/e99pqb95eo18b/fVpwee9MXlzpl/xfbdp99eYeebN3j/ScjPvR+n+ll78tKF5s0tB0DQev6ObDnJGmFm89WJTj975QEJb/E7E06bbK3MKpKcKnFsgdIgx5BPDjNwPMzfn2k3edjN927YnPpfSZsy8GWekfNs8Lbn5yJQcwxkLeH8LbdOMEzKfc/oNWz7n/RhdZpkFqc27N/UUWE0T4jssdGhtuJnFdS9W8/CVD7K0RGXslzZtXupSUDqFg6/d6KBtgJ7F95Os1213PtimzggAmYvrwFECAAA=",
   "map_point_history": [
     [
       {
@@ -1483,16 +1486,88 @@
             "turns_taken": 6
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_enchanted": [
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 2,
+                    "id": "ENCHANTMENT.SHARP"
+                  },
+                  "floor_added_to_deck": 1,
+                  "id": "CARD.GUNK_UP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "enchantment": "ENCHANTMENT.SHARP"
+              }
+            ],
+            "current_gold": 113,
+            "current_hp": 67,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SELF_HELP_BOOK.pages.INITIAL.options.READ_THE_BACK.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Enchantment1": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Sharp"
+                  },
+                  "Enchantment2": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Nimble"
+                  },
+                  "Enchantment3": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Swift"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.SELF_HELP_BOOK",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 3,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
     "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
@@ -1586,6 +1661,10 @@
           }
         },
         {
+          "enchantment": {
+            "amount": 2,
+            "id": "ENCHANTMENT.SHARP"
+          },
           "floor_added_to_deck": 1,
           "id": "CARD.GUNK_UP",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1960,11 +2039,11 @@
         "s3": 14826960764141444912
       },
       "unknown_map_point": {
-        "counter": 0,
-        "s0": 16098754977225063677,
-        "s1": 14046866489540009983,
-        "s2": 8115729787187779417,
-        "s3": 16766587588281655218
+        "counter": 1,
+        "s0": 17668985184719191216,
+        "s1": 7870858124992820315,
+        "s2": 5946635903321598884,
+        "s3": 14990694579769328491
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2032,8 +2111,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 123,
-  "save_time": 1790916324,
+  "run_time": 151,
+  "save_time": 1790917108,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2182,6 +2261,10 @@
     {
       "col": 4,
       "row": 2
+    },
+    {
+      "col": 4,
+      "row": 3
     }
   ],
   "win_time": 0
