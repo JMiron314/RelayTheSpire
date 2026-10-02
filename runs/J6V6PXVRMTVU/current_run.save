@@ -1828,11 +1828,44 @@
             "turns_taken": 9
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 126,
+            "current_hp": 12,
+            "damage_taken": 0,
+            "gold_gained": 38,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.PRAYER_WHEEL",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1970,7 +2003,7 @@
         "damage_dealt": 327,
         "debuffs_applied": 14
       },
-      "gold": 88,
+      "gold": 126,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
@@ -2048,7 +2081,6 @@
           ],
           "rare": [
             "RELIC.CLOAK_CLASP",
-            "RELIC.PRAYER_WHEEL",
             "RELIC.FROZEN_EGG",
             "RELIC.CAPTAINS_WHEEL",
             "RELIC.STURDY_CLAMP",
@@ -2131,16 +2163,20 @@
         {
           "floor_added_to_deck": 9,
           "id": "RELIC.LANTERN"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.PRAYER_WHEEL"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 75,
-            "s0": 7908835178504441746,
-            "s1": 207690737426639756,
-            "s2": 3858049238418252112,
-            "s3": 6647422031354048802
+            "counter": 76,
+            "s0": 3702078805030753596,
+            "s1": 6533180746612868430,
+            "s2": 16360308670269238978,
+            "s3": 6004929790498817072
           },
           "shops": {
             "counter": 28,
@@ -2325,17 +2361,17 @@
         "s3": 1509683712728911432
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 9990333161789582373,
-        "s1": 1293461636049624025,
-        "s2": 5179945142093017604,
-        "s3": 732394469117649614
+        "counter": 1,
+        "s0": 10483952731518620978,
+        "s1": 15903717975159883256,
+        "s2": 6072137726939962913,
+        "s3": 6278830949372025996
       }
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 434,
-  "save_time": 1790915843,
+  "run_time": 450,
+  "save_time": 1790915941,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2396,7 +2432,6 @@
         "RELIC.BOOK_OF_FIVE_RINGS"
       ],
       "rare": [
-        "RELIC.PRAYER_WHEEL",
         "RELIC.ART_OF_WAR",
         "RELIC.ICE_CREAM",
         "RELIC.POCKETWATCH",
@@ -2508,6 +2543,10 @@
     {
       "col": 1,
       "row": 9
+    },
+    {
+      "col": 1,
+      "row": 10
     }
   ],
   "win_time": 0
