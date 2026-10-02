@@ -1524,8 +1524,8 @@
         "map_point_type": "shop",
         "player_stats": [
           {
-            "bought_relics": [
-              "RELIC.STRIKE_DUMMY"
+            "bought_potions": [
+              "POTION.FAIRY_IN_A_BOTTLE"
             ],
             "card_choices": [
               {
@@ -1540,15 +1540,6 @@
               {
                 "card": {
                   "id": "CARD.ANGER",
-                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-                    "BaseLibCardModifiers": []
-                  }
-                },
-                "was_picked": false
-              },
-              {
-                "card": {
-                  "id": "CARD.BATTLE_TRANCE",
                   "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
                     "BaseLibCardModifiers": []
                   }
@@ -1592,12 +1583,20 @@
                 "was_picked": false
               }
             ],
-            "current_gold": 44,
+            "cards_gained": [
+              {
+                "id": "CARD.BATTLE_TRANCE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 67,
             "current_hp": 53,
             "damage_taken": 0,
             "gold_gained": 0,
             "gold_lost": 0,
-            "gold_spent": 195,
+            "gold_spent": 172,
             "gold_stolen": 0,
             "hp_healed": 0,
             "is_affected_by_fur_coat": false,
@@ -1608,7 +1607,7 @@
             "potion_choices": [
               {
                 "choice": "POTION.FAIRY_IN_A_BOTTLE",
-                "was_picked": false
+                "was_picked": true
               },
               {
                 "choice": "POTION.SPEED_POTION",
@@ -1622,7 +1621,7 @@
             "relic_choices": [
               {
                 "choice": "RELIC.STRIKE_DUMMY",
-                "was_picked": true
+                "was_picked": false
               },
               {
                 "choice": "RELIC.PEAR",
@@ -1764,13 +1763,20 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 6,
+          "id": "CARD.BATTLE_TRANCE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "damage_dealt": 154,
         "debuffs_applied": 8
       },
-      "gold": 44,
+      "gold": 67,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
@@ -1783,6 +1789,10 @@
         {
           "id": "POTION.COLORLESS_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.FAIRY_IN_A_BOTTLE",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -1924,10 +1934,6 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.ARCANE_SCROLL"
-        },
-        {
-          "floor_added_to_deck": 6,
-          "id": "RELIC.STRIKE_DUMMY"
         }
       ],
       "rng": {
@@ -2131,8 +2137,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 210,
-  "save_time": 1790915497,
+  "run_time": 344,
+  "save_time": 1790915579,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
