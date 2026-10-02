@@ -72,7 +72,7 @@
           "ENCOUNTER.GREMLIN_MERC_NORMAL",
           "ENCOUNTER.LIVING_FOG_NORMAL"
         ],
-        "normal_encounters_visited": 3,
+        "normal_encounters_visited": 4,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1524,8 +1524,8 @@
         "map_point_type": "shop",
         "player_stats": [
           {
-            "bought_potions": [
-              "POTION.FAIRY_IN_A_BOTTLE"
+            "bought_relics": [
+              "RELIC.STRIKE_DUMMY"
             ],
             "card_choices": [
               {
@@ -1540,6 +1540,15 @@
               {
                 "card": {
                   "id": "CARD.ANGER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BATTLE_TRANCE",
                   "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
                     "BaseLibCardModifiers": []
                   }
@@ -1583,20 +1592,12 @@
                 "was_picked": false
               }
             ],
-            "cards_gained": [
-              {
-                "id": "CARD.BATTLE_TRANCE",
-                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-                  "BaseLibCardModifiers": []
-                }
-              }
-            ],
-            "current_gold": 67,
+            "current_gold": 44,
             "current_hp": 53,
             "damage_taken": 0,
             "gold_gained": 0,
             "gold_lost": 0,
-            "gold_spent": 172,
+            "gold_spent": 195,
             "gold_stolen": 0,
             "hp_healed": 0,
             "is_affected_by_fur_coat": false,
@@ -1607,7 +1608,7 @@
             "potion_choices": [
               {
                 "choice": "POTION.FAIRY_IN_A_BOTTLE",
-                "was_picked": true
+                "was_picked": false
               },
               {
                 "choice": "POTION.SPEED_POTION",
@@ -1621,7 +1622,7 @@
             "relic_choices": [
               {
                 "choice": "RELIC.STRIKE_DUMMY",
-                "was_picked": false
+                "was_picked": true
               },
               {
                 "choice": "RELIC.PEAR",
@@ -1641,11 +1642,83 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 7,
+                  "id": "CARD.SHRUG_IT_OFF",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.UPPERCUT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SPITE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SHRUG_IT_OFF",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 58,
+            "current_hp": 32,
+            "damage_taken": 27,
+            "gold_gained": 14,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.COLORLESS_POTION"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.FOSSIL_STALKER_NORMAL",
+            "monster_ids": [
+              "MONSTER.FOSSIL_STALKER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 4
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 6,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1657,7 +1730,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 53,
+      "current_hp": 32,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1765,36 +1838,26 @@
           }
         },
         {
-          "floor_added_to_deck": 6,
-          "id": "CARD.BATTLE_TRANCE",
+          "floor_added_to_deck": 7,
+          "id": "CARD.SHRUG_IT_OFF",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 154,
-        "debuffs_applied": 8
+        "damage_dealt": 209,
+        "debuffs_applied": 10
       },
-      "gold": 67,
+      "gold": 58,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.6
       },
-      "potions": [
-        {
-          "id": "POTION.COLORLESS_POTION",
-          "slot_index": 0
-        },
-        {
-          "id": "POTION.FAIRY_IN_A_BOTTLE",
-          "slot_index": 1
-        }
-      ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
@@ -1934,16 +1997,20 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.ARCANE_SCROLL"
+        },
+        {
+          "floor_added_to_deck": 6,
+          "id": "RELIC.STRIKE_DUMMY"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 50,
-            "s0": 17634277947948421064,
-            "s1": 8156126821697882044,
-            "s2": 15824723350491626259,
-            "s3": 12763133222173237633
+            "counter": 61,
+            "s0": 11512211565384185343,
+            "s1": 12965992448961182325,
+            "s2": 6669533996943210281,
+            "s3": 5915594780920029785
           },
           "shops": {
             "counter": 28,
@@ -2058,11 +2125,11 @@
         "s3": 7174073025756116651
       },
       "shuffle": {
-        "counter": 79,
-        "s0": 10366672507057564542,
-        "s1": 10545185879321192493,
-        "s2": 15514768507028344464,
-        "s3": 10171833944803622347
+        "counter": 102,
+        "s0": 7772260820973927780,
+        "s1": 5218505875642742882,
+        "s2": 4135439635108304390,
+        "s3": 2807570400762094945
       },
       "unknown_map_point": {
         "counter": 1,
@@ -2072,11 +2139,11 @@
         "s3": 7751685855017808650
       },
       "combat_card_generation": {
-        "counter": 0,
-        "s0": 10287003904560145956,
-        "s1": 7400032842735088635,
-        "s2": 16802818451683982572,
-        "s3": 17729223569560611077
+        "counter": 49,
+        "s0": 947972471916693589,
+        "s1": 8366592419112740907,
+        "s2": 15859807130546024986,
+        "s3": 17381401619360807070
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2107,18 +2174,18 @@
         "s3": 2594099273794234785
       },
       "monster_ai": {
-        "counter": 0,
-        "s0": 7245339884520041555,
-        "s1": 6469232711758272202,
-        "s2": 4097692357214823168,
-        "s3": 6187674524516816234
+        "counter": 3,
+        "s0": 11474850922693926719,
+        "s1": 14961845959758078132,
+        "s2": 11523731145369721229,
+        "s3": 14177968557848677602
       },
       "niche": {
-        "counter": 5,
-        "s0": 12365247148151392779,
-        "s1": 2093062569597485605,
-        "s2": 242430762893063321,
-        "s3": 17418430300367370149
+        "counter": 6,
+        "s0": 5128634086800473995,
+        "s1": 13099681501507861687,
+        "s2": 12854949775630270098,
+        "s3": 5670064464564085241
       },
       "combat_orbs": {
         "counter": 0,
@@ -2137,8 +2204,8 @@
     },
     "seed": "J6V6PXVRMTVU"
   },
-  "run_time": 344,
-  "save_time": 1790915579,
+  "run_time": 269,
+  "save_time": 1790915590,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2300,6 +2367,10 @@
     {
       "col": 0,
       "row": 6
+    },
+    {
+      "col": 0,
+      "row": 7
     }
   ],
   "win_time": 0
