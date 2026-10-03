@@ -75,7 +75,7 @@
           "ENCOUNTER.SLIMES_NORMAL",
           "ENCOUNTER.VINE_SHAMBLER_NORMAL"
         ],
-        "normal_encounters_visited": 4,
+        "normal_encounters_visited": 6,
         "second_boss_id": null
       },
       "saved_map": {
@@ -2254,23 +2254,166 @@
             "turns_taken": 1
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.UNRELENTING",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.MOLTEN_FIST",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.RUPTURE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 232,
+            "current_hp": 69,
+            "damage_taken": 0,
+            "gold_gained": 7,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.LUCKY_TONIC",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.NIBBITS_NORMAL",
+            "monster_ids": [
+              "MONSTER.NIBBIT",
+              "MONSTER.NIBBIT"
+            ],
+            "room_type": "monster",
+            "turns_taken": 1
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 15,
+                  "id": "CARD.POMMEL_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.ANGER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.HEADBUTT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.POMMEL_STRIKE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 246,
+            "current_hp": 75,
+            "damage_taken": 0,
+            "gold_gained": 14,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLOOD_POTION",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+            "monster_ids": [
+              "MONSTER.SNAPPING_JAXFRUIT",
+              "MONSTER.SLITHERING_STRANGLER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 1
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 12,
+  "num_reloads": 13,
   "odds": {
-    "unknown_map_point_elite_odds_value": -3,
-    "unknown_map_point_monster_odds_value": 0.3,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.06
+    "unknown_map_point_elite_odds_value": -4,
+    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.08
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 63,
+      "current_hp": 75,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2409,6 +2552,13 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 15,
+          "id": "CARD.POMMEL_STRIKE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
@@ -2416,14 +2566,14 @@
         "damage_dealt": 435,
         "debuffs_applied": 3
       },
-      "gold": 225,
+      "gold": 246,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.045,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.015000007,
+        "potion_reward_odds_value": 0.3
       },
       "potions": [
         {
@@ -2591,11 +2741,11 @@
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 119,
-            "s0": 10380033502861519217,
-            "s1": 13310811083501014174,
-            "s2": 1701413139776772815,
-            "s3": 3627198161112443819
+            "counter": 145,
+            "s0": 9152054627866373005,
+            "s1": 6129933384963987924,
+            "s2": 8305141938818869372,
+            "s3": 14783441471701514022
           },
           "shops": {
             "counter": 28,
@@ -2779,18 +2929,18 @@
         "s3": 2068616982961574991
       },
       "shuffle": {
-        "counter": 178,
-        "s0": 9095628104491588935,
-        "s1": 11798555587170484777,
-        "s2": 14593761803606672954,
-        "s3": 2925564230531796141
+        "counter": 214,
+        "s0": 15073552488682271438,
+        "s1": 3601297509880021374,
+        "s2": 13024913419528237124,
+        "s3": 5489787968522465454
       },
       "unknown_map_point": {
-        "counter": 2,
-        "s0": 5190287390197173120,
-        "s1": 14594071216788824911,
-        "s2": 7508867077943645972,
-        "s3": 18367394133759299910
+        "counter": 3,
+        "s0": 8964700060663560585,
+        "s1": 16914339608381358043,
+        "s2": 4383865928548261012,
+        "s3": 5638830599020646628
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2835,11 +2985,11 @@
         "s3": 2786572160756754016
       },
       "niche": {
-        "counter": 21,
-        "s0": 11149340387344848706,
-        "s1": 8577625150348975809,
-        "s2": 3862054934962989800,
-        "s3": 2334573287282632329
+        "counter": 25,
+        "s0": 12200687835890197954,
+        "s1": 5556483729246997467,
+        "s2": 11488581446788077666,
+        "s3": 10662905952286484119
       },
       "combat_orbs": {
         "counter": 0,
@@ -2858,8 +3008,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 620,
-  "save_time": 1791049489,
+  "run_time": 640,
+  "save_time": 1791049550,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3045,6 +3195,14 @@
     {
       "col": 4,
       "row": 13
+    },
+    {
+      "col": 5,
+      "row": 14
+    },
+    {
+      "col": 4,
+      "row": 15
     }
   ],
   "win_time": 0
