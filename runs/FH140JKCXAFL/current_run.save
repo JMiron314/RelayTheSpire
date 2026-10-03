@@ -1644,8 +1644,7 @@
                 "title": {
                   "key": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 0,
@@ -1674,11 +1673,77 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 197,
+            "current_hp": 36,
+            "damage_taken": 0,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.BLOOD_VIAL",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 197,
+            "current_hp": 36,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.BYRD_SWOOP"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -4,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -1798,6 +1863,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 7,
           "id": "CARD.BYRD_SWOOP",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1808,7 +1874,7 @@
       "extra_fields": {
         "damage_dealt": 176
       },
-      "gold": 161,
+      "gold": 197,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
@@ -1878,7 +1944,6 @@
             "RELIC.WHETSTONE",
             "RELIC.STRIKE_DUMMY",
             "RELIC.BAG_OF_PREPARATION",
-            "RELIC.BLOOD_VIAL",
             "RELIC.BONE_FLUTE",
             "RELIC.BRONZE_SCALES",
             "RELIC.STRAWBERRY",
@@ -1991,16 +2056,20 @@
         {
           "floor_added_to_deck": 9,
           "id": "RELIC.CHOSEN_CHEESE"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.BLOOD_VIAL"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 63,
-            "s0": 9152098620082629706,
-            "s1": 15765052171259688900,
-            "s2": 7691918049324868405,
-            "s3": 7736287018731950104
+            "counter": 64,
+            "s0": 14886277303612656534,
+            "s1": 14948943522892200123,
+            "s2": 8891633282487848831,
+            "s3": 11311800032927959378
           },
           "shops": {
             "counter": 0,
@@ -2187,17 +2256,17 @@
         "s3": 1227167468527725779
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 15464901534920766800,
-        "s1": 1765177505397477674,
-        "s2": 5220770398393792247,
-        "s3": 2665562171690459221
+        "counter": 1,
+        "s0": 16869515779059893295,
+        "s1": 9696974098877420173,
+        "s2": 14537835592989705127,
+        "s3": 14280887550588965789
       }
     },
     "seed": "FH140JKCXAFL"
   },
-  "run_time": 409,
-  "save_time": 1791050540,
+  "run_time": 423,
+  "save_time": 1791050597,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2233,7 +2302,6 @@
         "RELIC.PEN_NIB"
       ],
       "common": [
-        "RELIC.BLOOD_VIAL",
         "RELIC.FESTIVE_POPPER",
         "RELIC.MEAL_TICKET",
         "RELIC.BAG_OF_MARBLES",
@@ -2372,6 +2440,14 @@
     {
       "col": 1,
       "row": 9
+    },
+    {
+      "col": 2,
+      "row": 10
+    },
+    {
+      "col": 1,
+      "row": 11
     }
   ],
   "win_time": 0
