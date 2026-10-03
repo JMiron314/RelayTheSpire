@@ -23,7 +23,7 @@
           "ENCOUNTER.BYGONE_EFFIGY_ELITE",
           "ENCOUNTER.BYRDONIS_ELITE"
         ],
-        "elite_encounters_visited": 2,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.THIS_OR_THAT",
           "EVENT.SYMBIOTE",
@@ -57,7 +57,7 @@
           "EVENT.AROMA_OF_CHAOS",
           "EVENT.THE_FUTURE_OF_POTIONS"
         ],
-        "events_visited": 7,
+        "events_visited": 9,
         "normal_encounter_ids": [
           "ENCOUNTER.SLIMES_WEAK",
           "ENCOUNTER.NIBBITS_WEAK",
@@ -1261,7 +1261,8 @@
   "ascension": 10,
   "current_act_index": 0,
   "events_seen": [
-    "EVENT.SELF_HELP_BOOK"
+    "EVENT.SELF_HELP_BOOK",
+    "EVENT.JUNGLE_MAZE_ADVENTURE"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -2121,23 +2122,155 @@
             "turns_taken": 3
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 193,
+            "current_hp": 57,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "SoloGold": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 155.211308,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "JoinForcesGold": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 56.839828,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 56,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.JUNGLE_MAZE_ADVENTURE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 13,
+                  "id": "CARD.STAMPEDE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.POMMEL_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FIEND_FIRE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.STAMPEDE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 225,
+            "current_hp": 63,
+            "damage_taken": 0,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 6,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.FLEX_POTION",
+                "was_picked": true
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.ORNAMENTAL_FAN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHROG_PARASITE_ELITE",
+            "monster_ids": [
+              "MONSTER.PHROG_PARASITE",
+              "MONSTER.WRIGGLER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 1
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 11,
+  "num_reloads": 12,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.06,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 57,
+      "current_hp": 63,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2269,6 +2402,13 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "CARD.STAMPEDE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
@@ -2276,25 +2416,28 @@
         "damage_dealt": 435,
         "debuffs_applied": 3
       },
-      "gold": 137,
+      "gold": 225,
       "max_energy": 3,
       "max_hp": 80,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.039999988,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": -0.045,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
           "id": "POTION.EXPLOSIVE_AMPOULE",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.FLEX_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.ORNAMENTAL_FAN",
             "RELIC.LUCKY_FYSH",
             "RELIC.GREMLIN_HORN",
             "RELIC.MERCURY_HOURGLASS",
@@ -2439,16 +2582,20 @@
         {
           "floor_added_to_deck": 11,
           "id": "RELIC.ORICHALCUM"
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "RELIC.ORNAMENTAL_FAN"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 105,
-            "s0": 8397107291372945010,
-            "s1": 16385978303551186169,
-            "s2": 6747257196259832758,
-            "s3": 16406292826465843168
+            "counter": 119,
+            "s0": 10380033502861519217,
+            "s1": 13310811083501014174,
+            "s2": 1701413139776772815,
+            "s3": 3627198161112443819
           },
           "shops": {
             "counter": 28,
@@ -2632,18 +2779,18 @@
         "s3": 2068616982961574991
       },
       "shuffle": {
-        "counter": 161,
-        "s0": 6759763930876493994,
-        "s1": 14066111088132767738,
-        "s2": 7812317327888333646,
-        "s3": 16886812365065143864
+        "counter": 178,
+        "s0": 9095628104491588935,
+        "s1": 11798555587170484777,
+        "s2": 14593761803606672954,
+        "s3": 2925564230531796141
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 17668985184719191216,
-        "s1": 7870858124992820315,
-        "s2": 5946635903321598884,
-        "s3": 14990694579769328491
+        "counter": 2,
+        "s0": 5190287390197173120,
+        "s1": 14594071216788824911,
+        "s2": 7508867077943645972,
+        "s3": 18367394133759299910
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2688,11 +2835,11 @@
         "s3": 2786572160756754016
       },
       "niche": {
-        "counter": 16,
-        "s0": 2379615971278253317,
-        "s1": 17183033014831153163,
-        "s2": 11249701911866241947,
-        "s3": 3364683387896226689
+        "counter": 21,
+        "s0": 11149340387344848706,
+        "s1": 8577625150348975809,
+        "s2": 3862054934962989800,
+        "s3": 2334573287282632329
       },
       "combat_orbs": {
         "counter": 0,
@@ -2711,8 +2858,8 @@
     },
     "seed": "T9TLCKVAS9SB"
   },
-  "run_time": 595,
-  "save_time": 1790918173,
+  "run_time": 620,
+  "save_time": 1791049489,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2730,7 +2877,6 @@
         "RELIC.PEAR",
         "RELIC.PLANISPHERE",
         "RELIC.CANDELABRA",
-        "RELIC.ORNAMENTAL_FAN",
         "RELIC.AKABEKO",
         "RELIC.PERMAFROST",
         "RELIC.MINIATURE_CANNON",
@@ -2891,6 +3037,14 @@
     {
       "col": 4,
       "row": 11
+    },
+    {
+      "col": 4,
+      "row": 12
+    },
+    {
+      "col": 4,
+      "row": 13
     }
   ],
   "win_time": 0
