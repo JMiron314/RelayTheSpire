@@ -23,7 +23,7 @@
           "ENCOUNTER.PHROG_PARASITE_ELITE",
           "ENCOUNTER.BYGONE_EFFIGY_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.WAR_HISTORIAN_REPY",
           "EVENT.BYRDONIS_NEST",
@@ -57,7 +57,7 @@
           "EVENT.THE_LEGENDS_WERE_TRUE",
           "EVENT.THIS_OR_THAT"
         ],
-        "events_visited": 3,
+        "events_visited": 4,
         "normal_encounter_ids": [
           "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
           "ENCOUNTER.SLIMES_WEAK",
@@ -1074,7 +1074,8 @@
   "current_act_index": 0,
   "events_seen": [
     "EVENT.BYRDONIS_NEST",
-    "EVENT.ROOM_FULL_OF_CHEESE"
+    "EVENT.ROOM_FULL_OF_CHEESE",
+    "EVENT.WHISPERING_HOLLOW"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1739,23 +1740,136 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.SHROUD",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.AFTERLIFE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CLEANSE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 197,
+            "current_hp": 39,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 3,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 67,
+            "max_hp_gained": 1,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.LANTERN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYRDONIS_ELITE",
+            "monster_ids": [
+              "MONSTER.BYRDONIS"
+            ],
+            "room_type": "elite",
+            "turns_taken": 1
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 164,
+            "current_hp": 39,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "WHISPERING_HOLLOW.pages.INITIAL.options.GOLD.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 33,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 67,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLOCK_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.POWER_POTION",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.WHISPERING_HOLLOW",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 9,
+  "num_reloads": 10,
   "odds": {
-    "unknown_map_point_elite_odds_value": -4,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.12,
-    "unknown_map_point_treasure_odds_value": 0.08
+    "unknown_map_point_elite_odds_value": -5,
+    "unknown_map_point_monster_odds_value": 0.3,
+    "unknown_map_point_shop_odds_value": 0.14999999,
+    "unknown_map_point_treasure_odds_value": 0.099999994
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 36,
+      "current_hp": 39,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1874,14 +1988,14 @@
       "extra_fields": {
         "damage_dealt": 176
       },
-      "gold": 197,
+      "gold": 164,
       "max_energy": 3,
-      "max_hp": 66,
+      "max_hp": 67,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
-        "potion_reward_odds_value": 0.3
+        "card_rarity_odds_value": 0.039999988,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
@@ -1929,7 +2043,6 @@
             "RELIC.BOOK_REPAIR_KNIFE"
           ],
           "common": [
-            "RELIC.LANTERN",
             "RELIC.RED_MASK",
             "RELIC.WAR_PAINT",
             "RELIC.FESTIVE_POPPER",
@@ -2060,16 +2173,20 @@
         {
           "floor_added_to_deck": 10,
           "id": "RELIC.BLOOD_VIAL"
+        },
+        {
+          "floor_added_to_deck": 12,
+          "id": "RELIC.LANTERN"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 64,
-            "s0": 14886277303612656534,
-            "s1": 14948943522892200123,
-            "s2": 8891633282487848831,
-            "s3": 11311800032927959378
+            "counter": 80,
+            "s0": 14620269284043901150,
+            "s1": 250341431530252976,
+            "s2": 3947561415873624236,
+            "s3": 15484457365337946146
           },
           "shops": {
             "counter": 0,
@@ -2186,18 +2303,18 @@
         "s3": 5905923188299481089
       },
       "shuffle": {
-        "counter": 165,
-        "s0": 14419516898353315720,
-        "s1": 357529893970670823,
-        "s2": 176988023577613498,
-        "s3": 17500771637342980139
+        "counter": 180,
+        "s0": 9570314342761582016,
+        "s1": 7851331609667807224,
+        "s2": 8844381934180317974,
+        "s3": 14281992212311221210
       },
       "unknown_map_point": {
-        "counter": 3,
-        "s0": 4068624522201004333,
-        "s1": 5750827765183911705,
-        "s2": 10034566176772057699,
-        "s3": 6475783815212850348
+        "counter": 4,
+        "s0": 3343702827673989784,
+        "s1": 18228411670095692887,
+        "s2": 11958007868607435598,
+        "s3": 4140675862360914168
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2242,11 +2359,11 @@
         "s3": 16980368907926351045
       },
       "niche": {
-        "counter": 8,
-        "s0": 2606394871215486930,
-        "s1": 8320586065017088950,
-        "s2": 9702751833576237089,
-        "s3": 11798299410670042347
+        "counter": 9,
+        "s0": 17647518347231387791,
+        "s1": 15128848718038479941,
+        "s2": 17541221346360041459,
+        "s3": 1363387926234766043
       },
       "combat_orbs": {
         "counter": 0,
@@ -2265,8 +2382,8 @@
     },
     "seed": "FH140JKCXAFL"
   },
-  "run_time": 423,
-  "save_time": 1791050597,
+  "run_time": 439,
+  "save_time": 1791050648,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2322,7 +2439,6 @@
         "RELIC.CENTENNIAL_PUZZLE",
         "RELIC.STRAWBERRY",
         "RELIC.WAR_PAINT",
-        "RELIC.LANTERN",
         "RELIC.VENERABLE_TEA_SET",
         "RELIC.VAJRA"
       ],
@@ -2448,6 +2564,14 @@
     {
       "col": 1,
       "row": 11
+    },
+    {
+      "col": 1,
+      "row": 12
+    },
+    {
+      "col": 2,
+      "row": 13
     }
   ],
   "win_time": 0
