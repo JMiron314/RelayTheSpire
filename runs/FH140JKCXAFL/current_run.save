@@ -133,7 +133,7 @@
           "EVENT.SPIRIT_GRAFTER",
           "EVENT.AMALGAMATOR"
         ],
-        "events_visited": 0,
+        "events_visited": 1,
         "normal_encounter_ids": [
           "ENCOUNTER.THIEVING_HOPPER_WEAK",
           "ENCOUNTER.TUNNELER_WEAK",
@@ -150,7 +150,7 @@
           "ENCOUNTER.HUNTER_KILLER_NORMAL",
           "ENCOUNTER.BOWLBUGS_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": null
       },
       "saved_map": {
@@ -207,6 +207,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -308,6 +309,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 1,
@@ -435,6 +437,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -518,6 +521,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -573,6 +577,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -600,6 +605,7 @@
             "type": "shop"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -667,6 +673,7 @@
             "type": "shop"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -712,6 +719,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 6,
@@ -837,6 +845,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -1967,10 +1976,146 @@
           }
         ]
       }
+    ],
+    [
+      {
+        "map_point_type": "ancient",
+        "player_stats": [
+          {
+            "ancient_choice": [
+              {
+                "TextKey": "PHILOSOPHERS_STONE",
+                "title": {
+                  "key": "PHILOSOPHERS_STONE.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              },
+              {
+                "TextKey": "SNECKO_EYE",
+                "title": {
+                  "key": "SNECKO_EYE.title",
+                  "table": "relics"
+                },
+                "was_chosen": true
+              },
+              {
+                "TextKey": "SOZU",
+                "title": {
+                  "key": "SOZU.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              }
+            ],
+            "current_gold": 164,
+            "current_hp": 69,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SNECKO_EYE.title",
+                  "table": "relics"
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 1,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.SNECKO_EYE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.DARV",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.FLATTEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCULPTING_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PULL_AGGRO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 164,
+            "current_hp": 71,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 2,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 71,
+            "max_hp_gained": 1,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SHACKLING_POTION",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.THIEVING_HOPPER_WEAK",
+            "monster_ids": [
+              "MONSTER.THIEVING_HOPPER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 1
+          }
+        ]
+      }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 12,
+  "num_reloads": 13,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1982,7 +2127,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 68,
+      "current_hp": 71,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2103,12 +2248,12 @@
       },
       "gold": 164,
       "max_energy": 3,
-      "max_hp": 70,
+      "max_hp": 71,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
@@ -2289,16 +2434,20 @@
         {
           "floor_added_to_deck": 12,
           "id": "RELIC.LANTERN"
+        },
+        {
+          "floor_added_to_deck": 18,
+          "id": "RELIC.SNECKO_EYE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 116,
-            "s0": 13753676699599740141,
-            "s1": 10066349740838003912,
-            "s2": 2219180189123934169,
-            "s3": 12589220935341556637
+            "counter": 129,
+            "s0": 15076108339883176633,
+            "s1": 6559398389726084178,
+            "s2": 5452518606710525619,
+            "s3": 6751546969486751082
           },
           "shops": {
             "counter": 0,
@@ -2415,11 +2564,11 @@
         "s3": 5905923188299481089
       },
       "shuffle": {
-        "counter": 225,
-        "s0": 12589004546534311783,
-        "s1": 9353932737637035799,
-        "s2": 1052568254663211975,
-        "s3": 17682533393078307990
+        "counter": 240,
+        "s0": 769053928874564494,
+        "s1": 6601481502068089804,
+        "s2": 13027597092943029084,
+        "s3": 11011605510439554501
       },
       "unknown_map_point": {
         "counter": 4,
@@ -2450,11 +2599,11 @@
         "s3": 1769871296179681574
       },
       "combat_energy_costs": {
-        "counter": 0,
-        "s0": 9798262154806053166,
-        "s1": 1079118638609796042,
-        "s2": 2354185474906874746,
-        "s3": 1685311927716705856
+        "counter": 6,
+        "s0": 13663384772479713018,
+        "s1": 11345167744845115606,
+        "s2": 16226229714640206705,
+        "s3": 17358892789570075716
       },
       "combat_targets": {
         "counter": 0,
@@ -2471,11 +2620,11 @@
         "s3": 16980368907926351045
       },
       "niche": {
-        "counter": 16,
-        "s0": 14503821325938106586,
-        "s1": 4454758186651103253,
-        "s2": 11649192587178375961,
-        "s3": 13072127212084316815
+        "counter": 17,
+        "s0": 4754693043181607488,
+        "s1": 6142813827126651862,
+        "s2": 11313611135536454595,
+        "s3": 6868923018036439955
       },
       "combat_orbs": {
         "counter": 0,
@@ -2494,8 +2643,8 @@
     },
     "seed": "FH140JKCXAFL"
   },
-  "run_time": 473,
-  "save_time": 1791050735,
+  "run_time": 486,
+  "save_time": 1791050770,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2631,6 +2780,14 @@
     {
       "col": 3,
       "row": 0
+    },
+    {
+      "col": 4,
+      "row": 1
+    },
+    {
+      "col": 4,
+      "row": 2
     }
   ],
   "win_time": 0
