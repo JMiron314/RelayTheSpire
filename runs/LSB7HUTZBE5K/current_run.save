@@ -23,7 +23,7 @@
           "ENCOUNTER.BYGONE_EFFIGY_ELITE",
           "ENCOUNTER.BYRDONIS_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.SUNKEN_STATUE",
           "EVENT.JUNGLE_MAZE_ADVENTURE",
@@ -75,7 +75,7 @@
           "ENCOUNTER.VINE_SHAMBLER_NORMAL",
           "ENCOUNTER.FLYCONID_NORMAL"
         ],
-        "normal_encounters_visited": 4,
+        "normal_encounters_visited": 6,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1742,23 +1742,356 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 70,
+            "current_hp": 42,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 22,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.CELESTIAL_MIGHT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PILLAR_OF_CREATION",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.MONOLOGUE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 96,
+            "current_hp": 37,
+            "damage_taken": 5,
+            "gold_gained": 26,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.VULNERABLE_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.AKABEKO",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+            "monster_ids": [
+              "MONSTER.BYGONE_EFFIGY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 4
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 13,
+                  "id": "CARD.COSMIC_INDIFFERENCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.ALIGNMENT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PROPHESIZE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.COSMIC_INDIFFERENCE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 108,
+            "current_hp": 28,
+            "damage_taken": 9,
+            "gold_gained": 12,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SLIMES_NORMAL",
+            "monster_ids": [
+              "MONSTER.TWIG_SLIME_M",
+              "MONSTER.LEAF_SLIME_M",
+              "MONSTER.LEAF_SLIME_S",
+              "MONSTER.TWIG_SLIME_S"
+            ],
+            "room_type": "monster",
+            "turns_taken": 5
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 14,
+                  "id": "CARD.GLOW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.PHOTON_CUT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CRESCENT_SPEAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GLOW",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 123,
+            "current_hp": 10,
+            "damage_taken": 18,
+            "gold_gained": 15,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SKILL_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+            "monster_ids": [
+              "MONSTER.CROSSBOW_RUBY_RAIDER",
+              "MONSTER.TRACKER_RUBY_RAIDER",
+              "MONSTER.ASSASSIN_RUBY_RAIDER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 15,
+                  "id": "CARD.SHINING_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.GUIDING_STAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.MAKE_IT_SO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SHINING_STRIKE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 156,
+            "current_hp": 6,
+            "damage_taken": 4,
+            "gold_gained": 33,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SWIFT_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.SKILL_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.BOOK_OF_FIVE_RINGS",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHROG_PARASITE_ELITE",
+            "monster_ids": [
+              "MONSTER.PHROG_PARASITE",
+              "MONSTER.WRIGGLER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 6
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 5,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 20,
+      "current_hp": 6,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1886,31 +2219,51 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 14,
+          "id": "CARD.GLOW",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 15,
+          "id": "CARD.SHINING_STRIKE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 324,
-        "debuffs_applied": 18
+        "damage_dealt": 761,
+        "debuffs_applied": 23
       },
-      "gold": 70,
+      "gold": 156,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
+        "card_rarity_odds_value": -0.05,
         "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
-          "id": "POTION.VULNERABLE_POTION",
+          "id": "POTION.SWIFT_POTION",
           "slot_index": 0
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.AKABEKO",
             "RELIC.PERMAFROST",
             "RELIC.CANDELABRA",
             "RELIC.MERCURY_HOURGLASS",
@@ -1942,7 +2295,6 @@
             "RELIC.LASTING_CANDY"
           ],
           "common": [
-            "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.BLOOD_VIAL",
             "RELIC.WAR_PAINT",
             "RELIC.BAG_OF_MARBLES",
@@ -2078,16 +2430,32 @@
               }
             ]
           }
+        },
+        {
+          "floor_added_to_deck": 12,
+          "id": "RELIC.AKABEKO"
+        },
+        {
+          "floor_added_to_deck": 15,
+          "id": "RELIC.BOOK_OF_FIVE_RINGS",
+          "props": {
+            "ints": [
+              {
+                "name": "CardsAdded",
+                "value": 1
+              }
+            ]
+          }
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 77,
-            "s0": 4253234820328859179,
-            "s1": 12277672650421545430,
-            "s2": 1361988953059716084,
-            "s3": 16659183018120090876
+            "counter": 127,
+            "s0": 12980649841805763700,
+            "s1": 3278696199493032167,
+            "s2": 7145107858584384408,
+            "s3": 16807349871588494941
           },
           "shops": {
             "counter": 28,
@@ -2221,25 +2589,25 @@
         "s3": 651339781303177218
       },
       "shuffle": {
-        "counter": 150,
-        "s0": 783519287263985912,
-        "s1": 13607230573340160490,
-        "s2": 57536845677574011,
-        "s3": 10512839791741159299
+        "counter": 279,
+        "s0": 954034686888252663,
+        "s1": 10231127895617720910,
+        "s2": 4819926754068720257,
+        "s3": 2024051800518148075
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 17523817303311038924,
-        "s1": 14078702734745307987,
-        "s2": 9307093111198871420,
-        "s3": 7221159327367380771
+        "counter": 2,
+        "s0": 6081606979897855420,
+        "s1": 12788512832490331619,
+        "s2": 4688071843048511152,
+        "s3": 8542788542281396893
       },
       "combat_card_generation": {
-        "counter": 0,
-        "s0": 16759520630044076360,
-        "s1": 6067632545927193392,
-        "s2": 10364349603412940039,
-        "s3": 5830285279752754668
+        "counter": 33,
+        "s0": 7001913241843578349,
+        "s1": 4342771411880480079,
+        "s2": 10385471396052704922,
+        "s3": 7914049825196215036
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2263,25 +2631,25 @@
         "s3": 17577671723206049989
       },
       "combat_targets": {
-        "counter": 3,
-        "s0": 13247790427588323237,
-        "s1": 863415023688764061,
-        "s2": 8925698632451567634,
-        "s3": 9001470881970363965
+        "counter": 7,
+        "s0": 2458190706249416087,
+        "s1": 2690618748788913816,
+        "s2": 15725508288850861040,
+        "s3": 17173053604181592874
       },
       "monster_ai": {
-        "counter": 12,
-        "s0": 2086691458666689608,
-        "s1": 5494281320148903884,
-        "s2": 3025836725163393892,
-        "s3": 14027633231532178557
+        "counter": 15,
+        "s0": 6030055078707927606,
+        "s1": 18430684596827499926,
+        "s2": 3001037441588225443,
+        "s3": 11306319236207650658
       },
       "niche": {
-        "counter": 7,
-        "s0": 14698633375455913355,
-        "s1": 15042472484484169224,
-        "s2": 13819224956476039368,
-        "s3": 15943617667170551623
+        "counter": 20,
+        "s0": 14157348813650551233,
+        "s1": 1960595858092370570,
+        "s2": 10122098507548457336,
+        "s3": 12805595448671324336
       },
       "combat_orbs": {
         "counter": 0,
@@ -2300,8 +2668,8 @@
     },
     "seed": "LSB7HUTZBE5K"
   },
-  "run_time": 426,
-  "save_time": 1791083172,
+  "run_time": 783,
+  "save_time": 1791083775,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2318,7 +2686,6 @@
         "RELIC.PEAR",
         "RELIC.STONE_CRACKER",
         "RELIC.HORN_CLEAT",
-        "RELIC.AKABEKO",
         "RELIC.PERMAFROST",
         "RELIC.JOSS_PAPER",
         "RELIC.LETTER_OPENER",
@@ -2347,7 +2714,6 @@
         "RELIC.GORGET",
         "RELIC.ANCHOR",
         "RELIC.CENTENNIAL_PUZZLE",
-        "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.ODDLY_SMOOTH_STONE",
         "RELIC.REGAL_PILLOW",
         "RELIC.BRONZE_SCALES",
@@ -2476,6 +2842,26 @@
     {
       "col": 6,
       "row": 10
+    },
+    {
+      "col": 5,
+      "row": 11
+    },
+    {
+      "col": 4,
+      "row": 12
+    },
+    {
+      "col": 5,
+      "row": 13
+    },
+    {
+      "col": 5,
+      "row": 14
+    },
+    {
+      "col": 4,
+      "row": 15
     }
   ],
   "win_time": 0
