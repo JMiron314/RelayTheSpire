@@ -177,7 +177,7 @@
           "ENCOUNTER.SOUL_NEXUS_ELITE",
           "ENCOUNTER.MECHA_KNIGHT_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.BATTLEWORN_DUMMY",
           "EVENT.DOLL_ROOM",
@@ -3880,11 +3880,585 @@
             "turns_taken": 8
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 209,
+            "current_hp": 34,
+            "damage_taken": 0,
+            "gold_gained": 45,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 84,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.TINY_MAILBOX",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 209,
+            "current_hp": 59,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 25,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 84,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.ENERGY_POTION",
+                "was_picked": true
+              },
+              {
+                "choice": "POTION.LIQUID_BRONZE",
+                "was_picked": false
+              }
+            ],
+            "potion_discarded": [
+              "POTION.STABLE_SERUM"
+            ],
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "floor_added_to_deck": 43,
+                  "id": "CARD.NOXIOUS_FUMES",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.DASH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.MEMENTO_MORI",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "enchantment": {
+                  "amount": 1,
+                  "id": "ENCHANTMENT.GLAM"
+                },
+                "id": "CARD.NOXIOUS_FUMES",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 249,
+            "current_hp": 53,
+            "damage_taken": 6,
+            "gold_gained": 40,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 84,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.ATTACK_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.HORN_CLEAT",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.KNIGHTS_ELITE",
+            "monster_ids": [
+              "MONSTER.FLAIL_KNIGHT",
+              "MONSTER.SPECTRAL_KNIGHT",
+              "MONSTER.MAGI_KNIGHT"
+            ],
+            "room_type": "elite",
+            "turns_taken": 7
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 249,
+            "current_hp": 53,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 84,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.NOXIOUS_FUMES"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "bought_relics": [
+              "RELIC.ORRERY"
+            ],
+            "card_choices": [
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "floor_added_to_deck": 45,
+                  "id": "CARD.SHADOWMELD",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.SKEWER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.POISONED_STAB",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "floor_added_to_deck": 45,
+                  "id": "CARD.UNTOUCHABLE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.ANTICIPATE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.PREPARED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "floor_added_to_deck": 45,
+                  "id": "CARD.CLOAK_AND_DAGGER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.PREPARED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.DASH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "floor_added_to_deck": 45,
+                  "id": "CARD.BACKFLIP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.PREDATOR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.POUNCE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.BACKFLIP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.RICOCHET",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "enchantment": {
+                    "amount": 1,
+                    "id": "ENCHANTMENT.GLAM"
+                  },
+                  "id": "CARD.DEADLY_POISON",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PINPOINT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SKEWER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.EXPERTISE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DEADLY_POISON",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ACCELERANT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DARK_SHACKLES",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BEAT_DOWN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "enchantment": {
+                  "amount": 1,
+                  "id": "ENCHANTMENT.GLAM"
+                },
+                "id": "CARD.SHADOWMELD",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 1,
+                  "id": "ENCHANTMENT.GLAM"
+                },
+                "id": "CARD.UNTOUCHABLE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 1,
+                  "id": "ENCHANTMENT.GLAM"
+                },
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "enchantment": {
+                  "amount": 1,
+                  "id": "ENCHANTMENT.GLAM"
+                },
+                "id": "CARD.BACKFLIP",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 38,
+            "current_hp": 53,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 211,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 84,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.GIGANTIFICATION_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.POISON_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.POWER_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.ORRERY",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.ODDLY_SMOOTH_STONE",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.ANCHOR",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 8,
+  "num_reloads": 9,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -3896,7 +4470,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 34,
+      "current_hp": 53,
       "deck": [
         {
           "enchantment": {
@@ -4191,41 +4765,92 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 1,
+            "id": "ENCHANTMENT.GLAM"
+          },
+          "floor_added_to_deck": 43,
+          "id": "CARD.NOXIOUS_FUMES",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "enchantment": {
+            "amount": 1,
+            "id": "ENCHANTMENT.GLAM"
+          },
+          "floor_added_to_deck": 45,
+          "id": "CARD.SHADOWMELD",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 1,
+            "id": "ENCHANTMENT.GLAM"
+          },
+          "floor_added_to_deck": 45,
+          "id": "CARD.UNTOUCHABLE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 1,
+            "id": "ENCHANTMENT.GLAM"
+          },
+          "floor_added_to_deck": 45,
+          "id": "CARD.CLOAK_AND_DAGGER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "enchantment": {
+            "amount": 1,
+            "id": "ENCHANTMENT.GLAM"
+          },
+          "floor_added_to_deck": 45,
+          "id": "CARD.BACKFLIP",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 2528,
-        "debuffs_applied": 96
+        "damage_dealt": 2777,
+        "debuffs_applied": 108
       },
-      "gold": 164,
+      "gold": 38,
       "max_energy": 3,
       "max_hp": 84,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.009999992,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": 0.024999991,
+        "potion_reward_odds_value": 0.70000005
       },
       "potions": [
         {
-          "id": "POTION.STABLE_SERUM",
+          "id": "POTION.ENERGY_POTION",
           "slot_index": 0
-        },
-        {
-          "id": "POTION.ATTACK_POTION",
-          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.HORN_CLEAT",
             "RELIC.PEAR",
             "RELIC.PERMAFROST",
-            "RELIC.LASTING_CANDY",
             "RELIC.TWISTED_FUNNEL",
-            "RELIC.TINY_MAILBOX",
             "RELIC.AKABEKO",
             "RELIC.NUNCHAKU",
             "RELIC.PARRYING_SHIELD",
@@ -4240,39 +4865,30 @@
             "RELIC.GREMLIN_HORN",
             "RELIC.JOSS_PAPER",
             "RELIC.TINGSHA",
-            "RELIC.LUCKY_FYSH",
             "RELIC.PANTOGRAPH",
             "RELIC.ORICHALCUM",
-            "RELIC.PLANISPHERE",
             "RELIC.TUNING_FORK"
           ],
           "common": [
-            "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.WAR_PAINT",
             "RELIC.REGAL_PILLOW",
             "RELIC.SNECKO_SKULL",
             "RELIC.VENERABLE_TEA_SET",
             "RELIC.PENDULUM",
             "RELIC.BRONZE_SCALES",
-            "RELIC.JUZU_BRACELET",
             "RELIC.WHETSTONE",
             "RELIC.VAJRA",
-            "RELIC.AMETHYST_AUBERGINE",
             "RELIC.RED_MASK",
             "RELIC.GORGET",
             "RELIC.BLOOD_VIAL",
-            "RELIC.BAG_OF_MARBLES",
-            "RELIC.ANCHOR",
-            "RELIC.ODDLY_SMOOTH_STONE"
+            "RELIC.BAG_OF_MARBLES"
           ],
           "rare": [
             "RELIC.MEAT_ON_THE_BONE",
-            "RELIC.WHITE_BEAST_STATUE",
             "RELIC.GAMBLING_CHIP",
             "RELIC.INTIMIDATING_HELMET",
             "RELIC.STURDY_CLAMP",
             "RELIC.HELICAL_DART",
-            "RELIC.WHITE_STAR",
             "RELIC.PAPER_KRANE",
             "RELIC.CAPTAINS_WHEEL",
             "RELIC.TOUGH_BANDAGES",
@@ -4284,24 +4900,18 @@
             "RELIC.RAINBOW_RING",
             "RELIC.POCKETWATCH",
             "RELIC.BELLOWS",
-            "RELIC.SHOVEL",
             "RELIC.RAZOR_TOOTH",
-            "RELIC.MOLTEN_EGG",
             "RELIC.TUNGSTEN_ROD",
             "RELIC.GAME_PIECE",
-            "RELIC.TOXIC_EGG",
             "RELIC.CLOAK_CLASP",
             "RELIC.PRAYER_WHEEL",
             "RELIC.BEATING_REMNANT",
             "RELIC.THE_COURIER",
             "RELIC.LIZARD_TAIL",
-            "RELIC.OLD_COIN",
             "RELIC.ART_OF_WAR",
             "RELIC.SHURIKEN",
             "RELIC.CHANDELIER",
             "RELIC.UNCEASING_TOP",
-            "RELIC.GIRYA",
-            "RELIC.FROZEN_EGG",
             "RELIC.STONE_CALENDAR"
           ],
           "shop": [
@@ -4323,10 +4933,8 @@
             "RELIC.THE_ABACUS",
             "RELIC.CHEMICAL_X",
             "RELIC.BURNING_STICKS",
-            "RELIC.DRAGON_FRUIT",
             "RELIC.SCREAMING_FLAGON",
-            "RELIC.LEES_WAFFLE",
-            "RELIC.ORRERY"
+            "RELIC.LEES_WAFFLE"
           ]
         }
       },
@@ -4354,7 +4962,7 @@
             "ints": [
               {
                 "name": "TurnsSeen",
-                "value": 1
+                "value": 2
               }
             ]
           }
@@ -4398,23 +5006,35 @@
         {
           "floor_added_to_deck": 40,
           "id": "RELIC.STONE_CRACKER"
+        },
+        {
+          "floor_added_to_deck": 41,
+          "id": "RELIC.TINY_MAILBOX"
+        },
+        {
+          "floor_added_to_deck": 43,
+          "id": "RELIC.HORN_CLEAT"
+        },
+        {
+          "floor_added_to_deck": 45,
+          "id": "RELIC.ORRERY"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 311,
-            "s0": 1184476747593981547,
-            "s1": 5257620920412542927,
-            "s2": 3095607212575682063,
-            "s3": 4502692238325395602
+            "counter": 387,
+            "s0": 16331340104456454170,
+            "s1": 14070405411857330489,
+            "s2": 10394161216749060918,
+            "s3": 13675091618456666842
           },
           "shops": {
-            "counter": 112,
-            "s0": 2317560089631905214,
-            "s1": 569636254542543737,
-            "s2": 12985515575427740934,
-            "s3": 14920805621447757046
+            "counter": 140,
+            "s0": 2140812333953968229,
+            "s1": 14392405288687766339,
+            "s2": 9968315122843402588,
+            "s3": 8351403154991487866
           },
           "transformations": {
             "counter": 0,
@@ -4537,11 +5157,11 @@
         "s3": 11026090492105170233
       },
       "shuffle": {
-        "counter": 770,
-        "s0": 17305203506360733591,
-        "s1": 16660896358971219197,
-        "s2": 1380296224345693349,
-        "s3": 3579029577296517087
+        "counter": 825,
+        "s0": 4319772914798610406,
+        "s1": 16928318636053047398,
+        "s2": 2073332456146593061,
+        "s3": 16359463648782479886
       },
       "unknown_map_point": {
         "counter": 10,
@@ -4551,11 +5171,11 @@
         "s3": 15542345083488516546
       },
       "combat_card_generation": {
-        "counter": 61,
-        "s0": 9613295155920791851,
-        "s1": 8232983405104443093,
-        "s2": 14890790122081019745,
-        "s3": 15902490034153096021
+        "counter": 83,
+        "s0": 12017080555141480476,
+        "s1": 504704814197680998,
+        "s2": 2304583523110232256,
+        "s3": 14624824223137899119
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -4565,11 +5185,11 @@
         "s3": 12430282080781387534
       },
       "combat_card_selection": {
-        "counter": 0,
-        "s0": 17383405703669029014,
-        "s1": 14319028881561005393,
-        "s2": 3403350821453034380,
-        "s3": 1009186008142117788
+        "counter": 27,
+        "s0": 1097243504168100892,
+        "s1": 8721026670157007557,
+        "s2": 7045183663325224682,
+        "s3": 8916693325977951834
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -4586,18 +5206,18 @@
         "s3": 9779510843970435264
       },
       "monster_ai": {
-        "counter": 17,
-        "s0": 16462302638363215317,
-        "s1": 6472693906199764705,
-        "s2": 8940890478321778806,
-        "s3": 1825140765532253184
+        "counter": 24,
+        "s0": 18252552797008718235,
+        "s1": 16344126852397499872,
+        "s2": 14994945509300718134,
+        "s3": 629111905049303201
       },
       "niche": {
-        "counter": 33,
-        "s0": 11349550153372274797,
-        "s1": 10348952378801370938,
-        "s2": 6033566647961520662,
-        "s3": 11190841633223210398
+        "counter": 36,
+        "s0": 15382131656239444180,
+        "s1": 5551346390996136584,
+        "s2": 16127425685676185467,
+        "s3": 1000822467654963046
       },
       "combat_orbs": {
         "counter": 0,
@@ -4607,25 +5227,21 @@
         "s3": 6091404230791568442
       },
       "treasure_room_relics": {
-        "counter": 2,
-        "s0": 16420470591143126441,
-        "s1": 18234719406634511000,
-        "s2": 333531437397281112,
-        "s3": 9524808798273086210
+        "counter": 3,
+        "s0": 11151313533916916787,
+        "s1": 1895864413315335785,
+        "s2": 11394490433537584369,
+        "s3": 4698185852498635961
       }
     },
     "seed": "M7TRFZCZJR04"
   },
-  "run_time": 2755,
-  "save_time": 1791085757,
+  "run_time": 3115,
+  "save_time": 1791086147,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
-        "RELIC.TINY_MAILBOX",
-        "RELIC.PLANISPHERE",
-        "RELIC.LASTING_CANDY",
-        "RELIC.LUCKY_FYSH",
         "RELIC.JOSS_PAPER",
         "RELIC.KUSARIGAMA",
         "RELIC.PANTOGRAPH",
@@ -4634,7 +5250,6 @@
         "RELIC.PETRIFIED_TOAD",
         "RELIC.NUNCHAKU",
         "RELIC.CANDELABRA",
-        "RELIC.HORN_CLEAT",
         "RELIC.ORNAMENTAL_FAN",
         "RELIC.PEAR",
         "RELIC.AKABEKO",
@@ -4648,8 +5263,6 @@
       ],
       "common": [
         "RELIC.BLOOD_VIAL",
-        "RELIC.BOOK_OF_FIVE_RINGS",
-        "RELIC.ANCHOR",
         "RELIC.GORGET",
         "RELIC.PENDULUM",
         "RELIC.BAG_OF_MARBLES",
@@ -4658,19 +5271,14 @@
         "RELIC.VAJRA",
         "RELIC.VENERABLE_TEA_SET",
         "RELIC.REGAL_PILLOW",
-        "RELIC.AMETHYST_AUBERGINE",
-        "RELIC.ODDLY_SMOOTH_STONE",
         "RELIC.RED_MASK",
-        "RELIC.WHETSTONE",
-        "RELIC.JUZU_BRACELET"
+        "RELIC.WHETSTONE"
       ],
       "rare": [
         "RELIC.CAPTAINS_WHEEL",
         "RELIC.TUNGSTEN_ROD",
         "RELIC.UNCEASING_TOP",
-        "RELIC.WHITE_STAR",
         "RELIC.INTIMIDATING_HELMET",
-        "RELIC.SHOVEL",
         "RELIC.CLOAK_CLASP",
         "RELIC.PRAYER_WHEEL",
         "RELIC.VEXING_PUZZLEBOX",
@@ -4682,13 +5290,9 @@
         "RELIC.CHANDELIER",
         "RELIC.SHURIKEN",
         "RELIC.GAME_PIECE",
-        "RELIC.MOLTEN_EGG",
-        "RELIC.TOXIC_EGG",
         "RELIC.LIZARD_TAIL",
-        "RELIC.OLD_COIN",
         "RELIC.MUMMIFIED_HAND",
         "RELIC.POCKETWATCH",
-        "RELIC.FROZEN_EGG",
         "RELIC.BELLOWS",
         "RELIC.RAINBOW_RING",
         "RELIC.BEATING_REMNANT",
@@ -4696,8 +5300,6 @@
         "RELIC.GAMBLING_CHIP",
         "RELIC.THE_COURIER",
         "RELIC.STURDY_CLAMP",
-        "RELIC.GIRYA",
-        "RELIC.WHITE_BEAST_STATUE",
         "RELIC.RAZOR_TOOTH"
       ],
       "shop": [
@@ -4705,7 +5307,6 @@
         "RELIC.DOLLYS_MIRROR",
         "RELIC.ROYAL_STAMP",
         "RELIC.PUNCH_DAGGER",
-        "RELIC.DRAGON_FRUIT",
         "RELIC.GHOST_SEED",
         "RELIC.BELT_BUCKLE",
         "RELIC.LEES_WAFFLE",
@@ -4720,7 +5321,6 @@
         "RELIC.BREAD",
         "RELIC.CHEMICAL_X",
         "RELIC.MYSTIC_LIGHTER",
-        "RELIC.ORRERY",
         "RELIC.TOOLBOX"
       ],
       "event": [
@@ -4765,6 +5365,26 @@
     {
       "col": 6,
       "row": 7
+    },
+    {
+      "col": 5,
+      "row": 8
+    },
+    {
+      "col": 4,
+      "row": 9
+    },
+    {
+      "col": 3,
+      "row": 10
+    },
+    {
+      "col": 4,
+      "row": 11
+    },
+    {
+      "col": 4,
+      "row": 12
     }
   ],
   "win_time": 0
