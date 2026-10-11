@@ -23,7 +23,7 @@
           "ENCOUNTER.SKULKING_COLONY_ELITE",
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.WELCOME_TO_WONGOS",
           "EVENT.THIS_OR_THAT",
@@ -72,7 +72,7 @@
           "ENCOUNTER.SEWER_CLAM_NORMAL",
           "ENCOUNTER.FOSSIL_STALKER_NORMAL"
         ],
-        "normal_encounters_visited": 2,
+        "normal_encounters_visited": 3,
         "second_boss_id": null
       },
       "saved_map": {
@@ -1534,11 +1534,273 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 6,
+                  "id": "CARD.SNAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.VEILPIERCER",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCOURGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SNAP",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 33,
+            "current_hp": 46,
+            "damage_taken": 2,
+            "gold_gained": 13,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.LIQUID_BRONZE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TOADPOLES_WEAK",
+            "monster_ids": [
+              "MONSTER.TOADPOLE",
+              "MONSTER.TOADPOLE"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 33,
+            "current_hp": 46,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.BONE_SHARDS"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 8,
+                  "id": "CARD.MELANCHOLY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.INVOKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DEFILE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.MELANCHOLY",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 66,
+            "current_hp": 42,
+            "damage_taken": 4,
+            "gold_gained": 33,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.BLOCK_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.LIQUID_BRONZE"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.PETRIFIED_TOAD",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
+            "monster_ids": [
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER",
+              "MONSTER.PHANTASMAL_GARDENER"
+            ],
+            "room_type": "elite",
+            "turns_taken": 4
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 66,
+            "current_hp": 42,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.MELANCHOLY"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 102,
+            "current_hp": 42,
+            "damage_taken": 0,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.GIRYA",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
     "unknown_map_point_elite_odds_value": -3,
     "unknown_map_point_monster_odds_value": 0.3,
@@ -1550,7 +1812,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 48,
+      "current_hp": 42,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1623,6 +1885,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 2,
           "id": "CARD.BONE_SHARDS",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1635,32 +1898,50 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 6,
+          "id": "CARD.SNAP",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 8,
+          "id": "CARD.MELANCHOLY",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 34,
-        "debuffs_applied": 1
+        "damage_dealt": 86,
+        "debuffs_applied": 7
       },
-      "gold": 20,
+      "gold": 102,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.020000007,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.20000002
       },
       "potions": [
         {
           "id": "POTION.SWIFT_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.BLOCK_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.PETRIFIED_TOAD",
             "RELIC.PANTOGRAPH",
             "RELIC.PARRYING_SHIELD",
             "RELIC.KUSARIGAMA",
@@ -1733,7 +2014,6 @@
             "RELIC.LIZARD_TAIL",
             "RELIC.ART_OF_WAR",
             "RELIC.BOOKMARK",
-            "RELIC.GIRYA",
             "RELIC.BEATING_REMNANT",
             "RELIC.RAINBOW_RING",
             "RELIC.GAME_PIECE",
@@ -1799,16 +2079,32 @@
         {
           "floor_added_to_deck": 4,
           "id": "RELIC.BAG_OF_MARBLES"
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "RELIC.PETRIFIED_TOAD"
+        },
+        {
+          "floor_added_to_deck": 10,
+          "id": "RELIC.GIRYA",
+          "props": {
+            "ints": [
+              {
+                "name": "TimesLifted",
+                "value": 0
+              }
+            ]
+          }
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 39,
-            "s0": 10371994673779272388,
-            "s1": 4558055416711766626,
-            "s2": 8896215454431055000,
-            "s3": 10842478824504767696
+            "counter": 67,
+            "s0": 6121164177533626578,
+            "s1": 5177488592350577989,
+            "s2": 13143372480027169386,
+            "s3": 2269660158352016895
           },
           "shops": {
             "counter": 28,
@@ -1974,11 +2270,11 @@
         "s3": 17633666033815192630
       },
       "shuffle": {
-        "counter": 56,
-        "s0": 2820597878404606823,
-        "s1": 8208480083228884697,
-        "s2": 11241113571302115793,
-        "s3": 8327897088701753812
+        "counter": 94,
+        "s0": 1651560737960085486,
+        "s1": 513569819621241464,
+        "s2": 217804196070604017,
+        "s3": 17296209450393888336
       },
       "unknown_map_point": {
         "counter": 2,
@@ -2030,11 +2326,11 @@
         "s3": 15829394257568652186
       },
       "niche": {
-        "counter": 3,
-        "s0": 9204562048270195036,
-        "s1": 5753839252572534275,
-        "s2": 17250262573737172558,
-        "s3": 14280118443209924526
+        "counter": 9,
+        "s0": 12720692162492098411,
+        "s1": 15206585691665580111,
+        "s2": 15893651084490686299,
+        "s3": 4989564861944828875
       },
       "combat_orbs": {
         "counter": 0,
@@ -2044,17 +2340,17 @@
         "s3": 4788271165121143206
       },
       "treasure_room_relics": {
-        "counter": 0,
-        "s0": 8345859766687921470,
-        "s1": 13556077639797418468,
-        "s2": 1234242994906613885,
-        "s3": 3546250070104501955
+        "counter": 1,
+        "s0": 18357903884097008153,
+        "s1": 16055973145503962279,
+        "s2": 15809338045708909891,
+        "s3": 13323039279017723230
       }
     },
     "seed": "RQ4VVM4J4X43"
   },
-  "run_time": 157,
-  "save_time": 1791688513,
+  "run_time": 317,
+  "save_time": 1791689049,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2071,7 +2367,6 @@
         "RELIC.LASTING_CANDY",
         "RELIC.LUCKY_FYSH",
         "RELIC.PEAR",
-        "RELIC.PETRIFIED_TOAD",
         "RELIC.BOWLER_HAT",
         "RELIC.PLANISPHERE",
         "RELIC.SPARKLING_ROUGE",
@@ -2115,7 +2410,6 @@
         "RELIC.STRIKE_DUMMY"
       ],
       "rare": [
-        "RELIC.GIRYA",
         "RELIC.BEATING_REMNANT",
         "RELIC.CLOAK_CLASP",
         "RELIC.TUNGSTEN_ROD",
@@ -2211,6 +2505,26 @@
     {
       "col": 5,
       "row": 5
+    },
+    {
+      "col": 6,
+      "row": 6
+    },
+    {
+      "col": 5,
+      "row": 7
+    },
+    {
+      "col": 5,
+      "row": 8
+    },
+    {
+      "col": 6,
+      "row": 9
+    },
+    {
+      "col": 6,
+      "row": 10
     }
   ],
   "win_time": 0
