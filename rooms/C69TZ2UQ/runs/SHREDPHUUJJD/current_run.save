@@ -202,7 +202,7 @@
           "EVENT.SLIPPERY_BRIDGE",
           "EVENT.TEA_MASTER"
         ],
-        "events_visited": 1,
+        "events_visited": 11,
         "normal_encounter_ids": [
           "ENCOUNTER.SCROLLS_OF_BITING_WEAK",
           "ENCOUNTER.DEVOTED_SCULPTOR_WEAK",
@@ -218,7 +218,7 @@
           "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
           "ENCOUNTER.OWL_MAGISTRATE_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": "ENCOUNTER.QUEEN_BOSS"
       },
       "saved_map": {
@@ -239,6 +239,7 @@
         "height": 14,
         "points": [
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -308,6 +309,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -427,6 +429,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 2,
@@ -500,6 +503,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -527,6 +531,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -558,6 +563,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 5,
@@ -585,6 +591,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 5,
@@ -654,6 +661,7 @@
             "type": "shop"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -797,6 +805,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 6,
@@ -888,6 +897,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -953,13 +963,17 @@
   "current_act_index": 2,
   "events_seen": [
     "EVENT.SPIRALING_WHIRLPOOL",
-    "EVENT.CRYSTAL_SPHERE"
+    "EVENT.CRYSTAL_SPHERE",
+    "EVENT.RANWID_THE_ELDER",
+    "EVENT.TRIAL",
+    "EVENT.ROUND_TEA_PARTY",
+    "EVENT.THE_FUTURE_OF_POTIONS"
   ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmNkYGAAYQYoAACrlnbZEAAAAA==",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgYmBgaGNga1mImPW5yL5hQ49wn7HQ88tNTCaweLO2f5PY2HVdKqMcmLW6qzpxRE9Ar7LZ94KNAkbEeNG/fzcxUPb0ga37FUbn+dxlJ4qkd33UTD45GGTJbybsrbD+14YiMxV4ZVeUpxQk8Re0+gXgNggacu6ntZvnLVFN8t8dRIfL7Mw6TJq6NjitK6vc9lF54s1NWzXHtUtX3rjicbxKbPubpo0uYon6KQbre8zIknGHW5LGcdVZi+6cdjO7HKOUcW9XFHHCn80GX6LnriMU3tUztijkqwr+Z47COaKLNCqed1SEvh1C4jvoCPxxI13+0QPyq3fOGNxxoi1XNaFvVPDvhSKNDlwGAU45DSptxxpoBxouQ6BaHDli5qFhs9vrvJet77pHz4dqNKRfGEL3kSk+7muhbtlvXM2m528vUzTc27u1SnRp9IKXg860xu1+RNvaWTtvT6W20TPrX5mwfnlV+axlFxS+2T1/ek20x713P60tzKyF3G+qcrnqVqnt+jwwgAdOOxjXwBAAA=",
   "map_point_history": [
     [
       {
@@ -3337,23 +3351,347 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.SUCKER_PUNCH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.ANTICIPATE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DAGGER_SPRAY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 205,
+            "current_hp": 60,
+            "damage_taken": 0,
+            "gold_gained": 7,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 2,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SCROLLS_OF_BITING_WEAK",
+            "monster_ids": [
+              "MONSTER.SCROLL_OF_BITING",
+              "MONSTER.SCROLL_OF_BITING",
+              "MONSTER.SCROLL_OF_BITING"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 205,
+            "current_hp": 60,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "RANWID_THE_ELDER.pages.INITIAL.options.RELIC.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Potion": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Block Potion"
+                  },
+                  "Relic": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Blood Vial"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.RAINBOW_RING",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.FESTIVE_POPPER",
+                "was_picked": true
+              }
+            ],
+            "relics_removed": [
+              "RELIC.BLOOD_VIAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.RANWID_THE_ELDER",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 205,
+            "current_hp": 70,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "TRIAL.pages.INITIAL.options.ACCEPT.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "EntrantNumber": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 410,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              },
+              {
+                "title": {
+                  "key": "TRIAL.pages.NOBLE.options.GUILTY.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "EntrantNumber": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 410,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 10,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.TRIAL",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 205,
+            "current_hp": 59,
+            "damage_taken": 11,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "ROUND_TEA_PARTY.pages.INITIAL.options.PICK_FIGHT.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Relic": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Royal Poison"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.ORNAMENTAL_FAN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.ROUND_TEA_PARTY",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "floor_added_to_deck": 39,
+                  "id": "CARD.FAN_OF_KNIVES",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.ABRASIVE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.ENVENOM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.FAN_OF_KNIVES",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 220,
+            "current_hp": 59,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Rarity": {
+                    "type": "String",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Rare"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 15,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 70,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_discarded": [
+              "POTION.SHACKLING_POTION"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.THE_FUTURE_OF_POTIONS",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 7,
+  "num_reloads": 8,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_elite_odds_value": -5,
+    "unknown_map_point_monster_odds_value": 0.5,
+    "unknown_map_point_shop_odds_value": 0.14999999,
+    "unknown_map_point_treasure_odds_value": 0.099999994
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.SILENT",
-      "current_hp": 58,
+      "current_hp": 59,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -3587,21 +3925,29 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 39,
+          "id": "CARD.FAN_OF_KNIVES",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 2,
-        "damage_dealt": 1519,
-        "debuffs_applied": 137
+        "damage_dealt": 1629,
+        "debuffs_applied": 141
       },
-      "gold": 198,
+      "gold": 220,
       "max_energy": 3,
       "max_hp": 70,
       "max_potion_slot_count": 3,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.05,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.6
       },
       "potions": [
         {
@@ -3611,16 +3957,11 @@
         {
           "id": "POTION.RADIANT_TINCTURE",
           "slot_index": 1
-        },
-        {
-          "id": "POTION.SHACKLING_POTION",
-          "slot_index": 2
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.ORNAMENTAL_FAN",
             "RELIC.LETTER_OPENER",
             "RELIC.TUNING_FORK",
             "RELIC.PARRYING_SHIELD",
@@ -3649,7 +3990,6 @@
             "RELIC.RIPPLE_BASIN"
           ],
           "common": [
-            "RELIC.FESTIVE_POPPER",
             "RELIC.ANCHOR",
             "RELIC.STRAWBERRY",
             "RELIC.AMETHYST_AUBERGINE",
@@ -3670,7 +4010,6 @@
             "RELIC.VENERABLE_TEA_SET"
           ],
           "rare": [
-            "RELIC.RAINBOW_RING",
             "RELIC.ART_OF_WAR",
             "RELIC.INTIMIDATING_HELMET",
             "RELIC.GIRYA",
@@ -3790,26 +4129,34 @@
           "id": "RELIC.BAG_OF_PREPARATION"
         },
         {
-          "floor_added_to_deck": 29,
-          "id": "RELIC.BLOOD_VIAL"
-        },
-        {
           "floor_added_to_deck": 31,
           "id": "RELIC.GORGET"
         },
         {
           "floor_added_to_deck": 34,
           "id": "RELIC.BLESSED_ANTLER"
+        },
+        {
+          "floor_added_to_deck": 36,
+          "id": "RELIC.RAINBOW_RING"
+        },
+        {
+          "floor_added_to_deck": 36,
+          "id": "RELIC.FESTIVE_POPPER"
+        },
+        {
+          "floor_added_to_deck": 38,
+          "id": "RELIC.ORNAMENTAL_FAN"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 263,
-            "s0": 14950227397473681215,
-            "s1": 9290288717145477055,
-            "s2": 15953003362165836253,
-            "s3": 13479449929118762665
+            "counter": 280,
+            "s0": 9430295574406868924,
+            "s1": 7780969418004139435,
+            "s2": 1601812377660615847,
+            "s3": 6554066994714972266
           },
           "shops": {
             "counter": 56,
@@ -3969,18 +4316,18 @@
         "s3": 15027884651262386647
       },
       "shuffle": {
-        "counter": 677,
-        "s0": 9726894176230272540,
-        "s1": 2845442629677617903,
-        "s2": 3165803049573899520,
-        "s3": 16070395558106512890
+        "counter": 711,
+        "s0": 15430371610525173149,
+        "s1": 9476281386150499395,
+        "s2": 4601789626894379136,
+        "s3": 6065680689067274792
       },
       "unknown_map_point": {
-        "counter": 3,
-        "s0": 3458232153008771239,
-        "s1": 6747702115435991550,
-        "s2": 13550902941605064503,
-        "s3": 10528660856046064994
+        "counter": 7,
+        "s0": 8744179937412706374,
+        "s1": 2442004874824424816,
+        "s2": 14215379664533578744,
+        "s3": 18239151333075964465
       },
       "combat_card_generation": {
         "counter": 177,
@@ -4018,18 +4365,18 @@
         "s3": 4053574996426310947
       },
       "monster_ai": {
-        "counter": 8,
-        "s0": 17846233468304192184,
-        "s1": 15755740301989337709,
-        "s2": 6590606422502034272,
-        "s3": 3892841577504861629
+        "counter": 9,
+        "s0": 1948662606165722472,
+        "s1": 8537598961956971445,
+        "s2": 16752130113521007064,
+        "s3": 12031961876781022317
       },
       "niche": {
-        "counter": 34,
-        "s0": 6317857528335559328,
-        "s1": 8332479089832868734,
-        "s2": 12312755734666852050,
-        "s3": 13466791219119809127
+        "counter": 37,
+        "s0": 1349782229026551639,
+        "s1": 13921910291136965309,
+        "s2": 9033226121829376634,
+        "s3": 12059759318937310259
       },
       "combat_orbs": {
         "counter": 0,
@@ -4048,8 +4395,8 @@
     },
     "seed": "SHREDPHUUJJD"
   },
-  "run_time": 2195,
-  "save_time": 1792467224,
+  "run_time": 2429,
+  "save_time": 1792468553,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -4062,7 +4409,6 @@
         "RELIC.KUSARIGAMA",
         "RELIC.JOSS_PAPER",
         "RELIC.PEN_NIB",
-        "RELIC.ORNAMENTAL_FAN",
         "RELIC.PEAR",
         "RELIC.LASTING_CANDY",
         "RELIC.REPTILE_TRINKET",
@@ -4097,7 +4443,6 @@
         "RELIC.VENERABLE_TEA_SET",
         "RELIC.WHETSTONE",
         "RELIC.BRONZE_SCALES",
-        "RELIC.FESTIVE_POPPER",
         "RELIC.WAR_PAINT"
       ],
       "rare": [
@@ -4116,7 +4461,6 @@
         "RELIC.BEATING_REMNANT",
         "RELIC.STURDY_CLAMP",
         "RELIC.FROZEN_EGG",
-        "RELIC.RAINBOW_RING",
         "RELIC.WHITE_STAR",
         "RELIC.GIRYA",
         "RELIC.SHOVEL",
@@ -4179,6 +4523,26 @@
     {
       "col": 2,
       "row": 1
+    },
+    {
+      "col": 2,
+      "row": 2
+    },
+    {
+      "col": 1,
+      "row": 3
+    },
+    {
+      "col": 2,
+      "row": 4
+    },
+    {
+      "col": 3,
+      "row": 5
+    },
+    {
+      "col": 4,
+      "row": 6
     }
   ],
   "win_time": 0
