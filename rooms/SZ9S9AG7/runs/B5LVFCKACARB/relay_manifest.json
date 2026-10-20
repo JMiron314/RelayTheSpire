@@ -1,17 +1,21 @@
 {
   "relay_version": 1,
   "run_id": "B5LVFCKACARB",
-  "start_time": 0,
-  "schema_version": 0,
+  "start_time": 1792515776,
+  "schema_version": 20,
   "ascension": 10,
   "character_id": "CHARACTER.SILENT",
   "game_mode": "standard",
-  "floors_completed": 0,
-  "relay_chain": [],
-  "last_updated": 1792515774,
-  "claimed_by": "3024d02807f00970a10b026506c63f2a377b1e81c2d46793e72be8034dc953b5",
-  "claimed_at": 1792515774,
-  "claim_expires_at": 1792558974,
+  "floors_completed": 5,
+  "relay_chain": [
+    {
+      "player_hash": "3024d02807f00970a10b026506c63f2a377b1e81c2d46793e72be8034dc953b5",
+      "floors_played": 5,
+      "turn_start_floor": 0,
+      "timestamp": 1792515897
+    }
+  ],
+  "last_updated": 1792515897,
   "room_id": "SZ9S9AG7",
   "floors_per_turn": 5,
   "repeat_policy": "2"
