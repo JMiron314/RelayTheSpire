@@ -133,7 +133,7 @@
           "EVENT.CRYSTAL_SPHERE",
           "EVENT.ROOM_FULL_OF_CHEESE"
         ],
-        "events_visited": 2,
+        "events_visited": 6,
         "normal_encounter_ids": [
           "ENCOUNTER.THIEVING_HOPPER_WEAK",
           "ENCOUNTER.TUNNELER_WEAK",
@@ -489,7 +489,10 @@
   "events_seen": [
     "EVENT.BRAIN_LEECH",
     "EVENT.BYRDONIS_NEST",
-    "EVENT.POTION_COURIER"
+    "EVENT.POTION_COURIER",
+    "EVENT.THE_FUTURE_OF_POTIONS",
+    "EVENT.INFESTED_AUTOMATON",
+    "EVENT.WELCOME_TO_WONGOS"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1982,11 +1985,309 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "floor_added_to_deck": 25,
+                  "id": "CARD.TYRANNY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.ARSENAL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.GENESIS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.TYRANNY",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 287,
+            "current_hp": 34,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Rarity": {
+                    "type": "String",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Event"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 5,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 82,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_discarded": [
+              "POTION.FOUL_POTION"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.THE_FUTURE_OF_POTIONS",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 323,
+            "current_hp": 34,
+            "damage_taken": 0,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 82,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.SHURIKEN",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.ASTRAL_PULSE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 323,
+            "current_hp": 39,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE.title",
+                  "table": "events"
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 5,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 82,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.INFESTED_AUTOMATON",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 354,
+            "current_hp": 39,
+            "damage_taken": 0,
+            "gold_gained": 31,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 82,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.CAPTAINS_WHEEL",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 254,
+            "current_hp": 51,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "WELCOME_TO_WONGOS.pages.INITIAL.options.BARGAIN_BIN.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "BargainBinCost": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 100,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "MysteryBoxCost": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 300,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "FeaturedItemCost": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 200,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "MysteryBoxRelicCount": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 3,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "MysteryBoxCombatCount": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 5,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "WongoPointAmount": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 32,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "RemainingWongoPointAmount": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 1968,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "TotalWongoBadgeAmount": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": null
+                  },
+                  "RandomRelic": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Beating Remnant"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 100,
+            "gold_stolen": 0,
+            "hp_healed": 12,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 89,
+            "max_hp_gained": 7,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.STRAWBERRY",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.WELCOME_TO_WONGOS",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 6,
   "odds": {
     "unknown_map_point_elite_odds_value": -1,
     "unknown_map_point_monster_odds_value": 0.1,
@@ -1998,7 +2299,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 29,
+      "current_hp": 51,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2164,16 +2465,33 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 25,
+          "id": "CARD.TYRANNY",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 27,
+          "id": "CARD.ASTRAL_PULSE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
         "damage_dealt": 1169,
-        "debuffs_applied": 39
+        "debuffs_applied": 39,
+        "wongo_points": 32
       },
-      "gold": 287,
+      "gold": 254,
       "max_energy": 3,
-      "max_hp": 82,
+      "max_hp": 89,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
@@ -2181,10 +2499,6 @@
         "potion_reward_odds_value": 0.70000005
       },
       "potions": [
-        {
-          "id": "POTION.FOUL_POTION",
-          "slot_index": 0
-        },
         {
           "id": "POTION.FOUL_POTION",
           "slot_index": 1
@@ -2225,7 +2539,6 @@
             "RELIC.LUCKY_FYSH"
           ],
           "common": [
-            "RELIC.STRAWBERRY",
             "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.VENERABLE_TEA_SET",
             "RELIC.LANTERN",
@@ -2252,7 +2565,6 @@
             "RELIC.PENDULUM"
           ],
           "rare": [
-            "RELIC.BEATING_REMNANT",
             "RELIC.TUNGSTEN_ROD",
             "RELIC.MUMMIFIED_HAND",
             "RELIC.STONE_CALENDAR",
@@ -2261,8 +2573,6 @@
             "RELIC.SHOVEL",
             "RELIC.MINI_REGENT",
             "RELIC.CHANDELIER",
-            "RELIC.CAPTAINS_WHEEL",
-            "RELIC.SHURIKEN",
             "RELIC.LIZARD_TAIL",
             "RELIC.INTIMIDATING_HELMET",
             "RELIC.GAMBLING_CHIP",
@@ -2358,16 +2668,28 @@
               }
             ]
           }
+        },
+        {
+          "floor_added_to_deck": 26,
+          "id": "RELIC.SHURIKEN"
+        },
+        {
+          "floor_added_to_deck": 28,
+          "id": "RELIC.CAPTAINS_WHEEL"
+        },
+        {
+          "floor_added_to_deck": 29,
+          "id": "RELIC.STRAWBERRY"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 152,
-            "s0": 841978822063197936,
-            "s1": 2254689686149183515,
-            "s2": 960799545627617645,
-            "s3": 13133307750540757665
+            "counter": 159,
+            "s0": 4407925362930340746,
+            "s1": 7394118209132466206,
+            "s2": 7647941785547774994,
+            "s3": 11241196671145886911
           },
           "shops": {
             "counter": 28,
@@ -2544,11 +2866,11 @@
         "s3": 12384299512219628001
       },
       "unknown_map_point": {
-        "counter": 3,
-        "s0": 11392726698549419504,
-        "s1": 3351672916693746950,
-        "s2": 17144798371178863782,
-        "s3": 13227410811520345981
+        "counter": 6,
+        "s0": 9855540058255846466,
+        "s1": 2699785945600527371,
+        "s2": 5699012646330431110,
+        "s3": 4936853244927410543
       },
       "combat_card_generation": {
         "counter": 1,
@@ -2607,17 +2929,17 @@
         "s3": 17713532391879502709
       },
       "treasure_room_relics": {
-        "counter": 1,
-        "s0": 13092082115619006136,
-        "s1": 8870888027908103421,
-        "s2": 11068171218253308562,
-        "s3": 5435134993650518084
+        "counter": 3,
+        "s0": 2909421432928673211,
+        "s1": 10200567806078529276,
+        "s2": 7594781774136948267,
+        "s3": 18300189846183632104
       }
     },
     "seed": "V9Y91BQUCQ1N"
   },
-  "run_time": 1212,
-  "save_time": 1792484944,
+  "run_time": 1279,
+  "save_time": 1792485202,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2673,13 +2995,10 @@
         "RELIC.GORGET",
         "RELIC.POTION_BELT",
         "RELIC.CENTENNIAL_PUZZLE",
-        "RELIC.STRAWBERRY",
         "RELIC.BLOOD_VIAL",
         "RELIC.BOOK_OF_FIVE_RINGS"
       ],
       "rare": [
-        "RELIC.SHURIKEN",
-        "RELIC.CAPTAINS_WHEEL",
         "RELIC.MEAT_ON_THE_BONE",
         "RELIC.WHITE_BEAST_STATUE",
         "RELIC.RAZOR_TOOTH",
@@ -2689,7 +3008,6 @@
         "RELIC.GAME_PIECE",
         "RELIC.FROZEN_EGG",
         "RELIC.STONE_CALENDAR",
-        "RELIC.BEATING_REMNANT",
         "RELIC.PRAYER_WHEEL",
         "RELIC.INTIMIDATING_HELMET",
         "RELIC.GAMBLING_CHIP",
@@ -2780,6 +3098,26 @@
     {
       "col": 3,
       "row": 7
+    },
+    {
+      "col": 3,
+      "row": 8
+    },
+    {
+      "col": 3,
+      "row": 9
+    },
+    {
+      "col": 3,
+      "row": 10
+    },
+    {
+      "col": 3,
+      "row": 11
+    },
+    {
+      "col": 3,
+      "row": 12
     }
   ],
   "win_time": 0
