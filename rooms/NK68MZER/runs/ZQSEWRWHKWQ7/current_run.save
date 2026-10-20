@@ -23,7 +23,7 @@
           "ENCOUNTER.BYGONE_EFFIGY_ELITE",
           "ENCOUNTER.PHROG_PARASITE_ELITE"
         ],
-        "elite_encounters_visited": 2,
+        "elite_encounters_visited": 3,
         "event_ids": [
           "EVENT.SELF_HELP_BOOK",
           "EVENT.THE_FUTURE_OF_POTIONS",
@@ -57,7 +57,7 @@
           "EVENT.ROOM_FULL_OF_CHEESE",
           "EVENT.SLIPPERY_BRIDGE"
         ],
-        "events_visited": 3,
+        "events_visited": 10,
         "normal_encounter_ids": [
           "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
           "ENCOUNTER.SLIMES_WEAK",
@@ -1161,7 +1161,10 @@
   "ascension": 10,
   "current_act_index": 0,
   "events_seen": [
-    "EVENT.WOOD_CARVINGS"
+    "EVENT.WOOD_CARVINGS",
+    "EVENT.AROMA_OF_CHAOS",
+    "EVENT.WHISPERING_HOLLOW",
+    "EVENT.WELLSPRING"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -1851,38 +1854,288 @@
             "turns_taken": 7
           }
         ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 112,
+            "current_hp": 51,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_transformed": [
+              {
+                "final_card": {
+                  "floor_added_to_deck": 11,
+                  "id": "CARD.STOMP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "original_card": {
+                  "floor_added_to_deck": 1,
+                  "id": "CARD.STRIKE_IRONCLAD",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                }
+              }
+            ],
+            "current_gold": 112,
+            "current_hp": 51,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO.title",
+                  "table": "events"
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.AROMA_OF_CHAOS",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "cards_transformed": [
+              {
+                "final_card": {
+                  "floor_added_to_deck": 12,
+                  "id": "CARD.CONFLAGRATION",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "original_card": {
+                  "floor_added_to_deck": 1,
+                  "id": "CARD.STRIKE_IRONCLAD",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                }
+              }
+            ],
+            "current_gold": 112,
+            "current_hp": 42,
+            "damage_taken": 9,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "WHISPERING_HOLLOW.pages.INITIAL.options.HUG.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 80,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.WHISPERING_HOLLOW",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 13,
+                  "id": "CARD.SPITE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.IRON_WAVE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.TWIN_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SPITE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 142,
+            "current_hp": 55,
+            "damage_taken": 7,
+            "gold_gained": 30,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 20,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 94,
+            "max_hp_gained": 14,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_used": [
+              "POTION.BLOCK_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.MANGO",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BYRDONIS_ELITE",
+            "monster_ids": [
+              "MONSTER.BYRDONIS"
+            ],
+            "room_type": "elite",
+            "turns_taken": 3
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 142,
+            "current_hp": 55,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "WELLSPRING.pages.INITIAL.options.BOTTLE.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "BatheCurses": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 1,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 94,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.HEART_OF_IRON",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.WELLSPRING",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 1,
+  "num_reloads": 2,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.2,
-    "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -5,
+    "unknown_map_point_monster_odds_value": 0.5,
+    "unknown_map_point_shop_odds_value": 0.12,
+    "unknown_map_point_treasure_odds_value": 0.099999994
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.IRONCLAD",
-      "current_hp": 51,
+      "current_hp": 55,
       "deck": [
-        {
-          "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_IRONCLAD",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
-        {
-          "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_IRONCLAD",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
         {
           "floor_added_to_deck": 1,
           "id": "CARD.STRIKE_IRONCLAD",
@@ -2002,20 +2255,41 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 11,
+          "id": "CARD.STOMP",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 12,
+          "id": "CARD.CONFLAGRATION",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "CARD.SPITE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 432,
-        "debuffs_applied": 4
+        "damage_dealt": 522,
+        "debuffs_applied": 6
       },
-      "gold": 112,
+      "gold": 142,
       "max_energy": 3,
-      "max_hp": 80,
+      "max_hp": 94,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.024999991,
-        "potion_reward_odds_value": 0.3
+        "card_rarity_odds_value": 0.039999988,
+        "potion_reward_odds_value": 0.4
       },
       "potions": [
         {
@@ -2023,7 +2297,7 @@
           "slot_index": 0
         },
         {
-          "id": "POTION.BLOCK_POTION",
+          "id": "POTION.HEART_OF_IRON",
           "slot_index": 1
         }
       ],
@@ -2091,7 +2365,6 @@
             "RELIC.RED_MASK"
           ],
           "rare": [
-            "RELIC.MANGO",
             "RELIC.KUNAI",
             "RELIC.CHANDELIER",
             "RELIC.GAMBLING_CHIP",
@@ -2172,7 +2445,7 @@
               },
               {
                 "name": "TreasureRoomsEntered",
-                "value": 0
+                "value": 1
               }
             ]
           }
@@ -2184,16 +2457,20 @@
         {
           "floor_added_to_deck": 9,
           "id": "RELIC.DEMON_TONGUE"
+        },
+        {
+          "floor_added_to_deck": 13,
+          "id": "RELIC.MANGO"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 77,
-            "s0": 6353444752884348406,
-            "s1": 7780857807114216820,
-            "s2": 13448531648124451151,
-            "s3": 15499005567034445830
+            "counter": 90,
+            "s0": 8274944104793788949,
+            "s1": 15432813839843502798,
+            "s2": 4648337766116678965,
+            "s3": 9713448968941653181
           },
           "shops": {
             "counter": 28,
@@ -2314,18 +2591,18 @@
         "s3": 5988727284154274242
       },
       "shuffle": {
-        "counter": 146,
-        "s0": 5677940184584632487,
-        "s1": 13449425060739420981,
-        "s2": 10920413741100374776,
-        "s3": 15631950987619981392
+        "counter": 163,
+        "s0": 3150641690039811192,
+        "s1": 8618416025103762113,
+        "s2": 18077488680085615935,
+        "s3": 9102967066773892272
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 15780035325116792059,
-        "s1": 15205731104904280572,
-        "s2": 5461528755089939272,
-        "s3": 17248292560652041765
+        "counter": 4,
+        "s0": 14343333668945480563,
+        "s1": 5366093445637598570,
+        "s2": 6323123897136656308,
+        "s3": 13766039977336410586
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2349,11 +2626,11 @@
         "s3": 17589439624763294656
       },
       "combat_energy_costs": {
-        "counter": 5,
-        "s0": 8779180154245987000,
-        "s1": 13659028498793645511,
-        "s2": 12654878427152966916,
-        "s3": 10617479024079918542
+        "counter": 6,
+        "s0": 6270043329799662257,
+        "s1": 7765436362643282555,
+        "s2": 16884239262454079420,
+        "s3": 3603202798467728639
       },
       "combat_targets": {
         "counter": 0,
@@ -2370,11 +2647,11 @@
         "s3": 13805989431335412221
       },
       "niche": {
-        "counter": 11,
-        "s0": 4505490542556016824,
-        "s1": 14671449933930876088,
-        "s2": 5744586149185121795,
-        "s3": 6776162390778134704
+        "counter": 12,
+        "s0": 12327480242514918576,
+        "s1": 13449187297878659587,
+        "s2": 11153321354173882043,
+        "s3": 3567152937023451178
       },
       "combat_orbs": {
         "counter": 0,
@@ -2393,8 +2670,8 @@
     },
     "seed": "ZQSEWRWHKWQ7"
   },
-  "run_time": 331,
-  "save_time": 1792528312,
+  "run_time": 485,
+  "save_time": 1792529670,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2457,7 +2734,6 @@
         "RELIC.WHETSTONE"
       ],
       "rare": [
-        "RELIC.MANGO",
         "RELIC.THE_COURIER",
         "RELIC.CHANDELIER",
         "RELIC.MOLTEN_EGG",
@@ -2568,6 +2844,26 @@
     {
       "col": 6,
       "row": 9
+    },
+    {
+      "col": 5,
+      "row": 10
+    },
+    {
+      "col": 4,
+      "row": 11
+    },
+    {
+      "col": 3,
+      "row": 12
+    },
+    {
+      "col": 4,
+      "row": 13
+    },
+    {
+      "col": 4,
+      "row": 14
     }
   ],
   "win_time": 0
