@@ -4,7 +4,7 @@
       "id": "ACT.UNDERDOCKS",
       "rooms": {
         "ancient_id": "EVENT.NEOW",
-        "boss_encounters_visited": 0,
+        "boss_encounters_visited": 1,
         "boss_id": "ENCOUNTER.SOUL_FYSH_BOSS",
         "elite_encounter_ids": [
           "ENCOUNTER.SKULKING_COLONY_ELITE",
@@ -23,7 +23,7 @@
           "ENCOUNTER.SKULKING_COLONY_ELITE",
           "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE"
         ],
-        "elite_encounters_visited": 3,
+        "elite_encounters_visited": 4,
         "event_ids": [
           "EVENT.DOORS_OF_LIGHT_AND_DARK",
           "EVENT.POTION_COURIER",
@@ -74,972 +74,6 @@
         ],
         "normal_encounters_visited": 3,
         "second_boss_id": null
-      },
-      "saved_map": {
-        "boss": {
-          "can_modify": true,
-          "coord": {
-            "col": 3,
-            "row": 16
-          },
-          "type": "boss"
-        },
-        "height": 16,
-        "points": [
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 2
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 1
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 3
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 2
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 1,
-                "row": 4
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 3
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 6
-              },
-              {
-                "col": 1,
-                "row": 6
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 5
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 7
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 6
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 8
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 7
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 9
-              },
-              {
-                "col": 1,
-                "row": 9
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 8
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 10
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 9
-            },
-            "type": "treasure"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 11
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 10
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 12
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 11
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 13
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 12
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 14
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 13
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 15
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 14
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 16
-              }
-            ],
-            "coord": {
-              "col": 0,
-              "row": 15
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 5
-              }
-            ],
-            "coord": {
-              "col": 1,
-              "row": 4
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 0,
-                "row": 7
-              }
-            ],
-            "coord": {
-              "col": 1,
-              "row": 6
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 1,
-                "row": 10
-              }
-            ],
-            "coord": {
-              "col": 1,
-              "row": 9
-            },
-            "type": "treasure"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 1,
-                "row": 11
-              }
-            ],
-            "coord": {
-              "col": 1,
-              "row": 10
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 1,
-                "row": 12
-              }
-            ],
-            "coord": {
-              "col": 1,
-              "row": 11
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 13
-              }
-            ],
-            "coord": {
-              "col": 1,
-              "row": 12
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 2
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 1
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 3
-              },
-              {
-                "col": 3,
-                "row": 3
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 2
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 1,
-                "row": 4
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 3
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 11
-              },
-              {
-                "col": 2,
-                "row": 11
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 10
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 12
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 11
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 13
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 12
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 14
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 13
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 15
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 14
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 16
-              }
-            ],
-            "coord": {
-              "col": 2,
-              "row": 15
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 4
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 3
-            },
-            "type": "shop"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 6
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 5
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 7
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 6
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 9
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 8
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 10
-              },
-              {
-                "col": 3,
-                "row": 10
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 9
-            },
-            "type": "treasure"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 11
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 10
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 12
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 11
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 2,
-                "row": 14
-              }
-            ],
-            "coord": {
-              "col": 3,
-              "row": 13
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 5,
-                "row": 3
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 2
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 5
-              },
-              {
-                "col": 3,
-                "row": 5
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 4
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 6
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 5
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 7
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 6
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 8
-              },
-              {
-                "col": 3,
-                "row": 8
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 7
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 9
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 8
-            },
-            "type": "shop"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 12
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 11
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 5,
-                "row": 13
-              },
-              {
-                "col": 3,
-                "row": 13
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 12
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 3,
-                "row": 16
-              }
-            ],
-            "coord": {
-              "col": 4,
-              "row": 15
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 2
-              },
-              {
-                "col": 5,
-                "row": 2
-              },
-              {
-                "col": 4,
-                "row": 2
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 1
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 5,
-                "row": 3
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 2
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 4
-              },
-              {
-                "col": 5,
-                "row": 4
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 3
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 5
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 4
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 7
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 6
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 11
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 10
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 5,
-                "row": 14
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 13
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 4,
-                "row": 15
-              }
-            ],
-            "coord": {
-              "col": 5,
-              "row": 14
-            },
-            "type": "shop"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 3
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 2
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 4
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 3
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 5
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 4
-            },
-            "type": "monster"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 5,
-                "row": 6
-              },
-              {
-                "col": 6,
-                "row": 6
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 5
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 7
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 6
-            },
-            "type": "rest_site"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 8
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 7
-            },
-            "type": "elite"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 6,
-                "row": 9
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 8
-            },
-            "type": "unknown"
-          },
-          {
-            "can_modify": true,
-            "children": [
-              {
-                "col": 5,
-                "row": 10
-              }
-            ],
-            "coord": {
-              "col": 6,
-              "row": 9
-            },
-            "type": "treasure"
-          }
-        ],
-        "start": {
-          "can_modify": true,
-          "children": [
-            {
-              "col": 0,
-              "row": 1
-            },
-            {
-              "col": 2,
-              "row": 1
-            },
-            {
-              "col": 5,
-              "row": 1
-            }
-          ],
-          "coord": {
-            "col": 3,
-            "row": 0
-          },
-          "type": "ancient"
-        },
-        "start_coords": [
-          {
-            "col": 0,
-            "row": 1
-          },
-          {
-            "col": 5,
-            "row": 1
-          },
-          {
-            "col": 2,
-            "row": 1
-          }
-        ],
-        "width": 7
       }
     },
     {
@@ -1096,7 +130,7 @@
           "EVENT.COLORFUL_PHILOSOPHERS",
           "EVENT.BRAIN_LEECH"
         ],
-        "events_visited": 0,
+        "events_visited": 1,
         "normal_encounter_ids": [
           "ENCOUNTER.THIEVING_HOPPER_WEAK",
           "ENCOUNTER.BOWLBUGS_WEAK",
@@ -1113,8 +147,836 @@
           "ENCOUNTER.OVICOPTER_NORMAL",
           "ENCOUNTER.EXOSKELETONS_NORMAL"
         ],
-        "normal_encounters_visited": 0,
+        "normal_encounters_visited": 1,
         "second_boss_id": null
+      },
+      "saved_map": {
+        "boss": {
+          "can_modify": true,
+          "coord": {
+            "col": 3,
+            "row": 15
+          },
+          "type": "boss"
+        },
+        "height": 15,
+        "points": [
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 2
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 3
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 5
+              },
+              {
+                "col": 1,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 4
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 5
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 7
+              },
+              {
+                "col": 1,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 6
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 7
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 8
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 9
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 10
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 12
+              },
+              {
+                "col": 1,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 11
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 12
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 14
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 13
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 2
+              },
+              {
+                "col": 0,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 2
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 4
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 5
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 7
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 11
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 12
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 14
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 5
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 7
+              },
+              {
+                "col": 1,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 6
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 8
+              },
+              {
+                "col": 3,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 7
+            },
+            "type": "shop"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 8
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 9
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 11
+              },
+              {
+                "col": 3,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 10
+            },
+            "type": "shop"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 12
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 14
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 13
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 2
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 4
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 8
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 10
+              },
+              {
+                "col": 2,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 9
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 10
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 12
+              },
+              {
+                "col": 2,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 11
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 12
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 14
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 14
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 13
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 14
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 11
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 12
+            },
+            "type": "shop"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 2
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 4
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 5
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 6
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 7
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 8
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 9
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 10
+            },
+            "type": "rest_site"
+          }
+        ],
+        "start": {
+          "can_modify": true,
+          "children": [
+            {
+              "col": 1,
+              "row": 1
+            },
+            {
+              "col": 3,
+              "row": 1
+            },
+            {
+              "col": 5,
+              "row": 1
+            }
+          ],
+          "coord": {
+            "col": 3,
+            "row": 0
+          },
+          "type": "ancient"
+        },
+        "start_coords": [
+          {
+            "col": 3,
+            "row": 1
+          },
+          {
+            "col": 1,
+            "row": 1
+          },
+          {
+            "col": 5,
+            "row": 1
+          }
+        ],
+        "width": 7
       }
     },
     {
@@ -1190,7 +1052,7 @@
     }
   ],
   "ascension": 10,
-  "current_act_index": 0,
+  "current_act_index": 1,
   "events_seen": [
     "EVENT.DROWNING_BEACON",
     "EVENT.THIS_OR_THAT",
@@ -1200,7 +1062,7 @@
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZeBgYGDwa92NwnS3f3rinZOrHHz3zTBU53pl1PTtiZy+58vkv5rUztkjnZE1KK9SZlvPP8dGar57ydLp6my7V+Ppuk+lxmW8o85eksJR8nteTFbbr41DtuV83JAHH9la+OqKbLblFZd3rqk9Klk/bx+QvdiPVk2i13Mk5dKfP1H+XYuRVLVm7u4ym9PHFuntUlJobJk3tTirZO9PEzn3TS0N3I8quHmrriyicRKlNj+pdMyp4UUhQzyeecjxAXA4N2A0sC+wSmNQxCDaIO39YzefwJZbDcz6VwfzpTyq9TDTLxBhMedHNMqs51TFtv7vG6lSNyr5PiyukGKl+d2pfEsU28ulpZqHqqS9f6GSe+PRXO3N+j9Fs86AmDc1dKgvNEUR21T825LvM21HuImfH9PFSmGB+hsYRbusUmMWGCkg7HpOaDDmEbBD04njHuPGCjIDyDfQlfg+w29p2H/yiUR8g94dvc/CaxZIJDD59Rx0VHIUMrD5U09pNHGBRnz1BcIuzcUpLUPcGPR2hSZ6iT2kZ/D+VpXJJHchSbJfRSBG63iiTtneDiI/Gpg9NZyzDRQ02N5+WRFsWlMwyWiAq3HUk6NMGPYdks/8ch3Flzsux6A84uN1z50YTPdN6xeccud1yukEqV8lf2/pxpk+nWq+S7euPinaZZJseO9Vy7deJii7TrrbLHXovz52Sy9VnzHhJckWkhtZXv+NJrDyWuWslsn9WiHGlcUJL9vrcwd3fhur9m50wvH9sRduPHtUdSt6MikqMuZ6lk+/ZGn11euOqiiZvpLLcVbpc7mBs2/DUTMnvodujY7YobJdKit3MXJ+/O7cnZ3jvZd/vGTX/NwsweHTs17Y7EzWXSotHlyYna+So5r3pbfPd+3LDVXM3sp9uxafdv3GCTkb3dtDh5dUFIjlJfe+9Rww1nLZ6ZSh/fnvb4xrU0mYUMczYuP2ostrXi2Dyx4zcuLxJPjjqS5NMd0pN5sdNWV85w1VH5bVs7Dt8SS5V4qMRzOaYkcVu3rk/VxNaX+ps2cByTaDtUcbhEojpCSFmgOUknKbTHh6fbsCvRMMpQ55he21GPYxskbt4QWSyjnLQl2aCnUqdpYv9LfTajT65OansjTrSJc0e+eaQgHPsneUZ3RU5hYe9d3SCGFymePXNzOjdO1jXM26R1zFftWMfJNxK6M+WTVZlTlqQ090w5M0GQrUFtccKVFLGeWT1NhpMDDZKMuI55px3MOGkmoXmTI1mlObEmxb6nt6dj40RJQ7NNKsfcth25cWKOhLSkyGPl1UlzUiJ6pvF0C07ONczbpHfMj+3Yi5MHJOxnSiiLNOR+y9pxNoV3+83VC013m/ak7Wk7q3PDYKaqtNjmzMMJ33JvnH7Dm3vzaKLOa8uS1NT2dT0fLkwtlTu36dHhmG+1HGee8XdLMjwysnboSWPvuPGGQXAOo8Ii4x/OFd9qO85P4P8d+SbRwdhGJiOrnUX39YUFgrJSW6Y6N30r+HH+Ge/7yO2JNtFmOemH217m3CiYwytdtjnFWYZBcu1bg8V7ZdO2bHPuuVaWcfEJnzpgUfcSXX5b92Q0tgue/WCwSFUubMvRw93PKjouKvCb3nry0O2yzZ2MRe3Sb78ULF4pl2dy7XDPt6qOi3H8ulFvHrp0207J2NguqPvtwsK9clYm15zbl1W9YEhYvFc2z2Tn4d5vZTcu3uJznHVroYeztUxmRnsQg8ud0iUdl/tUCm9OlF1ntemQpbuexSOPf9OkO++5KC+fnZiS791tk+s7cYqv2qYNtS6fTLs89roJzryuofRSykUlurjDJptjYiqv4qY1ki7TTJs9NpkJaF77p3gwyv5J+O32L1m/J8Tpym9a/dS5bGv1iXVl/DevvlPcfcs2JXx3+5us7xNi38ptWn0XTVIFAPdGTw50BQAA",
+  "map_drawings": "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",
   "map_point_history": [
     [
       {
@@ -2015,8 +1877,7 @@
                 "title": {
                   "key": "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 0,
@@ -2039,23 +1900,369 @@
             "turns_taken": 0
           }
         ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 15,
+                  "id": "CARD.NEUROSURGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.NO_ESCAPE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BLIGHT_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.NEUROSURGE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 284,
+            "current_hp": 40,
+            "damage_taken": 3,
+            "gold_gained": 26,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 53,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.CANDELABRA",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SKULKING_COLONY_ELITE",
+            "monster_ids": [
+              "MONSTER.SKULKING_COLONY"
+            ],
+            "room_type": "elite",
+            "turns_taken": 5
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 284,
+            "current_hp": 49,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 9,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 53,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.CALCIFY"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "boss",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 17,
+                  "id": "CARD.END_OF_DAYS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.DEVOUR_LIFE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.TIMES_UP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.END_OF_DAYS",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 359,
+            "current_hp": 38,
+            "damage_taken": 11,
+            "gold_gained": 75,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 53,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.SWIFT_POTION",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SOUL_FYSH_BOSS",
+            "monster_ids": [
+              "MONSTER.SOUL_FYSH"
+            ],
+            "room_type": "boss",
+            "turns_taken": 7
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "map_point_type": "ancient",
+        "player_stats": [
+          {
+            "ancient_choice": [
+              {
+                "TextKey": "IRONCLAD",
+                "title": {
+                  "key": "SEA_GLASS.IRONCLAD.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              },
+              {
+                "TextKey": "SAND_CASTLE",
+                "title": {
+                  "key": "SAND_CASTLE.title",
+                  "table": "relics"
+                },
+                "was_chosen": true
+              },
+              {
+                "TextKey": "TOUCH_OF_OROBAS",
+                "title": {
+                  "key": "TOUCH_OF_OROBAS.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              }
+            ],
+            "current_gold": 359,
+            "current_hp": 50,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "SAND_CASTLE.title",
+                  "table": "relics"
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 12,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 53,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.SAND_CASTLE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.DEFEND_NECROBINDER",
+              "CARD.DEFEND_NECROBINDER",
+              "CARD.REAP",
+              "CARD.NEUROSURGE",
+              "CARD.FETCH",
+              "CARD.UNLEASH"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.OROBAS",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 19,
+                  "id": "CARD.FLATTEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.WISP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PUTREFY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.FLATTEN",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "floor_added_to_deck": 2,
+                "id": "CARD.ENFEEBLING_TOUCH",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "cards_removed": [
+              {
+                "floor_added_to_deck": 2,
+                "id": "CARD.ENFEEBLING_TOUCH",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 370,
+            "current_hp": 49,
+            "damage_taken": 1,
+            "gold_gained": 11,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 53,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.THIEVING_HOPPER_WEAK",
+            "monster_ids": [
+              "MONSTER.THIEVING_HOPPER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 2
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 2,
+  "num_reloads": 6,
   "odds": {
-    "unknown_map_point_elite_odds_value": -4,
-    "unknown_map_point_monster_odds_value": 0.4,
-    "unknown_map_point_shop_odds_value": 0.12,
-    "unknown_map_point_treasure_odds_value": 0.08
+    "unknown_map_point_elite_odds_value": -1,
+    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_shop_odds_value": 0.03,
+    "unknown_map_point_treasure_odds_value": 0.02
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 43,
+      "current_hp": 49,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2097,13 +2304,7 @@
           }
         },
         {
-          "floor_added_to_deck": 1,
-          "id": "CARD.DEFEND_NECROBINDER",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
-        {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 1,
           "id": "CARD.DEFEND_NECROBINDER",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2120,12 +2321,21 @@
         {
           "current_upgrade_level": 1,
           "floor_added_to_deck": 1,
+          "id": "CARD.DEFEND_NECROBINDER",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 1,
           "id": "CARD.BODYGUARD",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 1,
           "id": "CARD.UNLEASH",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2140,13 +2350,6 @@
           }
         },
         {
-          "floor_added_to_deck": 2,
-          "id": "CARD.ENFEEBLING_TOUCH",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
-        {
           "floor_added_to_deck": 3,
           "id": "CARD.RATTLE",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2154,6 +2357,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 5,
           "id": "CARD.CALCIFY",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2168,6 +2372,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 8,
           "id": "CARD.FETCH",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2175,6 +2380,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 11,
           "id": "CARD.REAP",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2187,31 +2393,63 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 15,
+          "id": "CARD.NEUROSURGE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 17,
+          "id": "CARD.END_OF_DAYS",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 19,
+          "id": "CARD.FLATTEN",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 19,
+          "id": "CARD.ENFEEBLING_TOUCH",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 141,
-        "debuffs_applied": 9
+        "damage_dealt": 272,
+        "debuffs_applied": 12
       },
-      "gold": 258,
+      "gold": 370,
       "max_energy": 3,
       "max_hp": 53,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": 0.039999988,
-        "potion_reward_odds_value": 0.4
+        "card_rarity_odds_value": -0.035000004,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
           "id": "POTION.FLEX_POTION",
           "slot_index": 0
+        },
+        {
+          "id": "POTION.SWIFT_POTION",
+          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
         "relic_id_lists": {
           "uncommon": [
-            "RELIC.CANDELABRA",
             "RELIC.AKABEKO",
             "RELIC.PARRYING_SHIELD",
             "RELIC.PETRIFIED_TOAD",
@@ -2365,7 +2603,7 @@
             "ints": [
               {
                 "name": "SkillsPlayed",
-                "value": 6
+                "value": 2
               }
             ]
           }
@@ -2385,16 +2623,24 @@
         {
           "floor_added_to_deck": 12,
           "id": "RELIC.ETERNAL_FEATHER"
+        },
+        {
+          "floor_added_to_deck": 15,
+          "id": "RELIC.CANDELABRA"
+        },
+        {
+          "floor_added_to_deck": 18,
+          "id": "RELIC.SAND_CASTLE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 77,
-            "s0": 2443990926667089249,
-            "s1": 5747305504420061000,
-            "s2": 15617528220943430818,
-            "s3": 403932348512513653
+            "counter": 113,
+            "s0": 16364957512476875024,
+            "s1": 8842394166062236637,
+            "s2": 12512377839564727202,
+            "s3": 13639152187763438703
           },
           "shops": {
             "counter": 0,
@@ -2565,11 +2811,11 @@
         "s3": 10061479731945373592
       },
       "shuffle": {
-        "counter": 209,
-        "s0": 9699599272191587107,
-        "s1": 14432962233053253820,
-        "s2": 11685918979318752459,
-        "s3": 10158734772165078280
+        "counter": 305,
+        "s0": 10170594601465461672,
+        "s1": 9177211771231392871,
+        "s2": 240612162933681689,
+        "s3": 12077902099096961524
       },
       "unknown_map_point": {
         "counter": 3,
@@ -2579,11 +2825,11 @@
         "s3": 2531144152226803560
       },
       "combat_card_generation": {
-        "counter": 31,
-        "s0": 14707334663964759135,
-        "s1": 9578715507048236062,
-        "s2": 1631373641977261969,
-        "s3": 9107811101466692800
+        "counter": 32,
+        "s0": 3932183459447069825,
+        "s1": 6797990517628420048,
+        "s2": 340297881081215950,
+        "s3": 6420971234407628109
       },
       "combat_potion_generation": {
         "counter": 4,
@@ -2593,11 +2839,11 @@
         "s3": 11079404832325457653
       },
       "combat_card_selection": {
-        "counter": 25,
-        "s0": 17380521318843689615,
-        "s1": 14967654270860686731,
-        "s2": 7039646671530228721,
-        "s3": 8603974068119987985
+        "counter": 62,
+        "s0": 17195454222136453557,
+        "s1": 7264453804574337988,
+        "s2": 7358286621549600765,
+        "s3": 16047875411818558156
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -2621,11 +2867,11 @@
         "s3": 10510196157669386559
       },
       "niche": {
-        "counter": 10,
-        "s0": 16791119339237180241,
-        "s1": 14803246700106870765,
-        "s2": 5618272652004510731,
-        "s3": 16215663669995800092
+        "counter": 28,
+        "s0": 8086197359586045596,
+        "s1": 17474920621511961839,
+        "s2": 5338146216078332194,
+        "s3": 10871324133637795494
       },
       "combat_orbs": {
         "counter": 0,
@@ -2644,8 +2890,8 @@
     },
     "seed": "MFWQPWJ2QDVX"
   },
-  "run_time": 756,
-  "save_time": 1792535959,
+  "run_time": 1226,
+  "save_time": 1792540704,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2674,7 +2920,6 @@
         "RELIC.LUCKY_FYSH",
         "RELIC.LASTING_CANDY",
         "RELIC.TINY_MAILBOX",
-        "RELIC.CANDELABRA",
         "RELIC.GREMLIN_HORN"
       ],
       "common": [
@@ -2781,60 +3026,12 @@
       "row": 0
     },
     {
-      "col": 5,
+      "col": 1,
       "row": 1
     },
     {
-      "col": 6,
+      "col": 0,
       "row": 2
-    },
-    {
-      "col": 6,
-      "row": 3
-    },
-    {
-      "col": 6,
-      "row": 4
-    },
-    {
-      "col": 6,
-      "row": 5
-    },
-    {
-      "col": 6,
-      "row": 6
-    },
-    {
-      "col": 6,
-      "row": 7
-    },
-    {
-      "col": 3,
-      "row": 8
-    },
-    {
-      "col": 3,
-      "row": 9
-    },
-    {
-      "col": 3,
-      "row": 10
-    },
-    {
-      "col": 1,
-      "row": 11
-    },
-    {
-      "col": 1,
-      "row": 12
-    },
-    {
-      "col": 2,
-      "row": 13
-    },
-    {
-      "col": 2,
-      "row": 14
     }
   ],
   "win_time": 0
