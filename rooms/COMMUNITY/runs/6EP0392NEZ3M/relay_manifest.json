@@ -1,17 +1,21 @@
 {
   "relay_version": 1,
   "run_id": "6EP0392NEZ3M",
-  "start_time": 0,
-  "schema_version": 0,
+  "start_time": 1792514301,
+  "schema_version": 20,
   "ascension": 10,
   "character_id": "CHARACTER.DEFECT",
   "game_mode": "standard",
-  "floors_completed": 0,
-  "relay_chain": [],
-  "last_updated": 1792514299,
-  "claimed_by": "b65f0ccdaf09defeae2e3bb2e7c769e4db68a8d731b79b44cadba329fc42ed40",
-  "claimed_at": 1792514299,
-  "claim_expires_at": 1792557499,
+  "floors_completed": 5,
+  "relay_chain": [
+    {
+      "player_hash": "b65f0ccdaf09defeae2e3bb2e7c769e4db68a8d731b79b44cadba329fc42ed40",
+      "floors_played": 5,
+      "turn_start_floor": 0,
+      "timestamp": 1792514446
+    }
+  ],
+  "last_updated": 1792514446,
   "room_id": "COMMUNITY",
   "floors_per_turn": 5,
   "repeat_policy": "2"
