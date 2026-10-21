@@ -95,7 +95,7 @@
           "ENCOUNTER.DECIMILLIPEDE_ELITE",
           "ENCOUNTER.ENTOMANCER_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.BUGSLAYER",
           "EVENT.POTION_COURIER",
@@ -126,7 +126,7 @@
           "EVENT.COLORFUL_PHILOSOPHERS",
           "EVENT.THE_FUTURE_OF_POTIONS"
         ],
-        "events_visited": 1,
+        "events_visited": 2,
         "normal_encounter_ids": [
           "ENCOUNTER.THIEVING_HOPPER_WEAK",
           "ENCOUNTER.BOWLBUGS_WEAK",
@@ -143,7 +143,7 @@
           "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
           "ENCOUNTER.SPINY_TOAD_NORMAL"
         ],
-        "normal_encounters_visited": 1,
+        "normal_encounters_visited": 3,
         "second_boss_id": null
       },
       "saved_map": {
@@ -200,6 +200,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -287,6 +288,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -392,6 +394,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 1,
@@ -451,6 +454,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -464,6 +468,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -491,6 +496,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 5,
@@ -578,6 +584,7 @@
             "type": "shop"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 5,
@@ -737,6 +744,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 6,
@@ -838,6 +846,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 6,
@@ -911,6 +920,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -1039,13 +1049,14 @@
   "ascension": 10,
   "current_act_index": 1,
   "events_seen": [
-    "EVENT.ROOM_FULL_OF_CHEESE"
+    "EVENT.ROOM_FULL_OF_CHEESE",
+    "EVENT.POTION_COURIER"
   ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "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",
+  "map_drawings": "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",
   "map_point_history": [
     [
       {
@@ -2281,23 +2292,436 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "floor_added_to_deck": 20,
+                  "id": "CARD.SUBROUTINE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.HOTFIX",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.TESLA_COIL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.STORM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.SUBROUTINE",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 394,
+            "current_hp": 55,
+            "damage_taken": 0,
+            "gold_gained": 13,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 1,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 85,
+            "max_hp_gained": 1,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.BOWLBUGS_WEAK",
+            "monster_ids": [
+              "MONSTER.BOWLBUG_ROCK",
+              "MONSTER.BOWLBUG_NECTAR"
+            ],
+            "room_type": "monster",
+            "turns_taken": 3
+          }
+        ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "bought_relics": [
+              "RELIC.TOOLBOX",
+              "RELIC.STRAWBERRY"
+            ],
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.MOMENTUM_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.CLAW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCAVENGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FIGHT_THROUGH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FERAL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SEEKER_STRIKE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BOLAS",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 26,
+            "current_hp": 62,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 368,
+            "gold_stolen": 0,
+            "hp_healed": 7,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 92,
+            "max_hp_gained": 7,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.STRENGTH_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.REGEN_POTION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.POTION_OF_BINDING",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.TOOLBOX",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.STRAWBERRY",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.RED_MASK",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 26,
+            "current_hp": 62,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "POTION_COURIER.pages.INITIAL.options.RANSACK.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "FoulPotions": {
+                    "type": "BaseDynamic",
+                    "decimal_value": 3,
+                    "bool_value": false,
+                    "string_value": null
+                  }
+                }
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 92,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.POTION_OF_CAPACITY",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.POTION_COURIER",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 23,
+                  "id": "CARD.TURBO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.SKIM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.COOLHEADED",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.TURBO",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 42,
+            "current_hp": 48,
+            "damage_taken": 15,
+            "gold_gained": 16,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 1,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 93,
+            "max_hp_gained": 1,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.THE_OBSCURA_NORMAL",
+            "monster_ids": [
+              "MONSTER.THE_OBSCURA",
+              "MONSTER.PARAFRIGHT"
+            ],
+            "room_type": "monster",
+            "turns_taken": 7
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "floor_added_to_deck": 24,
+                  "id": "CARD.HAILSTORM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.HOLOGRAM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.BALL_LIGHTNING",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.ITERATION",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "id": "CARD.HAILSTORM",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 78,
+            "current_hp": 37,
+            "damage_taken": 32,
+            "gold_gained": 36,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 21,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 94,
+            "max_hp_gained": 1,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.REGAL_PILLOW",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.DECIMILLIPEDE_ELITE",
+            "monster_ids": [
+              "MONSTER.DECIMILLIPEDE_SEGMENT_FRONT",
+              "MONSTER.DECIMILLIPEDE_SEGMENT_MIDDLE",
+              "MONSTER.DECIMILLIPEDE_SEGMENT_BACK"
+            ],
+            "room_type": "elite",
+            "turns_taken": 3
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 3,
+  "num_reloads": 4,
   "odds": {
-    "unknown_map_point_elite_odds_value": -1,
-    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_elite_odds_value": -2,
+    "unknown_map_point_monster_odds_value": 0.2,
     "unknown_map_point_shop_odds_value": 0.03,
-    "unknown_map_point_treasure_odds_value": 0.02
+    "unknown_map_point_treasure_odds_value": 0.04
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 3,
       "character_id": "CHARACTER.DEFECT",
-      "current_hp": 54,
+      "current_hp": 37,
       "deck": [
         {
           "current_upgrade_level": 1,
@@ -2466,19 +2890,42 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 20,
+          "id": "CARD.SUBROUTINE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 23,
+          "id": "CARD.TURBO",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "floor_added_to_deck": 24,
+          "id": "CARD.HAILSTORM",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 1057
+        "damage_dealt": 1500
       },
-      "gold": 381,
+      "gold": 78,
       "max_energy": 3,
-      "max_hp": 84,
+      "max_hp": 94,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.035000004,
-        "potion_reward_odds_value": 0.5
+        "card_rarity_odds_value": 0.009999992,
+        "potion_reward_odds_value": 0.8000001
       },
       "potions": [
         {
@@ -2524,7 +2971,6 @@
             "RELIC.PETRIFIED_TOAD"
           ],
           "common": [
-            "RELIC.REGAL_PILLOW",
             "RELIC.POTION_BELT",
             "RELIC.DATA_DISK",
             "RELIC.PENDULUM",
@@ -2545,9 +2991,7 @@
             "RELIC.MEAL_TICKET",
             "RELIC.BAG_OF_PREPARATION",
             "RELIC.BLOOD_VIAL",
-            "RELIC.GORGET",
-            "RELIC.STRAWBERRY",
-            "RELIC.RED_MASK"
+            "RELIC.GORGET"
           ],
           "rare": [
             "RELIC.MEAT_ON_THE_BONE",
@@ -2614,8 +3058,7 @@
             "RELIC.PUNCH_DAGGER",
             "RELIC.GHOST_SEED",
             "RELIC.ROYAL_STAMP",
-            "RELIC.CAULDRON",
-            "RELIC.TOOLBOX"
+            "RELIC.CAULDRON"
           ]
         }
       },
@@ -2639,7 +3082,7 @@
             "ints": [
               {
                 "name": "CombatRewardsSeen",
-                "value": 11
+                "value": 14
               }
             ]
           }
@@ -2659,7 +3102,7 @@
             "ints": [
               {
                 "name": "CardsAdded",
-                "value": 7
+                "value": 10
               }
             ]
           }
@@ -2671,23 +3114,35 @@
         {
           "floor_added_to_deck": 18,
           "id": "RELIC.SAND_CASTLE"
+        },
+        {
+          "floor_added_to_deck": 21,
+          "id": "RELIC.TOOLBOX"
+        },
+        {
+          "floor_added_to_deck": 21,
+          "id": "RELIC.STRAWBERRY"
+        },
+        {
+          "floor_added_to_deck": 24,
+          "id": "RELIC.REGAL_PILLOW"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 152,
-            "s0": 565549890738846980,
-            "s1": 4261632088849103954,
-            "s2": 17678393620409584210,
-            "s3": 7588699428369295264
+            "counter": 207,
+            "s0": 2191692133706501184,
+            "s1": 8959398129023565195,
+            "s2": 3364634674844299404,
+            "s3": 10187548933287300834
           },
           "shops": {
-            "counter": 0,
-            "s0": 5251388823497644492,
-            "s1": 4195144523509393316,
-            "s2": 14977652659146315469,
-            "s3": 9789712813967298242
+            "counter": 28,
+            "s0": 3981796390009596778,
+            "s1": 7312064303913061869,
+            "s2": 13898823898326874917,
+            "s3": 5138965705775715198
           },
           "transformations": {
             "counter": 0,
@@ -2801,25 +3256,25 @@
         "s3": 4806216228618587817
       },
       "shuffle": {
-        "counter": 279,
-        "s0": 15118961962649476905,
-        "s1": 14376897422522083868,
-        "s2": 9475394620180357586,
-        "s3": 11061792243845308555
+        "counter": 363,
+        "s0": 8215385608042681624,
+        "s1": 13100633373390667748,
+        "s2": 1030064732367740921,
+        "s3": 12382695430403797111
       },
       "unknown_map_point": {
-        "counter": 2,
-        "s0": 14157493751809157975,
-        "s1": 7674169768385673402,
-        "s2": 2125385980839403962,
-        "s3": 7263599088072969666
+        "counter": 3,
+        "s0": 14570510192694140463,
+        "s1": 12936385942335910487,
+        "s2": 10987159738597673709,
+        "s3": 8552056183077963963
       },
       "combat_card_generation": {
-        "counter": 87,
-        "s0": 7251075264833474200,
-        "s1": 1400143925853700131,
-        "s2": 17409193513761300274,
-        "s3": 11362414801335694832
+        "counter": 203,
+        "s0": 14914717337872746170,
+        "s1": 2558022009223298208,
+        "s2": 1409908606419995992,
+        "s3": 8417643075811095996
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -2843,25 +3298,25 @@
         "s3": 5895699783505226684
       },
       "combat_targets": {
-        "counter": 106,
-        "s0": 3271507156854645462,
-        "s1": 9316917139388725474,
-        "s2": 13395053896645973943,
-        "s3": 661723731934092860
+        "counter": 140,
+        "s0": 6428192146769117764,
+        "s1": 6852092339246686789,
+        "s2": 6884440463999870056,
+        "s3": 6780186888229270164
       },
       "monster_ai": {
-        "counter": 3,
-        "s0": 16996284910190776420,
-        "s1": 9122434162814061981,
-        "s2": 5043299287000711632,
-        "s3": 3563525505746313790
+        "counter": 9,
+        "s0": 16289704623529659615,
+        "s1": 3793988611637479578,
+        "s2": 13103500880549040462,
+        "s3": 9735624707499802134
       },
       "niche": {
-        "counter": 36,
-        "s0": 9458113761838523939,
-        "s1": 17337308054223139751,
-        "s2": 16164953399124284514,
-        "s3": 16063285698721152793
+        "counter": 43,
+        "s0": 6255013438105469075,
+        "s1": 17513335931717576108,
+        "s2": 17414635357971218005,
+        "s3": 10287115027682674292
       },
       "combat_orbs": {
         "counter": 0,
@@ -2880,8 +3335,8 @@
     },
     "seed": "54PULR630QC2"
   },
-  "run_time": 764,
-  "save_time": 1792543351,
+  "run_time": 1072,
+  "save_time": 1792544286,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2920,7 +3375,6 @@
         "RELIC.BAG_OF_PREPARATION",
         "RELIC.BAG_OF_MARBLES",
         "RELIC.GORGET",
-        "RELIC.RED_MASK",
         "RELIC.HAPPY_FLOWER",
         "RELIC.FESTIVE_POPPER",
         "RELIC.VENERABLE_TEA_SET",
@@ -2929,11 +3383,9 @@
         "RELIC.JUZU_BRACELET",
         "RELIC.POTION_BELT",
         "RELIC.AMETHYST_AUBERGINE",
-        "RELIC.REGAL_PILLOW",
         "RELIC.LANTERN",
         "RELIC.BRONZE_SCALES",
         "RELIC.ANCHOR",
-        "RELIC.STRAWBERRY",
         "RELIC.PENDULUM",
         "RELIC.BLOOD_VIAL",
         "RELIC.CENTENNIAL_PUZZLE",
@@ -2992,7 +3444,6 @@
         "RELIC.GNARLED_HAMMER",
         "RELIC.LAVA_LAMP",
         "RELIC.SCREAMING_FLAGON",
-        "RELIC.TOOLBOX",
         "RELIC.WING_CHARM",
         "RELIC.PUNCH_DAGGER",
         "RELIC.THE_ABACUS",
@@ -3025,6 +3476,26 @@
     {
       "col": 5,
       "row": 2
+    },
+    {
+      "col": 5,
+      "row": 3
+    },
+    {
+      "col": 4,
+      "row": 4
+    },
+    {
+      "col": 4,
+      "row": 5
+    },
+    {
+      "col": 4,
+      "row": 6
+    },
+    {
+      "col": 5,
+      "row": 7
     }
   ],
   "win_time": 0
