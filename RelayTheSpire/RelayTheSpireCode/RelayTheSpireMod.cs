@@ -33,6 +33,15 @@ public static class RelayTheSpireMod
     /// UI subscribes to this to show an error message.
     /// </summary>
     public static event Action<string>? PushFailed;
+    
+    /// <summary>Fired after a map node is entered, so the floor tracker can refresh.</summary>
+    public static event Action? FloorProgressChanged;
+
+    public static void NotifyFloorProgress()
+    {
+        try { FloorProgressChanged?.Invoke(); }
+        catch (Exception ex) { Log.Error($"[RelayTheSpire] Error in FloorProgressChanged handler: {ex}"); }
+    }
 
     // -------------------------------------------------------------------------
     // Initialization
@@ -49,9 +58,6 @@ public static class RelayTheSpireMod
             var config = LoadConfig();
             if (config != null)
             {
-                RepeatPolicy.Current = config.RepeatPolicy;
-                Log.Info($"[RelayTheSpire] Repeat policy: {config.RepeatPolicy.Describe()}");
-                Log.Info($"[RelayTheSpire] Floors per turn: {config.FloorsPerTurn}");
                 Controller = new RelayController(config);
                 Log.Info($"[RelayTheSpire] Controller ready. Repo: {config.RepoOwner}/{config.RepoName}");
             }
@@ -128,22 +134,6 @@ public static class RelayTheSpireMod
 
             switch (key)
             {
-                case "repeat_policy":
-                    if (RepeatPolicy.TryParse(value, out var policy))
-                        config.RepeatPolicy = policy;
-                    else
-                        Log.Warn($"[RelayTheSpire] Invalid repeat_policy '{value}' (use 'once' or a number >= 1). Using default.");
-                    break;
-                case "floors_per_turn":
-                    if (int.TryParse(value, out var floorsPerTurn) && floorsPerTurn >= 1)
-                        config.FloorsPerTurn = floorsPerTurn;
-                    else
-                        Log.Warn($"[RelayTheSpire] Invalid floors_per_turn '{value}' (use a number >= 1). Using default.");
-                    break;
-                case "claim_ttl_hours":
-                    if (double.TryParse(value, out var hrs) && hrs > 0)
-                        config.ClaimTtl = TimeSpan.FromHours(hrs);
-                    break;
                 case "github_owner":  config.RepoOwner   = value; break;
                 case "github_repo":   config.RepoName    = value; break;
                 case "github_token":  config.GitHubToken = value; break;

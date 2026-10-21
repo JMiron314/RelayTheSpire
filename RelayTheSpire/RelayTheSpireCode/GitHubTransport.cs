@@ -15,13 +15,22 @@ namespace RelayTheSpire;
 /// <summary>
 /// Handles all communication with GitHub's Contents API.
 ///
-/// Repository layout:
-///   runs/{run_id}/current_run.save
-///   runs/{run_id}/relay_manifest.json
+/// Repository layout (see RelayScope, which owns every path):
+///   rooms/{room_id}/room.json                          immutable room settings
+///   rooms/{room_id}/runs/{run_id}/current_run.save, relay_manifest.json
 ///
-/// Each relay run lives in its own folder keyed by the seed (run_id).
+/// Every lobby is a room; "public" play is the well-known Community room. Each relay run lives in its own
+/// folder keyed by the seed (run_id), and a room's runs are simply its run folders (there is no separate
+/// registry to keep in sync). Every run-level method takes a
+/// <see cref="RelayScope"/> (one room) as its FIRST argument, deliberately not optional:
+/// forgetting it must be a compile error, not a silent write into the wrong place.
 /// All files are stored as plaintext; GitHub shows them as readable JSON in the UI,
 /// which makes it easy for community members to spectate runs in progress.
+///
+/// Create-only writes: a PUT without a `sha` creates a file and is rejected if it already exists. That
+/// rejection is how rooms and new runs are made race-safe without any shared counter. GitHub reports it
+/// as 422 (file exists, no sha supplied) or 409 (concurrent create / branch head moved), and neither code
+/// is trusted on its own: CreateFileAsync re-reads the path to find out whether the file really exists.
 ///
 /// Claims: the manifest doubles as a lock. GitHub's Contents API rejects a PUT whose
 /// `sha` doesn't match the file's current blob SHA, which gives us compare-and-swap.
@@ -48,7 +57,9 @@ public class GitHubTransport : IDisposable
 
     private const string ApiBase    = "https://api.github.com";
     private const string UserAgent  = "sts2-relay-mod/1.0";
-    private const string RunsPrefix = "runs";
+
+    /// <summary>How many fresh IDs CreateRoomAsync tries before giving up on collisions.</summary>
+    private const int MaxRoomIdAttempts = 5;
 
     /// <summary>
     /// How many times TryClaimAsync re-sends a claim after a 409 that turned out NOT to be a lost
@@ -76,7 +87,7 @@ public class GitHubTransport : IDisposable
     public GitHubTransport(Config config)
     {
         _config = config;
-        _http   = new HttpClient();
+        _http   = new HttpClient(new RateLimitHandler());
         _http.DefaultRequestHeaders.UserAgent.ParseAdd(UserAgent);
         _http.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue("Bearer", config.Token);
@@ -93,10 +104,10 @@ public class GitHubTransport : IDisposable
     /// Returns null if no relay exists for that run yet.
     /// Throws <see cref="RelayTransportException"/> on network or API errors.
     /// </summary>
-    public async Task<RelayBundle?> PullAsync(string runId)
+    public async Task<RelayBundle?> PullAsync(RelayScope scope, string runId)
     {
-        var saveContent     = await GetFileContentAsync(SavePath(runId));
-        var manifestContent = await GetFileContentAsync(ManifestPath(runId));
+        var saveContent     = await GetFileContentAsync(scope.SavePath(runId));
+        var manifestContent = await GetFileContentAsync(scope.ManifestPath(runId));
 
         if (saveContent is null || manifestContent is null)
             return null;
@@ -109,8 +120,8 @@ public class GitHubTransport : IDisposable
     }
     
     /// <summary>Writes only the manifest (used when the run ended and no save is worth pushing).</summary>
-    public Task PushManifestAsync(string runId, RelayManifest manifest) =>
-        PutFileAsync(ManifestPath(runId), manifest.ToJson(),
+    public Task PushManifestAsync(RelayScope scope, string runId, RelayManifest manifest) =>
+        PutFileAsync(scope.ManifestPath(runId), manifest.ToJson(),
             $"Run {runId} ended ({manifest.Status}) at floor {manifest.FloorsCompleted} [manifest]");
 
     /// <summary>
@@ -118,7 +129,7 @@ public class GitHubTransport : IDisposable
     /// Call this after the player has finished their floor and the manifest has been updated.
     /// Throws <see cref="RelayTransportException"/> on network or API errors.
     /// </summary>
-    public async Task PushAsync(string runId, RelayBundle bundle)
+    public async Task PushAsync(RelayScope scope, string runId, RelayBundle bundle)
     {
         var saveJson     = bundle.SaveFileContent;
         var manifestJson = bundle.Manifest.ToJson();
@@ -126,18 +137,8 @@ public class GitHubTransport : IDisposable
 
         // Push both files. Order matters: save first, then manifest.
         // If the save push fails we haven't touched the manifest, so the state stays consistent.
-        await PutFileAsync(SavePath(runId),     saveJson,     $"{message} [save]");
-        await PutFileAsync(ManifestPath(runId), manifestJson, $"{message} [manifest]");
-    }
-
-    /// <summary>
-    /// Returns true if a relay run already exists in the repo for this run_id.
-    /// Use this to decide whether to create a fresh manifest or pull an existing one.
-    /// </summary>
-    public async Task<bool> RunExistsAsync(string runId)
-    {
-        var content = await GetFileContentAsync(ManifestPath(runId));
-        return content is not null;
+        await PutFileAsync(scope.SavePath(runId),     saveJson,     $"{message} [save]");
+        await PutFileAsync(scope.ManifestPath(runId), manifestJson, $"{message} [manifest]");
     }
 
     /// <summary>
@@ -146,9 +147,9 @@ public class GitHubTransport : IDisposable
     /// <see cref="TryClaimAsync"/> is what makes the claim atomic.
     /// Throws <see cref="RelayTransportException"/> on network/API errors or a corrupt manifest.
     /// </summary>
-    public async Task<ManifestSnapshot?> GetManifestWithShaAsync(string runId)
+    public async Task<ManifestSnapshot?> GetManifestWithShaAsync(RelayScope scope, string runId)
     {
-        var file = await GetFileWithShaAsync(ManifestPath(runId));
+        var file = await GetFileWithShaAsync(scope.ManifestPath(runId));
         if (file is null)
             return null;
 
@@ -178,7 +179,8 @@ public class GitHubTransport : IDisposable
     /// A 409 alone never means "lost": GitHub also uses it when the branch head moves for an unrelated
     /// write. After a 409 we re-read the manifest and let <see cref="ClassifyConflict"/> decide.
     /// </summary>
-    public async Task<ClaimAttempt> TryClaimAsync(string runId, RelayManifest claimedManifest, string expectedSha)
+    public async Task<ClaimAttempt> TryClaimAsync(
+        RelayScope scope, string runId, RelayManifest claimedManifest, string expectedSha)
     {
         if (string.IsNullOrEmpty(expectedSha))
             throw new ArgumentException("expectedSha is required; without it the claim isn't atomic.", nameof(expectedSha));
@@ -195,13 +197,13 @@ public class GitHubTransport : IDisposable
             try
             {
                 var newSha = await PutFileCoreAsync(
-                    ManifestPath(runId), json, message, expectedSha, conditional: true);
+                    scope.ManifestPath(runId), json, message, expectedSha, conditional: true);
                 return new ClaimAttempt(true, newSha);
             }
             catch (ClaimConflictException ex)
             {
                 // Don't trust the 409. Find out whether the manifest really changed.
-                var remote = await GetManifestWithShaAsync(runId)
+                var remote = await GetManifestWithShaAsync(scope, runId)
                              ?? throw new RelayTransportException(
                                  $"Run '{runId}' disappeared from GitHub while claiming it.", ex);
 
@@ -252,17 +254,17 @@ public class GitHubTransport : IDisposable
     }
 
     /// <summary>
-    /// Lists every relay run in the repo along with its manifest. Used by "Take the Baton"
-    /// to find a run that needs a player.
+    /// Lists every relay run in a room along with its manifest. Used by
+    /// "Take the Baton" to find a run that needs a player.
     ///
-    /// Costs one request to list runs/ plus one per run to fetch its manifest (throttled).
+    /// Costs one request to list the room's runs folder plus one per run to fetch its manifest (throttled).
     /// A failure on the listing itself (bad token, missing repo, rate limit) throws, so it isn't
     /// mistaken for "no runs"; a single unreadable run is skipped.
     /// Note: GitHub truncates directory listings at 1000 entries.
     /// </summary>
-    public async Task<List<RunListing>> ListRunsAsync()
+    public async Task<List<RunListing>> ListRunsAsync(RelayScope scope)
     {
-        var runIds = await GetDirectoryNamesAsync(RunsPrefix);
+        var runIds = await GetEntryNamesAsync(scope.RunsRoot, "dir");
 
         using var gate = new SemaphoreSlim(6);
         var tasks = runIds.Select(async Task<RunListing?> (runId) =>
@@ -270,7 +272,7 @@ public class GitHubTransport : IDisposable
             await gate.WaitAsync();
             try
             {
-                var json     = await GetFileContentAsync(ManifestPath(runId));
+                var json     = await GetFileContentAsync(scope.ManifestPath(runId));
                 var manifest = json is null ? null : RelayManifest.FromJson(json);
                 return manifest is null ? null : new RunListing(runId, manifest);
             }
@@ -289,11 +291,173 @@ public class GitHubTransport : IDisposable
     }
 
     // -------------------------------------------------------------------------
+    // Create-only writes: new runs
+    // -------------------------------------------------------------------------
+
+    /// <summary>
+    /// Writes a run's first manifest, but only if the run doesn't exist yet. Used when a run begins, before
+    /// it has any save: Created=false means the folder is already taken (a seed collision), so the caller
+    /// should pick another seed. Created=true returns the manifest's SHA, which is the token for later
+    /// conditional writes. Throws on auth, network or rate-limit errors.
+    /// </summary>
+    public async Task<CreateAttempt> TryCreateManifestAsync(RelayScope scope, string runId, RelayManifest manifest)
+    {
+        var message = $"Start run {runId} ({manifest.CharacterId}, A{manifest.Ascension})";
+        var result  = await CreateFileAsync(scope.ManifestPath(runId), manifest.ToJson(), message);
+        return new CreateAttempt(result.Created, result.Sha);
+    }
+
+    // -------------------------------------------------------------------------
+    // Rooms
+    // -------------------------------------------------------------------------
+
+    /// <summary>
+    /// Creates a room: a create-only write of rooms/{id}/room.json. The settings' room ID is used if it is
+    /// valid (the create-room panel shows the ID before the player presses Start); if that ID is already
+    /// taken, or none was given, a fresh random one is tried instead. The returned settings carry the ID the
+    /// room actually got, which may differ from the one passed in, so the caller must display THAT one.
+    /// Throws <see cref="ArgumentException"/> if the settings are invalid, and
+    /// <see cref="RelayTransportException"/> on network/API errors or if no free ID can be found.
+    /// </summary>
+    public async Task<RoomSettings> CreateRoomAsync(RoomSettings settings)
+    {
+        var roomId = RelayScope.TryNormalizeRoomId(settings.RoomId, out var given)
+            ? given
+            : RelayScope.GenerateRoomId();
+
+        for (int attempt = 0; attempt < MaxRoomIdAttempts; attempt++)
+        {
+            var candidate = settings.WithRoomId(roomId);
+            if (candidate.Validate() is { } problem)
+                throw new ArgumentException(problem, nameof(settings));
+
+            var created = await CreateFileAsync(
+                RelayScope.RoomJsonPathFor(roomId), candidate.ToJson(), $"Create room {roomId}");
+            if (created.Created)
+                return candidate;
+
+            roomId = RelayScope.GenerateRoomId(); // that ID was taken
+        }
+
+        throw new RelayTransportException("Could not find a free room ID. Try again.");
+    }
+
+    /// <summary>
+    /// Creates a room under exactly the ID in the settings, or reports that it already exists. Unlike
+    /// <see cref="CreateRoomAsync"/> it never picks another ID, which is what the well-known Community room
+    /// needs: if Created=false, someone else just created it and the caller should read it with
+    /// <see cref="GetRoomAsync"/>. Throws <see cref="ArgumentException"/> if the settings are invalid.
+    /// </summary>
+    public async Task<CreateAttempt> TryCreateRoomAsync(RoomSettings settings)
+    {
+        if (settings.Validate() is { } problem)
+            throw new ArgumentException(problem, nameof(settings));
+        if (!RelayScope.TryNormalizeRoomId(settings.RoomId, out var id) || id != settings.RoomId)
+            throw new ArgumentException("The room ID must be in canonical form.", nameof(settings));
+
+        var created = await CreateFileAsync(
+            RelayScope.RoomJsonPathFor(id), settings.ToJson(), $"Create room {id}");
+        return new CreateAttempt(created.Created, created.Sha);
+    }
+
+    /// <summary>
+    /// Reads a room's settings. Returns null if no such room exists. Throws
+    /// <see cref="ArgumentException"/> for a malformed ID (it becomes part of a repo path, so it is checked
+    /// here too, not only in the UI) and <see cref="RelayTransportException"/> if room.json is unreadable,
+    /// invalid, or claims to belong to a different room.
+    /// </summary>
+    public async Task<RoomSettings?> GetRoomAsync(string roomId)
+    {
+        var id   = RequireRoomId(roomId);
+        var json = await GetFileContentAsync(RelayScope.RoomJsonPathFor(id));
+        if (json is null)
+            return null;
+
+        var settings = RoomSettings.FromJson(json)
+                       ?? throw new RelayTransportException($"room.json for room '{id}' is corrupt or unreadable.");
+
+        if (!string.Equals(settings.RoomId, id, StringComparison.Ordinal))
+            throw new RelayTransportException(
+                $"room.json in room '{id}' says it belongs to room '{settings.RoomId}'.");
+
+        if (settings.Validate() is { } problem)
+            throw new RelayTransportException($"room.json for room '{id}' is invalid: {problem}");
+
+        return settings;
+    }
+    
+        // -------------------------------------------------------------------------
+    // Public room listing
+    // -------------------------------------------------------------------------
+
+    /// <summary>
+    /// Writes listed/{room_id}.json, create-only. Created=false means a marker is already there, which is
+    /// fine. Call it AFTER the room's own room.json exists: a marker without a room is ignored by the
+    /// browser, a room without a marker is merely not listed.
+    /// </summary>
+    public async Task<CreateAttempt> TryCreateListedMarkerAsync(RoomSettings room)
+    {
+        if (!RelayScope.TryNormalizeRoomId(room.RoomId, out var id) || id != room.RoomId)
+            throw new ArgumentException("The room ID must be in canonical form.", nameof(room));
+
+        var created = await CreateFileAsync(
+            RelayScope.ListedMarkerPathFor(id), ListedMarker.From(room).ToJson(), $"List room {id}");
+        return new CreateAttempt(created.Created, created.Sha);
+    }
+
+    /// <summary>
+    /// IDs of every room that has a marker, sorted. One request. Only file NAMES are read; the room's own
+    /// room.json is what decides whether it is really listed. Note: GitHub truncates listings at 1000 entries.
+    /// </summary>
+    public async Task<List<string>> ListListedRoomIdsAsync()
+    {
+        var names = await GetEntryNamesAsync(RelayScope.ListedRoot, "file");
+        var ids   = new SortedSet<string>(StringComparer.Ordinal);
+        foreach (var name in names)
+            if (RelayScope.TryRoomIdFromMarkerName(name, out var id))
+                ids.Add(id);
+        return ids.ToList();
+    }
+
+    /// <summary>
+    /// Unix time of the newest commit touching rooms/{id} (any run pushed, claimed or started counts), or
+    /// null if there is none. One request.
+    /// </summary>
+    public async Task<long?> GetRoomLastActivityAsync(string roomId)
+    {
+        var path = RelayScope.RoomFolderFor(RequireRoomId(roomId));
+        var url  = $"{ApiBase}/repos/{_config.Owner}/{_config.Repo}/commits" +
+                   $"?sha={Uri.EscapeDataString(_config.Branch)}&path={Uri.EscapeDataString(path)}&per_page=1";
+
+        var response = await _http.GetAsync(url);
+        if (response.StatusCode == HttpStatusCode.NotFound)
+            return null;
+
+        await EnsureSuccessAsync(response, $"LIST commits {path}");
+
+        try
+        {
+            var body    = await response.Content.ReadAsStringAsync();
+            var commits = JsonSerializer.Deserialize<List<GitHubCommitEntry>>(body, JsonOpts);
+            return commits?.FirstOrDefault()?.Commit?.Committer?.Date?.ToUnixTimeSeconds();
+        }
+        catch (JsonException)
+        {
+            return null;
+        }
+    }
+
+    // -------------------------------------------------------------------------
     // Private helpers
     // -------------------------------------------------------------------------
 
-    /// <summary>Names of the sub-directories of a repo path. Empty if the path doesn't exist.</summary>
-    private async Task<List<string>> GetDirectoryNamesAsync(string path)
+    private static string RequireRoomId(string roomId) =>
+        RelayScope.TryNormalizeRoomId(roomId, out var id)
+            ? id
+            : throw new ArgumentException($"'{roomId}' is not a valid room ID.", nameof(roomId));
+
+    /// <summary>Names of the entries of one type ("dir" or "file") in a repo folder. Empty if the folder doesn't exist.</summary>
+    private async Task<List<string>> GetEntryNamesAsync(string path, string type)
     {
         var response = await _http.GetAsync($"{ContentsUrl(path)}?ref={_config.Branch}");
 
@@ -304,13 +468,10 @@ public class GitHubTransport : IDisposable
 
         var body    = await response.Content.ReadAsStringAsync();
         var entries = JsonSerializer.Deserialize<List<GitHubDirEntry>>(body, JsonOpts) ?? new();
-        return entries.Where(e => e.Type == "dir" && e.Name is not null)
+        return entries.Where(e => e.Type == type && e.Name is not null)
                       .Select(e => e.Name!)
                       .ToList();
     }
-
-    private string SavePath(string runId)     => $"{RunsPrefix}/{runId}/current_run.save";
-    private string ManifestPath(string runId) => $"{RunsPrefix}/{runId}/relay_manifest.json";
 
     private string ContentsUrl(string path) =>
         $"{ApiBase}/repos/{_config.Owner}/{_config.Repo}/contents/{path}";
@@ -406,9 +567,14 @@ public class GitHubTransport : IDisposable
             throw new ClaimConflictException(
                 $"'{path}' was rejected with HTTP 409 (file changed, or the branch head moved).");
 
-        // Anything else, including 422, is a real error and surfaces loudly. A 422 means the request
-        // itself was malformed (e.g. a missing sha on an existing file); it must never be mistaken
-        // for a lost race.
+        // A 422 on a write that supplied no sha is how GitHub says "this file already exists" (or, rarely,
+        // that the request is bad). Only CreateFileAsync interprets it, by re-reading the path. A 422 on a
+        // write that DID supply a sha (a claim) is never a lost race and falls through to a loud error.
+        if (sha is null && (int)response.StatusCode == 422)
+            throw new CreateRejectedException(
+                $"GitHub API error during 'PUT {path}': HTTP 422 {response.ReasonPhrase}\n{body}");
+
+        // Anything else is a real error and surfaces loudly.
         await EnsureSuccessAsync(response, $"PUT {path}");
 
         try
@@ -418,6 +584,47 @@ public class GitHubTransport : IDisposable
         catch (JsonException)
         {
             return null; // The write succeeded; we just couldn't read the new SHA back.
+        }
+    }
+
+    /// <summary>
+    /// Creates a file only if it does not exist. Never overwrites.
+    ///   Created=true            The file is ours; Sha is its blob SHA.
+    ///   Created=false           The file already exists; Sha and ExistingContent describe what is there now.
+    ///   throws                  Auth/network/rate-limit errors, a 422 for a file that does NOT exist (a bad
+    ///                           request, not a collision), or GitHub still answering 409 after
+    ///                           <see cref="MaxConflictRetries"/> retries with the file never appearing.
+    ///
+    /// Neither 422 nor 409 is taken at face value. After either we read the path: if the file is there,
+    /// it exists. If it isn't, a 409 means the branch head moved for an unrelated write, so we back off and
+    /// re-send, while a 422 is a genuine error.
+    /// </summary>
+    private async Task<FileCreate> CreateFileAsync(string path, string textContent, string commitMessage)
+    {
+        for (int attempt = 0; ; attempt++)
+        {
+            RelayTransportException? rejection = null;
+            try
+            {
+                var sha = await PutFileCoreAsync(path, textContent, commitMessage, sha: null, conditional: true);
+                return new FileCreate(true, sha, null);
+            }
+            catch (ClaimConflictException ex)  { rejection = ex; }
+            catch (CreateRejectedException ex) { rejection = ex; }
+
+            var existing = await GetFileWithShaAsync(path);
+            if (existing is { } there)
+                return new FileCreate(false, there.Sha, there.Content);
+
+            if (rejection is CreateRejectedException)
+                throw rejection;
+
+            if (attempt >= MaxConflictRetries)
+                throw new RelayTransportException(
+                    $"GitHub kept rejecting the creation of '{path}' even though nothing is there " +
+                    "(the repo may be busy). Try again in a moment.", rejection!);
+
+            await Task.Delay(200 * (attempt + 1) + Random.Shared.Next(0, 150));
         }
     }
 
@@ -445,6 +652,12 @@ public class GitHubTransport : IDisposable
         if (response.IsSuccessStatusCode) return;
 
         var body = await response.Content.ReadAsStringAsync();
+
+        // Primary and secondary rate limits both arrive as 403 or 429. Say so plainly.
+        if ((response.StatusCode == HttpStatusCode.Forbidden || (int)response.StatusCode == 429) &&
+            (GitHubRateLimit.IsExhausted || body.Contains("rate limit", StringComparison.OrdinalIgnoreCase)))
+            throw new RelayRateLimitException(GitHubRateLimit.DescribeExhausted());
+
         throw new RelayTransportException(
             $"GitHub API error during '{context}': HTTP {(int)response.StatusCode} {response.ReasonPhrase}\n{body}");
     }
@@ -495,6 +708,22 @@ public class GitHubTransport : IDisposable
     {
         [JsonPropertyName("sha")] public string? Sha { get; set; }
     }
+    
+    private class GitHubCommitEntry
+    {
+        [JsonPropertyName("commit")] public GitHubCommitDetail? Commit { get; set; }
+    }
+
+    private class GitHubCommitDetail
+    {
+        [JsonPropertyName("committer")] public GitHubCommitPerson? Committer { get; set; }
+    }
+
+    private class GitHubCommitPerson
+    {
+        [JsonPropertyName("date")] public DateTimeOffset? Date { get; set; }
+    }
+    
 }
 
 /// <summary>The in-memory representation of what travels between players.</summary>
@@ -502,6 +731,12 @@ public record RelayBundle(
     string         SaveFileContent,  // Raw text of current_run.save
     RelayManifest  Manifest
 );
+
+/// <summary>Outcome of a create-only write: Created=false means the path was already taken.</summary>
+public record CreateAttempt(bool Created, string? Sha);
+
+/// <summary>Internal result of CreateFileAsync, including what was found when the file already existed.</summary>
+internal record FileCreate(bool Created, string? Sha, string? ExistingContent);
 
 /// <summary>One run found in the repo: its folder name (the run ID) and its manifest.</summary>
 public record RunListing(string RunId, RelayManifest Manifest);
@@ -535,6 +770,16 @@ public class RelayTransportException : Exception
 {
     public RelayTransportException(string message) : base(message) { }
     public RelayTransportException(string message, Exception inner) : base(message, inner) { }
+}
+
+/// <summary>
+/// A create (a write with no sha) was rejected with a 422: usually "the file already exists", occasionally a
+/// genuinely bad request. Only CreateFileAsync catches it, and it settles which by re-reading the path.
+/// Derives from RelayTransportException so it still surfaces loudly anywhere it isn't specifically handled.
+/// </summary>
+public class CreateRejectedException : RelayTransportException
+{
+    public CreateRejectedException(string message) : base(message) { }
 }
 
 /// <summary>

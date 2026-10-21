@@ -72,7 +72,7 @@ internal static class EnterMapCoordPatch
 
         var manifest = RelayManifest.FromJson(File.ReadAllText(manifestPath));
         var save     = ActiveSaveData.Parse(File.ReadAllText(savePath));
-        if (manifest is null || save is null || !manifest.MatchesRun(save) || manifest.IsEnded) return false;
+        if (manifest is null || save is null || !manifest.IsRoomRun || !manifest.MatchesRun(save) || manifest.IsEnded) return false;
         
         var playerHash = RelayTheSpireMod.GetLocalPlayerHash();
         if (manifest.HasTakenCurrentTurn(playerHash) ||
@@ -80,7 +80,7 @@ internal static class EnterMapCoordPatch
             return false;
 
         // The save is still the previous floor; the selection about to happen adds one more.
-        return manifest.IsTurnComplete(save.VisitedMapCoordsCount + 1, controller.FloorsPerTurn);
+        return manifest.IsTurnComplete(save.VisitedMapCoordsCount + 1);
     }
     
     // 0 = idle, 1 = a push is running. Prevents overlapping pushes if EnterMapCoord fires
@@ -110,6 +110,13 @@ internal static class EnterMapCoordPatch
                 Log.Error($"[RelayTheSpire] EnterMapCoord task faulted before relay push: {ex}");
                 return;
             }
+            
+            // Wait for the floor's save so the tracker reads the new floor count.
+            if (SaveManager.Instance.CurrentRunSaveTask is { } saveTask)
+            {
+                try { await saveTask; } catch { }
+            }
+            RelayTheSpireMod.NotifyFloorProgress();
 
             var controller = RelayTheSpireMod.Controller;
             if (controller is null)
@@ -154,8 +161,6 @@ internal static class EnterMapCoordPatch
             return;
         }
 
-        if (SaveManager.Instance.CurrentRunSaveTask is { } pending)
-            await pending;
         var saveJson = await File.ReadAllTextAsync(savePath);
         var save     = ActiveSaveData.Parse(saveJson);
         if (save is null)
@@ -163,7 +168,7 @@ internal static class EnterMapCoordPatch
             Log.Warn("[RelayTheSpire] Could not parse current_run.save - skipping relay push.");
             return;
         }
-        
+
         // Load the relay manifest. If none exists, this is not a relay run.
         var manifestPath = RelaySavePaths.GetFilePath(RelayManifest.FileName);
         if (!File.Exists(manifestPath))
@@ -176,10 +181,24 @@ internal static class EnterMapCoordPatch
                      "(stale from an earlier relay?) - treating as a normal run, no push.");
             return;
         }
+        if (!manifest.IsRoomRun)
+        {
+            Log.Info("[RelayTheSpire] Manifest isn't part of a relay room - treating as a normal run, no push.");
+            return;
+        }
+
+        // ---- Identity sync --------------------------------------------------------------
+        // A run registered at embark has no start_time/schema yet (the game only knows them once it has
+        // saved). Now there is a real save, so record them locally. From here on start_time, not the seed,
+        // identifies the run (see RelayManifest.MatchesRun). Identity fields only: this is not the turn, so
+        // it doesn't break the "nothing recorded locally until the push succeeds" rule below.
+        if (manifest.SyncIdentityFrom(save))
+        {
+            try { await RelaySavePaths.WriteFileAsync(RelayManifest.FileName, manifest.ToJson()); }
+            catch (Exception ex) { Log.Warn($"[RelayTheSpire] Could not store run identity locally (will retry next floor): {ex.Message}"); }
+        }
 
         var playerHash = RelayTheSpireMod.GetLocalPlayerHash();
-        Log.Info($"[RelayTheSpire] floors: prior={save.PriorActFloors} coords={save.ActFloors} " +
-                 $"history={save.HistoryFloors} used={save.VisitedMapCoordsCount} manifestFloors={manifest.FloorsCompleted}");
 
         // ---- Already-pushed guard -------------------------------------------------------
         // One push per turn: either the chain already ends with this player, or we already pushed
@@ -193,10 +212,10 @@ internal static class EnterMapCoordPatch
         
         // ---- Turn-length guard ----------------------------------------------------------
         // Not enough floors played yet: keep playing. Nothing is written or pushed.
-        if (!manifest.IsTurnComplete(save.VisitedMapCoordsCount, controller.FloorsPerTurn))
+        if (!manifest.IsTurnComplete(save.VisitedMapCoordsCount))
         {
             Log.Info($"[RelayTheSpire] Floor {save.VisitedMapCoordsCount}: " +
-                     $"{save.VisitedMapCoordsCount - manifest.FloorsCompleted}/{controller.FloorsPerTurn} " +
+                     $"{save.VisitedMapCoordsCount - manifest.FloorsCompleted}/{manifest.FloorsPerTurn} " +
                      "floors played this turn - not passing yet.");
             return;
         }
@@ -234,6 +253,7 @@ internal static class EnterMapCoordPatch
 
         Log.Info($"[RelayTheSpire] Relay push successful. Turn {manifest.RelayChain.Count} recorded.");
         RelayTheSpireMod.OnTurnPassed(save, manifest);
+        RelayLocalStore.RecordTurn(manifest);
 
         // It's no longer this player's turn - send them to the main menu.
         // (Testing behaviour; eventually we'll block Continue instead.)

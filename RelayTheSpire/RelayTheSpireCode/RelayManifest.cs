@@ -83,6 +83,38 @@ public class RelayManifest
     public long? ClaimExpiresAt { get; set; }
 
     // -------------------------------------------------------------------------
+    // Scope & rules
+    //
+    // The rules a run is played under travel WITH the run. They are copied from its room
+    // when the run is created (see RoomSettings.StampRules). Room settings never
+    // change after creation, so the copy can't drift, and the game-side patches can read everything
+    // they need from the local manifest without a network call.
+    // -------------------------------------------------------------------------
+
+    /// <summary>Room this run belongs to. Null only for a manifest that isn't part of any room (never pushed).</summary>
+    [JsonPropertyName("room_id")]
+    public string? RoomId { get; set; }
+
+    /// <summary>How many floors a player plays before passing the baton. Always treated as >= 1.</summary>
+    [JsonPropertyName("floors_per_turn")]
+    public int FloorsPerTurn { get; set; } = 1;
+
+    /// <summary>Serialized repeat rule: "once" or a cooldown number. Null/invalid = once.</summary>
+    [JsonPropertyName("repeat_policy")]
+    public string? RepeatPolicyText { get; set; }
+
+    [JsonIgnore]
+    public bool IsRoomRun => !string.IsNullOrEmpty(RoomId);
+
+    /// <summary>The repeat rule for this run. A missing or unreadable value means "once" (the strictest).</summary>
+    [JsonIgnore]
+    public RepeatPolicy Policy
+    {
+        get => RepeatPolicy.TryParse(RepeatPolicyText, out var p) ? p : RepeatPolicy.OncePerRun;
+        set => RepeatPolicyText = value.ToText();
+    }
+
+    // -------------------------------------------------------------------------
     // Factory & helpers
     // -------------------------------------------------------------------------
 
@@ -90,22 +122,42 @@ public class RelayManifest
     public static long NowUnix() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
     /// <summary>
-    /// Creates a brand-new manifest from a freshly parsed active save.
-    /// Call this when a player starts a relay run from scratch (floor 0).
+    /// Creates a floor-0 manifest for a run that is about to begin, before any save exists.
+    /// StartTime and SchemaVersion are unknown yet (0) and are filled in from the first real save
+    /// (see <see cref="SyncIdentityFrom"/>). Until then <see cref="MatchesRun"/> falls back to the seed.
+    /// Room and rules are stamped separately by RoomSettings.StampRules.
     /// </summary>
-    public static RelayManifest CreateNew(ActiveSaveData save)
+    public static RelayManifest CreateNew(string seed, string characterId, int ascension, string gameMode = "standard")
     {
         return new RelayManifest
         {
-            RunId          = save.Seed,
-            StartTime      = save.StartTime,
-            SchemaVersion  = save.SchemaVersion,
-            Ascension      = save.Ascension,
-            CharacterId    = save.CharacterId,
-            GameMode       = save.GameMode,
-            FloorsCompleted = save.VisitedMapCoordsCount,
-            LastUpdated    = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            RunId           = seed,
+            CharacterId     = characterId,
+            Ascension       = ascension,
+            GameMode        = gameMode,
+            FloorsCompleted = 0,
+            LastUpdated     = NowUnix(),
         };
+    }
+
+    /// <summary>
+    /// Copies the identity fields that only a real save knows (or that the game may have resolved after the
+    /// manifest was created: random character, clamped ascension) from the save into this manifest.
+    /// RunId is never touched: it is the repo folder key and must stay stable even if the in-save seed
+    /// changes after a migration. StartTime is only filled in when it is still unknown (0).
+    /// Returns true if anything changed.
+    /// </summary>
+    public bool SyncIdentityFrom(ActiveSaveData save)
+    {
+        bool changed = false;
+
+        if (StartTime == 0 && save.StartTime != 0) { StartTime = save.StartTime; changed = true; }
+        if (save.SchemaVersion != 0 && SchemaVersion != save.SchemaVersion) { SchemaVersion = save.SchemaVersion; changed = true; }
+        if (save.SchemaVersion != 0 && Ascension != save.Ascension) { Ascension = save.Ascension; changed = true; }
+        if (!string.IsNullOrEmpty(save.CharacterId) && CharacterId != save.CharacterId) { CharacterId = save.CharacterId; changed = true; }
+        if (!string.IsNullOrEmpty(save.GameMode) && GameMode != save.GameMode) { GameMode = save.GameMode; changed = true; }
+
+        return changed;
     }
 
     /// <summary>
@@ -124,9 +176,11 @@ public class RelayManifest
         });
 
         FloorsCompleted = updatedSave.VisitedMapCoordsCount;
-        // The game may have migrated the save to a newer schema since this manifest was
-        // created; the bundle we're about to push is the new schema, so record that.
+        // The game may have migrated the save to a newer schema since this manifest was created, and a
+        // run created before its first save has provisional character/ascension/start_time. The bundle
+        // we're about to push is the real thing, so record its identity.
         SchemaVersion   = updatedSave.SchemaVersion;
+        SyncIdentityFrom(updatedSave);
         LastUpdated     = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
         ClearClaim();
@@ -159,11 +213,11 @@ public class RelayManifest
     
     /// <summary>
     /// True if the repeat rule stops this player from taking the next turn. Replaces HasPlayerPlayed
-    /// for eligibility checks. The one-argument form uses the configured policy; the other exists
-    /// so tests can exercise both policies without touching global state.
+    /// for eligibility checks. The one-argument form uses the policy carried by this manifest
+    /// (<see cref="Policy"/>); the other lets callers and tests supply a policy explicitly.
     /// </summary>
     public bool IsBlockedFromRepeat(string playerHash) =>
-        IsBlockedFromRepeat(playerHash, RepeatPolicy.Current);
+        IsBlockedFromRepeat(playerHash, Policy);
 
     public bool IsBlockedFromRepeat(string playerHash, RepeatPolicy policy) =>
         policy.Blocks(RelayChain, playerHash);
@@ -217,6 +271,9 @@ public class RelayManifest
     /// </summary>
     public bool IsTurnComplete(int currentFloor, int floorsPerTurn) =>
         currentFloor - FloorsCompleted >= Math.Max(1, floorsPerTurn);
+
+    /// <summary>Same, using the floors-per-turn rule carried by this manifest.</summary>
+    public bool IsTurnComplete(int currentFloor) => IsTurnComplete(currentFloor, FloorsPerTurn);
 
     /// <summary>
     /// Where this player stands with respect to claiming this run. Precedence:

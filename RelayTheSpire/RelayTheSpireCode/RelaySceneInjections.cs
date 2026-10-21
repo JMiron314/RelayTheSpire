@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using Godot;
 using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Nodes;
+using MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect;
 using MegaCrit.Sts2.Core.Nodes.Screens.MainMenu;
 using System;
 
@@ -10,9 +11,11 @@ namespace RelayTheSpire.UI;
 /// <summary>
 /// Injects RelayTheSpire UI nodes into the game's existing scenes using BaseLib's AddedNode.
 ///
-/// Two injection points:
+/// Three injection points:
 ///   1. NMainMenu → RelayMenuPanel (pull UI, always visible on main menu)
 ///   2. NRun      → TurnPassedNotification (push feedback, shown after map node selection)
+///   3. NCharacterSelectScreen → RelayRunToggle ("Relay run" checkbox; see RelayEmbarkPatch)
+///   4. NRun → RelayFloorTracker (floors left this turn, beside the boss icon)
 /// </summary>
 public static class RelaySceneInjections
 {
@@ -108,6 +111,48 @@ public static class RelaySceneInjections
                 var dummy = new TurnPassedNotification { MouseFilter = Control.MouseFilterEnum.Ignore };
                 dummy.Ready += () => IgnoreMouseRecursive(dummy);
                 nRun.AddChild(dummy);
+                return dummy;
+            }
+        });
+    
+    public static readonly AddedNode<NRun, RelayFloorTracker> RunFloorTracker =
+        new((nRun) =>
+        {
+            try
+            {
+                var tracker = new RelayFloorTracker();
+                nRun.AddChild(tracker);
+                Log.Info("[RelayTheSpire] RelayFloorTracker injected into NRun.");
+                return tracker;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"[RelayTheSpire] Failed to inject RelayFloorTracker: {ex}");
+                var dummy = new RelayFloorTracker();
+                nRun.AddChild(dummy);
+                return dummy;
+            }
+        });
+
+    // -------------------------------------------------------------------------
+    // Character select → RelayRunToggle
+    // -------------------------------------------------------------------------
+
+    public static readonly AddedNode<NCharacterSelectScreen, RelayRunToggle> CharacterSelectToggle =
+        new((screen) =>
+        {
+            try
+            {
+                var toggle = new RelayRunToggle();
+                screen.AddChild(toggle);
+                Log.Info("[RelayTheSpire] RelayRunToggle injected into NCharacterSelectScreen.");
+                return toggle;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"[RelayTheSpire] Failed to inject RelayRunToggle: {ex}");
+                var dummy = new RelayRunToggle();
+                screen.AddChild(dummy);
                 return dummy;
             }
         });

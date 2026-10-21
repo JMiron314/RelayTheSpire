@@ -41,7 +41,7 @@ internal static class GameOverPatch
             if (!File.Exists(manifestPath)) return; // not a relay run
 
             var manifest = RelayManifest.FromJson(await File.ReadAllTextAsync(manifestPath));
-            if (manifest is null) return;
+            if (manifest is null || !manifest.IsRoomRun) return;
 
             // Must be THIS run, not a stale manifest from an earlier relay.
             if (startTime != 0 && manifest.StartTime != 0 && manifest.StartTime != startTime)
@@ -79,6 +79,7 @@ internal static class GameOverPatch
 
             if (result.Success)
             {
+                RelayLocalStore.RecordEnded(manifest);
                 RelayTheSpireMod.PendingMenuMessage =
                     $"Run {manifest.RunId} ended ({outcome}) at floor {floors}. " +
                     "It's been recorded on the relay and can't be pulled again.";

@@ -18,11 +18,8 @@ public readonly record struct RepeatPolicy(int? CooldownTurns)
 
     public static RepeatPolicy Cooldown(int turns) => new(Math.Max(1, turns));
 
-    /// <summary>
-    /// The policy used by the game-facing code paths. Set once at startup from the config
-    /// (RelayTheSpireMod.Initialize). Tests should prefer the explicit-policy overloads.
-    /// </summary>
-    public static RepeatPolicy Current { get; set; } = Cooldown(2);
+    // There is deliberately no global "current" policy any more: the rules travel with each run
+    // (RelayManifest.Policy), copied from its room when the run is created.
 
     public bool IsOncePerRun => CooldownTurns is null;
 
@@ -57,8 +54,11 @@ public readonly record struct RepeatPolicy(int? CooldownTurns)
         return false;
     }
 
+    /// <summary>Serialized form, the inverse of <see cref="TryParse"/>: "once" or the cooldown number.</summary>
+    public string ToText() => CooldownTurns is { } n ? n.ToString() : "once";
+
     /// <summary>Player-facing explanation, for error messages.</summary>
     public string Describe() => CooldownTurns is { } n
-        ? $"You can play a run again only after at least {n} other turn{(n == 1 ? "" : "s")} have been played."
+        ? $"You can play a run again only after at least {n} other player{(n == 1 ? "" : "s")} {(n == 1 ? "has" : "have")} played."
         : "Each player may only play a run once.";
 }

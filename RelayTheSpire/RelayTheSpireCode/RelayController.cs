@@ -125,10 +125,10 @@ public class RelayController
 {
     private readonly GitHubTransport _transport;
     private readonly RelayConfig     _config;
+    /// <summary>Public room browsing (the Rooms tab). Holds its own caches for the session.</summary>
+    public RoomBrowser Browser { get; }
 
     public bool ExitToMenuAfterPush => _config.ExitToMenuAfterPush;
-    
-    public int FloorsPerTurn => Math.Max(1, _config.FloorsPerTurn);
 
     public RelayController(RelayConfig config)
     {
@@ -139,17 +139,293 @@ public class RelayController
             Token:  config.GitHubToken,
             Branch: config.Branch
         ));
+        Browser = new RoomBrowser(_transport);   // <- new line
     }
+
+    // -------------------------------------------------------------------------
+    // Rooms
+    // -------------------------------------------------------------------------
+
+    /// <summary>
+    /// Creates a room. The result carries the ID the room actually got, which can differ from the one in
+    /// <paramref name="desired"/> if that ID was taken, so show the returned one.
+    /// </summary>
+    public async Task<RoomResult> CreateRoomAsync(RoomSettings desired)
+    {
+        try
+        {
+            var room = await _transport.CreateRoomAsync(desired);
+
+            // Listing is a second write. room.json comes first, so if the marker fails the room still
+            // exists and works by ID; it just isn't browsable. Tell the creator instead of failing.
+            string? warning = null;
+            if (room.Listed)
+            {
+                try { await _transport.TryCreateListedMarkerAsync(room); }
+                catch (RelayTransportException ex)
+                {
+                    warning = "The room was created, but it couldn't be listed publicly " +
+                              $"({ex.Message.Split('\n')[0]}). Friends can still join with the Room ID.";
+                }
+            }
+
+            return RoomResult.Ok(room, warning);
+        }
+        catch (ArgumentException ex)          { return RoomResult.Fail(ex.Message); }
+        catch (RelayTransportException ex)    { return RoomResult.Fail($"Could not create the room: {ex.Message}"); }
+    }
+    
+    public class RoomResult
+    {
+        public bool          Success { get; private set; }
+        public string?       Error   { get; private set; }
+        public RoomSettings? Room    { get; private set; }
+
+        /// <summary>Something that didn't stop the room being created (e.g. it couldn't be listed).</summary>
+        public string?       Warning { get; private set; }
+
+        public static RoomResult Ok(RoomSettings room, string? warning = null) =>
+            new() { Success = true, Room = room, Warning = warning };
+        public static RoomResult Fail(string error) => new() { Error = error };
+    }
+
+    /// <summary>Looks up a room by an ID typed or pasted by the player.</summary>
+    public async Task<RoomResult> FindRoomAsync(string rawRoomId)
+    {
+        if (!RelayScope.TryNormalizeRoomId(rawRoomId, out var id))
+            return RoomResult.Fail("That doesn't look like a room ID.");
+
+        try
+        {
+            var room = await _transport.GetRoomAsync(id);
+            return room is null ? RoomResult.Fail($"No room with ID '{id}'.") : RoomResult.Ok(room);
+        }
+        catch (RelayTransportException ex)
+        {
+            return RoomResult.Fail($"Could not reach GitHub: {ex.Message}");
+        }
+    }
+
+    /// <summary>A blank ID means the Community room; anything else is looked up as a room ID.</summary>
+    public async Task<RoomResult> ResolveRoomAsync(string? rawRoomId)
+    {
+        if (!string.IsNullOrWhiteSpace(rawRoomId))
+            return await FindRoomAsync(rawRoomId);
+
+        try { return RoomResult.Ok(await EnsureCommunityRoomAsync()); }
+        catch (RelayTransportException ex) { return RoomResult.Fail($"Could not reach GitHub: {ex.Message}"); }
+    }
+
+    /// <summary>
+    /// Returns the Community room, creating it from the well-known defaults if nobody has yet. If two players
+    /// create it at once, the create-only write lets exactly one win and both then read the winner's settings.
+    /// </summary>
+    private async Task<RoomSettings> EnsureCommunityRoomAsync()
+    {
+        var room = await _transport.GetRoomAsync(RelayScope.CommunityRoomId);
+        if (room is not null) return room;
+
+        await _transport.TryCreateRoomAsync(RoomSettings.CreateCommunity());
+
+        return await _transport.GetRoomAsync(RelayScope.CommunityRoomId)
+               ?? throw new RelayTransportException("The Community room could not be created.");
+    }
+
+    // -------------------------------------------------------------------------
+    // Taking the baton
+    // -------------------------------------------------------------------------
+
+    /// <summary>What one room looks like to one player right now.</summary>
+    internal sealed record RoomLookView(RoomSettings Room, RunListing? Best, RoomStats Stats);
+
+    private async Task<RoomLookView> LookAtRoomAsync(RoomSettings room, string playerHash, long now)
+    {
+        var runs  = await _transport.ListRunsAsync(RelayScope.ForRoom(room.RoomId));
+        var stats = RoomStats.Compute(runs, playerHash, now);
+        return new RoomLookView(room, room.SelectRun(runs, playerHash, now), stats);
+    }
+
+    /// <summary>
+    /// Decides what Take the Baton should do. With a room ID it looks at that room; blank means the Community
+    /// room. The outcome is one of: take a run, start one automatically (the room is below its target), or
+    /// offer to start one (the room is at or above its target).
+    /// </summary>
+    public async Task<BatonSearchResult> FindBatonAsync(string playerHash, string? rawRoomId = null)
+    {
+        try
+        {
+            var resolved = await ResolveRoomAsync(rawRoomId);
+            if (!resolved.Success) return BatonSearchResult.Fail(resolved.Error!);
+
+            return BatonSearchResult.From(
+                await LookAtRoomAsync(resolved.Room!, playerHash, RelayManifest.NowUnix()));
+        }
+        catch (RelayTransportException ex)
+        {
+            return BatonSearchResult.Fail($"Could not reach GitHub: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Looks up the current state of the given runs, one request each (up to 6 at a time). A run that can't be
+    /// checked (network, rate limit, a corrupt manifest) is left out of <see cref="RunStatesResult.States"/> and
+    /// counted in Failed, so the caller can keep showing what it knew before.
+    /// </summary>
+    public async Task<RunStatesResult> FetchRunStatesAsync(
+        IReadOnlyList<(string RoomId, string RunId)> runs, string playerHash)
+    {
+        var now = RelayManifest.NowUnix();
+        using var gate = new System.Threading.SemaphoreSlim(6);
+
+        var tasks = runs.Select(async Task<(string RoomId, string RunId, RunLiveState? State, string? Error)> (r) =>
+        {
+            await gate.WaitAsync();
+            try
+            {
+                var snap = await _transport.GetManifestWithShaAsync(RelayScope.ForRoom(r.RoomId), r.RunId);
+                var state = snap is null
+                    ? RunLiveState.Missing(r.RoomId, r.RunId)
+                    : RunLiveState.From(r.RoomId, r.RunId, snap.Manifest, playerHash, now);
+                return (r.RoomId, r.RunId, state, null);
+            }
+            catch (Exception ex) when (ex is RelayTransportException or ArgumentException)
+            {
+                return (r.RoomId, r.RunId, null, ex.Message);
+            }
+            finally
+            {
+                gate.Release();
+            }
+        }).ToList();
+
+        var results = await Task.WhenAll(tasks);
+
+        var states = new Dictionary<(string RoomId, string RunId), RunLiveState>();
+        foreach (var r in results)
+            if (r.State is not null) states[(r.RoomId, r.RunId)] = r.State;
+
+        return new RunStatesResult(states, results.Count(r => r.State is null),
+                                   results.Select(r => r.Error).FirstOrDefault(e => e is not null));
+    }
+
+    public async Task<PullResult> PullRelayAsync(RoomSettings room, string runId, string playerHash)
+    {
+        var scope = RelayScope.ForRoom(room.RoomId);
+
+        // ---- Claim first. The claim is the lock; the download comes after. ----
+        ManifestSnapshot? snap;
+        try { snap = await _transport.GetManifestWithShaAsync(scope, runId); }
+        catch (RelayTransportException ex) { return PullResult.Fail($"Could not reach GitHub: {ex.Message}"); }
+
+        if (snap is null)
+            return PullResult.Fail($"No relay run found for ID '{runId}'.");
+
+        var now = RelayManifest.NowUnix();
+        switch (snap.Manifest.CheckClaim(playerHash, now))
+        {
+            case ClaimStatus.RunEnded:
+                return PullResult.Fail($"This run has ended ({snap.Manifest.Status}) at floor " +
+                                       $"{snap.Manifest.FloorsCompleted}. It can't be continued.");
+            case ClaimStatus.AlreadyPlayed:
+                return PullResult.Fail($"You can't take this turn yet.\n{snap.Manifest.Policy.Describe()}");
+            case ClaimStatus.HeldByOther:
+                var mins = snap.Manifest.ClaimSecondsRemaining(now) / 60;
+                return PullResult.Fail($"Another player is currently playing this run " +
+                                       $"(their claim expires in ~{mins} min).");
+        }
+
+        snap.Manifest.ApplyClaim(playerHash, now, room.ClaimTtl);
+        ClaimAttempt claim;
+        try { claim = await _transport.TryClaimAsync(scope, runId, snap.Manifest, snap.Sha); }
+        catch (RelayTransportException ex) { return PullResult.Fail($"Could not claim the run: {ex.Message}"); }
+
+        if (!claim.Claimed)
+            return PullResult.Fail("Someone else claimed this run a moment ago. Try Take the Baton again.");
+
+        // ---- We own the turn. Now download. ----
+        RelayBundle? bundle;
+        try { bundle = await _transport.PullAsync(scope, runId); }
+        catch (RelayTransportException ex) { return PullResult.Fail($"Could not reach GitHub: {ex.Message}"); }
+
+        if (bundle is null)
+            return PullResult.Fail($"No relay run found for ID '{runId}'.");
+
+        var save = ActiveSaveData.Parse(bundle.SaveFileContent);
+        if (save is null)
+            return PullResult.Fail("The downloaded save file could not be parsed. It may be corrupt.");
+
+        var validationError = bundle.Manifest.ValidateAgainstSave(save);
+        if (validationError is not null)
+            return PullResult.Fail($"Manifest/save mismatch: {validationError}");
+
+        try
+        {
+            var savePath     = RelaySavePaths.GetFilePath("current_run.save");
+            Directory.CreateDirectory(Path.GetDirectoryName(savePath)!);
+
+            await RelaySavePaths.WriteFileAsync("current_run.save", bundle.SaveFileContent);
+            await RelaySavePaths.WriteFileAsync(RelayManifest.FileName, bundle.Manifest.ToJson());
+        }
+        catch (Exception ex)
+        {
+            return PullResult.Fail($"Failed to write save files to disk: {ex.Message}");
+        }
+
+        return PullResult.Ok(save, bundle.Manifest);
+    }
+
+    // -------------------------------------------------------------------------
+    // Starting a run
+    // -------------------------------------------------------------------------
+
+    /// <summary>
+    /// Registers a brand-new run in a room, before the game has made its first save. Writes the floor-0
+    /// manifest with a create-only PUT, already claimed by the creator, so the run exists in the room (and
+    /// counts toward its target) from the moment it begins. If the write can't be made, the caller should
+    /// block the run from starting rather than create one nobody can track.
+    ///
+    /// <see cref="BeginRunResult.SeedTaken"/> means a run folder with this seed already exists: pick another
+    /// seed and call again. The returned manifest is exactly what was written remotely; save it locally as is.
+    /// </summary>
+    public async Task<BeginRunResult> BeginRunAsync(
+        RoomSettings room, string playerHash, string seed, string characterId, int ascension)
+    {
+        var manifest = RelayManifest.CreateNew(seed, characterId, ascension);
+        room.StampRules(manifest);
+        manifest.ApplyClaim(playerHash, RelayManifest.NowUnix(), room.ClaimTtl);
+
+        try
+        {
+            var attempt = await _transport.TryCreateManifestAsync(RelayScope.ForRoom(room.RoomId), seed, manifest);
+            return attempt.Created ? BeginRunResult.Ok(manifest) : BeginRunResult.TakenSeed();
+        }
+        catch (RelayTransportException ex)
+        {
+            return BeginRunResult.Fail($"Could not register the run on GitHub: {ex.Message}");
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // Passing the baton
+    // -------------------------------------------------------------------------
+
+    /// <summary>The room a run belongs to, from its manifest. Null if it isn't part of one.</summary>
+    private static RelayScope? ScopeOf(RelayManifest manifest) =>
+        RelayScope.TryNormalizeRoomId(manifest.RoomId, out var id) ? RelayScope.ForRoom(id) : null;
 
     public async Task<PushResult> PushRelayAsync(string savePath, RelayManifest manifest)
     {
+        var scope = ScopeOf(manifest);
+        if (scope is null)
+            return PushResult.Fail("This run isn't part of a relay room, so it can't be pushed.");
+
         string saveJson;
         try { saveJson = await File.ReadAllTextAsync(savePath); }
         catch (Exception ex) { return PushResult.Fail($"Could not read save file: {ex.Message}"); }
 
         try
         {
-            var remote = await _transport.GetManifestWithShaAsync(manifest.RunId);
+            var remote = await _transport.GetManifestWithShaAsync(scope, manifest.RunId);
             if (remote is not null)
             {
                 var me  = manifest.RelayChain[^1].PlayerHash;
@@ -164,7 +440,7 @@ public class RelayController
                     return PushResult.Fail("Your claim expired and another player took the run. Your progress was not pushed.");
             }
 
-            await _transport.PushAsync(manifest.RunId, new RelayBundle(saveJson, manifest));
+            await _transport.PushAsync(scope, manifest.RunId, new RelayBundle(saveJson, manifest));
         }
         catch (RelayTransportException ex)
         {
@@ -172,15 +448,19 @@ public class RelayController
         }
         return PushResult.Ok(manifest);
     }
-    
+
     public async Task<PushResult> PushRunEndedAsync(RelayManifest manifest, string? saveJson)
     {
+        var scope = ScopeOf(manifest);
+        if (scope is null)
+            return PushResult.Fail("This run isn't part of a relay room, so it can't be pushed.");
+
         try
         {
             if (saveJson != null)
-                await _transport.PushAsync(manifest.RunId, new RelayBundle(saveJson, manifest));
+                await _transport.PushAsync(scope, manifest.RunId, new RelayBundle(saveJson, manifest));
             else
-                await _transport.PushManifestAsync(manifest.RunId, manifest);
+                await _transport.PushManifestAsync(scope, manifest.RunId, manifest);
         }
         catch (RelayTransportException ex)
         {
@@ -188,185 +468,13 @@ public class RelayController
         }
         return PushResult.Ok(manifest);
     }
-
-    /// <summary>
-    /// Turns the player's current in-progress run into a relay run by writing a fresh
-    /// relay_manifest.json next to current_run.save. This is the ONLY place a manifest is
-    /// created - normal (non-relay) runs never get one, so they are never pushed.
-    ///
-    /// Nothing is pushed here; the first push happens when the player picks their next
-    /// map node (EnterMapCoordPatch), which also records them as turn 1 in the chain.
-    /// </summary>
-    public async Task<StartResult> StartRelayAsync()
-    {
-        string savePath, manifestPath;
-        try
-        {
-            savePath     = RelaySavePaths.GetFilePath("current_run.save");
-            manifestPath = RelaySavePaths.GetFilePath(RelayManifest.FileName);
-        }
-        catch (Exception ex)
-        {
-            return StartResult.Fail($"Could not locate the save folder: {ex.Message}");
-        }
-
-        if (!File.Exists(savePath))
-            return StartResult.Fail(
-                "No run in progress. Start a new run in the game, Save & Quit to the main menu, " +
-                "then click Start Relay.");
-
-        ActiveSaveData? save;
-        try
-        {
-            save = ActiveSaveData.Parse(await File.ReadAllTextAsync(savePath));
-        }
-        catch (Exception ex)
-        {
-            return StartResult.Fail($"Could not read your current run: {ex.Message}");
-        }
-
-        if (save is null)
-            return StartResult.Fail("Your current run save could not be parsed.");
-
-        // Already a relay run? Nothing to do - just remind the player of the run ID.
-        if (File.Exists(manifestPath))
-        {
-            try
-            {
-                var existing = RelayManifest.FromJson(await File.ReadAllTextAsync(manifestPath));
-                if (existing != null && existing.MatchesRun(save))
-                    return StartResult.Ok(save, existing, alreadyStarted: true);
-            }
-            catch
-            {
-                // Unreadable manifest: treat as stale and replace it below.
-            }
-        }
-
-        // Don't clobber someone else's relay that happens to use the same run ID.
-        try
-        {
-            if (await _transport.RunExistsAsync(save.Seed))
-                return StartResult.Fail(
-                    $"A relay with run ID '{save.Seed}' already exists on GitHub. " +
-                    "Use Receive Turn to join it instead.");
-        }
-        catch (RelayTransportException ex)
-        {
-            return StartResult.Fail($"Could not reach GitHub: {ex.Message}");
-        }
-
-        var manifest = RelayManifest.CreateNew(save);
-        try
-        {
-            await RelaySavePaths.WriteFileAsync(RelayManifest.FileName, manifest.ToJson());
-        }
-        catch (Exception ex)
-        {
-            return StartResult.Fail($"Failed to write relay manifest: {ex.Message}");
-        }
-
-        return StartResult.Ok(save, manifest, alreadyStarted: false);
-    }
-
-    /// <summary>
-    /// Finds the run this player should take next: among all runs on GitHub whose manifest
-    /// does NOT contain this player, the one furthest along (highest floor). Ties go to the
-    /// most recently updated run.
-    /// </summary>
-    public async Task<BatonSearchResult> FindBatonAsync(string playerHash)
-    {
-        List<RunListing> runs;
-        try
-        {
-            runs = await _transport.ListRunsAsync();
-        }
-        catch (RelayTransportException ex)
-        {
-            return BatonSearchResult.Fail($"Could not reach GitHub: {ex.Message}");
-        }
-
-        var now = RelayManifest.NowUnix();
-        var open = runs
-            .Where(r => r.Manifest.CheckClaim(playerHash, now)
-                is ClaimStatus.Available or ClaimStatus.HeldByYou)
-            .OrderByDescending(r => r.Manifest.FloorsCompleted)
-            .ThenByDescending(r => r.Manifest.LastUpdated)
-            .ToList();
-
-        var best = open.FirstOrDefault();
-        return BatonSearchResult.Ok(
-            totalRuns:    runs.Count,
-            finishedRuns: runs.Count(r => r.Manifest.IsEnded),
-            playedByYou:  runs.Count - open.Count,
-            best:         best);
-    }
-
-    public async Task<PullResult> PullRelayAsync(string runId, string playerHash)
-    {
-        // ---- Claim first. The claim is the lock; the download comes after. ----
-        ManifestSnapshot? snap;
-        try { snap = await _transport.GetManifestWithShaAsync(runId); }
-        catch (RelayTransportException ex) { return PullResult.Fail($"Could not reach GitHub: {ex.Message}"); }
-
-        if (snap is null)
-            return PullResult.Fail($"No relay run found for ID '{runId}'.");
-
-        var now = RelayManifest.NowUnix();
-        switch (snap.Manifest.CheckClaim(playerHash, now))
-        {
-            case ClaimStatus.RunEnded:
-                return PullResult.Fail($"This run has ended ({snap.Manifest.Status}) at floor " +
-                                       $"{snap.Manifest.FloorsCompleted}. It can't be continued.");
-            case ClaimStatus.AlreadyPlayed:
-                return PullResult.Fail($"You can't take this turn yet.\n{RepeatPolicy.Current.Describe()}");
-            case ClaimStatus.HeldByOther:
-                var mins = snap.Manifest.ClaimSecondsRemaining(now) / 60;
-                return PullResult.Fail($"Another player is currently playing this run " +
-                                       $"(their claim expires in ~{mins} min).");
-        }
-
-        snap.Manifest.ApplyClaim(playerHash, now, _config.ClaimTtl);
-        ClaimAttempt claim;
-        try { claim = await _transport.TryClaimAsync(runId, snap.Manifest, snap.Sha); }
-        catch (RelayTransportException ex) { return PullResult.Fail($"Could not claim the run: {ex.Message}"); }
-
-        if (!claim.Claimed)
-            return PullResult.Fail("Someone else claimed this run a moment ago. Try Take the Baton again.");
-
-        // ---- We own the turn. Now download. ----
-        RelayBundle? bundle;
-        try { bundle = await _transport.PullAsync(runId); }
-        catch (RelayTransportException ex) { return PullResult.Fail($"Could not reach GitHub: {ex.Message}"); }
-
-        if (bundle is null)
-            return PullResult.Fail($"No relay run found for ID '{runId}'.");
-
-        var save = ActiveSaveData.Parse(bundle.SaveFileContent);
-        if (save is null)
-            return PullResult.Fail("The downloaded save file could not be parsed. It may be corrupt.");
-
-        var validationError = bundle.Manifest.ValidateAgainstSave(save);
-        if (validationError is not null)
-            return PullResult.Fail($"Manifest/save mismatch: {validationError}");
-        
-        try
-        {
-            var savePath     = RelaySavePaths.GetFilePath("current_run.save");
-            var manifestPath = RelaySavePaths.GetFilePath(RelayManifest.FileName);
-            Directory.CreateDirectory(Path.GetDirectoryName(savePath)!);
-
-            await RelaySavePaths.WriteFileAsync("current_run.save", bundle.SaveFileContent);
-            await RelaySavePaths.WriteFileAsync(RelayManifest.FileName, bundle.Manifest.ToJson());
-        }
-        catch (Exception ex)
-        {
-            return PullResult.Fail($"Failed to write save files to disk: {ex.Message}");
-        }
-
-        return PullResult.Ok(save, bundle.Manifest);
-    }
 }
+
+/// <summary>Outcome of <see cref="RelayController.FetchRunStatesAsync"/>.</summary>
+public sealed record RunStatesResult(
+    Dictionary<(string RoomId, string RunId), RunLiveState> States,
+    int     Failed,
+    string? FirstError);
 
 public class PushResult
 {
@@ -381,49 +489,80 @@ public class PushResult
         new() { Success = false, Error = error };
 }
 
-public class StartResult
+/// <summary>Outcome of <see cref="RelayController.BeginRunAsync"/>.</summary>
+public class BeginRunResult
 {
-    public bool            Success        { get; private set; }
-    public bool            AlreadyStarted { get; private set; }
-    public string?         Error          { get; private set; }
-    public ActiveSaveData? Save           { get; private set; }
-    public RelayManifest?  Manifest       { get; private set; }
+    public bool           Success  { get; private set; }
 
-    public static StartResult Ok(ActiveSaveData save, RelayManifest manifest, bool alreadyStarted) =>
-        new() { Success = true, Save = save, Manifest = manifest, AlreadyStarted = alreadyStarted };
+    /// <summary>A run with this seed already exists in the room. Pick another seed and retry.</summary>
+    public bool           SeedTaken { get; private set; }
 
-    public static StartResult Fail(string error) =>
-        new() { Success = false, Error = error };
+    public string?        Error    { get; private set; }
+    public RelayManifest? Manifest { get; private set; }
+
+    public static BeginRunResult Ok(RelayManifest manifest) => new() { Success = true, Manifest = manifest };
+    public static BeginRunResult TakenSeed()                => new() { SeedTaken = true };
+    public static BeginRunResult Fail(string error)         => new() { Error = error };
+}
+
+public class RoomResult
+{
+    public bool          Success { get; private set; }
+    public string?       Error   { get; private set; }
+    public RoomSettings? Room    { get; private set; }
+
+    public static RoomResult Ok(RoomSettings room) => new() { Success = true, Room = room };
+    public static RoomResult Fail(string error)    => new() { Error = error };
+}
+
+/// <summary>What Take the Baton should do next. See <see cref="RelayController.FindBatonAsync"/>.</summary>
+public enum BatonOutcome
+{
+    /// <summary>A run is waiting for this player: pull it.</summary>
+    TakeRun,
+
+    /// <summary>Nothing to take and the room is below its run target: start a new run without asking.</summary>
+    StartRun,
+
+    /// <summary>Nothing to take and the room is at or above its target: tell the player and let them choose to start one.</summary>
+    OfferStartRun,
 }
 
 public class BatonSearchResult
 {
-    public bool           Success     { get; private set; }
-    public string?        Error       { get; private set; }
-    public int TotalRuns    { get; private set; }
-    public int FinishedRuns { get; private set; }
-    public int PlayedByYou  { get; private set; }
-    
-    /// <summary>Runs that are still going (total minus ended).</summary>
-    public int OngoingRuns => TotalRuns - FinishedRuns;
+    public bool           Success { get; private set; }
+    public string?        Error   { get; private set; }
 
-    /// <summary>The chosen run, or null if no run is available to this player.</summary>
-    public string?        RunId       { get; private set; }
-    public RelayManifest? Manifest    { get; private set; }
+    public BatonOutcome   Outcome { get; private set; }
 
-    public static BatonSearchResult Ok(int totalRuns, int finishedRuns, int playedByYou, RunListing? best) =>
-        new()
+    /// <summary>The room the outcome applies to (the Community room for quick play with nothing to take).</summary>
+    public RoomSettings?  Room    { get; private set; }
+
+    public RoomStats      Stats   { get; private set; }
+
+    /// <summary>The run to take. Set only when <see cref="Outcome"/> is TakeRun.</summary>
+    public string?        RunId    { get; private set; }
+    public RelayManifest? Manifest { get; private set; }
+
+    internal static BatonSearchResult From(RelayController.RoomLookView look)
+    {
+        var outcome = look.Best is not null ? BatonOutcome.TakeRun
+                    : look.Room.ShouldAutoStart(look.Stats) ? BatonOutcome.StartRun
+                    : BatonOutcome.OfferStartRun;
+
+        return new BatonSearchResult
         {
-            Success      = true,
-            TotalRuns    = totalRuns,
-            FinishedRuns = finishedRuns,
-            PlayedByYou  = playedByYou,
-            RunId        = best?.RunId,
-            Manifest     = best?.Manifest,
+            Success  = true,
+            Outcome  = outcome,
+            Room     = look.Room,
+            Stats    = look.Stats,
+            RunId    = look.Best?.RunId,
+            Manifest = look.Best?.Manifest,
         };
+    }
 
     public static BatonSearchResult Fail(string error) =>
-        new() { Success = false, Error = error };
+        new() { Error = error };
 }
 
 public class PullResult
@@ -440,6 +579,10 @@ public class PullResult
         new() { Success = false, Error = error };
 }
 
+/// <summary>
+/// Connection settings from RelayTheSpire.cfg. Game rules (floors per turn, repeat policy, run target) are
+/// not here: they belong to each room and travel with its runs.
+/// </summary>
 public class RelayConfig
 {
     public string RepoOwner   { get; set; } = "";
@@ -449,13 +592,4 @@ public class RelayConfig
 
     /// <summary>After a successful push, force the player back to the main menu.</summary>
     public bool ExitToMenuAfterPush { get; set; } = true;
-    
-    /// <summary>Who may take another turn in a run they already played. See RepeatPolicy.</summary>
-    public RepeatPolicy RepeatPolicy { get; set; } = RepeatPolicy.Cooldown(2);
-    
-    /// <summary>How many floors a player plays before the baton is passed. Always >= 1.</summary>
-    public int FloorsPerTurn { get; set; } = 1;
-    
-    /// <summary>How long a claim blocks other players before it expires.</summary>
-    public TimeSpan ClaimTtl { get; set; } = TimeSpan.FromHours(12);
 }

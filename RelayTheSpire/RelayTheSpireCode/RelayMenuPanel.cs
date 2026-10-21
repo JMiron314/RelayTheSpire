@@ -1,7 +1,9 @@
 using Godot;
 using MegaCrit.Sts2.Core.Logging;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect;
 using MegaCrit.Sts2.Core.Nodes.Screens.MainMenu;
 using MegaCrit.Sts2.Core.Saves;
 using System.IO;
@@ -30,9 +32,20 @@ public partial class RelayMenuPanel : PanelContainer
 {
     private LineEdit  _runIdInput  = null!;
     private Button    _batonButton = null!;
-    private Button    _pullButton  = null!;
-    private Button    _startButton = null!;
+    private Button    _createButton = null!;
+    private RelayMyRunsView _myRuns = null!;
     private Label     _statusLabel = null!;
+    private OptionButton _picker = null!;
+    private Button    _forgetButton = null!;
+    private TabContainer _tabs = null!;
+    private RelayRoomsView _rooms = null!;
+    private Button _revealButton = null!;
+    
+    // _picker items: 0 = placeholder, 1 = "Community" (clears the field), then one item per recent room.
+    private const int PickerPlaceholder = 0;
+    private const int PickerCommunity   = 1;
+    private const int PickerFirstRoom   = 2;
+    private readonly List<string> _pickerRooms = new();
 
     private static void LogSaveDiagnostics(string label)
     {
@@ -45,10 +58,30 @@ public partial class RelayMenuPanel : PanelContainer
                  $"File.Exists={exists}, " +
                  $"size={(exists ? new FileInfo(path).Length : -1)}");
     }
+    
+    private static void StyleButton(Button button, Color normal, Color hover, Color pressed)
+    {
+        StyleBoxFlat Make(Color color)
+        {
+            var box = new StyleBoxFlat { BgColor = color };
+            box.SetCornerRadiusAll(4);
+            box.SetContentMarginAll(8);
+            return box;
+        }
+
+        button.AddThemeStyleboxOverride("normal",   Make(normal));
+        button.AddThemeStyleboxOverride("hover",    Make(hover));
+        button.AddThemeStyleboxOverride("pressed",  Make(pressed));
+        button.AddThemeStyleboxOverride("disabled", Make(normal.Darkened(0.4f)));
+
+        // Optional: text color
+        button.AddThemeColorOverride("font_color", Colors.White);
+        button.AddThemeColorOverride("font_hover_color", Colors.White);
+    }
 
     public override void _Ready()
     {
-        CustomMinimumSize = new Vector2(400, 0);
+        CustomMinimumSize = new Vector2(460, 0);
 
         var margin = new MarginContainer();
         margin.AddThemeConstantOverride("margin_top",    16);
@@ -57,28 +90,71 @@ public partial class RelayMenuPanel : PanelContainer
         margin.AddThemeConstantOverride("margin_right",  20);
         AddChild(margin);
 
-        var vbox = new VBoxContainer();
-        vbox.AddThemeConstantOverride("separation", 12);
-        margin.AddChild(vbox);
+        var outer = new VBoxContainer();
+        outer.AddThemeConstantOverride("separation", 12);
+        margin.AddChild(outer);
 
         // Title
         var title = new Label { Text = "RelayTheSpire" };
         title.AddThemeFontSizeOverride("font_size", 20);
-        vbox.AddChild(title);
+        outer.AddChild(title);
 
-        vbox.AddChild(new HSeparator());
+        outer.AddChild(new HSeparator());
 
+        // Tabs: "Play" holds everything below that is added to vbox; "My Runs" is the history view.
+        // Tabs: "Play" holds everything below that is added to vbox; "My Runs" is the history view;
+        // "Rooms" is the public room browser.
+        // Fixed size: the panel must not resize when the tab or the status text changes.
+        // Play is wrapped in a scroll container so its content can't push the panel bigger;
+        // My Runs and Rooms already scroll their own lists.
+        _tabs = new TabContainer { CustomMinimumSize = new Vector2(440, 420) };
+        outer.AddChild(_tabs);
+
+        var playScroll = new ScrollContainer
+        {
+            HorizontalScrollMode = ScrollContainer.ScrollMode.Disabled,
+            SizeFlagsHorizontal  = SizeFlags.ExpandFill,
+            SizeFlagsVertical    = SizeFlags.ExpandFill,
+        };
+        _tabs.AddChild(playScroll);
+
+        var vbox = new VBoxContainer { SizeFlagsHorizontal = SizeFlags.ExpandFill };
+        vbox.AddThemeConstantOverride("separation", 12);
+        playScroll.AddChild(vbox);
+
+        _myRuns = new RelayMyRunsView();
+        _tabs.AddChild(_myRuns);
+
+        _rooms = new RelayRoomsView();
+        _rooms.JoinRequested += OnJoinRoom;
+        _tabs.AddChild(_rooms);
+
+        _tabs.SetTabTitle(0, "Play");
+        _tabs.SetTabTitle(1, "My Runs");
+        _tabs.SetTabTitle(2, "Rooms");
+        _tabs.TabChanged += index =>
+        {
+            if (index == 1) _myRuns.Refresh();
+            else if (index == 2) _rooms.OnOpened();
+        };
+        
         // Take the Baton: one click, picks the best run for this player.
         _batonButton = new Button
         {
-            Text        = "Take the Baton",
-            TooltipText = "Finds the furthest-along relay run that you haven't played yet " +
-                          "and downloads it.",
+            Text        = "Take the Baton!",
+            TooltipText = "Takes the next run waiting for you. Leave the Room ID blank to play in " +
+                          "the Community room, or enter a room ID to play with friends.",
         };
         _batonButton.Pressed += OnBatonPressed;
+        vbox.AddChild(new HSeparator());
         vbox.AddChild(_batonButton);
-
-        var orLabel = new Label { Text = "or enter a specific run:" };
+        StyleButton(_batonButton,
+            normal:  new Color(0.15f, 0.45f, 0.2f),
+            hover:   new Color(0.2f, 0.55f, 0.27f),
+            pressed: new Color(0.1f, 0.35f, 0.15f));
+        vbox.AddChild(new HSeparator());
+        
+        var orLabel = new Label { Text = "Room ID (leave blank for the Community room):" };
         orLabel.AddThemeFontSizeOverride("font_size", 13);
         orLabel.Modulate = new Color(0.8f, 0.8f, 0.8f);
         vbox.AddChild(orLabel);
@@ -87,43 +163,82 @@ public partial class RelayMenuPanel : PanelContainer
         var runIdRow = new HBoxContainer();
         vbox.AddChild(runIdRow);
 
-        var runIdLabel = new Label { Text = "Run ID:" };
+        var runIdLabel = new Label { Text = "Room ID:" };
         runIdLabel.CustomMinimumSize = new Vector2(70, 0);
         runIdRow.AddChild(runIdLabel);
 
         _runIdInput = new LineEdit
         {
-            PlaceholderText     = "e.g. JWH64KK3BX",
+            PlaceholderText     = "Community",
             SizeFlagsHorizontal = SizeFlags.ExpandFill,
         };
-        _runIdInput.TextSubmitted += _ => OnPullPressed();
+        _runIdInput.TextSubmitted += _ => OnBatonPressed();
+        // LineEdit only raises TextChanged for typing/pasting, not for code. Code that sets the text goes
+        // through SetRoomText, which updates RelayStartContext itself.
+        _runIdInput.TextChanged   += text => { RelayStartContext.LastRoomId = text; SyncPicker(); };
+        _runIdInput.FocusExited   += RelayLocalStore.Flush;
+        _runIdInput.Text           = RelayStartContext.LastRoomId; // remembered across restarts until cleared
         runIdRow.AddChild(_runIdInput);
+        
+        _revealButton = new Button
+        {
+            Text        = "Hide",
+            TooltipText = "Hide or show the room code (useful when streaming).",
+        };
+        _revealButton.Pressed += () => SetCodeHidden(!RelayStartContext.CodeHidden);
+        runIdRow.AddChild(_revealButton);
 
-        // Pull button
-        _pullButton = new Button { Text = "Receive Turn" };
-        _pullButton.Pressed += OnPullPressed;
-        vbox.AddChild(_pullButton);
+        // Recent rooms: pick one to fill the field, or "Forget" to drop the one in the field.
+        var pickerRow = new HBoxContainer();
+        vbox.AddChild(pickerRow);
+
+        _picker = new OptionButton
+        {
+            SizeFlagsHorizontal = SizeFlags.ExpandFill,
+            ClipText            = true,
+            TooltipText         = "Rooms you've used recently. Pick one to fill the Room ID field.",
+        };
+        _picker.ItemSelected += OnPickerSelected;
+        pickerRow.AddChild(_picker);
+
+        _forgetButton = new Button
+        {
+            Text        = "Forget",
+            TooltipText = "Remove the room in the Room ID field from your recent rooms.",
+        };
+        _forgetButton.Pressed += OnForgetPressed;
+        pickerRow.AddChild(_forgetButton);
+
+        RebuildPicker();
+
+        _createButton = new Button
+        {
+            Text        = "Create New Room",
+        };
+        _createButton.Pressed += OnCreatePressed;
+        vbox.AddChild(_createButton);
 
         vbox.AddChild(new HSeparator());
-
-        // Start button: turns the current in-progress run into a relay run.
-        _startButton = new Button
-        {
-            Text        = "Start Relay From Current Run",
-            TooltipText = "Marks your current in-progress run as a relay run. " +
-                          "It will be pushed when you finish your floor(s).",
-        };
-        _startButton.Pressed += OnStartPressed;
-        vbox.AddChild(_startButton);
 
         // Status label
         _statusLabel = new Label
         {
-            Text         = "Enter a run ID to receive a relay turn.",
+            Text         = "Click Take the Baton to join a run.",
             AutowrapMode = TextServer.AutowrapMode.WordSmart,
         };
         _statusLabel.AddThemeFontSizeOverride("font_size", 13);
         vbox.AddChild(_statusLabel);
+        
+        ApplyCodeHidden();
+
+        // The panel is a child of the main menu, so without this it would draw on top of every submenu
+        // (character select, settings...). Follow the menu's own button group: hidden while a submenu is open.
+        if (FindMainMenu() is { SubmenuStack: { } stack })
+        {
+            Visible = !stack.SubmenusOpen;
+            _ = stack.Connect(NSubmenuStack.SignalName.StackModified,
+                              Callable.From(() => Visible = !stack.SubmenusOpen));
+        }
 
         // Shown once after a forced exit to the menu following a successful push.
         if (RelayTheSpireMod.PendingMenuMessage is { } pending)
@@ -131,6 +246,9 @@ public partial class RelayMenuPanel : PanelContainer
             SetStatus(pending, isError: false);
             RelayTheSpireMod.PendingMenuMessage = null;
         }
+        
+        // Once per launch: warns if other gameplay-altering mods are loaded.
+        RelayModCheck.ShowIfNeeded(this);
     }
 
     // -------------------------------------------------------------------------
@@ -138,13 +256,94 @@ public partial class RelayMenuPanel : PanelContainer
     // -------------------------------------------------------------------------
 
     // Returns null on success, otherwise a human-readable reason for the failure.
-    private string? RefreshMainMenu()
+    public override void _ExitTree() => RelayLocalStore.Flush();
+
+    // -------------------------------------------------------------------------
+    // Recent rooms picker
+    // -------------------------------------------------------------------------
+
+    private void RebuildPicker()
+    {
+        _picker.Clear();
+        _pickerRooms.Clear();
+
+        _picker.AddItem("Recent rooms...");
+        _picker.AddItem("Community");
+        foreach (var room in RelayLocalStore.RecentRooms())
+        {
+            _picker.AddItem(RelayStartContext.CodeHidden && string.IsNullOrEmpty(room.Name) ? "Unnamed room" : room.Label);
+            _pickerRooms.Add(room.RoomId);
+        }
+
+        SyncPicker();
+    }
+
+    // Makes the picker show what the field says: a recent room, Community (blank), or the placeholder.
+    private void SyncPicker()
+    {
+        int index = PickerPlaceholder;
+        if (string.IsNullOrWhiteSpace(_runIdInput.Text))
+            index = PickerCommunity;
+        else if (RelayScope.TryNormalizeRoomId(_runIdInput.Text, out var id) && _pickerRooms.IndexOf(id) is var i and >= 0)
+            index = PickerFirstRoom + i;
+
+        _picker.Select(index);
+        _forgetButton.Disabled = !RelayLocalStore.IsRecent(_runIdInput.Text);
+    }
+
+    private void SetRoomText(string text)
+    {
+        _runIdInput.Text = text;
+        RelayStartContext.LastRoomId = text;
+        RelayLocalStore.Flush();
+        SyncPicker();
+    }
+
+    private void OnPickerSelected(long index)
+    {
+        if (index == PickerCommunity)
+            SetRoomText("");
+        else if (index >= PickerFirstRoom && index - PickerFirstRoom < _pickerRooms.Count)
+            SetRoomText(_pickerRooms[(int)(index - PickerFirstRoom)]);
+        else
+            SyncPicker(); // the placeholder isn't a choice
+    }
+
+    private void OnForgetPressed()
+    {
+        RelayLocalStore.Forget(_runIdInput.Text);
+        RebuildPicker();
+        SetStatus("Removed that room from your recent rooms.", isError: false);
+    }
+    
+    // Join from the Rooms tab: fill in the Room ID field and go back to Play. Doesn't take the baton.
+    private void OnJoinRoom(RoomSettings room)
+    {
+        bool community = room.RoomId == RelayScope.CommunityRoomId;
+
+        if (!community)
+        {
+            RelayLocalStore.Touch(room.RoomId, room.Name); // so it shows up in Recent rooms
+            RebuildPicker();
+        }
+
+        SetRoomText(community ? "" : room.RoomId);
+        _tabs.CurrentTab = 0;
+        SetStatus($"Room set to {RelayStartContext.NameOf(room)}. Click Take the Baton to play.", isError: false);
+    }
+
+    private NMainMenu? FindMainMenu()
     {
         Node? node = GetParent();
         while (node != null && node is not NMainMenu)
             node = node.GetParent();
+        return node as NMainMenu;
+    }
 
-        if (node is not NMainMenu mainMenu)
+    private string? RefreshMainMenu()
+    {
+        var mainMenu = FindMainMenu();
+        if (mainMenu is null)
             return "couldn't find the main menu node in the scene tree.";
 
         if (!SaveManager.Instance.HasRunSave)
@@ -165,124 +364,6 @@ public partial class RelayMenuPanel : PanelContainer
         }
     }
 
-    private void OnPullPressed()
-    {
-        var runId = _runIdInput.Text.Trim().ToUpperInvariant();
-
-        if (string.IsNullOrEmpty(runId))
-        {
-            SetStatus("Please enter a run ID.", isError: true);
-            return;
-        }
-
-        if (RelayTheSpireMod.Controller is null)
-        {
-            SetStatus("RelayTheSpire.cfg not configured. Check your mod folder.", isError: true);
-            return;
-        }
-
-        _ = DoPull(runId);
-    }
-
-    // Backups live in a sibling folder, NOT in the saves folder. The game's cloud sync
-    // (CloudSaveStore.SyncCloudToLocal) deletes any local file in a synced folder that doesn't
-    // exist in Steam Cloud, which would destroy the very backups meant to protect the player's run.
-    private static string BackupDirectory(string saveDir) =>
-        Path.Combine(Directory.GetParent(saveDir)!.FullName, "relay_backups");
-
-    // Copies the existing run (and manifest) to timestamped .bak files.
-    // Returns the backup path, or null if there was no existing run.
-    private static string? BackupExistingRun(string saveDir)
-    {
-        var savePath = Path.Combine(saveDir, "current_run.save");
-        if (!File.Exists(savePath))
-            return null;
-
-        var backupDir = BackupDirectory(saveDir);
-        Directory.CreateDirectory(backupDir);
-
-        var stamp      = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-        var backupPath = Path.Combine(backupDir, $"current_run.save.bak-{stamp}");
-        File.Copy(savePath, backupPath, overwrite: false);
-
-        var manifestPath = Path.Combine(saveDir, "relay_manifest.json");
-        if (File.Exists(manifestPath))
-            File.Copy(manifestPath, Path.Combine(backupDir, $"relay_manifest.json.bak-{stamp}"), overwrite: false);
-
-        PruneBackups(backupDir, "current_run.save.bak-*", keep: 5);
-        PruneBackups(backupDir, "relay_manifest.json.bak-*", keep: 5);
-        return backupPath;
-    }
-
-    private static void PruneBackups(string dir, string pattern, int keep)
-    {
-        try
-        {
-            var old = new DirectoryInfo(dir).GetFiles(pattern);
-            Array.Sort(old, (a, b) => b.LastWriteTimeUtc.CompareTo(a.LastWriteTimeUtc));
-            for (int i = keep; i < old.Length; i++)
-                old[i].Delete();
-        }
-        catch (Exception ex)
-        {
-            Log.Warn($"[RelayTheSpire] Backup pruning failed: {ex.Message}");
-        }
-    }
-
-    private void OnStartPressed()
-    {
-        if (RelayTheSpireMod.Controller is null)
-        {
-            SetStatus("RelayTheSpire.cfg not configured. Check your mod folder.", isError: true);
-            return;
-        }
-
-        _ = DoStart();
-    }
-
-    private async Task DoStart()
-    {
-        SetStatus("Checking your current run...", isError: false);
-        SetBusy(true);
-
-        try
-        {
-            var result = await RelayTheSpireMod.Controller!.StartRelayAsync();
-
-            if (!result.Success)
-            {
-                SetStatus($"Error: {result.Error}", isError: true);
-                Log.Warn($"[RelayTheSpire] Start relay failed: {result.Error}");
-                return;
-            }
-
-            var runId = result.Manifest!.RunId;
-            DisplayServer.ClipboardSet(runId);
-
-            var headline = result.AlreadyStarted
-                ? "This run is already a relay run."
-                : "Relay started!";
-
-            SetStatus(
-                $"{headline} Run ID: {runId} (copied to clipboard).\n" +
-                "Click 'Continue', play your floor, then pick the next map node." +
-                "Then the run is handed off to the next player. ",
-                isError: false);
-
-            Log.Info($"[RelayTheSpire] Relay {(result.AlreadyStarted ? "already active" : "started")}. " +
-                     $"Run {runId}, floor {result.Save?.VisitedMapCoordsCount}.");
-        }
-        catch (Exception ex)
-        {
-            SetStatus($"Unexpected error: {ex.Message}", isError: true);
-            Log.Error($"[RelayTheSpire] Start relay exception: {ex}");
-        }
-        finally
-        {
-            SetBusy(false);
-        }
-    }
-
     private void OnBatonPressed()
     {
         if (RelayTheSpireMod.Controller is null)
@@ -291,6 +372,7 @@ public partial class RelayMenuPanel : PanelContainer
             return;
         }
 
+        RelayLocalStore.Flush();
         _ = DoTakeBaton();
     }
 
@@ -302,7 +384,8 @@ public partial class RelayMenuPanel : PanelContainer
         try
         {
             var playerHash = RelayTheSpireMod.GetLocalPlayerHash();
-            var search     = await RelayTheSpireMod.Controller!.FindBatonAsync(playerHash);
+            // Blank field = the Community room only. With a room ID, only that room.
+            var search = await RelayTheSpireMod.Controller!.FindBatonAsync(playerHash, _runIdInput.Text);
 
             if (!search.Success)
             {
@@ -311,32 +394,26 @@ public partial class RelayMenuPanel : PanelContainer
                 return;
             }
 
-            if (search.RunId is null)
+            var room  = search.Room!;
+            var stats = search.Stats;
+
+            if (search.Outcome != BatonOutcome.TakeRun)
             {
-                string message;
-                if (search.TotalRuns == 0)
-                {
-                    message = "There are no relay runs yet.";
-                }
-                else
-                {
-                    var ongoing  = search.OngoingRuns;
-                    var finished = search.FinishedRuns;
+                Log.Info($"[RelayTheSpire] Baton search in {RelayStartContext.NameOf(room)}: nothing to take ({search.Outcome}; " +
+                         $"{stats.Total} total, {stats.Ongoing} ongoing, {stats.Ended} ended, {stats.Available} available).");
 
-                    message = $"There {(ongoing == 1 ? "is" : "are")} {ongoing} ongoing " +
-                              $"run{(ongoing == 1 ? "" : "s")} and {finished} finished " +
-                              $"run{(finished == 1 ? "" : "s")}.";
-
-                    message += ongoing == 0
-                        ? " Nothing is in progress, so there's no run to take."
-                        : $" {(ongoing == 1 ? "It isn't" : "None of the ongoing runs are")} available to you right now " +
-                          "(you're blocked by the repeat rule, or another player is currently playing it).";
+                if (search.Outcome == BatonOutcome.StartRun)
+                {
+                    // Below the room's run target: start a new run without asking.
+                    BeginStartFlow(room);
+                    return;
                 }
 
+                // At or above the target: say what's going on and let the player decide.
+                var message = $"No run is waiting for you in {RelayStartContext.NameOf(room)} " +
+                              $"({stats.Ongoing} ongoing, {stats.Ended} finished). Start a new run?";
                 SetStatus(message, isError: false);
-                ShowPopup(message + "\n\nNo run is waiting for you right now.");
-                Log.Info($"[RelayTheSpire] Baton search: no available run ({search.TotalRuns} total, " +
-                         $"{search.PlayedByYou} already played by this player).");
+                ConfirmStart(message, () => BeginStartFlow(room));
                 return;
             }
 
@@ -353,17 +430,79 @@ public partial class RelayMenuPanel : PanelContainer
                 return;
             }
 
-            _runIdInput.Text = search.RunId;
-            SetStatus($"Found run {search.RunId} at floor {manifest.FloorsCompleted}. Downloading...", isError: false);
-            Log.Info($"[RelayTheSpire] Baton search picked run {search.RunId} (floor {manifest.FloorsCompleted}, " +
-                     $"{search.TotalRuns - search.PlayedByYou} of {search.TotalRuns} runs available).");
+            SetStatus($"Found run {search.RunId} in {RelayStartContext.NameOf(room)} at floor {manifest.FloorsCompleted}. Downloading...",
+                      isError: false);
+            Log.Info($"[RelayTheSpire] Baton search picked run {search.RunId} in {room.RoomId} " +
+                     $"(floor {manifest.FloorsCompleted}; {stats.Available} of {stats.Total} runs available).");
 
-            await DoPull(search.RunId);
+            await DoPull(room, search.RunId!);
         }
         catch (Exception ex)
         {
             SetStatus($"Unexpected error: {ex.Message}", isError: true);
             Log.Error($"[RelayTheSpire] Take the Baton exception: {ex}");
+        }
+        finally
+        {
+            SetBusy(false);
+        }
+    }
+
+    private void OnCreatePressed()
+    {
+        if (RelayTheSpireMod.Controller is null)
+        {
+            SetStatus("RelayTheSpire.cfg not configured. Check your mod folder.", isError: true);
+            return;
+        }
+
+        var dialog = new RelayCreateRoomDialog();
+        dialog.RoomChosen += desired => { _ = DoCreateRoom(desired); };
+        AddChild(dialog);
+        dialog.PopupCentered();
+    }
+
+    private async Task DoCreateRoom(RoomSettings desired)
+    {
+        SetStatus("Creating a private room...", isError: false);
+        SetBusy(true);
+
+        try
+        {
+            var result = await RelayTheSpireMod.Controller!.CreateRoomAsync(desired);
+            if (!result.Success)
+            {
+                SetStatus($"Error: {result.Error}", isError: true);
+                Log.Warn($"[RelayTheSpire] Create room failed: {result.Error}");
+                return;
+            }
+
+            var room = result.Room!;
+            DisplayServer.ClipboardSet(room.RoomId);
+            RelayLocalStore.Touch(room.RoomId, room.Name);
+            RebuildPicker();
+            SetRoomText(room.RoomId);
+
+            var listedNote = !room.Listed ? ""
+                : result.Warning is { } warning ? $"\nNote: {warning}"
+                : "\nListed publicly: it will show up in the Rooms tab.";
+
+            var named  = room.Name is null ? "Room" : $"\"{room.DisplayName}\"";
+            var idText = RelayStartContext.CodeHidden
+                ? "The Room ID is hidden but copied to clipboard."
+                : $"Room ID: {room.RoomId} (copied to clipboard).";
+
+            SetStatus(
+                $"{named} created! {idText} Share this with your friends!\n" +
+                $"{room.RunCount} runs, {room.FloorsPerTurn} floors per turn. {room.Policy.Describe()}" +
+                listedNote + "\n" +
+                "Click Take the Baton to start the first run.",
+                isError: false);
+        }
+        catch (Exception ex)
+        {
+            SetStatus($"Unexpected error: {ex.Message}", isError: true);
+            Log.Error($"[RelayTheSpire] Create room exception: {ex}");
         }
         finally
         {
@@ -389,6 +528,76 @@ public partial class RelayMenuPanel : PanelContainer
             return false;
         }
     }
+    
+    private void SetCodeHidden(bool hidden)
+    {
+        RelayStartContext.CodeHidden = hidden;
+        ApplyCodeHidden();
+    }
+
+    private void ApplyCodeHidden()
+    {
+        bool hidden        = RelayStartContext.CodeHidden;
+        _runIdInput.Secret = hidden;
+        _revealButton.Text = hidden ? "Show" : "Hide";
+        RebuildPicker();
+    }
+
+    /// <summary>
+    /// Opens character select for a new relay run in the given room. Takes the same three steps the game's
+    /// own Singleplayer button takes; the "Relay run" checkbox arrives already ticked and pointed at the room
+    /// (RelayStartContext), and RelayEmbarkPatch registers the run when the player embarks.
+    /// </summary>
+    private void BeginStartFlow(RoomSettings room)
+    {
+        if (SaveManager.Instance.HasRunSave)
+        {
+            var msg = "You already have a run in progress. Continue or abandon it before starting a new relay run.";
+            SetStatus(msg, isError: true);
+            ShowPopup(msg);
+            return;
+        }
+
+        var mainMenu = FindMainMenu();
+        if (mainMenu is null)
+        {
+            SetStatus("Couldn't find the main menu to open character select.", isError: true);
+            return;
+        }
+
+        try
+        {
+            RelayStartContext.Arm(room);
+
+            var screen = mainMenu.SubmenuStack.GetSubmenuType<NCharacterSelectScreen>();
+            screen.InitializeSingleplayer();
+            mainMenu.SubmenuStack.Push((NSubmenu) screen);
+
+            SetStatus($"Pick a character to start a new run in {RelayStartContext.NameOf(room)}.", isError: false);
+            Log.Info($"[RelayTheSpire] Opened character select for a new run in {room.RoomId}.");
+        }
+        catch (Exception ex)
+        {
+            RelayStartContext.Clear();
+            SetStatus($"Couldn't open character select: {ex.Message}", isError: true);
+            Log.Error($"[RelayTheSpire] Opening character select failed: {ex}");
+        }
+    }
+
+    private void ConfirmStart(string message, Action onConfirm)
+    {
+        var dialog = new ConfirmationDialog
+        {
+            Title         = "RelayTheSpire",
+            DialogText    = message,
+            OkButtonText  = "Start a new run",
+            CancelButtonText = "Cancel",
+        };
+        dialog.Confirmed += () => { dialog.QueueFree(); onConfirm(); };
+        dialog.Canceled  += dialog.QueueFree;
+        AddChild(dialog);
+        dialog.PopupCentered();
+    }
 
     private void ShowPopup(string message)
     {
@@ -402,63 +611,52 @@ public partial class RelayMenuPanel : PanelContainer
     private void SetBusy(bool busy)
     {
         _batonButton.Disabled = busy;
-        _pullButton.Disabled  = busy;
-        _startButton.Disabled = busy;
+        _createButton.Disabled = busy;
+        _picker.Disabled      = busy;
+        _forgetButton.Disabled = busy || !RelayLocalStore.IsRecent(_runIdInput.Text);
     }
 
-    private async Task DoPull(string runId)
+    private async Task DoPull(RoomSettings room, string runId)
     {
+        if (SaveManager.Instance.HasRunSave)
+        {
+            SetStatus("You already have a run in progress. Continue or abandon it before taking the baton.", isError: true);
+            return;
+        }
         SetStatus("Downloading run save...", isError: false);
         SetBusy(true);
 
         try
         {
             var playerHash = RelayTheSpireMod.GetLocalPlayerHash();
-            var saveDir    = RelaySavePaths.GetSaveDirectory();
-
-            // Back up any in-progress run BEFORE the pull can overwrite it.
-            // If the backup fails, abort rather than risk losing the run.
-            string? backupPath;
-            try
-            {
-                backupPath = BackupExistingRun(saveDir);
-                if (backupPath != null)
-                    Log.Info($"[RelayTheSpire] Backed up existing run to {backupPath}");
-            }
-            catch (Exception ex)
-            {
-                SetStatus($"Couldn't back up your current run, so nothing was changed: {ex.Message}", isError: true);
-                Log.Error($"[RelayTheSpire] Backup failed, pull aborted: {ex}");
-                return;
-            }
-
+            
             LogSaveDiagnostics("before pull");
 
-            var result = await RelayTheSpireMod.Controller!.PullRelayAsync(runId, playerHash);
+            var result = await RelayTheSpireMod.Controller!.PullRelayAsync(room, runId, playerHash);
 
             LogSaveDiagnostics("after pull");
 
             if (result.Success)
             {
+                RelayLocalStore.Touch(room.RoomId, room.Name);
+                RebuildPicker();
+
                 var floor = result.Save?.VisitedMapCoordsCount ?? -1;
                 var seed  = result.Save?.Seed ?? runId;
 
                 var refreshError = RefreshMainMenu();
-                var backupNote   = backupPath != null
-                    ? $"\nYour previous run was backed up as {Path.GetFileName(backupPath)} (in the relay_backups folder next to your saves folder)."
-                    : "";
-
+                
                 if (refreshError == null)
                 {
                     SetStatus(
                         $"Run received! Floor {floor}, seed {seed}.\n" +
-                        "Click 'Continue' in the main menu to start your turn." + backupNote,
+                        "Click 'Continue' in the main menu to start your turn.",
                         isError: false);
                 }
                 else
                 {
                     SetStatus(
-                        $"Run saved (floor {floor}, seed {seed}), but the menu didn't refresh: {refreshError}" + backupNote,
+                        $"Run saved (floor {floor}, seed {seed}), but the menu didn't refresh: {refreshError}",
                         isError: true);
                     Log.Warn($"[RelayTheSpire] Menu refresh failed: {refreshError}");
                 }
