@@ -96,7 +96,7 @@
           "ENCOUNTER.DECIMILLIPEDE_ELITE",
           "ENCOUNTER.INFESTED_PRISMS_ELITE"
         ],
-        "elite_encounters_visited": 1,
+        "elite_encounters_visited": 2,
         "event_ids": [
           "EVENT.RANWID_THE_ELDER",
           "EVENT.BRAIN_LEECH",
@@ -2412,8 +2412,7 @@
                 "title": {
                   "key": "BRAIN_LEECH.pages.INITIAL.options.RIP.title",
                   "table": "events"
-                },
-                "variables": {}
+                }
               }
             ],
             "gold_gained": 0,
@@ -2816,11 +2815,223 @@
             "turns_taken": 6
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 169,
+            "current_hp": 24,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 83,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.END_OF_DAYS"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 203,
+            "current_hp": 24,
+            "damage_taken": 0,
+            "gold_gained": 34,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 83,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.BOOK_OF_FIVE_RINGS",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 203,
+            "current_hp": 48,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 24,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 83,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 28,
+                  "id": "CARD.ENFEEBLING_TOUCH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.PULL_AGGRO",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "current_upgrade_level": 1,
+                  "id": "CARD.FETCH",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.ENFEEBLING_TOUCH",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 231,
+            "current_hp": 22,
+            "damage_taken": 26,
+            "gold_gained": 28,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 83,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.STRENGTH_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.COLORLESS_POTION",
+              "POTION.DEXTERITY_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.BLOOD_VIAL",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.INFESTED_PRISMS_ELITE",
+            "monster_ids": [
+              "MONSTER.INFESTED_PRISM"
+            ],
+            "room_type": "elite",
+            "turns_taken": 8
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 231,
+            "current_hp": 46,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 24,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 83,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "HEAL"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 5,
+  "num_reloads": 6,
   "odds": {
     "unknown_map_point_elite_odds_value": -2,
     "unknown_map_point_monster_odds_value": 0.2,
@@ -2832,7 +3043,7 @@
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 24,
+      "current_hp": 46,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2927,6 +3138,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 17,
           "id": "CARD.END_OF_DAYS",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -2983,30 +3195,33 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 28,
+          "id": "CARD.ENFEEBLING_TOUCH",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
         "card_shop_removals_used": 1,
-        "damage_dealt": 387,
-        "debuffs_applied": 20
+        "damage_dealt": 400,
+        "debuffs_applied": 26
       },
-      "gold": 169,
+      "gold": 231,
       "max_energy": 3,
       "max_hp": 83,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.040000003,
-        "potion_reward_odds_value": 0.6
+        "card_rarity_odds_value": -0.025000006,
+        "potion_reward_odds_value": 0.5
       },
       "potions": [
         {
-          "id": "POTION.COLORLESS_POTION",
+          "id": "POTION.STRENGTH_POTION",
           "slot_index": 0
-        },
-        {
-          "id": "POTION.DEXTERITY_POTION",
-          "slot_index": 1
         }
       ],
       "relic_grab_bag": {
@@ -3043,7 +3258,6 @@
             "RELIC.LUCKY_FYSH"
           ],
           "common": [
-            "RELIC.BLOOD_VIAL",
             "RELIC.POTION_BELT",
             "RELIC.FESTIVE_POPPER",
             "RELIC.REGAL_PILLOW",
@@ -3057,7 +3271,6 @@
             "RELIC.BAG_OF_PREPARATION",
             "RELIC.STRIKE_DUMMY",
             "RELIC.BAG_OF_MARBLES",
-            "RELIC.BOOK_OF_FIVE_RINGS",
             "RELIC.WHETSTONE",
             "RELIC.PENDULUM",
             "RELIC.RED_MASK",
@@ -3167,16 +3380,32 @@
         {
           "floor_added_to_deck": 24,
           "id": "RELIC.MOLTEN_EGG"
+        },
+        {
+          "floor_added_to_deck": 26,
+          "id": "RELIC.BOOK_OF_FIVE_RINGS",
+          "props": {
+            "ints": [
+              {
+                "name": "CardsAdded",
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "floor_added_to_deck": 28,
+          "id": "RELIC.BLOOD_VIAL"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 191,
-            "s0": 6484775729426362976,
-            "s1": 5237575496608695346,
-            "s2": 14753119137115143851,
-            "s3": 12847458184373010112
+            "counter": 206,
+            "s0": 195104403964374168,
+            "s1": 2935531444786287731,
+            "s2": 15848282355944093926,
+            "s3": 12841301330901040191
           },
           "shops": {
             "counter": 28,
@@ -3297,11 +3526,11 @@
         "s3": 115291927899045922
       },
       "shuffle": {
-        "counter": 467,
-        "s0": 18260187534362704416,
-        "s1": 7676568035454705682,
-        "s2": 15556743721170663464,
-        "s3": 1658337184767398927
+        "counter": 521,
+        "s0": 14003718282258031977,
+        "s1": 13405311776870406051,
+        "s2": 14097802300649542023,
+        "s3": 16164925621326305754
       },
       "unknown_map_point": {
         "counter": 3,
@@ -3311,11 +3540,11 @@
         "s3": 349608207438250284
       },
       "combat_card_generation": {
-        "counter": 29,
-        "s0": 16641216773416693646,
-        "s1": 14342793987918471927,
-        "s2": 4855638294474352256,
-        "s3": 2463346278806886051
+        "counter": 78,
+        "s0": 3875969674723145876,
+        "s1": 5871574893203420034,
+        "s2": 6086624120487678878,
+        "s3": 11744475099503901141
       },
       "combat_potion_generation": {
         "counter": 0,
@@ -3353,11 +3582,11 @@
         "s3": 2705462554226636897
       },
       "niche": {
-        "counter": 25,
-        "s0": 10432455906692793501,
-        "s1": 4651860482727752361,
-        "s2": 8116321391515761124,
-        "s3": 3237570438334142216
+        "counter": 26,
+        "s0": 18205542012336595260,
+        "s1": 11595584198399807440,
+        "s2": 10703283104534560121,
+        "s3": 10138778740745563443
       },
       "combat_orbs": {
         "counter": 0,
@@ -3367,17 +3596,17 @@
         "s3": 13165444362104074081
       },
       "treasure_room_relics": {
-        "counter": 1,
-        "s0": 13138031190032026356,
-        "s1": 9743369435712278529,
-        "s2": 2298340025487537897,
-        "s3": 6363507796828874231
+        "counter": 2,
+        "s0": 7578282204547137282,
+        "s1": 3351125831142665244,
+        "s2": 7238647856182180893,
+        "s3": 15474047189701371149
       }
     },
     "seed": "N1BCZGR2TT59"
   },
-  "run_time": 1926,
-  "save_time": 1792545167,
+  "run_time": 2225,
+  "save_time": 1792545619,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -3411,7 +3640,6 @@
         "RELIC.PEN_NIB"
       ],
       "common": [
-        "RELIC.BOOK_OF_FIVE_RINGS",
         "RELIC.STRIKE_DUMMY",
         "RELIC.ANCHOR",
         "RELIC.WHETSTONE",
@@ -3427,7 +3655,6 @@
         "RELIC.WAR_PAINT",
         "RELIC.AMETHYST_AUBERGINE",
         "RELIC.BRONZE_SCALES",
-        "RELIC.BLOOD_VIAL",
         "RELIC.CENTENNIAL_PUZZLE",
         "RELIC.RED_MASK",
         "RELIC.BAG_OF_PREPARATION",
@@ -3538,6 +3765,26 @@
     {
       "col": 3,
       "row": 7
+    },
+    {
+      "col": 3,
+      "row": 8
+    },
+    {
+      "col": 3,
+      "row": 9
+    },
+    {
+      "col": 3,
+      "row": 10
+    },
+    {
+      "col": 4,
+      "row": 11
+    },
+    {
+      "col": 5,
+      "row": 12
     }
   ],
   "win_time": 0
