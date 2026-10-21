@@ -129,7 +129,7 @@
           "EVENT.THE_FUTURE_OF_POTIONS",
           "EVENT.SELF_HELP_BOOK"
         ],
-        "events_visited": 3,
+        "events_visited": 4,
         "normal_encounter_ids": [
           "ENCOUNTER.TUNNELER_WEAK",
           "ENCOUNTER.BOWLBUGS_WEAK",
@@ -974,7 +974,8 @@
   "events_seen": [
     "EVENT.WOOD_CARVINGS",
     "EVENT.CRYSTAL_SPHERE",
-    "EVENT.SLIPPERY_BRIDGE"
+    "EVENT.SLIPPERY_BRIDGE",
+    "EVENT.ROOM_FULL_OF_CHEESE"
   ],
   "extra_fields": {
     "started_with_neow": true
@@ -2790,23 +2791,279 @@
             "turns_taken": 12
           }
         ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 5,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 80,
+            "current_hp": 49,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 15,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "CLONE"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "treasure",
+        "player_stats": [
+          {
+            "current_gold": 112,
+            "current_hp": 49,
+            "damage_taken": 0,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.LUCKY_FYSH",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "treasure",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 5,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 25,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 142,
+            "current_hp": 64,
+            "damage_taken": 0,
+            "gold_gained": 30,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 15,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "CLONE"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 142,
+            "current_hp": 50,
+            "damage_taken": 14,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH.title",
+                  "table": "events"
+                },
+                "variables": {}
+              }
+            ],
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.CHOSEN_CHEESE",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.ROOM_FULL_OF_CHEESE",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "cards_gained": [
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 5,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 25,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 27,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              },
+              {
+                "current_upgrade_level": 1,
+                "enchantment": {
+                  "amount": 4,
+                  "id": "ENCHANTMENT.CLONE"
+                },
+                "floor_added_to_deck": 27,
+                "id": "CARD.ETERNAL_ARMOR",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 202,
+            "current_hp": 65,
+            "damage_taken": 0,
+            "gold_gained": 60,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 15,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 75,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "CLONE"
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 4,
+  "num_reloads": 5,
   "odds": {
-    "unknown_map_point_elite_odds_value": -4,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.089999996,
-    "unknown_map_point_treasure_odds_value": 0.08
+    "unknown_map_point_elite_odds_value": -5,
+    "unknown_map_point_monster_odds_value": 0.2,
+    "unknown_map_point_shop_odds_value": 0.12,
+    "unknown_map_point_treasure_odds_value": 0.099999994
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.REGENT",
-      "current_hp": 34,
+      "current_hp": 65,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -2999,6 +3256,90 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 25,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 27,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 27,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 29,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 29,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 29,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "current_upgrade_level": 1,
+          "enchantment": {
+            "amount": 4,
+            "id": "ENCHANTMENT.CLONE"
+          },
+          "floor_added_to_deck": 29,
+          "id": "CARD.ETERNAL_ARMOR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "discovered_cards": [
@@ -3008,7 +3349,7 @@
         "damage_dealt": 1285,
         "debuffs_applied": 35
       },
-      "gold": 80,
+      "gold": 202,
       "max_energy": 3,
       "max_hp": 75,
       "max_potion_slot_count": 2,
@@ -3037,7 +3378,6 @@
             "RELIC.ORNAMENTAL_FAN",
             "RELIC.PLANISPHERE",
             "RELIC.HORN_CLEAT",
-            "RELIC.LUCKY_FYSH",
             "RELIC.REGALITE",
             "RELIC.STONE_CRACKER",
             "RELIC.RIPPLE_BASIN",
@@ -3180,16 +3520,24 @@
         {
           "floor_added_to_deck": 23,
           "id": "RELIC.ETERNAL_FEATHER"
+        },
+        {
+          "floor_added_to_deck": 26,
+          "id": "RELIC.LUCKY_FYSH"
+        },
+        {
+          "floor_added_to_deck": 28,
+          "id": "RELIC.CHOSEN_CHEESE"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 191,
-            "s0": 6495553167975575203,
-            "s1": 13944348325994463988,
-            "s2": 10418257681393713880,
-            "s3": 12426783297692406528
+            "counter": 192,
+            "s0": 4022941854278942551,
+            "s1": 807701196031356559,
+            "s2": 5145898535937764475,
+            "s3": 161722484107752848
           },
           "shops": {
             "counter": 112,
@@ -3317,11 +3665,11 @@
         "s3": 4843188323059931697
       },
       "unknown_map_point": {
-        "counter": 6,
-        "s0": 3124705142254185919,
-        "s1": 816048019820952913,
-        "s2": 6512873271058066923,
-        "s3": 551004705503389007
+        "counter": 7,
+        "s0": 2858534798185084321,
+        "s1": 8821529293696695557,
+        "s2": 3426143462935412820,
+        "s3": 17511052664053477633
       },
       "combat_card_generation": {
         "counter": 2491,
@@ -3380,22 +3728,21 @@
         "s3": 3926531555622665665
       },
       "treasure_room_relics": {
-        "counter": 1,
-        "s0": 10072227023252643797,
-        "s1": 7390663936268574952,
-        "s2": 17522756094332563922,
-        "s3": 6775411027326754507
+        "counter": 2,
+        "s0": 12920911731707290102,
+        "s1": 2196069390133530351,
+        "s2": 12360260983745195527,
+        "s3": 17277047401772480912
       }
     },
     "seed": "MELEQDZ30E02"
   },
-  "run_time": 1913,
-  "save_time": 1792543887,
+  "run_time": 1944,
+  "save_time": 1792544491,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
       "uncommon": [
-        "RELIC.LUCKY_FYSH",
         "RELIC.CANDELABRA",
         "RELIC.KUSARIGAMA",
         "RELIC.BOWLER_HAT",
@@ -3543,6 +3890,26 @@
     {
       "col": 5,
       "row": 7
+    },
+    {
+      "col": 6,
+      "row": 8
+    },
+    {
+      "col": 6,
+      "row": 9
+    },
+    {
+      "col": 5,
+      "row": 10
+    },
+    {
+      "col": 6,
+      "row": 11
+    },
+    {
+      "col": 5,
+      "row": 12
     }
   ],
   "win_time": 0
