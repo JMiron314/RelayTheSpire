@@ -6,20 +6,24 @@
   "ascension": 10,
   "character_id": "CHARACTER.IRONCLAD",
   "game_mode": "standard",
-  "floors_completed": 5,
+  "floors_completed": 8,
   "relay_chain": [
     {
       "player_hash": "b65f0ccdaf09defeae2e3bb2e7c769e4db68a8d731b79b44cadba329fc42ed40",
       "floors_played": 5,
       "turn_start_floor": 0,
       "timestamp": 1792514623
+    },
+    {
+      "player_hash": "5157c07504ce9db85ec8029e925e6ff11116a98225878c2a1be66d9eaea370d5",
+      "floors_played": 3,
+      "turn_start_floor": 5,
+      "timestamp": 1792623518
     }
   ],
-  "last_updated": 1792514623,
-  "claimed_by": "5157c07504ce9db85ec8029e925e6ff11116a98225878c2a1be66d9eaea370d5",
-  "claimed_at": 1792623294,
-  "claim_expires_at": 1792666494,
+  "last_updated": 1792623518,
   "room_id": "COMMUNITY",
   "floors_per_turn": 5,
-  "repeat_policy": "2"
+  "repeat_policy": "2",
+  "status": "lost"
 }
