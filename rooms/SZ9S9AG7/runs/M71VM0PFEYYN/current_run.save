@@ -1,0 +1,2223 @@
+{
+  "acts": [
+    {
+      "id": "ACT.OVERGROWTH",
+      "rooms": {
+        "ancient_id": "EVENT.NEOW",
+        "boss_encounters_visited": 0,
+        "boss_id": "ENCOUNTER.VANTOM_BOSS",
+        "elite_encounter_ids": [
+          "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "ENCOUNTER.BYRDONIS_ELITE",
+          "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "ENCOUNTER.BYRDONIS_ELITE",
+          "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "ENCOUNTER.BYRDONIS_ELITE",
+          "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "ENCOUNTER.BYRDONIS_ELITE",
+          "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "ENCOUNTER.BYRDONIS_ELITE"
+        ],
+        "elite_encounters_visited": 0,
+        "event_ids": [
+          "EVENT.ROOM_FULL_OF_CHEESE",
+          "EVENT.UNREST_SITE",
+          "EVENT.SUNKEN_STATUE",
+          "EVENT.RELIC_TRADER",
+          "EVENT.BYRDONIS_NEST",
+          "EVENT.WELCOME_TO_WONGOS",
+          "EVENT.THE_LEGENDS_WERE_TRUE",
+          "EVENT.WOOD_CARVINGS",
+          "EVENT.SYMBIOTE",
+          "EVENT.DOLL_ROOM",
+          "EVENT.SAPPHIRE_SEED",
+          "EVENT.LUMINOUS_CHOIR",
+          "EVENT.MORPHIC_GROVE",
+          "EVENT.THE_FUTURE_OF_POTIONS",
+          "EVENT.WAR_HISTORIAN_REPY",
+          "EVENT.THIS_OR_THAT",
+          "EVENT.WHISPERING_HOLLOW",
+          "EVENT.DENSE_VEGETATION",
+          "EVENT.SELF_HELP_BOOK",
+          "EVENT.POTION_COURIER",
+          "EVENT.STONE_OF_ALL_TIME",
+          "EVENT.SLIPPERY_BRIDGE",
+          "EVENT.TABLET_OF_TRUTH",
+          "EVENT.CRYSTAL_SPHERE",
+          "EVENT.WELLSPRING",
+          "EVENT.TEA_MASTER",
+          "EVENT.JUNGLE_MAZE_ADVENTURE",
+          "EVENT.RANWID_THE_ELDER",
+          "EVENT.FAKE_MERCHANT",
+          "EVENT.AROMA_OF_CHAOS",
+          "EVENT.BRAIN_LEECH"
+        ],
+        "events_visited": 1,
+        "normal_encounter_ids": [
+          "ENCOUNTER.NIBBITS_WEAK",
+          "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+          "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+          "ENCOUNTER.CUBEX_CONSTRUCT_NORMAL",
+          "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+          "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+          "ENCOUNTER.MAWLER_NORMAL",
+          "ENCOUNTER.NIBBITS_NORMAL",
+          "ENCOUNTER.FLYCONID_NORMAL",
+          "ENCOUNTER.OVERGROWTH_CRAWLERS",
+          "ENCOUNTER.SLITHERING_STRANGLER_NORMAL",
+          "ENCOUNTER.FOGMOG_NORMAL",
+          "ENCOUNTER.SNAPPING_JAXFRUIT_NORMAL",
+          "ENCOUNTER.INKLETS_NORMAL",
+          "ENCOUNTER.SLIMES_NORMAL"
+        ],
+        "normal_encounters_visited": 3,
+        "second_boss_id": null
+      },
+      "saved_map": {
+        "boss": {
+          "can_modify": true,
+          "coord": {
+            "col": 3,
+            "row": 16
+          },
+          "type": "boss"
+        },
+        "height": 16,
+        "points": [
+          {
+            "children": [
+              {
+                "col": 0,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 2
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 4
+              },
+              {
+                "col": 1,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 4
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 6
+              },
+              {
+                "col": 1,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 5
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 6
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 8
+              },
+              {
+                "col": 0,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 7
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 8
+            },
+            "type": "unknown"
+          },
+          {
+            "children": [
+              {
+                "col": 1,
+                "row": 10
+              },
+              {
+                "col": 0,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 9
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 10
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 11
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 12
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 14
+              },
+              {
+                "col": 0,
+                "row": 14
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 13
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 0,
+              "row": 14
+            },
+            "type": "monster"
+          },
+          {
+            "children": [
+              {
+                "col": 1,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 2
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 4
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 7
+              },
+              {
+                "col": 1,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 6
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 1,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 7
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 8
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 11
+              },
+              {
+                "col": 1,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 10
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 0,
+                "row": 12
+              },
+              {
+                "col": 2,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 11
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 14
+            },
+            "type": "unknown"
+          },
+          {
+            "children": [
+              {
+                "col": 3,
+                "row": 16
+              }
+            ],
+            "coord": {
+              "col": 1,
+              "row": 15
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 3
+            },
+            "type": "shop"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 6
+              },
+              {
+                "col": 1,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 5
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 6
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 7
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 8
+            },
+            "type": "monster"
+          },
+          {
+            "children": [
+              {
+                "col": 1,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 9
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 11
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 12
+            },
+            "type": "unknown"
+          },
+          {
+            "children": [
+              {
+                "col": 3,
+                "row": 16
+              }
+            ],
+            "coord": {
+              "col": 2,
+              "row": 15
+            },
+            "type": "rest_site"
+          },
+          {
+            "children": [
+              {
+                "col": 3,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 2
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 2,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 4
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 12
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 14
+              },
+              {
+                "col": 4,
+                "row": 14
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 13
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 3,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 14
+            },
+            "type": "elite"
+          },
+          {
+            "children": [
+              {
+                "col": 3,
+                "row": 16
+              }
+            ],
+            "coord": {
+              "col": 3,
+              "row": 15
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 5
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 6
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 7
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 8
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 10
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 11
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 13
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 12
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 14
+            },
+            "type": "shop"
+          },
+          {
+            "children": [
+              {
+                "col": 3,
+                "row": 16
+              }
+            ],
+            "coord": {
+              "col": 4,
+              "row": 15
+            },
+            "type": "rest_site"
+          },
+          {
+            "children": [
+              {
+                "col": 5,
+                "row": 2
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 1
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 3
+              },
+              {
+                "col": 6,
+                "row": 3
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 2
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 4
+            },
+            "type": "shop"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 9
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 8
+            },
+            "type": "elite"
+          },
+          {
+            "children": [
+              {
+                "col": 4,
+                "row": 10
+              },
+              {
+                "col": 5,
+                "row": 10
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 9
+            },
+            "type": "treasure"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 11
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 10
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 4,
+                "row": 12
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 11
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 14
+              }
+            ],
+            "coord": {
+              "col": 5,
+              "row": 13
+            },
+            "type": "elite"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 4
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 3
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 5
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 4
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 6
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 5
+            },
+            "type": "monster"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 7
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 6
+            },
+            "type": "unknown"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 5,
+                "row": 8
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 7
+            },
+            "type": "rest_site"
+          },
+          {
+            "can_modify": true,
+            "children": [
+              {
+                "col": 6,
+                "row": 15
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 14
+            },
+            "type": "monster"
+          },
+          {
+            "children": [
+              {
+                "col": 3,
+                "row": 16
+              }
+            ],
+            "coord": {
+              "col": 6,
+              "row": 15
+            },
+            "type": "rest_site"
+          }
+        ],
+        "start": {
+          "can_modify": true,
+          "children": [
+            {
+              "col": 0,
+              "row": 1
+            },
+            {
+              "col": 1,
+              "row": 1
+            },
+            {
+              "col": 3,
+              "row": 1
+            },
+            {
+              "col": 5,
+              "row": 1
+            }
+          ],
+          "coord": {
+            "col": 3,
+            "row": 0
+          },
+          "type": "ancient"
+        },
+        "start_coords": [
+          {
+            "col": 3,
+            "row": 1
+          },
+          {
+            "col": 5,
+            "row": 1
+          },
+          {
+            "col": 0,
+            "row": 1
+          },
+          {
+            "col": 1,
+            "row": 1
+          }
+        ],
+        "width": 7
+      }
+    },
+    {
+      "id": "ACT.HIVE",
+      "rooms": {
+        "ancient_id": "EVENT.TEZCATARA",
+        "boss_encounters_visited": 0,
+        "boss_id": "ENCOUNTER.KNOWLEDGE_DEMON_BOSS",
+        "elite_encounter_ids": [
+          "ENCOUNTER.DECIMILLIPEDE_ELITE",
+          "ENCOUNTER.INFESTED_PRISMS_ELITE",
+          "ENCOUNTER.ENTOMANCER_ELITE",
+          "ENCOUNTER.INFESTED_PRISMS_ELITE",
+          "ENCOUNTER.DECIMILLIPEDE_ELITE",
+          "ENCOUNTER.ENTOMANCER_ELITE",
+          "ENCOUNTER.INFESTED_PRISMS_ELITE",
+          "ENCOUNTER.ENTOMANCER_ELITE",
+          "ENCOUNTER.DECIMILLIPEDE_ELITE",
+          "ENCOUNTER.ENTOMANCER_ELITE",
+          "ENCOUNTER.INFESTED_PRISMS_ELITE",
+          "ENCOUNTER.DECIMILLIPEDE_ELITE",
+          "ENCOUNTER.INFESTED_PRISMS_ELITE",
+          "ENCOUNTER.ENTOMANCER_ELITE",
+          "ENCOUNTER.DECIMILLIPEDE_ELITE"
+        ],
+        "elite_encounters_visited": 0,
+        "event_ids": [
+          "EVENT.ZEN_WEAVER",
+          "EVENT.WAR_HISTORIAN_REPY",
+          "EVENT.BUGSLAYER",
+          "EVENT.WELCOME_TO_WONGOS",
+          "EVENT.SPIRIT_GRAFTER",
+          "EVENT.LOST_WISP",
+          "EVENT.THE_LANTERN_KEY",
+          "EVENT.RELIC_TRADER",
+          "EVENT.POTION_COURIER",
+          "EVENT.RANWID_THE_ELDER",
+          "EVENT.COLOSSAL_FLOWER",
+          "EVENT.THE_FUTURE_OF_POTIONS",
+          "EVENT.CRYSTAL_SPHERE",
+          "EVENT.FAKE_MERCHANT",
+          "EVENT.ROOM_FULL_OF_CHEESE",
+          "EVENT.SLIPPERY_BRIDGE",
+          "EVENT.INFESTED_AUTOMATON",
+          "EVENT.DOLL_ROOM",
+          "EVENT.SYMBIOTE",
+          "EVENT.BRAIN_LEECH",
+          "EVENT.COLORFUL_PHILOSOPHERS",
+          "EVENT.SELF_HELP_BOOK",
+          "EVENT.THE_LEGENDS_WERE_TRUE",
+          "EVENT.THIS_OR_THAT",
+          "EVENT.AMALGAMATOR",
+          "EVENT.TEA_MASTER",
+          "EVENT.STONE_OF_ALL_TIME",
+          "EVENT.FIELD_OF_MAN_SIZED_HOLES"
+        ],
+        "events_visited": 0,
+        "normal_encounter_ids": [
+          "ENCOUNTER.EXOSKELETONS_WEAK",
+          "ENCOUNTER.BOWLBUGS_WEAK",
+          "ENCOUNTER.LOUSE_PROGENITOR_NORMAL",
+          "ENCOUNTER.EXOSKELETONS_NORMAL",
+          "ENCOUNTER.SLUMBERING_BEETLE_NORMAL",
+          "ENCOUNTER.OVICOPTER_NORMAL",
+          "ENCOUNTER.BOWLBUGS_NORMAL",
+          "ENCOUNTER.MYTES_NORMAL",
+          "ENCOUNTER.SPINY_TOAD_NORMAL",
+          "ENCOUNTER.CHOMPERS_NORMAL",
+          "ENCOUNTER.HUNTER_KILLER_NORMAL",
+          "ENCOUNTER.THE_OBSCURA_NORMAL",
+          "ENCOUNTER.OVICOPTER_NORMAL",
+          "ENCOUNTER.THE_OBSCURA_NORMAL"
+        ],
+        "normal_encounters_visited": 0,
+        "second_boss_id": null
+      }
+    },
+    {
+      "id": "ACT.GLORY",
+      "rooms": {
+        "ancient_id": "EVENT.VAKUU",
+        "boss_encounters_visited": 0,
+        "boss_id": "ENCOUNTER.AEONGLASS_BOSS",
+        "elite_encounter_ids": [
+          "ENCOUNTER.SOUL_NEXUS_ELITE",
+          "ENCOUNTER.KNIGHTS_ELITE",
+          "ENCOUNTER.MECHA_KNIGHT_ELITE",
+          "ENCOUNTER.KNIGHTS_ELITE",
+          "ENCOUNTER.MECHA_KNIGHT_ELITE",
+          "ENCOUNTER.SOUL_NEXUS_ELITE",
+          "ENCOUNTER.MECHA_KNIGHT_ELITE",
+          "ENCOUNTER.SOUL_NEXUS_ELITE",
+          "ENCOUNTER.KNIGHTS_ELITE",
+          "ENCOUNTER.SOUL_NEXUS_ELITE",
+          "ENCOUNTER.MECHA_KNIGHT_ELITE",
+          "ENCOUNTER.KNIGHTS_ELITE",
+          "ENCOUNTER.SOUL_NEXUS_ELITE",
+          "ENCOUNTER.MECHA_KNIGHT_ELITE",
+          "ENCOUNTER.KNIGHTS_ELITE"
+        ],
+        "elite_encounters_visited": 0,
+        "event_ids": [
+          "EVENT.TINKER_TIME",
+          "EVENT.FAKE_MERCHANT",
+          "EVENT.RANWID_THE_ELDER",
+          "EVENT.ROOM_FULL_OF_CHEESE",
+          "EVENT.TRIAL",
+          "EVENT.CRYSTAL_SPHERE",
+          "EVENT.SELF_HELP_BOOK",
+          "EVENT.POTION_COURIER",
+          "EVENT.SLIPPERY_BRIDGE",
+          "EVENT.WAR_HISTORIAN_REPY",
+          "EVENT.RELIC_TRADER",
+          "EVENT.DOLL_ROOM",
+          "EVENT.SYMBIOTE",
+          "EVENT.WELCOME_TO_WONGOS",
+          "EVENT.THE_LEGENDS_WERE_TRUE",
+          "EVENT.STONE_OF_ALL_TIME",
+          "EVENT.GRAVE_OF_THE_FORGOTTEN",
+          "EVENT.HUNGRY_FOR_MUSHROOMS",
+          "EVENT.ROUND_TEA_PARTY",
+          "EVENT.BRAIN_LEECH",
+          "EVENT.THE_FUTURE_OF_POTIONS",
+          "EVENT.BATTLEWORN_DUMMY",
+          "EVENT.REFLECTIONS",
+          "EVENT.THIS_OR_THAT",
+          "EVENT.TEA_MASTER"
+        ],
+        "events_visited": 0,
+        "normal_encounter_ids": [
+          "ENCOUNTER.TURRET_OPERATOR_WEAK",
+          "ENCOUNTER.DEVOTED_SCULPTOR_WEAK",
+          "ENCOUNTER.SCROLLS_OF_BITING_NORMAL",
+          "ENCOUNTER.AXEBOTS_NORMAL",
+          "ENCOUNTER.FABRICATOR_NORMAL",
+          "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL",
+          "ENCOUNTER.FROG_KNIGHT_NORMAL",
+          "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+          "ENCOUNTER.THE_LOST_AND_FORGOTTEN_NORMAL",
+          "ENCOUNTER.SLIMED_BERSERKER_NORMAL",
+          "ENCOUNTER.GLOBE_HEAD_NORMAL",
+          "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+          "ENCOUNTER.CONSTRUCT_MENAGERIE_NORMAL"
+        ],
+        "normal_encounters_visited": 0,
+        "second_boss_id": "ENCOUNTER.TEST_SUBJECT_BOSS"
+      }
+    }
+  ],
+  "ascension": 10,
+  "current_act_index": 0,
+  "extra_fields": {
+    "started_with_neow": true
+  },
+  "game_mode": "standard",
+  "map_drawings": "H4sIAAAAAAAECmJkYGAAYQYGBgZWBgYGGwaZO4CZLWr+7FZScLODV0/644FU5VfmVUc+b5vscddIuDe6eVHe4+Ce3DtdG3hzBLe91Tu37d/Rm2WHM25fkqi+raVcyJxekqfVe4t33cc9rOa7zH+7/fr2sOL+PJnvt5c8bthcXlIQ3C+S9+HiIUe7KIsT7gIMenyvLx7NtZ20Y4871/I/N+6vUjh6235JgXGfSm79pHbdTKENpX7ftr4+ue+Z3c3rX9T/z2JYmmC9wCSHZ4oAQ0T0C5Vs5bkpuXsmb8ztFtohGKJnvuPU87AozrtZ2ooMLttlT7+4lrzz7g+du9Jbljac3jGlwGi6hN/zosNfY5wYPhTYTpd79/zTEdWEYzsWnZHbvubmYzWL6jna6v3ez1gATpObEBkBAAA=",
+  "map_point_history": [
+    [
+      {
+        "map_point_type": "ancient",
+        "player_stats": [
+          {
+            "ancient_choice": [
+              {
+                "TextKey": "SMALL_CAPSULE",
+                "title": {
+                  "key": "SMALL_CAPSULE.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              },
+              {
+                "TextKey": "NUTRITIOUS_OYSTER",
+                "title": {
+                  "key": "NUTRITIOUS_OYSTER.title",
+                  "table": "relics"
+                },
+                "was_chosen": false
+              },
+              {
+                "TextKey": "NEOWS_BONES",
+                "title": {
+                  "key": "NEOWS_BONES.title",
+                  "table": "relics"
+                },
+                "was_chosen": true
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SHAME",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 249,
+            "current_hp": 71,
+            "damage_taken": 0,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "NEOWS_BONES.title",
+                  "table": "relics"
+                }
+              }
+            ],
+            "gold_gained": 150,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 71,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 11,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "relic_choices": [
+              {
+                "choice": "RELIC.NEOWS_BONES",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.GOLDEN_PEARL",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.NUTRITIOUS_OYSTER",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.NEOW",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 2,
+                  "id": "CARD.GLITTERSTREAM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.PROPHESIZE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.TERRAFORMING",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GLITTERSTREAM",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 263,
+            "current_hp": 61,
+            "damage_taken": 10,
+            "gold_gained": 14,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.NIBBITS_WEAK",
+            "monster_ids": [
+              "MONSTER.NIBBIT"
+            ],
+            "room_type": "monster",
+            "turns_taken": 6
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 3,
+                  "id": "CARD.GLOW",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.PHOTON_CUT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.COLLISION_COURSE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GLOW",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 274,
+            "current_hp": 48,
+            "damage_taken": 13,
+            "gold_gained": 11,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+            "monster_ids": [
+              "MONSTER.SHRINKER_BEETLE"
+            ],
+            "room_type": "monster",
+            "turns_taken": 6
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 4,
+                  "id": "CARD.GATHER_LIGHT",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.KNOW_THY_PLACE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.HIDDEN_CACHE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.GATHER_LIGHT",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 285,
+            "current_hp": 48,
+            "damage_taken": 0,
+            "gold_gained": 11,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 86,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+            "monster_ids": [
+              "MONSTER.FUZZY_WURM_CRAWLER"
+            ],
+            "room_type": "monster",
+            "turns_taken": 6
+          }
+        ]
+      }
+    ]
+  ],
+  "modifiers": [],
+  "num_reloads": 0,
+  "odds": {
+    "unknown_map_point_elite_odds_value": -1,
+    "unknown_map_point_monster_odds_value": 0.1,
+    "unknown_map_point_shop_odds_value": 0.03,
+    "unknown_map_point_treasure_odds_value": 0.02
+  },
+  "platform_type": "steam",
+  "players": [
+    {
+      "base_orb_slot_count": 0,
+      "character_id": "CHARACTER.REGENT",
+      "current_hp": 48,
+      "deck": [
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.STRIKE_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.STRIKE_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.STRIKE_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.STRIKE_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.DEFEND_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.DEFEND_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.DEFEND_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.DEFEND_REGENT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.FALLING_STAR",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.VENERATE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.ASCENDERS_BANE",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "CARD.SHAME",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 2,
+          "id": "CARD.GLITTERSTREAM",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 3,
+          "id": "CARD.GLOW",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 4,
+          "id": "CARD.GATHER_LIGHT",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        }
+      ],
+      "extra_fields": {
+        "damage_dealt": 146,
+        "debuffs_applied": 12
+      },
+      "gold": 285,
+      "max_energy": 3,
+      "max_hp": 86,
+      "max_potion_slot_count": 2,
+      "net_id": 1,
+      "odds": {
+        "card_rarity_odds_value": -0.0050000073,
+        "potion_reward_odds_value": 0.70000005
+      },
+      "relic_grab_bag": {
+        "relic_id_lists": {
+          "uncommon": [
+            "RELIC.CANDELABRA",
+            "RELIC.JOSS_PAPER",
+            "RELIC.HORN_CLEAT",
+            "RELIC.BOWLER_HAT",
+            "RELIC.KUSARIGAMA",
+            "RELIC.AKABEKO",
+            "RELIC.LASTING_CANDY",
+            "RELIC.STONE_CRACKER",
+            "RELIC.GREMLIN_HORN",
+            "RELIC.PARRYING_SHIELD",
+            "RELIC.PANTOGRAPH",
+            "RELIC.MINIATURE_CANNON",
+            "RELIC.REPTILE_TRINKET",
+            "RELIC.VAMBRACE",
+            "RELIC.PEN_NIB",
+            "RELIC.TINY_MAILBOX",
+            "RELIC.GALACTIC_DUST",
+            "RELIC.PEAR",
+            "RELIC.REGALITE",
+            "RELIC.LUCKY_FYSH",
+            "RELIC.PERMAFROST",
+            "RELIC.PLANISPHERE",
+            "RELIC.ORNAMENTAL_FAN",
+            "RELIC.PETRIFIED_TOAD",
+            "RELIC.NUNCHAKU",
+            "RELIC.RIPPLE_BASIN",
+            "RELIC.ETERNAL_FEATHER",
+            "RELIC.TUNING_FORK",
+            "RELIC.LETTER_OPENER",
+            "RELIC.MERCURY_HOURGLASS",
+            "RELIC.ORICHALCUM",
+            "RELIC.SPARKLING_ROUGE"
+          ],
+          "common": [
+            "RELIC.POTION_BELT",
+            "RELIC.GORGET",
+            "RELIC.HAPPY_FLOWER",
+            "RELIC.LANTERN",
+            "RELIC.BOOK_OF_FIVE_RINGS",
+            "RELIC.BAG_OF_MARBLES",
+            "RELIC.JUZU_BRACELET",
+            "RELIC.BLOOD_VIAL",
+            "RELIC.STRIKE_DUMMY",
+            "RELIC.RED_MASK",
+            "RELIC.STRAWBERRY",
+            "RELIC.CENTENNIAL_PUZZLE",
+            "RELIC.REGAL_PILLOW",
+            "RELIC.VAJRA",
+            "RELIC.MEAL_TICKET",
+            "RELIC.FESTIVE_POPPER",
+            "RELIC.WAR_PAINT",
+            "RELIC.BAG_OF_PREPARATION",
+            "RELIC.BRONZE_SCALES",
+            "RELIC.ANCHOR",
+            "RELIC.WHETSTONE",
+            "RELIC.FENCING_MANUAL",
+            "RELIC.VENERABLE_TEA_SET",
+            "RELIC.PENDULUM",
+            "RELIC.ODDLY_SMOOTH_STONE",
+            "RELIC.AMETHYST_AUBERGINE"
+          ],
+          "rare": [
+            "RELIC.ART_OF_WAR",
+            "RELIC.GAMBLING_CHIP",
+            "RELIC.POCKETWATCH",
+            "RELIC.WHITE_BEAST_STATUE",
+            "RELIC.INTIMIDATING_HELMET",
+            "RELIC.TUNGSTEN_ROD",
+            "RELIC.SHOVEL",
+            "RELIC.BEATING_REMNANT",
+            "RELIC.MANGO",
+            "RELIC.RAZOR_TOOTH",
+            "RELIC.RAINBOW_RING",
+            "RELIC.ICE_CREAM",
+            "RELIC.LIZARD_TAIL",
+            "RELIC.MINI_REGENT",
+            "RELIC.MUMMIFIED_HAND",
+            "RELIC.STONE_CALENDAR",
+            "RELIC.UNSETTLING_LAMP",
+            "RELIC.FROZEN_EGG",
+            "RELIC.MEAT_ON_THE_BONE",
+            "RELIC.BELLOWS",
+            "RELIC.TOXIC_EGG",
+            "RELIC.SHURIKEN",
+            "RELIC.THE_COURIER",
+            "RELIC.MOLTEN_EGG",
+            "RELIC.WHITE_STAR",
+            "RELIC.GIRYA",
+            "RELIC.OLD_COIN",
+            "RELIC.GAME_PIECE",
+            "RELIC.LUNAR_PASTRY",
+            "RELIC.CLOAK_CLASP",
+            "RELIC.CAPTAINS_WHEEL",
+            "RELIC.STURDY_CLAMP",
+            "RELIC.PRAYER_WHEEL",
+            "RELIC.KUNAI",
+            "RELIC.ORANGE_DOUGH",
+            "RELIC.VEXING_PUZZLEBOX",
+            "RELIC.UNCEASING_TOP",
+            "RELIC.CHANDELIER"
+          ],
+          "shop": [
+            "RELIC.MYSTIC_LIGHTER",
+            "RELIC.CHEMICAL_X",
+            "RELIC.VITRUVIAN_MINION",
+            "RELIC.TOOLBOX",
+            "RELIC.DINGY_RUG",
+            "RELIC.SCREAMING_FLAGON",
+            "RELIC.MEMBERSHIP_CARD",
+            "RELIC.BELT_BUCKLE",
+            "RELIC.BURNING_STICKS",
+            "RELIC.MINIATURE_TENT",
+            "RELIC.GHOST_SEED",
+            "RELIC.RINGING_TRIANGLE",
+            "RELIC.BREAD",
+            "RELIC.DRAGON_FRUIT",
+            "RELIC.WING_CHARM",
+            "RELIC.THE_ABACUS",
+            "RELIC.ORRERY",
+            "RELIC.LEES_WAFFLE",
+            "RELIC.GNARLED_HAMMER",
+            "RELIC.PUNCH_DAGGER",
+            "RELIC.DOLLYS_MIRROR",
+            "RELIC.CAULDRON",
+            "RELIC.SLING_OF_COURAGE",
+            "RELIC.KIFUDA",
+            "RELIC.ROYAL_STAMP",
+            "RELIC.LAVA_LAMP"
+          ]
+        }
+      },
+      "relics": [
+        {
+          "floor_added_to_deck": 1,
+          "id": "RELIC.DIVINE_RIGHT"
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "RELIC.NEOWS_BONES"
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "RELIC.GOLDEN_PEARL"
+        },
+        {
+          "floor_added_to_deck": 1,
+          "id": "RELIC.NUTRITIOUS_OYSTER"
+        }
+      ],
+      "rng": {
+        "rngs": {
+          "rewards": {
+            "counter": 60,
+            "s0": 15007784453128602797,
+            "s1": 2914450267968797759,
+            "s2": 12082152168395444828,
+            "s3": 8020594273375726421
+          },
+          "shops": {
+            "counter": 0,
+            "s0": 13276634495834106941,
+            "s1": 15044980180508085504,
+            "s2": 8186209634504392549,
+            "s3": 14189065773285092035
+          },
+          "transformations": {
+            "counter": 0,
+            "s0": 6549694081948765071,
+            "s1": 10521415618071351419,
+            "s2": 2419253098739094652,
+            "s3": 1724140280721206717
+          }
+        },
+        "seed": 18122054013555564797
+      },
+      "unlock_state": {
+        "encounters_seen": [
+          "ENCOUNTER.NIBBITS_WEAK",
+          "ENCOUNTER.SLIMES_WEAK",
+          "ENCOUNTER.SHRINKER_BEETLE_WEAK",
+          "ENCOUNTER.INKLETS_NORMAL",
+          "ENCOUNTER.MAWLER_NORMAL",
+          "ENCOUNTER.BYRDONIS_ELITE",
+          "ENCOUNTER.PHROG_PARASITE_ELITE",
+          "ENCOUNTER.BYGONE_EFFIGY_ELITE",
+          "ENCOUNTER.RUBY_RAIDERS_NORMAL",
+          "ENCOUNTER.NIBBITS_NORMAL",
+          "ENCOUNTER.FLYCONID_NORMAL",
+          "ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK",
+          "ENCOUNTER.FOGMOG_NORMAL",
+          "ENCOUNTER.VANTOM_BOSS",
+          "ENCOUNTER.VINE_SHAMBLER_NORMAL",
+          "ENCOUNTER.THE_KIN_BOSS",
+          "ENCOUNTER.THIEVING_HOPPER_WEAK",
+          "ENCOUNTER.BOWLBUGS_WEAK",
+          "ENCOUNTER.SPINY_TOAD_NORMAL",
+          "ENCOUNTER.TUNNELER_WEAK",
+          "ENCOUNTER.CHOMPERS_NORMAL",
+          "ENCOUNTER.MYTES_NORMAL",
+          "ENCOUNTER.CEREMONIAL_BEAST_BOSS",
+          "ENCOUNTER.SLUDGE_SPINNER_WEAK",
+          "ENCOUNTER.SEAPUNK_WEAK",
+          "ENCOUNTER.TOADPOLES_WEAK",
+          "ENCOUNTER.CORPSE_SLUGS_WEAK",
+          "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE",
+          "ENCOUNTER.TERROR_EEL_ELITE",
+          "ENCOUNTER.WATERFALL_GIANT_BOSS",
+          "ENCOUNTER.EXOSKELETONS_WEAK",
+          "ENCOUNTER.DECIMILLIPEDE_ELITE",
+          "ENCOUNTER.ENTOMANCER_ELITE",
+          "ENCOUNTER.INFESTED_PRISMS_ELITE",
+          "ENCOUNTER.THE_INSATIABLE_BOSS",
+          "ENCOUNTER.THE_OBSCURA_NORMAL",
+          "ENCOUNTER.HUNTER_KILLER_NORMAL",
+          "ENCOUNTER.SOUL_NEXUS_ELITE",
+          "ENCOUNTER.MECHA_KNIGHT_ELITE",
+          "ENCOUNTER.QUEEN_BOSS",
+          "ENCOUNTER.TEST_SUBJECT_BOSS",
+          "ENCOUNTER.LIVING_FOG_NORMAL",
+          "ENCOUNTER.OWL_MAGISTRATE_NORMAL",
+          "ENCOUNTER.AXEBOTS_NORMAL",
+          "ENCOUNTER.KNIGHTS_ELITE"
+        ],
+        "number_of_runs": 9,
+        "unlocked_epochs": [
+          "COLORLESS1_EPOCH",
+          "RELIC1_EPOCH",
+          "COLORLESS2_EPOCH",
+          "SILENT6_EPOCH",
+          "CUSTOM_AND_SEEDS_EPOCH",
+          "ACT3_B_EPOCH",
+          "RELIC2_EPOCH",
+          "COLORLESS3_EPOCH",
+          "IRONCLAD4_EPOCH",
+          "IRONCLAD3_EPOCH",
+          "ACT2_B_EPOCH",
+          "COLORLESS4_EPOCH",
+          "RELIC4_EPOCH",
+          "EVENT3_EPOCH",
+          "IRONCLAD2_EPOCH",
+          "COLORLESS5_EPOCH",
+          "SILENT4_EPOCH",
+          "SILENT5_EPOCH",
+          "DEFECT6_EPOCH",
+          "IRONCLAD5_EPOCH",
+          "POTION2_EPOCH",
+          "SILENT2_EPOCH",
+          "OROBAS_EPOCH",
+          "EVENT1_EPOCH",
+          "RELIC5_EPOCH",
+          "REGENT6_EPOCH",
+          "DEFECT3_EPOCH",
+          "RELIC3_EPOCH",
+          "DEFECT4_EPOCH",
+          "REGENT1_EPOCH",
+          "SILENT3_EPOCH",
+          "IRONCLAD6_EPOCH",
+          "REGENT5_EPOCH",
+          "DEFECT5_EPOCH",
+          "POTION1_EPOCH",
+          "NEOW_EPOCH",
+          "NECROBINDER2_EPOCH",
+          "SILENT1_EPOCH",
+          "REGENT2_EPOCH",
+          "EVENT2_EPOCH",
+          "DEFECT1_EPOCH",
+          "NECROBINDER3_EPOCH",
+          "UNDERDOCKS_EPOCH",
+          "REGENT3_EPOCH",
+          "DEFECT2_EPOCH",
+          "NECROBINDER4_EPOCH",
+          "REGENT4_EPOCH",
+          "NECROBINDER5_EPOCH",
+          "NECROBINDER6_EPOCH",
+          "DARV_EPOCH",
+          "NECROBINDER1_EPOCH",
+          "REGENT7_EPOCH",
+          "IRONCLAD7_EPOCH",
+          "SILENT7_EPOCH",
+          "DAILY_RUN_EPOCH",
+          "DEFECT7_EPOCH",
+          "NECROBINDER7_EPOCH"
+        ]
+      }
+    }
+  ],
+  "pre_finished_room": null,
+  "rng": {
+    "rngs": {
+      "up_front": {
+        "counter": 416,
+        "s0": 11824455893925771952,
+        "s1": 13985384402613778210,
+        "s2": 14154609899554371068,
+        "s3": 11354027046852706191
+      },
+      "shuffle": {
+        "counter": 88,
+        "s0": 3439979660591310813,
+        "s1": 10867291056716488642,
+        "s2": 8096829570801016836,
+        "s3": 12422437847360148156
+      },
+      "unknown_map_point": {
+        "counter": 0,
+        "s0": 1321594247479421099,
+        "s1": 12027016275958765001,
+        "s2": 10434853988414400702,
+        "s3": 13723094675485414911
+      },
+      "combat_card_generation": {
+        "counter": 0,
+        "s0": 15795873956184094509,
+        "s1": 13266476912668474070,
+        "s2": 4945712955079065396,
+        "s3": 15367488892419306428
+      },
+      "combat_potion_generation": {
+        "counter": 0,
+        "s0": 4810167903133652213,
+        "s1": 7556013060199619803,
+        "s2": 9069141468155433530,
+        "s3": 17836115826541523053
+      },
+      "combat_card_selection": {
+        "counter": 0,
+        "s0": 8732736844630291980,
+        "s1": 8838308842709663702,
+        "s2": 7178139638207854508,
+        "s3": 18104001657357584067
+      },
+      "combat_energy_costs": {
+        "counter": 0,
+        "s0": 5851343379547744243,
+        "s1": 628575599163405063,
+        "s2": 14452089682961893792,
+        "s3": 2484030383796780762
+      },
+      "combat_targets": {
+        "counter": 0,
+        "s0": 11510387001708918237,
+        "s1": 237968548851581278,
+        "s2": 9175614869523468609,
+        "s3": 5231115923772301525
+      },
+      "monster_ai": {
+        "counter": 0,
+        "s0": 13145046470263188536,
+        "s1": 9315652972801485417,
+        "s2": 11819733627248777872,
+        "s3": 7389623790869819030
+      },
+      "niche": {
+        "counter": 4,
+        "s0": 1403189545067848741,
+        "s1": 1810092466241804461,
+        "s2": 14312290677065313066,
+        "s3": 10244473189234443429
+      },
+      "combat_orbs": {
+        "counter": 0,
+        "s0": 17620701542057510808,
+        "s1": 2056637115174821511,
+        "s2": 13934414538240542826,
+        "s3": 7225733933828228177
+      },
+      "treasure_room_relics": {
+        "counter": 0,
+        "s0": 12691578069786693570,
+        "s1": 3353225274725235488,
+        "s2": 3843457127939700526,
+        "s3": 1025389267649598801
+      }
+    },
+    "seed": "M71VM0PFEYYN"
+  },
+  "run_time": 160,
+  "save_time": 1792646809,
+  "schema_version": 20,
+  "shared_relic_grab_bag": {
+    "relic_id_lists": {
+      "uncommon": [
+        "RELIC.LUCKY_FYSH",
+        "RELIC.ETERNAL_FEATHER",
+        "RELIC.AKABEKO",
+        "RELIC.KUSARIGAMA",
+        "RELIC.LASTING_CANDY",
+        "RELIC.JOSS_PAPER",
+        "RELIC.MERCURY_HOURGLASS",
+        "RELIC.GREMLIN_HORN",
+        "RELIC.PEN_NIB",
+        "RELIC.BOWLER_HAT",
+        "RELIC.MINIATURE_CANNON",
+        "RELIC.ORNAMENTAL_FAN",
+        "RELIC.CANDELABRA",
+        "RELIC.PETRIFIED_TOAD",
+        "RELIC.PARRYING_SHIELD",
+        "RELIC.STONE_CRACKER",
+        "RELIC.ORICHALCUM",
+        "RELIC.PEAR",
+        "RELIC.TUNING_FORK",
+        "RELIC.LETTER_OPENER",
+        "RELIC.HORN_CLEAT",
+        "RELIC.PANTOGRAPH",
+        "RELIC.SPARKLING_ROUGE",
+        "RELIC.PLANISPHERE",
+        "RELIC.VAMBRACE",
+        "RELIC.NUNCHAKU",
+        "RELIC.PERMAFROST",
+        "RELIC.REPTILE_TRINKET",
+        "RELIC.TINY_MAILBOX",
+        "RELIC.RIPPLE_BASIN"
+      ],
+      "common": [
+        "RELIC.ODDLY_SMOOTH_STONE",
+        "RELIC.REGAL_PILLOW",
+        "RELIC.BOOK_OF_FIVE_RINGS",
+        "RELIC.POTION_BELT",
+        "RELIC.WHETSTONE",
+        "RELIC.CENTENNIAL_PUZZLE",
+        "RELIC.STRIKE_DUMMY",
+        "RELIC.MEAL_TICKET",
+        "RELIC.VENERABLE_TEA_SET",
+        "RELIC.FESTIVE_POPPER",
+        "RELIC.JUZU_BRACELET",
+        "RELIC.RED_MASK",
+        "RELIC.PENDULUM",
+        "RELIC.GORGET",
+        "RELIC.BRONZE_SCALES",
+        "RELIC.ANCHOR",
+        "RELIC.BAG_OF_PREPARATION",
+        "RELIC.BLOOD_VIAL",
+        "RELIC.HAPPY_FLOWER",
+        "RELIC.LANTERN",
+        "RELIC.VAJRA",
+        "RELIC.STRAWBERRY",
+        "RELIC.BAG_OF_MARBLES",
+        "RELIC.AMETHYST_AUBERGINE",
+        "RELIC.WAR_PAINT"
+      ],
+      "rare": [
+        "RELIC.BELLOWS",
+        "RELIC.STURDY_CLAMP",
+        "RELIC.THE_COURIER",
+        "RELIC.UNSETTLING_LAMP",
+        "RELIC.FROZEN_EGG",
+        "RELIC.RAINBOW_RING",
+        "RELIC.WHITE_BEAST_STATUE",
+        "RELIC.STONE_CALENDAR",
+        "RELIC.CLOAK_CLASP",
+        "RELIC.ICE_CREAM",
+        "RELIC.MANGO",
+        "RELIC.WHITE_STAR",
+        "RELIC.GIRYA",
+        "RELIC.TOXIC_EGG",
+        "RELIC.RAZOR_TOOTH",
+        "RELIC.GAMBLING_CHIP",
+        "RELIC.MEAT_ON_THE_BONE",
+        "RELIC.TUNGSTEN_ROD",
+        "RELIC.MUMMIFIED_HAND",
+        "RELIC.PRAYER_WHEEL",
+        "RELIC.ART_OF_WAR",
+        "RELIC.MOLTEN_EGG",
+        "RELIC.UNCEASING_TOP",
+        "RELIC.CHANDELIER",
+        "RELIC.VEXING_PUZZLEBOX",
+        "RELIC.POCKETWATCH",
+        "RELIC.SHURIKEN",
+        "RELIC.OLD_COIN",
+        "RELIC.INTIMIDATING_HELMET",
+        "RELIC.BEATING_REMNANT",
+        "RELIC.GAME_PIECE",
+        "RELIC.CAPTAINS_WHEEL",
+        "RELIC.SHOVEL",
+        "RELIC.KUNAI",
+        "RELIC.LIZARD_TAIL"
+      ],
+      "shop": [
+        "RELIC.LAVA_LAMP",
+        "RELIC.CAULDRON",
+        "RELIC.BREAD",
+        "RELIC.CHEMICAL_X",
+        "RELIC.MEMBERSHIP_CARD",
+        "RELIC.ROYAL_STAMP",
+        "RELIC.LEES_WAFFLE",
+        "RELIC.SLING_OF_COURAGE",
+        "RELIC.PUNCH_DAGGER",
+        "RELIC.BURNING_STICKS",
+        "RELIC.DRAGON_FRUIT",
+        "RELIC.SCREAMING_FLAGON",
+        "RELIC.GNARLED_HAMMER",
+        "RELIC.DINGY_RUG",
+        "RELIC.BELT_BUCKLE",
+        "RELIC.KIFUDA",
+        "RELIC.THE_ABACUS",
+        "RELIC.ORRERY",
+        "RELIC.MYSTIC_LIGHTER",
+        "RELIC.DOLLYS_MIRROR",
+        "RELIC.RINGING_TRIANGLE",
+        "RELIC.GHOST_SEED",
+        "RELIC.TOOLBOX",
+        "RELIC.WING_CHARM",
+        "RELIC.MINIATURE_TENT"
+      ],
+      "event": [
+        "RELIC.FRESNEL_LENS"
+      ],
+      "ancient": [
+        "RELIC.LOOMING_FRUIT",
+        "RELIC.VERY_HOT_COCOA"
+      ]
+    }
+  },
+  "start_time": 1792646649,
+  "visited_map_coords": [
+    {
+      "col": 3,
+      "row": 0
+    },
+    {
+      "col": 5,
+      "row": 1
+    },
+    {
+      "col": 5,
+      "row": 2
+    },
+    {
+      "col": 5,
+      "row": 3
+    },
+    {
+      "col": 5,
+      "row": 4
+    }
+  ],
+  "win_time": 0
+}
