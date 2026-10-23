@@ -23,7 +23,7 @@
           "ENCOUNTER.SKULKING_COLONY_ELITE",
           "ENCOUNTER.TERROR_EEL_ELITE"
         ],
-        "elite_encounters_visited": 0,
+        "elite_encounters_visited": 1,
         "event_ids": [
           "EVENT.SUNKEN_STATUE",
           "EVENT.TEA_MASTER",
@@ -54,7 +54,7 @@
           "EVENT.DROWNING_BEACON",
           "EVENT.ENDLESS_CONVEYOR"
         ],
-        "events_visited": 1,
+        "events_visited": 4,
         "normal_encounter_ids": [
           "ENCOUNTER.TOADPOLES_WEAK",
           "ENCOUNTER.SLUDGE_SPINNER_WEAK",
@@ -72,7 +72,7 @@
           "ENCOUNTER.GREMLIN_MERC_NORMAL",
           "ENCOUNTER.CORPSE_SLUGS_NORMAL"
         ],
-        "normal_encounters_visited": 3,
+        "normal_encounters_visited": 4,
         "second_boss_id": null
       },
       "saved_map": {
@@ -183,6 +183,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -270,6 +271,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -283,6 +285,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 0,
@@ -490,6 +493,7 @@
             "type": "elite"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -535,6 +539,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 2,
@@ -654,6 +659,7 @@
             "type": "monster"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -667,6 +673,7 @@
             "type": "rest_site"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 5,
@@ -864,6 +871,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 4,
@@ -909,6 +917,7 @@
             "type": "unknown"
           },
           {
+            "can_modify": true,
             "children": [
               {
                 "col": 3,
@@ -1198,11 +1207,14 @@
   ],
   "ascension": 10,
   "current_act_index": 0,
+  "events_seen": [
+    "EVENT.THIS_OR_THAT"
+  ],
   "extra_fields": {
     "started_with_neow": true
   },
   "game_mode": "standard",
-  "map_drawings": "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",
+  "map_drawings": "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",
   "map_point_history": [
     [
       {
@@ -1501,23 +1513,377 @@
             "turns_taken": 4
           }
         ]
+      },
+      {
+        "map_point_type": "shop",
+        "player_stats": [
+          {
+            "bought_relics": [
+              "RELIC.BOOKMARK"
+            ],
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.RIGHT_HAND_HAND",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.DEFILE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PARSE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.PAGESTORM",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FLASH_OF_STEEL",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.REND",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.MELANCHOLY",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "cards_removed": [
+              {
+                "floor_added_to_deck": 1,
+                "id": "CARD.STRIKE_NECROBINDER",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 89,
+            "current_hp": 42,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 371,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.FRUIT_JUICE",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.DROPLET_OF_PRECOGNITION",
+                "was_picked": false
+              },
+              {
+                "choice": "POTION.DEXTERITY_POTION",
+                "was_picked": false
+              }
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.BOOKMARK",
+                "was_picked": true
+              },
+              {
+                "choice": "RELIC.VAMBRACE",
+                "was_picked": false
+              },
+              {
+                "choice": "RELIC.CHEMICAL_X",
+                "was_picked": false
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "shop",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "monster",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "id": "CARD.GRAVEBLAST",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.SCOURGE",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.MELANCHOLY",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "current_gold": 104,
+            "current_hp": 36,
+            "damage_taken": 6,
+            "gold_gained": 15,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.GREMLIN_MERC_NORMAL",
+            "monster_ids": [
+              "MONSTER.GREMLIN_MERC",
+              "MONSTER.SNEAKY_GREMLIN",
+              "MONSTER.FAT_GREMLIN"
+            ],
+            "room_type": "monster",
+            "turns_taken": 6
+          }
+        ]
+      },
+      {
+        "map_point_type": "rest_site",
+        "player_stats": [
+          {
+            "current_gold": 104,
+            "current_hp": 36,
+            "damage_taken": 0,
+            "gold_gained": 0,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "rest_site_choices": [
+              "SMITH"
+            ],
+            "stolen_loot": 0,
+            "upgraded_cards": [
+              "CARD.BODYGUARD"
+            ]
+          }
+        ],
+        "rooms": [
+          {
+            "room_type": "rest_site",
+            "turns_taken": 0
+          }
+        ]
+      },
+      {
+        "map_point_type": "elite",
+        "player_stats": [
+          {
+            "card_choices": [
+              {
+                "card": {
+                  "floor_added_to_deck": 8,
+                  "id": "CARD.SNAP",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": true
+              },
+              {
+                "card": {
+                  "id": "CARD.FLATTEN",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              },
+              {
+                "card": {
+                  "id": "CARD.FEAR",
+                  "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                    "BaseLibCardModifiers": []
+                  }
+                },
+                "was_picked": false
+              }
+            ],
+            "cards_gained": [
+              {
+                "id": "CARD.SNAP",
+                "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+                  "BaseLibCardModifiers": []
+                }
+              }
+            ],
+            "current_gold": 136,
+            "current_hp": 32,
+            "damage_taken": 4,
+            "gold_gained": 32,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "potion_choices": [
+              {
+                "choice": "POTION.COLORLESS_POTION",
+                "was_picked": true
+              }
+            ],
+            "potion_used": [
+              "POTION.DEXTERITY_POTION"
+            ],
+            "relic_choices": [
+              {
+                "choice": "RELIC.FESTIVE_POPPER",
+                "was_picked": true
+              }
+            ],
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "ENCOUNTER.TERROR_EEL_ELITE",
+            "monster_ids": [
+              "MONSTER.TERROR_EEL"
+            ],
+            "room_type": "elite",
+            "turns_taken": 11
+          }
+        ]
+      },
+      {
+        "map_point_type": "unknown",
+        "player_stats": [
+          {
+            "current_gold": 182,
+            "current_hp": 26,
+            "damage_taken": 6,
+            "event_choices": [
+              {
+                "title": {
+                  "key": "THIS_OR_THAT.pages.INITIAL.options.PLAIN.title",
+                  "table": "events"
+                },
+                "variables": {
+                  "Curse": {
+                    "type": "DynamicString",
+                    "decimal_value": 0,
+                    "bool_value": false,
+                    "string_value": "Clumsy"
+                  }
+                }
+              }
+            ],
+            "gold_gained": 46,
+            "gold_lost": 0,
+            "gold_spent": 0,
+            "gold_stolen": 0,
+            "hp_healed": 0,
+            "is_affected_by_fur_coat": false,
+            "max_hp": 66,
+            "max_hp_gained": 0,
+            "max_hp_lost": 0,
+            "player_id": 1,
+            "stolen_loot": 0
+          }
+        ],
+        "rooms": [
+          {
+            "model_id": "EVENT.THIS_OR_THAT",
+            "room_type": "event",
+            "turns_taken": 0
+          }
+        ]
       }
     ]
   ],
   "modifiers": [],
-  "num_reloads": 0,
+  "num_reloads": 1,
   "odds": {
-    "unknown_map_point_elite_odds_value": -2,
-    "unknown_map_point_monster_odds_value": 0.1,
-    "unknown_map_point_shop_odds_value": 0.06,
-    "unknown_map_point_treasure_odds_value": 0.04
+    "unknown_map_point_elite_odds_value": -3,
+    "unknown_map_point_monster_odds_value": 0.2,
+    "unknown_map_point_shop_odds_value": 0.089999996,
+    "unknown_map_point_treasure_odds_value": 0.06
   },
   "platform_type": "steam",
   "players": [
     {
       "base_orb_slot_count": 0,
       "character_id": "CHARACTER.NECROBINDER",
-      "current_hp": 42,
+      "current_hp": 26,
       "deck": [
         {
           "floor_added_to_deck": 1,
@@ -1542,13 +1908,6 @@
         },
         {
           "floor_added_to_deck": 1,
-          "id": "CARD.STRIKE_NECROBINDER",
-          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
-            "BaseLibCardModifiers": []
-          }
-        },
-        {
-          "floor_added_to_deck": 1,
           "id": "CARD.DEFEND_NECROBINDER",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
@@ -1576,6 +1935,7 @@
           }
         },
         {
+          "current_upgrade_level": 1,
           "floor_added_to_deck": 1,
           "id": "CARD.BODYGUARD",
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
@@ -1623,24 +1983,39 @@
           "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
             "BaseLibCardModifiers": []
           }
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "CARD.MELANCHOLY",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "CARD.SNAP",
+          "save_dict_List[BaseLib.Abstracts.CardModifier+ModifierSave]": {
+            "BaseLibCardModifiers": []
+          }
         }
       ],
       "extra_fields": {
-        "damage_dealt": 85,
-        "debuffs_applied": 4
+        "card_shop_removals_used": 1,
+        "damage_dealt": 222,
+        "debuffs_applied": 13
       },
-      "gold": 460,
+      "gold": 182,
       "max_energy": 3,
       "max_hp": 66,
       "max_potion_slot_count": 2,
       "net_id": 1,
       "odds": {
-        "card_rarity_odds_value": -0.0050000073,
+        "card_rarity_odds_value": 0.024999991,
         "potion_reward_odds_value": 0.3
       },
       "potions": [
         {
-          "id": "POTION.DEXTERITY_POTION",
+          "id": "POTION.COLORLESS_POTION",
           "slot_index": 0
         },
         {
@@ -1681,11 +2056,9 @@
             "RELIC.PARRYING_SHIELD",
             "RELIC.HORN_CLEAT",
             "RELIC.PERMAFROST",
-            "RELIC.BOWLER_HAT",
-            "RELIC.VAMBRACE"
+            "RELIC.BOWLER_HAT"
           ],
           "common": [
-            "RELIC.FESTIVE_POPPER",
             "RELIC.BAG_OF_MARBLES",
             "RELIC.BONE_FLUTE",
             "RELIC.PENDULUM",
@@ -1749,8 +2122,7 @@
             "RELIC.BELLOWS",
             "RELIC.UNCEASING_TOP",
             "RELIC.CAPTAINS_WHEEL",
-            "RELIC.POCKETWATCH",
-            "RELIC.BOOKMARK"
+            "RELIC.POCKETWATCH"
           ],
           "shop": [
             "RELIC.SCREAMING_FLAGON",
@@ -1777,8 +2149,7 @@
             "RELIC.UNDYING_SIGIL",
             "RELIC.WING_CHARM",
             "RELIC.PUNCH_DAGGER",
-            "RELIC.BURNING_STICKS",
-            "RELIC.CHEMICAL_X"
+            "RELIC.BURNING_STICKS"
           ]
         }
       },
@@ -1790,23 +2161,31 @@
         {
           "floor_added_to_deck": 1,
           "id": "RELIC.CURSED_PEARL"
+        },
+        {
+          "floor_added_to_deck": 5,
+          "id": "RELIC.BOOKMARK"
+        },
+        {
+          "floor_added_to_deck": 8,
+          "id": "RELIC.FESTIVE_POPPER"
         }
       ],
       "rng": {
         "rngs": {
           "rewards": {
-            "counter": 37,
-            "s0": 2397909429924773626,
-            "s1": 17076912789069276618,
-            "s2": 18214035374376401420,
-            "s3": 3842488239558523755
+            "counter": 77,
+            "s0": 2261876311375956643,
+            "s1": 3949898399379046930,
+            "s2": 5427539330079054703,
+            "s3": 15181823617594448528
           },
           "shops": {
-            "counter": 0,
-            "s0": 2431327235772610261,
-            "s1": 1984683903861431611,
-            "s2": 16977380460782172003,
-            "s3": 6714049647507703755
+            "counter": 28,
+            "s0": 8992136617627326918,
+            "s1": 8159681429582772922,
+            "s2": 9516903477770702505,
+            "s3": 4996390215965939195
           },
           "transformations": {
             "counter": 0,
@@ -1976,18 +2355,18 @@
         "s3": 6062788332155451466
       },
       "shuffle": {
-        "counter": 67,
-        "s0": 11490316027996152271,
-        "s1": 4682800737656004502,
-        "s2": 15099974862812186447,
-        "s3": 7587805499399558947
+        "counter": 155,
+        "s0": 6495248325131439822,
+        "s1": 16561215828524259848,
+        "s2": 10996507313422878183,
+        "s3": 680646180874528831
       },
       "unknown_map_point": {
-        "counter": 1,
-        "s0": 12008535638212981107,
-        "s1": 9652150677909147679,
-        "s2": 6034860220359314071,
-        "s3": 12073052232115662436
+        "counter": 2,
+        "s0": 9572868734593404680,
+        "s1": 8112549777804667899,
+        "s2": 5956912418852748260,
+        "s3": 17856601341927726421
       },
       "combat_card_generation": {
         "counter": 0,
@@ -2004,11 +2383,11 @@
         "s3": 4949150445739688231
       },
       "combat_card_selection": {
-        "counter": 0,
-        "s0": 13140578428305774301,
-        "s1": 8355382870383442111,
-        "s2": 15141639999992788522,
-        "s3": 17251610150018407716
+        "counter": 2,
+        "s0": 3600789322778425239,
+        "s1": 14542652471109700601,
+        "s2": 17357740873853178801,
+        "s3": 4078611339111155508
       },
       "combat_energy_costs": {
         "counter": 0,
@@ -2032,11 +2411,11 @@
         "s3": 15810251689930609954
       },
       "niche": {
-        "counter": 5,
-        "s0": 18236192071373910471,
-        "s1": 10573371993115958505,
-        "s2": 3271092921920996664,
-        "s3": 9882854839399651862
+        "counter": 9,
+        "s0": 847771154042761176,
+        "s1": 15572312133373259505,
+        "s2": 5515502594902712987,
+        "s3": 15375010212303159677
       },
       "combat_orbs": {
         "counter": 0,
@@ -2055,8 +2434,8 @@
     },
     "seed": "KUG5F775KJP2"
   },
-  "run_time": 237,
-  "save_time": 1792728621,
+  "run_time": 462,
+  "save_time": 1792732973,
   "schema_version": 20,
   "shared_relic_grab_bag": {
     "relic_id_lists": {
@@ -2069,7 +2448,6 @@
         "RELIC.PEAR",
         "RELIC.PLANISPHERE",
         "RELIC.ORNAMENTAL_FAN",
-        "RELIC.VAMBRACE",
         "RELIC.HORN_CLEAT",
         "RELIC.MERCURY_HOURGLASS",
         "RELIC.BOWLER_HAT",
@@ -2097,7 +2475,6 @@
         "RELIC.RED_MASK",
         "RELIC.AMETHYST_AUBERGINE",
         "RELIC.CENTENNIAL_PUZZLE",
-        "RELIC.FESTIVE_POPPER",
         "RELIC.JUZU_BRACELET",
         "RELIC.PENDULUM",
         "RELIC.ANCHOR",
@@ -2160,7 +2537,6 @@
         "RELIC.KIFUDA",
         "RELIC.BURNING_STICKS",
         "RELIC.TOOLBOX",
-        "RELIC.CHEMICAL_X",
         "RELIC.DINGY_RUG",
         "RELIC.MEMBERSHIP_CARD",
         "RELIC.BELT_BUCKLE",
@@ -2213,6 +2589,26 @@
     {
       "col": 2,
       "row": 4
+    },
+    {
+      "col": 2,
+      "row": 5
+    },
+    {
+      "col": 2,
+      "row": 6
+    },
+    {
+      "col": 2,
+      "row": 7
+    },
+    {
+      "col": 1,
+      "row": 8
+    },
+    {
+      "col": 2,
+      "row": 9
     }
   ],
   "win_time": 0
