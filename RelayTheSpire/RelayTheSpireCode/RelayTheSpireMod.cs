@@ -1,7 +1,6 @@
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
 using MegaCrit.Sts2.Core.Logging;
-using MegaCrit.Sts2.Core.Platform;
 using System;
 using System.IO;
 
@@ -82,11 +81,7 @@ public static class RelayTheSpireMod
     /// Returns the SHA-256 hash of the local player's Steam ID.
     /// Used for anti-replay checks in the manifest.
     /// </summary>
-    public static string GetLocalPlayerHash()
-    {
-        var steamId = PlatformUtil.GetLocalPlayerId(PlatformUtil.PrimaryPlatform);
-        return RelayManifest.HashPlayerId(steamId.ToString());
-    }
+    public static string GetLocalPlayerHash() => RelayManifest.HashPlayerId(RelayLocalStore.GetInstallSecret());
 
     // -------------------------------------------------------------------------
     // Event dispatch

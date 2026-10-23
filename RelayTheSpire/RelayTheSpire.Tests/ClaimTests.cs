@@ -102,23 +102,22 @@ public static class ClaimRulesTests
         T.Check(RepeatPolicy.TryParse(" 3 ", out var p2) && p2.CooldownTurns == 3, "parses a number");
         T.Check(!RepeatPolicy.TryParse("0", out _) && !RepeatPolicy.TryParse("banana", out _), "rejects 0 and junk");
 
-        // CheckClaim honours the configured policy
-        var saved = RepeatPolicy.Current;
-        try
-        {
-            m = Fresh();
-            m.RelayChain.Add(new RelayEntry { PlayerHash = Alice });
-            m.RelayChain.Add(new RelayEntry { PlayerHash = Bob });
-            m.RelayChain.Add(new RelayEntry { PlayerHash = "cccc3333" });
+        // CheckClaim honours the policy carried by the manifest itself
+        m = Fresh();
+        m.RelayChain.Add(new RelayEntry { PlayerHash = Alice });
+        m.RelayChain.Add(new RelayEntry { PlayerHash = Bob });
+        m.RelayChain.Add(new RelayEntry { PlayerHash = "cccc3333" });
 
-            RepeatPolicy.Current = cd2;
-            T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.Available, "CheckClaim: returning player Available under cooldown 2");
-            RepeatPolicy.Current = once;
-            T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.AlreadyPlayed, "CheckClaim: same player AlreadyPlayed under once");
-            m.ApplyClaim(Alice, Now, Ttl);
-            T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.AlreadyPlayed, "repeat block wins over own claim");
-        }
-        finally { RepeatPolicy.Current = saved; }
+        m.Policy = cd2;
+        T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.Available, "CheckClaim: returning player Available under cooldown 2");
+        m.Policy = once;
+        T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.AlreadyPlayed, "CheckClaim: same player AlreadyPlayed under once");
+        m.ApplyClaim(Alice, Now, Ttl);
+        T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.AlreadyPlayed, "repeat block wins over own claim");
+
+        m = Fresh();
+        m.RelayChain.Add(new RelayEntry { PlayerHash = Alice });
+        T.Check(m.CheckClaim(Alice, Now) == ClaimStatus.AlreadyPlayed, "manifest with no policy defaults to once");
 
         m = Fresh();
         m.RelayChain.Add(new RelayEntry { PlayerHash = Alice });
@@ -185,7 +184,7 @@ public static class ClaimRulesTests
 }
 
 /// <summary>
-/// Step 2: integration tests against a real GitHub repo. Uses throwaway runs/CLAIMTEST-* folders.
+/// Step 2: integration tests against a real GitHub repo. Uses throwaway rooms/{random}/runs/CLAIMTEST-* folders.
 ///
 /// There is no delete in the transport, so these folders stay in the repo afterwards;
 /// use a scratch repo/branch, or delete them by hand. The token needs write access.
@@ -194,9 +193,15 @@ public static class ClaimRaceTests
 {
     private static readonly TimeSpan Ttl = TimeSpan.FromHours(12);
 
+    /// <summary>A throwaway room scope, so test runs never land in the Community room. The room.json is never created.</summary>
+    private static RelayScope NewScope()
+    {
+        return RelayScope.ForRoom(RelayScope.GenerateRoomId());
+    }
+
     private static string NewRunId() => $"CLAIMTEST-{Guid.NewGuid():N}"[..22];
 
-    private static async Task SeedRunAsync(GitHubTransport admin, string runId)
+    private static async Task SeedRunAsync(GitHubTransport admin, RelayScope scope, string runId)
     {
         var manifest = new RelayManifest
         {
@@ -204,7 +209,7 @@ public static class ClaimRaceTests
             CharacterId = "CHARACTER.TEST", GameMode = "standard", FloorsCompleted = 5,
             LastUpdated = RelayManifest.NowUnix(),
         };
-        await admin.PushAsync(runId, new RelayBundle("{\"test\":true}", manifest));
+        await admin.PushAsync(scope, runId, new RelayBundle("{\"test\":true}", manifest));
     }
 
     public static async Task<int> RunAllAsync(GitHubTransport.Config cfg)
@@ -223,26 +228,27 @@ public static class ClaimRaceTests
     {
         T.Section("Stale SHA is rejected (deterministic)");
         var runId = NewRunId();
+        var scope = NewScope();
         using var admin = new GitHubTransport(cfg);
         using var a     = new GitHubTransport(cfg);
         using var b     = new GitHubTransport(cfg);
-        await SeedRunAsync(admin, runId);
+        await SeedRunAsync(admin, scope, runId);
 
-        var snapA = (await a.GetManifestWithShaAsync(runId))!;
-        var snapB = (await b.GetManifestWithShaAsync(runId))!;
+        var snapA = (await a.GetManifestWithShaAsync(scope, runId))!;
+        var snapB = (await b.GetManifestWithShaAsync(scope, runId))!;
         T.Check(snapA.Sha == snapB.Sha, "both players read the same manifest SHA");
 
         var now = RelayManifest.NowUnix();
         snapA.Manifest.ApplyClaim("player-a", now, Ttl);
-        var resA = await a.TryClaimAsync(runId, snapA.Manifest, snapA.Sha);
+        var resA = await a.TryClaimAsync(scope, runId, snapA.Manifest, snapA.Sha);
         T.Check(resA.Claimed, "first claimant wins");
         T.Check(resA.NewSha is not null && resA.NewSha != snapA.Sha, "winner receives the manifest's new SHA");
 
         snapB.Manifest.ApplyClaim("player-b", now, Ttl);
-        var resB = await b.TryClaimAsync(runId, snapB.Manifest, snapB.Sha);
+        var resB = await b.TryClaimAsync(scope, runId, snapB.Manifest, snapB.Sha);
         T.Check(!resB.Claimed, "second claimant with a stale SHA is rejected");
 
-        var remote = (await admin.GetManifestWithShaAsync(runId))!;
+        var remote = (await admin.GetManifestWithShaAsync(scope, runId))!;
         T.Check(remote.Manifest.ClaimedBy == "player-a", "remote manifest still belongs to the first claimant");
         T.Check(remote.Sha == resA.NewSha, "winner's returned SHA matches the remote SHA");
     }
@@ -256,28 +262,29 @@ public static class ClaimRaceTests
     {
         T.Section($"Concurrent race, {contenders} contenders");
         var runId = NewRunId();
+        var scope = NewScope();
         using var admin = new GitHubTransport(cfg);
-        await SeedRunAsync(admin, runId);
+        await SeedRunAsync(admin, scope, runId);
 
         var transports = Enumerable.Range(0, contenders).Select(_ => new GitHubTransport(cfg)).ToArray();
         try
         {
             var snaps = new ManifestSnapshot[contenders];
             for (int i = 0; i < contenders; i++)
-                snaps[i] = (await transports[i].GetManifestWithShaAsync(runId))!;
+                snaps[i] = (await transports[i].GetManifestWithShaAsync(scope, runId))!;
 
             var now = RelayManifest.NowUnix();
             var attempts = await Task.WhenAll(Enumerable.Range(0, contenders).Select(async i =>
             {
                 snaps[i].Manifest.ApplyClaim($"player-{i}", now, Ttl);
-                return await transports[i].TryClaimAsync(runId, snaps[i].Manifest, snaps[i].Sha);
+                return await transports[i].TryClaimAsync(scope, runId, snaps[i].Manifest, snaps[i].Sha);
             }));
 
             int winners = attempts.Count(x => x.Claimed);
             T.Check(winners == 1, $"exactly one contender wins (winners: {winners})");
 
             int winnerIdx = Array.FindIndex(attempts, x => x.Claimed);
-            var remote = (await admin.GetManifestWithShaAsync(runId))!;
+            var remote = (await admin.GetManifestWithShaAsync(scope, runId))!;
             T.Check(winnerIdx >= 0 && remote.Manifest.ClaimedBy == $"player-{winnerIdx}",
                     "remote manifest records the winner");
         }
@@ -292,17 +299,18 @@ public static class ClaimRaceTests
     {
         T.Section("Eligibility after a claim");
         var runId = NewRunId();
+        var scope = NewScope();
         using var admin = new GitHubTransport(cfg);
         using var a     = new GitHubTransport(cfg);
-        await SeedRunAsync(admin, runId);
+        await SeedRunAsync(admin, scope, runId);
 
         var now  = RelayManifest.NowUnix();
-        var snap = (await a.GetManifestWithShaAsync(runId))!;
+        var snap = (await a.GetManifestWithShaAsync(scope, runId))!;
         snap.Manifest.ApplyClaim("player-a", now, Ttl);
-        var res = await a.TryClaimAsync(runId, snap.Manifest, snap.Sha);
+        var res = await a.TryClaimAsync(scope, runId, snap.Manifest, snap.Sha);
         T.Check(res.Claimed, "claim succeeds on an unclaimed run");
 
-        var remote = (await admin.GetManifestWithShaAsync(runId))!.Manifest;
+        var remote = (await admin.GetManifestWithShaAsync(scope, runId))!.Manifest;
         T.Check(remote.CheckClaim("player-b", now + 5) == ClaimStatus.HeldByOther, "other player sees the run as claimed");
         T.Check(remote.CheckClaim("player-a", now + 5) == ClaimStatus.HeldByYou, "claimant sees the run as theirs");
         T.Check(remote.CheckClaim("player-b", now + (long)Ttl.TotalSeconds + 1) == ClaimStatus.Available,
@@ -310,7 +318,7 @@ public static class ClaimRaceTests
 
         // Claimant can refresh their own claim using the SHA returned from the first claim.
         remote.ApplyClaim("player-a", now + 60, Ttl);
-        var refresh = await a.TryClaimAsync(runId, remote, res.NewSha!);
+        var refresh = await a.TryClaimAsync(scope, runId, remote, res.NewSha!);
         T.Check(refresh.Claimed, "claimant can refresh using the SHA returned by the first claim");
     }
 }

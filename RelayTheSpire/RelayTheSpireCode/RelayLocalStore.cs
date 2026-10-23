@@ -303,4 +303,19 @@ internal static class RelayLocalStore
         }
         return new RelayLocalState();
     }
+
+	public static string GetInstallSecret()
+	{
+	    lock (Gate)
+    	{
+	        if (State.InstallSecret is null)
+	        {
+	            State.InstallSecret = Convert.ToHexString(
+	                System.Security.Cryptography.RandomNumberGenerator.GetBytes(32)).ToLowerInvariant();
+	            _dirty = true;
+	            Flush(); // the lock is reentrant, so this is fine
+	        }
+	        return State.InstallSecret;
+	    }
+	}
 }

@@ -133,6 +133,10 @@ public sealed class RelayLocalState
     /// <summary>Unix time (UTC) of the last successful My Runs refresh; 0 = never.</summary>
     [JsonPropertyName("last_checked")]
     public long LastChecked { get; set; }
+
+	/// <summary>This install's secret (64 lowercase hex chars). Only ever sent as the Bearer token.</summary>
+	[JsonPropertyName("install_secret")]
+	public string? InstallSecret { get; set; }
     
     /// <summary>Rooms the player hid in the Rooms tab. Local only; the room itself is unaffected.</summary>
     [JsonPropertyName("hidden_rooms")]
@@ -335,6 +339,9 @@ public sealed class RelayLocalState
             if (hiddenRooms.Count >= MaxHidden) break;
         }
         HiddenRooms = hiddenRooms;
+
+		InstallSecret = InstallSecret is { Length: 64 } s && s.All(c => (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f'))
+    		? s : null;
 
         return this;
     }
